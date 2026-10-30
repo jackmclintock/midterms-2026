@@ -1307,18 +1307,31 @@ def collect_all(previous: dict | None = None, today: date | None = None) -> dict
     out["generic_ballot"] = _run_one("generic-ballot", lambda: collect_generic_ballot(today), status,
                                      previous.get("generic_ballot"))
 
-    for postal in SENATE_STATES:
-        label = f"{postal}-senate"
-        res = _run_one(label, lambda p=postal: collect_race(senate_titles(p), today), status, prev_senate.get(postal))
-        if res is not None:
-            res["special"] = postal in SENATE_SPECIALS or "special" in (res.get("page") or "").lower()
-            out["senate"][postal] = res
+    # Rotate the order each hour so a run that hits its time budget leaves different races stale each time,
+    # and alternate which chamber goes first.
+    sen_order, gov_order = list(SENATE_STATES), list(GOVERNOR_STATES)
+    hour = datetime.now(timezone.utc).hour
+    if os.environ.get("POLLS_ROTATE"):
+        sen_order = sen_order[hour % len(sen_order):] + sen_order[:hour % len(sen_order)]
+        gov_order = gov_order[hour % len(gov_order):] + gov_order[:hour % len(gov_order)]
 
-    for postal in GOVERNOR_STATES:
-        label = f"{postal}-governor"
-        res = _run_one(label, lambda p=postal: collect_race(governor_titles(p), today), status, prev_gov.get(postal))
-        if res is not None:
-            out["governors"][postal] = res
+    def run_senate():
+        for postal in sen_order:
+            res = _run_one(f"{postal}-senate", lambda p=postal: collect_race(senate_titles(p), today), status, prev_senate.get(postal))
+            if res is not None:
+                res["special"] = postal in SENATE_SPECIALS or "special" in (res.get("page") or "").lower()
+                out["senate"][postal] = res
+
+    def run_governors():
+        for postal in gov_order:
+            res = _run_one(f"{postal}-governor", lambda p=postal: collect_race(governor_titles(p), today), status, prev_gov.get(postal))
+            if res is not None:
+                out["governors"][postal] = res
+
+    if os.environ.get("POLLS_ROTATE") and hour % 2:
+        run_governors(); run_senate()
+    else:
+        run_senate(); run_governors()
 
     ok = sum(1 for s in status.values() if s.get("ok"))
     out["summary"] = {

@@ -26,7 +26,7 @@ permissions:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 20
     steps:
       - name: Decide whether this run should proceed
         id: gate
@@ -52,6 +52,7 @@ jobs:
           fi
           echo "run=$run" >> "$GITHUB_OUTPUT"
           echo "fast=$fast" >> "$GITHUB_OUTPUT"
+          echo "minute=$minute" >> "$GITHUB_OUTPUT"
           echo "run=$run fast=$fast"
 
       - uses: actions/checkout@v4
@@ -65,9 +66,15 @@ jobs:
           python-version: "3.12"
 
       - name: Collect individual polls (Wikipedia tables)
-        if: steps.gate.outputs.run == '1' && steps.gate.outputs.fast == '0'
+        # Hourly only (the :07 schedule, or a manual run). Wikipedia rate-limits GitHub's shared runners,
+        # so the collector gets a 5-minute budget and keeps the previous data for anything it did not reach.
+        if: steps.gate.outputs.run == '1' && steps.gate.outputs.fast == '0' && (github.event_name != 'schedule' || steps.gate.outputs.minute == '07')
+        continue-on-error: true
+        env:
+          POLLS_TIME_BUDGET: "300"
+          POLLS_ROTATE: "1"
         run: python scripts/polls.py || echo "poll collection failed; continuing with previous data"
-        timeout-minutes: 6
+        timeout-minutes: 8
 
       - name: Build live.json
         if: steps.gate.outputs.run == '1'
