@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Midterms 2026</title>
+<meta name="description" content="Live forecast and results tracker for the 3 November 2026 US midterm elections: Senate, House and governors, with polls, models, prediction markets and historical context.">
+<meta name="theme-color" content="#f7f7f5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#12141a" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2317191d'/%3E%3Crect x='6' y='8' width='9' height='16' rx='2' fill='%232f6fde'/%3E%3Crect x='17' y='8' width='9' height='16' rx='2' fill='%23d63a3a'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="row">
+      <div class="brand"><span class="dot" id="livedot"></span> Midterms 2026</div>
+      <span class="pill" id="phasepill">loading</span>
+      <span class="spacer"></span>
+      <span class="meta" id="updated"></span>
+      <div class="seg" id="tzseg" title="Time zone for all times shown">
+        <button data-tz="America/New_York" class="on">ET</button>
+        <button data-tz="Asia/Riyadh">Riyadh</button>
+      </div>
+      <button class="iconbtn" id="themebtn" title="Toggle dark mode">◐</button>
+    </div>
+    <nav class="tabs" id="tabs">
+      <a href="#overview" class="active">Overview</a>
+      <a href="#night" id="tab-night">Election night</a>
+      <a href="#senate">Senate</a>
+      <a href="#house">House</a>
+      <a href="#governors">Governors</a>
+      <a href="#polls">Polls</a>
+      <a href="#models">Models &amp; markets</a>
+      <a href="#history">History</a>
+      <a href="#news">News</a>
+      <a href="#method">Method</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div id="loading" class="note">Loading the latest data…</div>
+  <div id="app" class="hide">
+
+    <section class="block" id="overview">
+      <div id="banner"></div>
+      <div class="grid hero" id="hero"></div>
+      <div class="kpis" id="kpis" style="margin-top:12px"></div>
+    </section>
+
+    <section class="block" id="night">
+      <div class="head"><h2>Election night</h2><span class="sub" id="night-sub"></span></div>
+      <div id="night-body"></div>
+    </section>
+
+    <section class="block" id="senate">
+      <div class="head"><h2>Senate</h2><span class="sub" id="senate-sub"></span></div>
+      <div class="grid two" id="senate-top"></div>
+      <div class="filters" style="margin-top:12px">
+        <input type="search" id="senate-q" placeholder="Filter by state or candidate">
+        <div class="seg" id="senate-filter"><button data-f="comp" class="on">Competitive</button><button data-f="all">All 35</button><button data-f="flip">Likely flips</button></div>
+      </div>
+      <div class="races" id="senate-races"></div>
+    </section>
+
+    <section class="block" id="house">
+      <div class="head"><h2>House</h2><span class="sub" id="house-sub"></span></div>
+      <div class="grid two" id="house-top"></div>
+      <div class="grid two" id="house-mid" style="margin-top:12px"></div>
+      <div class="filters" style="margin-top:12px">
+        <input type="search" id="house-q" placeholder="Filter by district, state or candidate">
+        <div class="seg" id="house-filter"><button data-f="comp" class="on">Competitive</button><button data-f="flip">Likely flips</button><button data-f="called">Called</button></div>
+      </div>
+      <div class="tablewrap" id="house-table"></div>
+    </section>
+
+    <section class="block" id="governors">
+      <div class="head"><h2>Governors</h2><span class="sub" id="gov-sub"></span></div>
+      <div class="grid two" id="gov-top"></div>
+      <div class="filters" style="margin-top:12px">
+        <div class="seg" id="gov-filter"><button data-f="comp" class="on">Competitive</button><button data-f="all">All 36</button></div>
+      </div>
+      <div class="races" id="gov-races"></div>
+    </section>
+
+    <section class="block" id="polls">
+      <div class="head"><h2>Polls</h2><span class="sub" id="polls-sub"></span></div>
+      <div id="polls-body"></div>
+    </section>
+
+    <section class="block" id="models">
+      <div class="head"><h2>Models and markets</h2><span class="sub">Every public forecast and market we track, side by side with our own model</span></div>
+      <div id="models-body"></div>
+    </section>
+
+    <section class="block" id="history">
+      <div class="head"><h2>History</h2><span class="sub">What midterms usually do to a president's party, and how wrong polls have been</span></div>
+      <div id="history-body"></div>
+    </section>
+
+    <section class="block" id="news">
+      <div class="head"><h2>News</h2><span class="sub" id="news-sub"></span></div>
+      <div class="news" id="news-body"></div>
+    </section>
+
+    <section class="block" id="method">
+      <div class="head"><h2>Method and sources</h2></div>
+      <div id="method-body" class="prose"></div>
+      <h3 style="margin-top:14px">Data health</h3>
+      <div class="status" id="status" style="margin-top:8px"></div>
+    </section>
+  </div>
+</main>
+<footer><div class="wrap" id="foot"></div></footer>
+<div class="tip" id="tip"></div>
+<script src="assets/app.js"></script>
+</body>
+</html>

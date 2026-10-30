@@ -1,0 +1,88 @@
+name: Refresh data
+
+on:
+  schedule:
+    # Normal cadence: every 30 minutes (UTC). GitHub may delay scheduled runs by several minutes.
+    - cron: "7,37 * * * *"
+    # Election week: every 5 minutes from 3 Nov 10:00 UTC through 6 Nov. The job exits early outside that window.
+    - cron: "*/5 * * * 3-6 11"
+  workflow_dispatch:
+    inputs:
+      fast:
+        description: "Fast mode (skip slow sources)"
+        required: false
+        default: "0"
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Decide whether this run should proceed
+        id: gate
+        run: |
+          now=$(date -u +%s)
+          live_from=$(date -u -d "2026-11-03 10:00" +%s)
+          live_until=$(date -u -d "2026-11-07 00:00" +%s)
+          minute=$(date -u +%M)
+          fast=0
+          run=1
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            if [ "$now" -ge "$live_from" ] && [ "$now" -lt "$live_until" ]; then
+              # Election window: the 5-minute schedule drives everything; skip the half-hourly one to avoid overlap.
+              if [ "${{ github.event.schedule }}" = "7,37 * * * *" ]; then run=0; fi
+              # Full (slow) refresh twice an hour, fast refresh otherwise.
+              if [ "$minute" != "00" ] && [ "$minute" != "30" ]; then fast=1; fi
+            else
+              # Outside the window the 5-minute schedule does nothing.
+              if [ "${{ github.event.schedule }}" = "*/5 * * * 3-6 11" ]; then run=0; fi
+            fi
+          else
+            fast="${{ github.event.inputs.fast || '0' }}"
+          fi
+          echo "run=$run" >> "$GITHUB_OUTPUT"
+          echo "fast=$fast" >> "$GITHUB_OUTPUT"
+          echo "run=$run fast=$fast"
+
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.run == '1'
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        if: steps.gate.outputs.run == '1'
+        with:
+          python-version: "3.12"
+
+      - name: Collect individual polls (Wikipedia tables)
+        if: steps.gate.outputs.run == '1' && steps.gate.outputs.fast == '0'
+        run: python scripts/polls.py || echo "poll collection failed; continuing with previous data"
+        timeout-minutes: 6
+
+      - name: Build live.json
+        if: steps.gate.outputs.run == '1'
+        env:
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          FAST_MODE: ${{ steps.gate.outputs.fast }}
+        run: python scripts/refresh.py
+
+      - name: Commit data
+        if: steps.gate.outputs.run == '1'
+        run: |
+          git config user.name "midterms-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git commit -m "data: refresh $(date -u +'%Y-%m-%d %H:%M UTC')" -q
+          # Retry the push in case another run landed first.
+          for i in 1 2 3; do
+            git push && break
+            git pull --rebase -q && sleep 3
+          done
