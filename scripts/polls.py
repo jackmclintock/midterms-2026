@@ -740,7 +740,7 @@ def classify_table(table: dict, notes: dict) -> dict | None:
             cols["sample"] = i
         elif cols["moe"] is None and "margin" in h and "error" in h:
             cols["moe"] = i
-        elif cols["round"] is None and "round" in h:
+        elif cols["round"] is None and re.fullmatch(r"(rcv\s*)?rounds?(\s*#)?|round\s*\d*|rcv", h):
             cols["round"] = i
         elif cols["sponsor"] is None and "sponsor" in h:
             cols["sponsor"] = i
@@ -895,7 +895,7 @@ def choose_main_tables(tables: list[dict]) -> list[dict]:
     if not general:
         general = [t for t in tables if not is_primary_section(t["section"])]
     if not general:
-        general = tables
+        return []  # only primary/convention polling on the page
     with_polls = [t for t in general if t["polls"]] or general
 
     def latest(t):
@@ -937,16 +937,14 @@ def pick_main_candidates(candidates: list[dict], polls: list[dict]):
 
     real = [c for c in candidates if "generic" not in c["name"].lower()
             and c["name"].lower() != "someone else"] or list(candidates)
-    reps = [c for c in real if c["party"] == "R"]
     non_r = [c for c in real if c["party"] != "R"]
     # The Democrat is normally the strongest non-Republican; where an independent
     # is the real challenger (NE, MT, ID, SD) the independent wins this contest.
     a = max(non_r, key=strength) if non_r else None
-    b = max(reps, key=strength) if reps else None
-    if b is None:
-        rest = [c for c in real if c is not a]
-        if rest:
-            b = max(rest, key=strength)
+    # The opponent is the strongest remaining candidate: normally the Republican,
+    # but e.g. an independent when the Republican is a distant third (RI governor).
+    rest = [c for c in real if c is not a]
+    b = max(rest, key=strength) if rest else None
     return a, b
 
 
@@ -1037,6 +1035,11 @@ def compute_average(polls: list[dict], a: dict | None, b: dict | None, today: da
         avg["opp"] = round(vb, 1)
         avg["opp_party"] = b["party"] or "I"
         avg["opp_name"] = b["name"]
+        if candidates:
+            rep = next((c for c in candidates if c["party"] == "R" and c["name"] in shares), None)
+            if rep is not None:
+                avg["rep"] = shares[rep["name"]]  # informational: the Republican is not the main opponent
+                avg["rep_name"] = rep["name"]
     avg["candidates"] = shares
     return avg
 

@@ -5,7 +5,10 @@ on:
     # Normal cadence: every 30 minutes (UTC). GitHub may delay scheduled runs by several minutes.
     - cron: "7,37 * * * *"
     # Election week: every 5 minutes from 3 Nov 10:00 UTC through 6 Nov. The job exits early outside that window.
-    - cron: "*/5 * * * 3-6 11"
+    - cron: "*/5 * 3-6 11 *"
+  push:
+    branches: [main]
+    paths: [".github/workflows/refresh.yml", "scripts/**", "data/seed/**"]
   workflow_dispatch:
     inputs:
       fast:
@@ -42,7 +45,7 @@ jobs:
               if [ "$minute" != "00" ] && [ "$minute" != "30" ]; then fast=1; fi
             else
               # Outside the window the 5-minute schedule does nothing.
-              if [ "${{ github.event.schedule }}" = "*/5 * * * 3-6 11" ]; then run=0; fi
+              if [ "${{ github.event.schedule }}" = "*/5 * 3-6 11 *" ]; then run=0; fi
             fi
           else
             fast="${{ github.event.inputs.fast || '0' }}"
