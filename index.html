@@ -19,13 +19,14 @@
       <span class="spacer"></span>
       <span class="meta" id="updated"></span>
       <div class="seg" id="tzseg" title="Time zone for all times shown">
-        <button data-tz="America/New_York" class="on">ET</button>
-        <button data-tz="Asia/Riyadh">Riyadh</button>
+        <button data-tz="et" class="on">ET</button>
+        <button data-tz="local">Local</button>
       </div>
       <button class="iconbtn" id="themebtn" title="Toggle dark mode">◐</button>
     </div>
     <nav class="tabs" id="tabs">
       <a href="#overview" class="active">Overview</a>
+      <a href="#map">Map</a>
       <a href="#night" id="tab-night">Election night</a>
       <a href="#senate">Senate</a>
       <a href="#house">House</a>
@@ -49,6 +50,11 @@
       <div class="kpis" id="kpis" style="margin-top:12px"></div>
     </section>
 
+    <section class="block" id="map">
+      <div class="head"><h2>Map</h2><span class="sub" id="map-sub">Senate, House and governors. Colour is the projected winner, arrows are the shift against expectations.</span></div>
+      <div class="card" id="map-body"></div>
+    </section>
+
     <section class="block" id="night">
       <div class="head"><h2>Election night</h2><span class="sub" id="night-sub"></span></div>
       <div id="night-body"></div>
@@ -70,7 +76,7 @@
       <div class="grid two" id="house-mid" style="margin-top:12px"></div>
       <div class="filters" style="margin-top:12px">
         <input type="search" id="house-q" placeholder="Filter by district, state or candidate">
-        <div class="seg" id="house-filter"><button data-f="comp" class="on">Competitive</button><button data-f="flip">Likely flips</button><button data-f="called">Called</button></div>
+        <div class="seg" id="house-filter"><button data-f="comp" class="on">Competitive</button><button data-f="flip">Likely flips</button><button data-f="called">Called</button><button data-f="all">All 435</button></div>
       </div>
       <div class="tablewrap" id="house-table"></div>
     </section>
@@ -114,6 +120,7 @@
 </main>
 <footer><div class="wrap" id="foot"></div></footer>
 <div class="tip" id="tip"></div>
+<script src="assets/map.js"></script>
 <script src="assets/app.js"></script>
 </body>
 </html>

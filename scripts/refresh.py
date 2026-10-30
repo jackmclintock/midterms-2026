@@ -594,7 +594,7 @@ def our_average(polls: list[dict], ref: Optional[date] = None, window_days: int 
         dup = seen_pollsters.get(key, 0)
         seen_pollsters[key] = dup + 1
         w = recency_weight(p["end"], ref) * math.sqrt(min(float(p.get("n") or 600), 1500) / 600.0) * (1.0 if dup == 0 else 0.3)
-        if p.get("partisan") or p.get("internal"):
+        if p.get("partisan") or p.get("internal") or p.get("lean"):
             w *= 0.5
         a = p.get("ind") if main_i else p.get("dem")
         if a is None:

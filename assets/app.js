@@ -19,7 +19,9 @@
   };
   const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
-  const STATE = { tz: localStorage.getItem('tz') || 'America/New_York', senateFilter: 'comp', houseFilter: 'comp', govFilter: 'comp' };
+  const LOCAL_TZ = (() => { try { return Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC'; } catch (e) { return 'UTC'; } })();
+  const ET = 'America/New_York';
+  const STATE = { tz: (localStorage.getItem('tz') === 'local' && LOCAL_TZ !== ET) ? LOCAL_TZ : ET, senateFilter: 'comp', houseFilter: 'comp', govFilter: 'comp' };
   let D = null, P = null, H = null, T = null;
   const ELECTION = new Date('2026-11-03T23:00:00Z'); // first polls close 6pm ET
 
@@ -49,7 +51,12 @@
     return d.toLocaleString('en-US', Object.assign({ timeZone: STATE.tz, hour: 'numeric', minute: '2-digit' }, opts || {}));
   };
   const fmtDateTime = (iso) => fmtTime(iso, { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
-  const tzShort = () => (STATE.tz === 'Asia/Riyadh' ? 'Riyadh' : 'ET');
+  const tzAbbrev = (tz) => {
+    if (tz === ET) return 'ET';
+    try { const part = new Intl.DateTimeFormat('en-US', { timeZone: tz, timeZoneName: 'short' }).formatToParts(new Date()).find((x) => x.type === 'timeZoneName'); return part ? part.value : tz; } catch (e) { return tz; }
+  };
+  const tzShort = () => tzAbbrev(STATE.tz);
+  const otherTz = () => (STATE.tz === ET ? LOCAL_TZ : ET);
   const ago = (iso) => {
     if (!iso) return '';
     const s = (Date.now() - new Date(iso).getTime()) / 1000;
@@ -265,7 +272,7 @@
     } else { pill.textContent = 'Final results'; }
     $('#updated').textContent = `Updated ${ago(D.generated_at)} · ${fmtDateTime(D.generated_at)} ${tzShort()}`;
     $('#tab-night').textContent = phase === 'pre' ? 'Election night guide' : 'Election night';
-    $$('#tzseg button').forEach((b) => b.classList.toggle('on', b.dataset.tz === STATE.tz));
+    $$('#tzseg button').forEach((b) => { b.classList.toggle('on', (b.dataset.tz === 'local') === (STATE.tz !== ET)); if (b.dataset.tz === 'local') { b.textContent = LOCAL_TZ === ET ? 'Local (ET)' : 'Local ' + tzAbbrev(LOCAL_TZ); } });
   }
 
   // --------------------------------------------------------- hero / summary
@@ -397,11 +404,12 @@
       const mv = [r.market.polymarket_dem, r.market.kalshi_dem].filter((x) => x != null);
       if (mv.length) tags.push(h('span', { class: 'tag' }, `Markets ${pctProb(mv.reduce((a, b) => a + b, 0) / mv.length)} ${indMain ? 'I' : 'D'}`));
     }
+    if (isFlip(r)) tags.unshift(h('span', { class: 'tag flip' }, `FLIP ${r.incumbent_party} → ${favD ? (indMain ? 'I' : 'D') : 'R'}`));
     let callTag = null;
     if (live.call === 'called' && live.winner) callTag = h('span', { class: 'tag called' }, `✓ ${live.winner} (${live.winner_party})`);
     else if (live.call === 'runoff') callTag = h('span', { class: 'tag called' }, 'Runoff');
     else if (live.eevp > 0) callTag = h('span', { class: 'tag ' + marginClass(live.margin) }, `${live.eevp}% in · ${marginTxt(live.margin, 1)}`);
-    const card = h('div', { class: 'race', onclick: (e) => { if (e.target.closest('a')) return; card.classList.toggle('open'); } },
+    const card = h('div', { class: 'race', id: `race-${kind}-${r.postal}${r.special ? '-S' : ''}`, onclick: (e) => { if (e.target.closest('a')) return; card.classList.toggle('open'); } },
       h('div', { class: 'who' }, h('span', { class: 'st' }, stLabel), callTag,
         h('div', { class: 'cands', style: 'flex-basis:100%' },
           r.dem ? h('b', { style: 'color:var(--dem)' }, r.dem) : null, r.dem ? ' (D) vs ' : '',
@@ -561,7 +569,7 @@
       const rt = d.ratings || {};
       const l = d.live || {};
       tb.append(h('tr', null,
-        h('td', null, h('b', null, d.id), d.incumbent ? h('div', { class: 'muted', style: 'font-size:11px' }, `${d.incumbent} (${d.incumbent_party})`) : (d.incumbent_party ? h('div', { class: 'muted', style: 'font-size:11px' }, `${d.incumbent_party}-held`) : null)),
+        h('td', null, h('b', null, d.id), isFlip(d) ? h('span', { class: 'tag flip', style: 'margin-left:6px' }, 'FLIP') : null, d.incumbent ? h('div', { class: 'muted', style: 'font-size:11px' }, `${d.incumbent} (${d.incumbent_party})`) : (d.incumbent_party ? h('div', { class: 'muted', style: 'font-size:11px' }, `${d.incumbent_party}-held`) : null)),
         h('td', null, d.dem ? h('span', { class: 'd' }, d.dem) : '', d.dem && d.rep ? ' v ' : '', d.rep ? h('span', { class: 'rp' }, d.rep) : ''),
         h('td', null, ['cook', 'sabato', 'inside', 'nyt'].filter((k) => rt[k]).map((k) => h('span', { class: 'tag ' + ratingClass(rt[k]), style: 'margin-right:3px' }, `${k === 'nyt' ? 'NYT' : k[0].toUpperCase() + k.slice(1)} ${ratingLabel(rt[k])}`))),
         h('td', { class: 'r' }, d.pvi || '–'),
@@ -648,6 +656,8 @@
     if (hs.markets && hs.markets.polymarket_dem != null) houRows.push({ source: 'Polymarket (live)', dem_control: hs.markets.polymarket_dem, as_of: D.generated_at.slice(0, 10), url: 'https://polymarket.com/event/which-party-will-win-the-house-in-2026' });
     if (hs.markets && hs.markets.kalshi_dem != null) houRows.push({ source: 'Kalshi (live)', dem_control: hs.markets.kalshi_dem, as_of: D.generated_at.slice(0, 10) });
     const mkTable = (rows, seatLabel) => {
+      // Drop the seed snapshot of a market when a live reading exists.
+      for (const m of ['Polymarket', 'Kalshi']) if (rows.some((r) => r.source === m + ' (live)')) rows = rows.filter((r) => r.source !== m);
       const tbl = h('table', null, h('thead', null, h('tr', null, h('th', null, 'Source'), h('th', { class: 'r' }, 'D control'), h('th', { class: 'r' }, seatLabel), h('th', null, 'As of'))));
       const tb = h('tbody');
       for (const r of rows.filter((r) => r.dem_control != null).sort((a, b) => b.dem_control - a.dem_control)) tb.append(h('tr', null, h('td', null, r.url ? h('a', { href: r.url, target: '_blank', rel: 'noopener' }, r.source) : r.source), h('td', { class: 'r' }, h('span', { class: r.dem_control >= 0.5 ? 'd' : 'rp' }, pctProb(r.dem_control))), h('td', { class: 'r' }, r.dem_seats_median != null ? Number(r.dem_seats_median).toFixed(0) : '–'), h('td', null, r.as_of || '')));
@@ -794,7 +804,7 @@
         const isNext = !past && !nextMarked; if (isNext) nextMarked = true;
         const hot = sts.filter((s) => comp.has(s + 'S') || comp.has(s + 'G'));
         list.append(h('div', { class: 'c' + (past && live ? ' past' : '') + (isNext && live ? ' next' : '') },
-          h('div', { class: 't' }, `${fmtTime(t)} ${tzShort()}`, h('span', { class: 'muted', style: 'font-weight:400;font-size:11px' }, ` · ${new Date(t).toLocaleTimeString('en-US', { timeZone: STATE.tz === 'Asia/Riyadh' ? 'America/New_York' : 'Asia/Riyadh', hour: 'numeric', minute: '2-digit' })} ${STATE.tz === 'Asia/Riyadh' ? 'ET' : 'Riyadh'}`)),
+          h('div', { class: 't' }, `${fmtTime(t)} ${tzShort()}`, h('span', { class: 'muted', style: 'font-weight:400;font-size:11px' }, otherTz() === STATE.tz ? '' : ` · ${new Date(t).toLocaleTimeString('en-US', { timeZone: otherTz(), hour: 'numeric', minute: '2-digit' })} ${tzAbbrev(otherTz())}`)),
           h('div', { class: 'sts' }, sts.map((s) => h('span', { class: 'tag ' + ((comp.has(s + 'S') || comp.has(s + 'G')) ? 't' : ''), style: 'margin:2px 2px 0 0' + ((senStates.has(s) || govStates.has(s)) ? ';font-weight:600' : '') }, s))),
           hot.length ? h('div', { class: 'muted', style: 'font-size:11px;margin-top:4px' }, `Watch: ${hot.join(', ')}`) : null));
       }
@@ -839,16 +849,34 @@
     $('#foot').innerHTML = `Midterms 2026 · data generated ${esc(fmtDateTime(D.generated_at))} ${tzShort()} · seed data as of ${esc(D.seed_as_of && D.seed_as_of.senate || '')} · <a href="https://github.com/jackmclintock/midterms-2026" target="_blank" rel="noopener">Source on GitHub</a>`;
   }
 
+  // ------------------------------------------------------------------ map
+  function renderMap() {
+    if (!window.MidtermsMap) return;
+    window.MidtermsMap.render(D, $('#map-body'), (office, r) => {
+      if (office === 'house') {
+        STATE.houseFilter = 'all'; $$('#house-filter button').forEach((x) => x.classList.toggle('on', x.dataset.f === 'all'));
+        $('#house-q').value = r.id; renderHouse();
+        document.getElementById('house').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return;
+      }
+      const kind = office === 'senate' ? 'senate' : 'gov';
+      if (kind === 'senate') { STATE.senateFilter = 'all'; $$('#senate-filter button').forEach((x) => x.classList.toggle('on', x.dataset.f === 'all')); $('#senate-q').value = ''; renderSenate(); }
+      else { STATE.govFilter = 'all'; $$('#gov-filter button').forEach((x) => x.classList.toggle('on', x.dataset.f === 'all')); renderGovernors(); }
+      const card = document.getElementById(`race-${kind}-${r.postal}${r.special ? '-S' : ''}`);
+      if (card) { card.classList.add('open'); card.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    }).catch((e) => console.error('map', e));
+  }
+
   // --------------------------------------------------------------- render
   function render() {
-    try { renderHeader(); renderHero(); renderNight(); renderSenate(); renderHouse(); renderGovernors(); renderPolls(); renderModels(); renderHistory(); renderNews(); renderMethod(); }
+    try { renderHeader(); renderHero(); renderMap(); renderNight(); renderSenate(); renderHouse(); renderGovernors(); renderPolls(); renderModels(); renderHistory(); renderNews(); renderMethod(); }
     catch (e) { console.error(e); $('#loading').textContent = 'Render error: ' + e.message; $('#loading').classList.remove('hide'); }
     $('#loading').classList.add('hide'); $('#app').classList.remove('hide');
   }
 
   // ---------------------------------------------------------------- wiring
   function wire() {
-    $$('#tzseg button').forEach((b) => b.addEventListener('click', () => { STATE.tz = b.dataset.tz; try { localStorage.setItem('tz', STATE.tz); } catch (e) {} render(); }));
+    $$('#tzseg button').forEach((b) => b.addEventListener('click', () => { STATE.tz = b.dataset.tz === 'local' ? LOCAL_TZ : ET; try { localStorage.setItem('tz', b.dataset.tz); } catch (e) {} render(); }));
     $('#themebtn').addEventListener('click', () => {
       const cur = document.documentElement.getAttribute('data-theme');
       const dark = cur ? cur === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;

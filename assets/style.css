@@ -241,7 +241,7 @@ tbody tr:hover td { background: color-mix(in srgb, var(--surface-2) 60%, transpa
 
 /* Toggle */
 .seg { display: inline-flex; border: 1px solid var(--line-strong); border-radius: 8px; overflow: hidden; }
-.seg button { border: 0; background: transparent; padding: 5px 10px; font-size: 12px; cursor: pointer; color: var(--ink-2); }
+.seg button { border: 0; background: transparent; padding: 5px 10px; font-size: 12px; cursor: pointer; color: var(--ink-2); white-space: nowrap; }
 .seg button.on { background: var(--ink); color: var(--bg); }
 
 .filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0 0 10px; }
@@ -261,3 +261,16 @@ details summary { cursor: pointer; font-weight: 600; }
   .top .meta { order: 10; flex-basis: 100%; font-size: 11px; padding-bottom: 2px; }
   .hero-num .big { font-size: 38px; } .race .prob { min-width: 70px; }
 }
+
+/* Map */
+.mapbox { width: 100%; position: relative; touch-action: none; }
+.mapbox svg { width: 100%; height: auto; display: block; cursor: grab; }
+.mapbox svg:active { cursor: grabbing; }
+.usmap .st.has { cursor: pointer; }
+.usmap .st.has:hover { stroke: var(--ink); stroke-width: 1.6; }
+.usmap .dist { cursor: pointer; }
+.usmap .dist:hover { stroke: var(--ink); stroke-width: 1.2; }
+.usmap .map-lbl { fill: var(--ink); font-family: var(--font); font-weight: 600; pointer-events: none; paint-order: stroke; stroke: var(--surface); stroke-width: 2.5px; stroke-linejoin: round; }
+.usmap .shift { cursor: help; }
+.sw.hatched { background: repeating-linear-gradient(45deg, var(--dem) 0 2px, var(--surface) 2px 4px, var(--rep) 4px 6px, var(--surface) 6px 8px); border: 1px solid var(--line-strong); }
+.tag.flip { background: repeating-linear-gradient(45deg, var(--surface-2) 0 3px, var(--surface) 3px 6px); border-color: var(--ink-3); font-weight: 700; }
