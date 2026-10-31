@@ -217,18 +217,45 @@
       }
     }
 
-    // pan + zoom
-    let drag = null;
-    svg.addEventListener('pointerdown', (e) => { drag = { x: e.clientX, y: e.clientY, v: STATE.view.slice() }; svg.setPointerCapture(e.pointerId); });
+    // pan (mouse always; touch only once zoomed in, so the page still scrolls) + pinch zoom
+    const zoomed = STATE.view[2] < (vw + 135) * 0.95;
+    container.classList.toggle('zoomed', zoomed);
+    const pointers = new Map();
+    let drag = null, pinch = null;
+    svg.addEventListener('pointerdown', (e) => {
+      pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      if (pointers.size === 2) {
+        const [a, b] = [...pointers.values()];
+        pinch = { d: Math.hypot(a.x - b.x, a.y - b.y), v: STATE.view.slice() }; drag = null;
+      } else if (e.pointerType === 'mouse' || zoomed) {
+        drag = { x: e.clientX, y: e.clientY, v: STATE.view.slice() };
+        try { svg.setPointerCapture(e.pointerId); } catch (err) {}
+      }
+    });
     svg.addEventListener('pointermove', (e) => {
-      if (!drag) return;
+      if (pointers.has(e.pointerId)) pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
       const rect = svg.getBoundingClientRect();
+      if (pinch && pointers.size === 2) {
+        const [a, b] = [...pointers.values()];
+        const d = Math.hypot(a.x - b.x, a.y - b.y) || 1;
+        const f = Math.max(0.5, Math.min(2.5, d / pinch.d));
+        const cx = pinch.v[0] + pinch.v[2] / 2, cy = pinch.v[1] + pinch.v[3] / 2;
+        const w = pinch.v[2] / f, hh = pinch.v[3] / f;
+        STATE.view = [cx - w / 2, cy - hh / 2, w, hh];
+        svg.setAttribute('viewBox', STATE.view.join(' '));
+        return;
+      }
+      if (!drag) return;
       const k = STATE.view[2] / rect.width;
       STATE.view[0] = drag.v[0] - (e.clientX - drag.x) * k; STATE.view[1] = drag.v[1] - (e.clientY - drag.y) * k;
       svg.setAttribute('viewBox', STATE.view.join(' '));
     });
-    const end = () => { drag = null; };
-    svg.addEventListener('pointerup', end); svg.addEventListener('pointercancel', end);
+    const end = (e) => {
+      pointers.delete(e.pointerId);
+      if (pinch && pointers.size < 2) { pinch = null; build(container, D, onPick); return; }
+      drag = null;
+    };
+    svg.addEventListener('pointerup', end); svg.addEventListener('pointercancel', end); svg.addEventListener('pointerleave', (e) => { if (e.pointerType === 'mouse') end(e); });
     container.innerHTML = '';
     container.appendChild(svg);
     return { arrowsMode };
@@ -266,9 +293,9 @@
     legend.append(sw('var(--dem)', 'Democrat favoured'), sw('var(--dem)', 'leaning D', 0.4), sw('var(--rep)', 'leaning R', 0.4), sw('var(--rep)', 'Republican favoured'), sw('var(--ind)', 'Independent favoured'), sw('var(--surface-2)', STATE.office === 'house' ? 'squares are districts' : 'no race'));
     const flipSw = document.createElement('span'); flipSw.innerHTML = '<i class="sw hatched"></i>hatched = projected to change party'; legend.append(flipSw);
     const note = document.createElement('div'); note.className = 'muted'; note.style.cssText = 'font-size:12px;margin-top:6px';
-    note.textContent = arrowsMode === 'off' ? 'Click a state or district to jump to the race. Drag to pan.' :
-      arrowsMode === 'expected' ? 'Arrows: how the count so far compares with our expected result for that seat. Left and blue means the Democrat is running ahead of expectations, right and red the Republican. Longer is bigger. Click a state or district to jump to the race. Drag to pan.' :
-        'Arrows: how our expected result for the seat compares with the 2024 presidential vote there. Left and blue means a shift toward Democrats, right and red toward Republicans. Once votes are in, the arrows switch to results versus expectations. Click a state or district to jump to the race. Drag to pan.';
+    note.textContent = arrowsMode === 'off' ? 'Tap a state or district to jump to the race. Pinch or use + to zoom, then drag to pan.' :
+      arrowsMode === 'expected' ? 'Arrows: how the count so far compares with our expected result for that seat. Left and blue means the Democrat is running ahead of expectations, right and red the Republican. Longer is bigger. Tap a state or district to jump to the race. Pinch or use + to zoom, then drag to pan.' :
+        'Arrows: how our expected result for the seat compares with the 2024 presidential vote there. Left and blue means a shift toward Democrats, right and red toward Republicans. Once votes are in, the arrows switch to results versus expectations. Tap a state or district to jump to the race. Pinch or use + to zoom, then drag to pan.';
     if (STATE.office === 'house') note.textContent += ' Zoom in for per-district arrows.';
     host.appendChild(legend); host.appendChild(note);
   }

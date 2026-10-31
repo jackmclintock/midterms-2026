@@ -127,9 +127,29 @@ def main() -> int:
     out = Path(a.out)
     (out / "data" / "seed").mkdir(parents=True, exist_ok=True)
     (out / "data" / "live.json").write_text(json.dumps(sim, separators=(",", ":")))
-    for f in ("polls_combined.json", "timeseries.json"):
-        if (ROOT / "data" / f).exists():
-            shutil.copy(ROOT / "data" / f, out / "data" / f)
+    if (ROOT / "data" / "polls_combined.json").exists():
+        shutil.copy(ROOT / "data" / "polls_combined.json", out / "data" / "polls_combined.json")
+    # Synthetic time series: pre-election points every 30 min for two days, then every 5 min through the night,
+    # drifting from the pre-election odds to the simulated odds as the count comes in.
+    pre_s, pre_h, pre_g = live["senate"]["summary"]["p_dem_control"], live["house"]["summary"]["p_dem_control"], live["governors"]["summary"]["p_dem_control"]
+    cur_s, cur_h, cur_g = sim["senate"]["summary"]["p_dem_control"], sim["house"]["summary"]["p_dem_control"], sim["governors"]["summary"]["p_dem_control"]
+    pts = []
+    t = datetime(2026, 11, 1, 12, 0, tzinfo=timezone.utc)
+    close = datetime(2026, 11, 3, 23, 0, tzinfo=timezone.utc)
+    while t <= now:
+        if t < close:
+            frac = 0.0
+            step = timedelta(minutes=30)
+        else:
+            frac = min(1.0, ((t - close).total_seconds() / 3600) / max(0.5, a.hours)) ** 0.7
+            step = timedelta(minutes=5)
+        wob = lambda base, cur, k: max(0.01, min(0.99, base + (cur - base) * frac + rng.gauss(0, 0.012 + 0.05 * frac * (1 - frac)) * k))
+        ps, ph, pg = wob(pre_s, cur_s, 1), wob(pre_h, cur_h, 0.6), wob(pre_g, cur_g, 1)
+        pts.append({"t": t.isoformat(timespec="minutes"), "sen_model": round(ps, 3), "hou_model": round(ph, 3), "gov_model": round(pg, 3),
+                    "sen_poly": round(max(0.01, min(0.99, ps + 0.02 + rng.gauss(0, 0.015))), 3), "hou_poly": round(max(0.01, min(0.99, ph + 0.04 + rng.gauss(0, 0.01))), 3),
+                    "gb": 8.5, "sen_exp": None, "hou_exp": None})
+        t += step
+    (out / "data" / "timeseries.json").write_text(json.dumps({"points": pts}, separators=(",", ":")))
     shutil.copy(ROOT / "data" / "seed" / "history.json", out / "data" / "seed" / "history.json")
     shutil.copy(ROOT / "index.html", out / "index.html")
     if (out / "assets").exists():

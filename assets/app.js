@@ -62,7 +62,7 @@
     const s = (Date.now() - new Date(iso).getTime()) / 1000;
     if (s < 90) return 'just now';
     if (s < 3600) return Math.round(s / 60) + ' min ago';
-    if (s < 86400) return (s / 3600).toFixed(1) + ' h ago';
+    if (s < 86400) return (s < 7200 ? (s / 3600).toFixed(1) : Math.round(s / 3600)) + ' h ago';
     return Math.round(s / 86400) + ' d ago';
   };
   const partyName = (p) => ({ D: 'Democrat', R: 'Republican', I: 'Independent', O: 'Other' }[p] || p);
@@ -264,15 +264,18 @@
     const pill = $('#phasepill'), dot = $('#livedot');
     pill.className = 'pill'; dot.className = 'dot';
     const now = Date.now();
+    const narrow = window.innerWidth <= 640;
     if (phase === 'pre') {
       const days = Math.max(0, (ELECTION - now) / 86400000);
-      pill.textContent = days >= 1 ? `${Math.ceil(days)} day${Math.ceil(days) === 1 ? '' : 's'} to polls closing` : `${Math.max(1, Math.round(days * 24))} hours to first polls closing`;
+      pill.textContent = days >= 1 ? `${Math.ceil(days)} day${Math.ceil(days) === 1 ? '' : 's'} to ${narrow ? 'go' : 'polls closing'}` : `${Math.max(1, Math.round(days * 24))} h to ${narrow ? 'go' : 'first polls closing'}`;
     } else if (phase === 'live') {
-      pill.textContent = 'LIVE RESULTS'; pill.classList.add('live'); dot.classList.add('live');
+      pill.textContent = narrow ? 'LIVE' : 'LIVE RESULTS'; pill.classList.add('live'); dot.classList.add('live');
     } else { pill.textContent = 'Final results'; }
-    $('#updated').textContent = `Updated ${ago(D.generated_at)} · ${fmtDateTime(D.generated_at)} ${tzShort()}`;
+    const upd = `Updated ${ago(D.generated_at)} · ${fmtDateTime(D.generated_at)} ${tzShort()}`;
+    $('#updated').textContent = upd;
+    const ui = $('#updated-inline'); if (ui) ui.textContent = upd + (D.phase === 'live' ? ' · refreshes every 5 minutes' : ' · refreshes every 30 minutes');
     $('#tab-night').textContent = phase === 'pre' ? 'Election night guide' : 'Election night';
-    $$('#tzseg button').forEach((b) => { b.classList.toggle('on', (b.dataset.tz === 'local') === (STATE.tz !== ET)); if (b.dataset.tz === 'local') { b.textContent = LOCAL_TZ === ET ? 'Local (ET)' : 'Local ' + tzAbbrev(LOCAL_TZ); } });
+    $$('#tzseg button').forEach((b) => { b.classList.toggle('on', (b.dataset.tz === 'local') === (STATE.tz !== ET)); if (b.dataset.tz === 'local') { b.textContent = LOCAL_TZ === ET ? 'Local (ET)' : (window.innerWidth <= 640 ? 'Local' : 'Local ' + tzAbbrev(LOCAL_TZ)); } });
   }
 
   // --------------------------------------------------------- hero / summary
@@ -316,8 +319,50 @@
         h('span', null, live ? (leadR ? `${leadR} leading + ` : '') : 'expected ', h('b', { style: 'color:var(--rep)' }, live ? secR : Math.round(expR)))),
       h('div', { class: 'legend' }, h('span', null, h('i', { class: 'sw', style: 'background:var(--dem)' }), live ? 'D secured' : 'D not on ballot'), h('span', null, h('i', { class: 'sw', style: 'background:color-mix(in srgb, var(--dem) 45%, var(--surface))' }), live ? 'D leading' : 'D expected wins'), h('span', null, h('i', { class: 'sw', style: 'background:color-mix(in srgb, var(--rep) 45%, var(--surface))' }), live ? 'R leading' : 'R expected wins'), h('span', null, h('i', { class: 'sw', style: 'background:var(--rep)' }), live ? 'R secured' : 'R not on ballot')),
     );
+    if (extra && extra.spark) { const sp = sparkline(extra.spark, extra.sparkMkt, p >= 0.5, extra.object === 'governorships' ? 'majority' : 'control'); if (sp) card.append(sp); }
     if (extra && extra.compare) card.append(extra.compare);
     return card;
+  }
+
+  function sparkline(key, mktKey, favD, extraLabel) {
+    if (!T || !T.points || T.points.length < 3) return null;
+    const pts = T.points.filter((p) => p[key] != null).map((p) => ({ x: +new Date(p.t), y: p[key] }));
+    if (pts.length < 3) return null;
+    const mk = mktKey ? T.points.filter((p) => p[mktKey] != null).map((p) => ({ x: +new Date(p.t), y: p[mktKey] })) : [];
+    const W = 360, Hh = 54, m = { t: 6, r: 34, b: 4, l: 2 };
+    const x0 = pts[0].x, x1 = pts[pts.length - 1].x || x0 + 1;
+    const X = (x) => m.l + ((x - x0) / Math.max(1, x1 - x0)) * (W - m.l - m.r);
+    const Y = (y) => m.t + (1 - y) * (Hh - m.t - m.b);
+    const ns = 'http://www.w3.org/2000/svg', svg = document.createElementNS(ns, 'svg');
+    svg.setAttribute('viewBox', `0 0 ${W} ${Hh}`); svg.setAttribute('preserveAspectRatio', 'xMinYMid meet');
+    const el = (tag, attrs) => { const e = document.createElementNS(ns, tag); for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v); svg.appendChild(e); return e; };
+    el('line', { class: 'mid', x1: m.l, x2: W - m.r, y1: Y(0.5), y2: Y(0.5) });
+    const half = el('text', { x: W - m.r + 7, y: Y(0.5) + 3, fill: 'var(--ink-3)' }); half.textContent = '50%';
+    const d = pts.map((p, i) => (i ? 'L' : 'M') + X(p.x).toFixed(1) + ' ' + Y(p.y).toFixed(1)).join(' ');
+    const col = favD ? 'var(--dem)' : 'var(--rep)';
+    el('path', { class: 'area', d: d + ` L${X(x1).toFixed(1)} ${Y(0.5)} L${X(x0).toFixed(1)} ${Y(0.5)} Z`, fill: col });
+    if (mk.length > 2) el('path', { class: 'mkt', d: mk.map((p, i) => (i ? 'L' : 'M') + X(p.x).toFixed(1) + ' ' + Y(p.y).toFixed(1)).join(' ') });
+    el('path', { class: 'ours', d, stroke: col });
+    const last = pts[pts.length - 1];
+    el('circle', { cx: X(last.x), cy: Y(last.y), r: 3.5, fill: col, stroke: 'var(--surface)', 'stroke-width': 2 });
+    const ty = Math.abs(Y(last.y) - Y(0.5)) < 9 ? (last.y >= 0.5 ? Y(0.5) - 7 : Y(0.5) + 12) : Y(last.y) + 4;
+    const t = el('text', { x: X(last.x) + 7, y: ty, 'font-weight': 600 }); t.textContent = Math.round(last.y * 100) + '%';
+    const hours = (x1 - x0) / 3600000;
+    const span = hours < 36 ? `${fmtTime(new Date(x0).toISOString())} to ${fmtTime(new Date(x1).toISOString())} ${tzShort()}` : `${dateFmt(x0)} to ${dateFmt(x1)}`;
+    const wrap = h('div', { class: 'spark' },
+      h('div', { class: 'lbl-row' }, h('span', null, `Chance of D ${extraLabel || 'control'} over time`), h('span', null, span)), svg,
+      mk.length > 2 ? h('div', { class: 'legend', style: 'margin-top:2px;font-size:11px' }, h('span', null, h('i', { class: 'sw', style: `background:${col}` }), 'Our model'), h('span', null, h('i', { class: 'sw', style: 'background:var(--ind)' }), 'Polymarket')) : null);
+    // hover
+    const tip = $('#tip');
+    svg.addEventListener('mousemove', (ev) => {
+      const r = svg.getBoundingClientRect(); const xv = x0 + ((ev.clientX - r.left) / r.width) * (x1 - x0);
+      let best = pts[0]; for (const p of pts) if (Math.abs(p.x - xv) < Math.abs(best.x - xv)) best = p;
+      let bm = null; for (const p of mk) if (!bm || Math.abs(p.x - xv) < Math.abs(bm.x - xv)) bm = p;
+      tip.innerHTML = `${esc(fmtDateTime(new Date(best.x).toISOString()))} ${tzShort()}<br>Our model: <b>${Math.round(best.y * 100)}%</b>` + (bm ? `<br>Polymarket: <b>${Math.round(bm.y * 100)}%</b>` : '');
+      tip.style.display = 'block'; tip.style.left = ev.pageX + 'px'; tip.style.top = ev.pageY + 'px';
+    });
+    svg.addEventListener('mouseleave', () => { tip.style.display = 'none'; });
+    return wrap;
   }
 
   function compareRows(rows) {
@@ -358,9 +403,9 @@
     const hero = $('#hero'); hero.innerHTML = '';
     const sen = D.senate.summary, hou = D.house.summary, gov = D.governors.summary;
     hero.append(
-      chamberCard('Senate', sen, { compare: senateCompare(), badge: h('span', { class: 'pill' }, `${sen.to_win.D} D or ${sen.to_win.R} R to control`) }),
-      chamberCard('House', hou, { compare: houseCompare(), badge: h('span', { class: 'pill' }, '218 to control') }),
-      chamberCard('Governors', gov, { verb: 'hold a majority of', object: 'governorships', badge: h('span', { class: 'pill' }, '36 races') }));
+      chamberCard('Senate', sen, { compare: senateCompare(), spark: 'sen_model', sparkMkt: 'sen_poly', badge: h('span', { class: 'pill' }, `${sen.to_win.D} D or ${sen.to_win.R} R to control`) }),
+      chamberCard('House', hou, { compare: houseCompare(), spark: 'hou_model', sparkMkt: 'hou_poly', badge: h('span', { class: 'pill' }, '218 to control') }),
+      chamberCard('Governors', gov, { verb: 'hold a majority of', object: 'governorships', spark: 'gov_model', badge: h('span', { class: 'pill' }, '36 races') }));
     const gb = D.house.generic_ballot_median;
     const sw = D.phase === 'pre' ? null : (D.senate.swing || {});
     const kp = $('#kpis'); kp.innerHTML = '';
@@ -872,24 +917,35 @@
     try { renderHeader(); renderHero(); renderMap(); renderNight(); renderSenate(); renderHouse(); renderGovernors(); renderPolls(); renderModels(); renderHistory(); renderNews(); renderMethod(); }
     catch (e) { console.error(e); $('#loading').textContent = 'Render error: ' + e.message; $('#loading').classList.remove('hide'); }
     $('#loading').classList.add('hide'); $('#app').classList.remove('hide');
+    fitHeader(); setTimeout(fitHeader, 300);
   }
 
   // ---------------------------------------------------------------- wiring
+  function fitHeader() {
+    const hd = $('header.top'); if (!hd) return;
+    const hgt = Math.ceil(hd.getBoundingClientRect().height);
+    document.body.style.paddingTop = (hgt + 10) + 'px';
+    $$('section.block').forEach((s) => { s.style.scrollMarginTop = (hgt + 8) + 'px'; });
+  }
   function wire() {
+    window.addEventListener('resize', fitHeader); window.addEventListener('orientationchange', fitHeader);
     $$('#tzseg button').forEach((b) => b.addEventListener('click', () => { STATE.tz = b.dataset.tz === 'local' ? LOCAL_TZ : ET; try { localStorage.setItem('tz', b.dataset.tz); } catch (e) {} render(); }));
+    const themeLabel = () => { const cur = document.documentElement.getAttribute('data-theme'); const dark = cur ? cur === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches; $('#themebtn').textContent = dark ? 'Light' : 'Dark'; $('#themebtn').title = dark ? 'Switch to light mode' : 'Switch to dark mode'; };
     $('#themebtn').addEventListener('click', () => {
       const cur = document.documentElement.getAttribute('data-theme');
       const dark = cur ? cur === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
       const next = dark ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', next); try { localStorage.setItem('theme', next); } catch (e) {}
+      themeLabel();
     });
     try { const t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+    themeLabel();
     const seg = (id, key, fn) => $$(`#${id} button`).forEach((b) => b.addEventListener('click', () => { STATE[key] = b.dataset.f; $$(`#${id} button`).forEach((x) => x.classList.toggle('on', x === b)); fn(); }));
     seg('senate-filter', 'senateFilter', renderSenate); seg('house-filter', 'houseFilter', renderHouse); seg('gov-filter', 'govFilter', renderGovernors);
     $('#senate-q').addEventListener('input', renderSenate); $('#house-q').addEventListener('input', renderHouse);
     // tab highlighting on scroll
     const links = $$('#tabs a');
-    const obs = new IntersectionObserver((es) => { for (const e of es) if (e.isIntersecting) links.forEach((l) => l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id)); }, { rootMargin: '-120px 0px -70% 0px' });
+    const obs = new IntersectionObserver((es) => { for (const e of es) if (e.isIntersecting) links.forEach((l) => { const on = l.getAttribute('href') === '#' + e.target.id; l.classList.toggle('active', on); if (on && l.scrollIntoView) l.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' }); }); }, { rootMargin: '-120px 0px -70% 0px' });
     $$('section.block').forEach((s) => obs.observe(s));
     document.addEventListener('visibilitychange', () => { if (!document.hidden) load(false).catch(console.error); });
   }
