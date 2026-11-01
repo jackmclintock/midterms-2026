@@ -42,8 +42,8 @@ from typing import Any, Optional
 from xml.etree import ElementTree as ET
 
 ROOT = Path(__file__).resolve().parent.parent
-DATA = ROOT / "data"
-SEED = DATA / "seed"
+DATA = Path(os.environ.get("DATA_DIR") or (ROOT / "data"))
+SEED = Path(os.environ.get("SEED_DIR") or (ROOT / "data" / "seed"))
 SOURCES = json.loads((ROOT / "scripts" / "sources.json").read_text())
 
 ELECTION_DAY = datetime(2026, 11, 3, tzinfo=timezone.utc)

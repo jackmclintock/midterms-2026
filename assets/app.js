@@ -82,12 +82,22 @@
   const stateName = (p) => STATES[p] || p;
 
   // ------------------------------------------------------------- data load
+  // Data lives on the `data` branch and is read from GitHub's raw CDN, so it updates within seconds of each
+  // refresh instead of waiting for a Pages rebuild. Locally (or if raw fails) fall back to the relative path.
+  const RAW_BASE = 'https://raw.githubusercontent.com/jackmclintock/midterms-2026/data/';
+  const qsData = new URLSearchParams(location.search).get('data');
+  const DATA_BASE = qsData === 'raw' ? RAW_BASE : qsData === 'local' ? '' : (/github\.io$/.test(location.hostname) ? RAW_BASE : '');
   async function fetchJson(path, optional) {
+    const bust = '?t=' + Math.floor(Date.now() / 30000);
+    const tryFetch = async (base) => {
+      const r = await fetch(base + path + bust, { cache: 'no-store' });
+      if (!r.ok) throw new Error(r.status + ' ' + base + path);
+      return r.json();
+    };
     try {
-      const r = await fetch(path + '?t=' + Math.floor(Date.now() / 30000), { cache: 'no-store' });
-      if (!r.ok) throw new Error(r.status + ' ' + path);
-      return await r.json();
+      return await tryFetch(DATA_BASE);
     } catch (e) {
+      if (DATA_BASE) { try { return await tryFetch(''); } catch (e2) { if (optional) return null; throw e2; } }
       if (optional) return null;
       throw e;
     }

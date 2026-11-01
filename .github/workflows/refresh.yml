@@ -7,9 +7,9 @@ name: Refresh data
 # ~5.5 hours, then dispatches a fresh copy of itself. The cron entries are only a watchdog that restarts
 # the loop if it ever dies. Concurrency keeps exactly one loop alive at a time.
 #
-# Cycle length: 10 minutes normally, 6.5 minutes during election week (GitHub Pages rebuilds the site on
-# every commit and has a soft limit of 10 builds per hour). On election night the page itself also polls
-# the results feeds directly every 30 seconds, so the site is live between commits.
+# Cycle length: 10 minutes normally, 3 minutes during election week. Data is committed to the `data` branch
+# (not main), so GitHub Pages never has to rebuild for a data refresh; the page reads the branch through the
+# raw CDN. On election night the page itself also polls the results feeds directly every 30 seconds.
 
 on:
   schedule:
@@ -32,9 +32,11 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     # Loops hold the lock; a push (validation only, no commit) uses its own group so it never waits 5 hours.
+    # Newest loop wins: a freshly dispatched loop (after a code push, a hand-over or the watchdog) replaces
+    # the running one, so the loop always runs the latest code.
     concurrency:
       group: refresh-${{ github.event_name == 'push' && 'validate' || 'loop' }}
-      cancel-in-progress: false
+      cancel-in-progress: ${{ github.event_name != 'push' }}
     timeout-minutes: 355
     env:
       TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
@@ -50,11 +52,32 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Refresh loop
+      - name: Check out the data branch
         run: |
-          set -u
           git config user.name "midterms-bot"
           git config user.email "actions@users.noreply.github.com"
+          if git ls-remote --exit-code --heads origin data >/dev/null 2>&1; then
+            git fetch -q --depth 1 origin data
+            git worktree add -q _data origin/data
+            git -C _data checkout -q -B data
+          else
+            git worktree add -q --detach _data
+            git -C _data checkout -q --orphan data
+            git -C _data rm -rq . || true
+            mkdir -p _data/data && cp -r data/. _data/data/
+            git -C _data add -A && git -C _data commit -qm "data branch: initial snapshot"
+            git -C _data push -q origin data
+          fi
+          # Seeds and the sample feed live on main; mirror them so the page can read everything from one place.
+          mkdir -p _data/data/seed && cp -r data/seed/. _data/data/seed/
+          echo "data branch ready: $(git -C _data rev-parse --short HEAD)"
+
+      - name: Refresh loop
+        env:
+          DATA_DIR: ${{ github.workspace }}/_data/data
+          SEED_DIR: ${{ github.workspace }}/data/seed
+        run: |
+          set -u
           start=$(date -u +%s)
           live_from=$(date -u -d "$LIVE_FROM" +%s)
           live_until=$(date -u -d "$LIVE_UNTIL" +%s)
@@ -63,15 +86,15 @@ jobs:
           if [ "${{ github.event_name }}" = "push" ]; then once=1; commit=0; fi
           if [ "${{ github.event.inputs.once || '0' }}" = "1" ]; then once=1; fi
           polls_last=0
-          if [ -f data/polls.json ]; then
-            polls_last=$(python3 -c "import json,datetime;d=json.load(open('data/polls.json'));print(int(datetime.datetime.fromisoformat(d['generated_at']).timestamp()))" 2>/dev/null || echo 0)
+          if [ -f "$DATA_DIR/polls.json" ]; then
+            polls_last=$(python3 -c "import json,datetime,os;d=json.load(open(os.environ['DATA_DIR']+'/polls.json'));print(int(datetime.datetime.fromisoformat(d['generated_at']).timestamp()))" 2>/dev/null || echo 0)
           fi
           cycle=0
           while true; do
             cycle=$((cycle+1))
             now=$(date -u +%s)
             if [ "$now" -ge "$live_from" ] && [ "$now" -lt "$live_until" ]; then
-              period=390; live=1
+              period=180; live=1
             else
               period=600; live=0
             fi
@@ -91,21 +114,25 @@ jobs:
             FAST_MODE=$fast timeout 600 python scripts/refresh.py || echo "refresh failed; will retry next cycle"
             echo "::endgroup::"
             if [ "$commit" = "1" ]; then
-              git add data/
-              if git diff --cached --quiet; then
+              git -C _data add -A
+              if git -C _data diff --cached --quiet; then
                 echo "no data changes"
               else
-                git commit -qm "data: refresh $(date -u +'%Y-%m-%d %H:%M UTC')"
+                git -C _data commit -qm "data: refresh $(date -u +'%Y-%m-%d %H:%M UTC')"
                 pushed=0
                 for i in 1 2 3 4; do
-                  if git push -q origin HEAD:main; then pushed=1; break; fi
-                  echo "push rejected, rebasing (attempt $i)"
-                  git fetch -q origin main
-                  # Our data files always win: they are the newest generation.
-                  git rebase -X theirs origin/main || { git rebase --abort; git reset -q --soft origin/main; git commit -qm "data: refresh $(date -u +'%Y-%m-%d %H:%M UTC')"; }
+                  if git -C _data push -q origin data; then pushed=1; break; fi
+                  echo "push rejected (attempt $i); taking ours over the remote"
+                  git -C _data fetch -q origin data
+                  git -C _data reset -q --soft origin/data
+                  git -C _data commit -qm "data: refresh $(date -u +'%Y-%m-%d %H:%M UTC')" || true
                   sleep 5
                 done
                 [ "$pushed" = "1" ] || echo "::warning::could not push this cycle"
+                # Keep the data branch from growing without bound: squash its history once a day.
+                if [ "$(date -u +%H%M)" \< "0015" ] || [ "$(git -C _data rev-list --count HEAD)" -gt 2000 ]; then
+                  git -C _data checkout -q --orphan data-squash && git -C _data commit -qm "data: snapshot $(date -u +'%Y-%m-%d %H:%M UTC')" && git -C _data branch -q -M data && git -C _data push -q --force origin data || true
+                fi
               fi
             fi
             elapsed=$(( $(date -u +%s) - start ))
@@ -128,7 +155,8 @@ jobs:
             --jq '[.[] | select((.status=="queued" or .status=="in_progress" or .status=="waiting") and .event!="push")] | length')
           me=1; [ "${{ github.event_name }}" = "push" ] && me=0
           echo "active loop runs (excluding this one): $((active - me))"
-          if [ $((active - me)) -le 0 ]; then
+          # After a code push always start a new loop (it replaces the old one); otherwise only if none is active.
+          if [ "${{ github.event_name }}" = "push" ] || [ $((active - me)) -le 0 ]; then
             gh workflow run refresh.yml --repo "$GITHUB_REPOSITORY" --ref main
             echo "dispatched next loop"
           else

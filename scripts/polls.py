@@ -61,7 +61,7 @@ TREND_WEEKS = 12
 GENERIC_TREND_START = date(2026, 1, 1)
 
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
-OUTPUT_PATH = os.path.join(REPO_ROOT, "data", "polls.json")
+OUTPUT_PATH = os.environ.get("POLLS_OUTPUT") or os.path.join(os.environ.get("DATA_DIR") or os.path.join(REPO_ROOT, "data"), "polls.json")
 
 STATE_NAMES = {
     "AL": "Alabama", "AK": "Alaska", "AZ": "Arizona", "AR": "Arkansas", "CA": "California",
