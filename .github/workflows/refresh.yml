@@ -129,6 +129,12 @@ jobs:
                   sleep 5
                 done
                 [ "$pushed" = "1" ] || echo "::warning::could not push this cycle"
+                # Purge the jsDelivr CDN so the page sees the new files immediately.
+                if [ "$pushed" = "1" ]; then
+                  curl -sS -m 30 -X POST https://purge.jsdelivr.net/ -H 'content-type: application/json' \
+                    -d '{"path":["/gh/jackmclintock/midterms-2026@data/data/live.json","/gh/jackmclintock/midterms-2026@data/data/polls_combined.json","/gh/jackmclintock/midterms-2026@data/data/polls.json","/gh/jackmclintock/midterms-2026@data/data/timeseries.json","/gh/jackmclintock/midterms-2026@data/data/seed/history.json"]}' \
+                    -o /dev/null -w "jsdelivr purge: HTTP %{http_code}\n" || echo "jsdelivr purge failed (raw CDN still updates within 5 min)"
+                fi
                 # Keep the data branch from growing without bound: squash its history once a day.
                 if [ "$(date -u +%H%M)" \< "0015" ] || [ "$(git -C _data rev-list --count HEAD)" -gt 2000 ]; then
                   git -C _data checkout -q --orphan data-squash && git -C _data commit -qm "data: snapshot $(date -u +'%Y-%m-%d %H:%M UTC')" && git -C _data branch -q -M data && git -C _data push -q --force origin data || true
