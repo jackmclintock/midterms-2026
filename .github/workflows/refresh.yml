@@ -1,98 +1,136 @@
 name: Refresh data
 
+# How this runs
+# -------------
+# GitHub's cron is unreliable (it fired every 4 to 6 hours for this repo instead of every 30 minutes),
+# so the real cadence comes from a LOOP job: one run refreshes, commits, sleeps, and repeats for up to
+# ~5.5 hours, then dispatches a fresh copy of itself. The cron entries are only a watchdog that restarts
+# the loop if it ever dies. Concurrency keeps exactly one loop alive at a time.
+#
+# Cycle length: 10 minutes normally, 6.5 minutes during election week (GitHub Pages rebuilds the site on
+# every commit and has a soft limit of 10 builds per hour). On election night the page itself also polls
+# the results feeds directly every 30 seconds, so the site is live between commits.
+
 on:
   schedule:
-    # Normal cadence: every 30 minutes (UTC). GitHub may delay scheduled runs by several minutes.
-    - cron: "7,37 * * * *"
-    # Election week: every 5 minutes from 3 Nov 10:00 UTC through 6 Nov. The job exits early outside that window.
-    - cron: "*/5 * 3-6 11 *"
+    - cron: "11,41 * * * *"          # watchdog: queues behind a running loop, starts a new one if none
   push:
     branches: [main]
     paths: [".github/workflows/refresh.yml", "scripts/**", "data/seed/**"]
   workflow_dispatch:
     inputs:
-      fast:
-        description: "Fast mode (skip slow sources)"
+      once:
+        description: "Run a single refresh cycle instead of the loop"
         required: false
         default: "0"
 
-concurrency:
-  group: refresh
-  cancel-in-progress: false
-
 permissions:
   contents: write
+  actions: write
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    # Loops hold the lock; a push (validation only, no commit) uses its own group so it never waits 5 hours.
+    concurrency:
+      group: refresh-${{ github.event_name == 'push' && 'validate' || 'loop' }}
+      cancel-in-progress: false
+    timeout-minutes: 355
+    env:
+      TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+      LIVE_FROM: "2026-11-03 10:00"
+      LIVE_UNTIL: "2026-11-07 00:00"
+      LOOP_MAX_SECONDS: "19800"      # 5.5 hours, then hand over to a fresh run
     steps:
-      - name: Decide whether this run should proceed
-        id: gate
-        run: |
-          now=$(date -u +%s)
-          live_from=$(date -u -d "2026-11-03 10:00" +%s)
-          live_until=$(date -u -d "2026-11-07 00:00" +%s)
-          minute=$(date -u +%M)
-          fast=0
-          run=1
-          if [ "${{ github.event_name }}" = "schedule" ]; then
-            if [ "$now" -ge "$live_from" ] && [ "$now" -lt "$live_until" ]; then
-              # Election window: the 5-minute schedule drives everything; skip the half-hourly one to avoid overlap.
-              if [ "${{ github.event.schedule }}" = "7,37 * * * *" ]; then run=0; fi
-              # Full (slow) refresh twice an hour, fast refresh otherwise.
-              if [ "$minute" != "00" ] && [ "$minute" != "30" ]; then fast=1; fi
-            else
-              # Outside the window the 5-minute schedule does nothing.
-              if [ "${{ github.event.schedule }}" = "*/5 * 3-6 11 *" ]; then run=0; fi
-            fi
-          else
-            fast="${{ github.event.inputs.fast || '0' }}"
-          fi
-          echo "run=$run" >> "$GITHUB_OUTPUT"
-          echo "fast=$fast" >> "$GITHUB_OUTPUT"
-          echo "minute=$minute" >> "$GITHUB_OUTPUT"
-          echo "run=$run fast=$fast"
-
       - uses: actions/checkout@v4
-        if: steps.gate.outputs.run == '1'
         with:
           fetch-depth: 1
 
       - uses: actions/setup-python@v5
-        if: steps.gate.outputs.run == '1'
         with:
           python-version: "3.12"
 
-      - name: Collect individual polls (Wikipedia tables)
-        # Hourly only (the :07 schedule, or a manual run). Wikipedia rate-limits GitHub's shared runners,
-        # so the collector gets a 5-minute budget and keeps the previous data for anything it did not reach.
-        if: steps.gate.outputs.run == '1' && steps.gate.outputs.fast == '0' && (github.event_name != 'schedule' || steps.gate.outputs.minute == '07')
-        continue-on-error: true
-        env:
-          POLLS_TIME_BUDGET: "300"
-          POLLS_ROTATE: "1"
-        run: python scripts/polls.py || echo "poll collection failed; continuing with previous data"
-        timeout-minutes: 8
-
-      - name: Build live.json
-        if: steps.gate.outputs.run == '1'
-        env:
-          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
-          FAST_MODE: ${{ steps.gate.outputs.fast }}
-        run: python scripts/refresh.py
-
-      - name: Commit data
-        if: steps.gate.outputs.run == '1'
+      - name: Refresh loop
         run: |
+          set -u
           git config user.name "midterms-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/
-          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
-          git commit -m "data: refresh $(date -u +'%Y-%m-%d %H:%M UTC')" -q
-          # Retry the push in case another run landed first.
-          for i in 1 2 3; do
-            git push && break
-            git pull --rebase -q && sleep 3
+          start=$(date -u +%s)
+          live_from=$(date -u -d "$LIVE_FROM" +%s)
+          live_until=$(date -u -d "$LIVE_UNTIL" +%s)
+          once=0
+          commit=1
+          if [ "${{ github.event_name }}" = "push" ]; then once=1; commit=0; fi
+          if [ "${{ github.event.inputs.once || '0' }}" = "1" ]; then once=1; fi
+          polls_last=0
+          if [ -f data/polls.json ]; then
+            polls_last=$(python3 -c "import json,datetime;d=json.load(open('data/polls.json'));print(int(datetime.datetime.fromisoformat(d['generated_at']).timestamp()))" 2>/dev/null || echo 0)
+          fi
+          cycle=0
+          while true; do
+            cycle=$((cycle+1))
+            now=$(date -u +%s)
+            if [ "$now" -ge "$live_from" ] && [ "$now" -lt "$live_until" ]; then
+              period=390; live=1
+            else
+              period=600; live=0
+            fi
+            # Polls from Wikipedia: hourly at most (rate limited), never on election night after polls close.
+            fast=0
+            if [ "$live" = "1" ]; then fast=1; fi
+            if [ $((now - polls_last)) -ge 3600 ] && [ "$live" = "0" -o $((now - live_from)) -lt 36000 ]; then
+              echo "::group::polls (cycle $cycle)"
+              POLLS_TIME_BUDGET=240 POLLS_ROTATE=1 timeout 330 python scripts/polls.py || echo "poll collection failed; keeping previous data"
+              echo "::endgroup::"
+              polls_last=$(date -u +%s)
+              fast=0
+            fi
+            # Full (slow) refresh at least every 30 minutes even on election night, fast otherwise.
+            if [ "$live" = "1" ] && [ $(( (now / 60) % 30 )) -lt 7 ]; then fast=0; fi
+            echo "::group::refresh (cycle $cycle, live=$live fast=$fast period=${period}s)"
+            FAST_MODE=$fast timeout 600 python scripts/refresh.py || echo "refresh failed; will retry next cycle"
+            echo "::endgroup::"
+            if [ "$commit" = "1" ]; then
+              git add data/
+              if git diff --cached --quiet; then
+                echo "no data changes"
+              else
+                git commit -qm "data: refresh $(date -u +'%Y-%m-%d %H:%M UTC')"
+                pushed=0
+                for i in 1 2 3 4; do
+                  if git push -q origin HEAD:main; then pushed=1; break; fi
+                  echo "push rejected, rebasing (attempt $i)"
+                  git fetch -q origin main
+                  # Our data files always win: they are the newest generation.
+                  git rebase -X theirs origin/main || { git rebase --abort; git reset -q --soft origin/main; git commit -qm "data: refresh $(date -u +'%Y-%m-%d %H:%M UTC')"; }
+                  sleep 5
+                done
+                [ "$pushed" = "1" ] || echo "::warning::could not push this cycle"
+              fi
+            fi
+            elapsed=$(( $(date -u +%s) - start ))
+            if [ "$once" = "1" ]; then echo "single cycle done"; break; fi
+            if [ $elapsed -ge $LOOP_MAX_SECONDS ]; then echo "loop budget reached after $cycle cycles"; break; fi
+            took=$(( $(date -u +%s) - now ))
+            wait=$(( period - took ))
+            [ $wait -lt 15 ] && wait=15
+            echo "cycle $cycle took ${took}s; sleeping ${wait}s"
+            sleep $wait
           done
+
+      - name: Hand over to a fresh loop (or start one after a push)
+        if: always() && (github.event.inputs.once || '0') != '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Only start the next loop if nothing is already queued or running for it.
+          active=$(gh run list --repo "$GITHUB_REPOSITORY" --workflow refresh.yml --json databaseId,status,event \
+            --jq '[.[] | select((.status=="queued" or .status=="in_progress" or .status=="waiting") and .event!="push")] | length')
+          me=1; [ "${{ github.event_name }}" = "push" ] && me=0
+          echo "active loop runs (excluding this one): $((active - me))"
+          if [ $((active - me)) -le 0 ]; then
+            gh workflow run refresh.yml --repo "$GITHUB_REPOSITORY" --ref main
+            echo "dispatched next loop"
+          else
+            echo "another loop is already queued; not dispatching"
+          fi

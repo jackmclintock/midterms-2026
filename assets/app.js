@@ -96,7 +96,10 @@
     const [live, polls, hist, ts] = await Promise.all([
       fetchJson('data/live.json'), fetchJson('data/polls_combined.json', true).then((x) => x || fetchJson('data/polls.json', true)),
       first ? fetchJson('data/seed/history.json', true) : Promise.resolve(H), fetchJson('data/timeseries.json', true)]);
+    // Carry client-side (in-browser) time-series points across server refreshes
+    if (T && T.points && ts && ts.points) { const serverLast = ts.points.length ? ts.points[ts.points.length - 1].t : ''; for (const pt of T.points) if (pt.client && pt.t > serverLast) ts.points.push(pt); }
     D = live; P = polls; H = hist; T = ts;
+    if (window.LiveClient) { try { window.LiveClient.reapply(D, T); } catch (e) { console.warn(e); } }
     render();
   }
 
@@ -271,9 +274,10 @@
     } else if (phase === 'live') {
       pill.textContent = narrow ? 'LIVE' : 'LIVE RESULTS'; pill.classList.add('live'); dot.classList.add('live');
     } else { pill.textContent = 'Final results'; }
-    const upd = `Updated ${ago(D.generated_at)} · ${fmtDateTime(D.generated_at)} ${tzShort()}`;
+    const cl = D.client_live;
+    const upd = cl ? `Live feed ${ago(cl.at)} · server build ${ago(D.generated_at)}` : `Updated ${ago(D.generated_at)} · ${fmtDateTime(D.generated_at)} ${tzShort()}`;
     $('#updated').textContent = upd;
-    const ui = $('#updated-inline'); if (ui) ui.textContent = upd + (D.phase === 'live' ? ' · refreshes every 5 minutes' : ' · refreshes every 30 minutes');
+    const ui = $('#updated-inline'); if (ui) ui.textContent = cl ? `${upd} · results via ${cl.source}, polled every 30 seconds` : upd + (D.phase === 'live' ? ' · server rebuilds every 6 minutes, results polled live every 30 seconds' : ' · server rebuilds every 10 minutes, markets live every minute');
     $('#tab-night').textContent = phase === 'pre' ? 'Election night guide' : 'Election night';
     $$('#tzseg button').forEach((b) => { b.classList.toggle('on', (b.dataset.tz === 'local') === (STATE.tz !== ET)); if (b.dataset.tz === 'local') { b.textContent = LOCAL_TZ === ET ? 'Local (ET)' : (window.innerWidth <= 640 ? 'Local' : 'Local ' + tzAbbrev(LOCAL_TZ)); } });
   }
@@ -421,8 +425,10 @@
     const b = $('#banner'); b.innerHTML = '';
     if (D.phase === 'live') {
       const nextClose = (D.poll_closing || []).map((c) => ({ ...c, t: new Date(c.close_utc) })).filter((c) => c.t > Date.now()).sort((a, b) => a.t - b.t);
+      const ls = window.LiveClient ? window.LiveClient.status() : null;
       b.append(h('div', { class: 'banner', style: 'margin-bottom:12px' },
         h('b', null, 'Results are live. '),
+        ls && ls.feedAt ? `Counts from the ${ls.source}, polled every 30 seconds (last ${ago(ls.feedAt)}). ` : (ls && ls.errors ? 'Waiting for the results feed to open; showing the last server build. ' : ''),
         `Polls have closed in ${(D.poll_closing || []).length - nextClose.length} states. `,
         nextClose.length ? `Next closing: ${nextClose.slice(0, 4).map((c) => c.state).join(', ')} at ${fmtTime(nextClose[0].close_utc)} ${tzShort()}. ` : 'All polls have closed. ',
         'Our projection blends the count so far with pre-election expectations and updates every few minutes.'));
@@ -950,8 +956,10 @@
     document.addEventListener('visibilitychange', () => { if (!document.hidden) load(false).catch(console.error); });
   }
 
+  window.MidtermsApp = { getD: () => D, getT: () => T, render, renderHeader };
   wire();
   load(true).then(() => {
+    if (window.LiveClient) { try { window.LiveClient.start(window.MidtermsApp); } catch (e) { console.warn('live client', e); } }
     // Refresh cadence: every 60s when live, every 5 min otherwise. Also tick the header.
     const tick = () => { if (D) renderHeader(); };
     setInterval(tick, 30000);

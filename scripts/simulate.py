@@ -84,6 +84,7 @@ def main() -> int:
     ap.add_argument("--swing", type=float, default=0.0)
     ap.add_argument("--seed", type=int, default=1)
     ap.add_argument("--out", default=str(ROOT / "rehearsal"))
+    ap.add_argument("--client", action="store_true", help="write the PRE-election server data plus a fake CNN feed, to test the in-browser live layer")
     a = ap.parse_args()
     rng = random.Random(a.seed)
     live = json.loads((ROOT / "data" / "live.json").read_text())
@@ -126,7 +127,30 @@ def main() -> int:
     sim["house"]["summary"] = {**hsum, **R.summarize_chamber(sim["house"]["districts"], 0, 0, 218, 218, 435)}
     out = Path(a.out)
     (out / "data" / "seed").mkdir(parents=True, exist_ok=True)
-    (out / "data" / "live.json").write_text(json.dumps(sim, separators=(",", ":")))
+    (out / "data" / "live.json").write_text(json.dumps(live if a.client else sim, separators=(",", ":")))
+    # Fake CNN feed in the real schema, so the browser layer can be exercised end to end.
+    def cnn_race(r, code, st, dist=None):
+        lv = r.get("live") or {}
+        total = int(lv.get("votes") or 0)
+        cands = []
+        for c in lv.get("cands") or []:
+            cands.append({"fullName": c["name"], "lastName": c["name"].split()[-1], "lastNameSlug": c.get("id"), "candidatePartyCode": {"D": "D", "R": "R"}.get(c["party"], "I"),
+                          "voteNum": int(c.get("votes") or 0), "votePercentNum": int(c.get("pct") or 0), "winner": lv.get("call") == "called" and lv.get("winner") == c["name"], "isIncumbent": bool(c.get("inc"))})
+        return {"ecKey": f"2026-{code}-{st}" + (f"-{int(dist)}" if dist else ""), "stateAbbreviation": st, "electionTitle": "General Election",
+                "raceTitle": ("Senate" if code == "SG" else "Governor" if code == "GG" else f"House {dist}") + (" Special" if r.get("special") else ""),
+                "editorialStatus": "called" if lv.get("call") == "called" else "", "percentReporting": int(lv.get("eevp") or 0), "totalVote": total,
+                "voteTimestamp": lv.get("updated"), "candidates": cands}
+    feed = out / "feed" / "national-races"
+    feed.mkdir(parents=True, exist_ok=True)
+    (feed / "2026-SG.json").write_text(json.dumps([cnn_race(r, "SG", r["postal"]) for r in sim["senate"]["races"] if r.get("live")]))
+    (feed / "2026-GG.json").write_text(json.dumps([cnn_race(r, "GG", r["postal"]) for r in sim["governors"]["races"] if r.get("live")]))
+    hg = []
+    for d in sim["house"]["districts"]:
+        if not d.get("live") or "cands" not in (d.get("live") or {}):
+            continue
+        num = "1" if d["id"].endswith("-AL") else str(int(d["id"].split("-")[1]))
+        hg.append(cnn_race(d, "HG", d["state"], num))
+    (feed / "2026-HG.json").write_text(json.dumps(hg))
     if (ROOT / "data" / "polls_combined.json").exists():
         shutil.copy(ROOT / "data" / "polls_combined.json", out / "data" / "polls_combined.json")
     # Synthetic time series: pre-election points every 30 min for two days, then every 5 min through the night,

@@ -450,6 +450,8 @@ def fetch_kalshi() -> dict:
     out: dict[str, Any] = {}
     cfg = SOURCES.get("kalshi", {})
     events = dict(cfg.get("events", {}))
+    if FAST:  # election night: chamber-level contracts only, the per-race ones take 40 s of rate-limit sleeps
+        events = {k: v for k, v in events.items() if not k.startswith(("sen_", "gov_", "hou_"))}
     base = "https://api.elections.kalshi.com/trade-api/v2/markets"
     n_ok = 0
     for key, ticker in events.items():
@@ -1225,6 +1227,13 @@ def main() -> int:
     for d in seed_house.get("competitive_districts", []):
         seed_names["hou_" + d.get("district", "").upper()] = {"dem": d.get("dem"), "rep": d.get("rep")}
     mkts = extract_market_summary(poly, kalshi, seed_names)
+    if FAST:
+        for grp in ("senate_races", "gov_races", "house_races"):
+            prev_grp = ((prev.get("markets_summary") or {}).get(grp)) or {}
+            for k, v in prev_grp.items():
+                cur = mkts[grp].setdefault(k, {})
+                for kk, vv in v.items():
+                    cur.setdefault(kk, vv)
 
     # Polls: VoteHub + CNN poll of polls + Wikipedia (from polls.py) -> our averages
     if FAST and prev_polls.get("generated_at"):
@@ -1339,6 +1348,7 @@ def main() -> int:
         "house": house,
         "governors": govs,
         "balance_of_power": mkts.get("balance_of_power"),
+        "markets_summary": {k: mkts.get(k) for k in ("senate_races", "gov_races", "house_races")},
         "markets_raw": {"polymarket": {k: {kk: vv for kk, vv in v.items() if kk != "markets"} | {"markets": v.get("markets", [])[:12]} for k, v in poly.items() if not k.startswith("hou_")},
                         "kalshi": {k: {kk: vv for kk, vv in v.items() if kk != "markets"} | {"markets": v.get("markets", [])[:12]} for k, v in kalshi.items()}},
         "poll_counts": polls.get("counts"),
