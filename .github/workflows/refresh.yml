@@ -4,8 +4,9 @@ name: Refresh data
 # -------------
 # GitHub's cron is unreliable (it fired every 4 to 6 hours for this repo instead of every 30 minutes),
 # so the real cadence comes from a LOOP job: one run refreshes, commits, sleeps, and repeats for up to
-# ~5.5 hours, then dispatches a fresh copy of itself. The cron entries are only a watchdog that restarts
-# the loop if it ever dies. Concurrency keeps exactly one loop alive at a time.
+# ~5.5 hours, then dispatches a fresh copy of itself. When new code lands on main the loop ends its cycle
+# and hands over, so the next loop runs the new code. The cron entries are only a watchdog that dispatches
+# a loop if none is alive. Nothing is ever cancelled, so the owner gets no failure or cancellation emails.
 #
 # Cycle length: 10 minutes normally, 3 minutes during election week. Data is committed to the `data` branch
 # (not main), so GitHub Pages never has to rebuild for a data refresh; the page reads the branch through the
@@ -32,11 +33,11 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     # Loops hold the lock; a push (validation only, no commit) uses its own group so it never waits 5 hours.
-    # Newest loop wins: a freshly dispatched loop (after a code push, a hand-over or the watchdog) replaces
-    # the running one, so the loop always runs the latest code.
+    # Nothing is ever cancelled (cancellations email the repo owner). The loop notices new code itself and
+    # hands over; the watchdog only dispatches a loop when none is alive.
     concurrency:
-      group: refresh-${{ github.event_name == 'push' && 'validate' || 'loop' }}
-      cancel-in-progress: ${{ github.event_name != 'push' }}
+      group: refresh-${{ github.event_name == 'push' && 'validate' || github.event_name == 'schedule' && 'watchdog' || 'loop' }}
+      cancel-in-progress: false
     timeout-minutes: 355
     env:
       TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
@@ -44,15 +45,34 @@ jobs:
       LIVE_UNTIL: "2026-11-07 00:00"
       LOOP_MAX_SECONDS: "19800"      # 5.5 hours, then hand over to a fresh run
     steps:
+      - name: Watchdog (scheduled runs only)
+        id: watchdog
+        if: github.event_name == 'schedule'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          active=$(gh run list --repo "$GITHUB_REPOSITORY" --workflow refresh.yml --json status,event \
+            --jq '[.[] | select((.status=="queued" or .status=="in_progress" or .status=="waiting") and .event=="workflow_dispatch")] | length')
+          echo "active loops: ${active:-?}"
+          if [ "${active:-0}" -ge 1 ]; then
+            echo "loop alive, nothing to do"; echo "skip=1" >> "$GITHUB_OUTPUT"
+          else
+            gh workflow run refresh.yml --repo "$GITHUB_REPOSITORY" --ref main && echo "no loop alive: dispatched one"
+            echo "skip=1" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: actions/checkout@v4
+        if: steps.watchdog.outputs.skip != '1'
         with:
           fetch-depth: 1
 
       - uses: actions/setup-python@v5
+        if: steps.watchdog.outputs.skip != '1'
         with:
           python-version: "3.12"
 
       - name: Check out the data branch
+        if: steps.watchdog.outputs.skip != '1'
         run: |
           git config user.name "midterms-bot"
           git config user.email "actions@users.noreply.github.com"
@@ -73,6 +93,7 @@ jobs:
           echo "data branch ready: $(git -C _data rev-parse --short HEAD)"
 
       - name: Refresh loop
+        if: steps.watchdog.outputs.skip != '1'
         env:
           DATA_DIR: ${{ github.workspace }}/_data/data
           SEED_DIR: ${{ github.workspace }}/data/seed
@@ -137,6 +158,10 @@ jobs:
             fi
             elapsed=$(( $(date -u +%s) - start ))
             if [ "$once" = "1" ]; then echo "single cycle done"; break; fi
+            git fetch -q origin main || true
+            if ! git diff --quiet HEAD origin/main -- scripts .github data/seed 2>/dev/null; then
+              echo "new code on main; handing over to a fresh loop"; break
+            fi
             if [ $elapsed -ge $LOOP_MAX_SECONDS ]; then echo "loop budget reached after $cycle cycles"; break; fi
             took=$(( $(date -u +%s) - now ))
             wait=$(( period - took ))
@@ -146,8 +171,7 @@ jobs:
           done
 
       - name: Hand over to a fresh loop (or start one after a push)
-        # Not on cancellation: a cancelled loop was replaced by a newer one, re-dispatching would cascade.
-        if: (success() || failure()) && (github.event.inputs.once || '0') != '1'
+        if: (success() || failure()) && github.event_name != 'schedule' && (github.event.inputs.once || '0') != '1'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -156,8 +180,7 @@ jobs:
             --jq '[.[] | select((.status=="queued" or .status=="in_progress" or .status=="waiting") and .event!="push")] | length')
           me=1; [ "${{ github.event_name }}" = "push" ] && me=0
           echo "active loop runs (excluding this one): $((active - me))"
-          # After a code push always start a new loop (it replaces the old one); otherwise only if none is active.
-          if [ "${{ github.event_name }}" = "push" ] || [ $((active - me)) -le 0 ]; then
+          if [ $((active - me)) -le 0 ]; then
             gh workflow run refresh.yml --repo "$GITHUB_REPOSITORY" --ref main
             echo "dispatched next loop"
           else
