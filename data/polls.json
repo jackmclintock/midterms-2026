@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-10-31T07:20:59+00:00",
- "as_of_date": "2026-10-31",
+ "generated_at": "2026-11-01T08:15:23+00:00",
+ "as_of_date": "2026-11-01",
  "source": "Wikipedia polling tables (aggregated by this project)",
  "method": {
   "window_days": 21,
@@ -14,11 +14,11 @@
   "url": "https://en.wikipedia.org/wiki/2026_United_States_elections",
   "fetched_via": "api",
   "avg": {
-   "margin": 8.6,
-   "n_polls": 40,
+   "margin": 8.3,
+   "n_polls": 42,
    "window_days": 21,
    "method": "last 21 days",
-   "latest_poll": "2026-10-27",
+   "latest_poll": "2026-10-30",
    "weights": {
     "recency": "exp(-days_since_end/10)",
     "sample": "sqrt(min(n,1500)/600)",
@@ -26,10 +26,26 @@
    },
    "polls_used": [
     {
+     "pollster": "ActiVote",
+     "end": "2026-10-30",
+     "n": 2000,
+     "weight": 0.084,
+     "Democratic": 53.5,
+     "Republican": 46.5
+    },
+    {
+     "pollster": "Ipsos",
+     "end": "2026-10-28",
+     "n": 1209,
+     "weight": 0.062,
+     "Democratic": 50.0,
+     "Republican": 44.0
+    },
+    {
      "pollster": "Tufts University/YouGov",
      "end": "2026-10-27",
      "n": 499,
-     "weight": 0.042,
+     "weight": 0.036,
      "Democratic": 52.0,
      "Republican": 40.0
     },
@@ -37,7 +53,7 @@
      "pollster": "Tufts University/YouGov",
      "end": "2026-10-27",
      "n": 1000,
-     "weight": 0.018,
+     "weight": 0.015,
      "Democratic": 47.0,
      "Republican": 36.0
     },
@@ -45,7 +61,7 @@
      "pollster": "Emerson College",
      "end": "2026-10-26",
      "n": 1000,
-     "weight": 0.054,
+     "weight": 0.046,
      "Democratic": 52.0,
      "Republican": 42.0
     },
@@ -53,7 +69,7 @@
      "pollster": "Harvard/Harris Poll/HarrisX",
      "end": "2026-10-26",
      "n": null,
-     "weight": 0.042,
+     "weight": 0.036,
      "Democratic": 52.0,
      "Republican": 48.0
     },
@@ -61,7 +77,7 @@
      "pollster": "The Economist/YouGov",
      "end": "2026-10-26",
      "n": 1123,
-     "weight": 0.057,
+     "weight": 0.049,
      "Democratic": 52.0,
      "Republican": 41.0
     },
@@ -69,7 +85,7 @@
      "pollster": "The Economist/YouGov",
      "end": "2026-10-26",
      "n": 1263,
-     "weight": 0.018,
+     "weight": 0.015,
      "Democratic": 50.0,
      "Republican": 41.0
     },
@@ -77,7 +93,7 @@
      "pollster": "The Economist/YouGov",
      "end": "2026-10-26",
      "n": 1430,
-     "weight": 0.019,
+     "weight": 0.016,
      "Democratic": 46.0,
      "Republican": 40.0
     },
@@ -85,7 +101,7 @@
      "pollster": "Reuters/Ipsos",
      "end": "2026-10-26",
      "n": 1164,
-     "weight": 0.058,
+     "weight": 0.05,
      "Democratic": 53.0,
      "Republican": 44.0
     },
@@ -93,7 +109,7 @@
      "pollster": "Reuters/Ipsos",
      "end": "2026-10-26",
      "n": 1280,
-     "weight": 0.018,
+     "weight": 0.016,
      "Democratic": 50.0,
      "Republican": 41.0
     },
@@ -101,7 +117,7 @@
      "pollster": "NPR/PBS/Marist University",
      "end": "2026-10-26",
      "n": null,
-     "weight": 0.042,
+     "weight": 0.036,
      "Democratic": 52.0,
      "Republican": 44.0
     },
@@ -109,7 +125,7 @@
      "pollster": "NPR/PBS/Marist University",
      "end": "2026-10-26",
      "n": 1289,
-     "weight": 0.018,
+     "weight": 0.016,
      "Democratic": 52.0,
      "Republican": 42.0
     },
@@ -117,7 +133,7 @@
      "pollster": "Cygnal (R)",
      "end": "2026-10-24",
      "n": 1500,
-     "weight": 0.054,
+     "weight": 0.046,
      "Democratic": 52.0,
      "Republican": 43.0
     },
@@ -125,7 +141,7 @@
      "pollster": "CBS/YouGov",
      "end": "2026-10-23",
      "n": 1749,
-     "weight": 0.049,
+     "weight": 0.042,
      "Democratic": 53.0,
      "Republican": 45.0
     },
@@ -133,7 +149,7 @@
      "pollster": "Echelon Insights",
      "end": "2026-10-23",
      "n": 3644,
-     "weight": 0.049,
+     "weight": 0.042,
      "Democratic": 51.0,
      "Republican": 46.0
     },
@@ -141,7 +157,7 @@
      "pollster": "Prolific",
      "end": "2026-10-22",
      "n": 713,
-     "weight": 0.03,
+     "weight": 0.026,
      "Democratic": 53.0,
      "Republican": 42.0
     },
@@ -149,7 +165,7 @@
      "pollster": "Prolific",
      "end": "2026-10-22",
      "n": 1118,
-     "weight": 0.011,
+     "weight": 0.01,
      "Democratic": 50.0,
      "Republican": 40.0
     },
@@ -157,7 +173,7 @@
      "pollster": "Clarity Campaign Labs",
      "end": "2026-10-21",
      "n": 1016,
-     "weight": 0.033,
+     "weight": 0.028,
      "Democratic": 52.0,
      "Republican": 44.0
     },
@@ -165,7 +181,7 @@
      "pollster": "ActiVote",
      "end": "2026-10-21",
      "n": 1000,
-     "weight": 0.033,
+     "weight": 0.008,
      "Democratic": 53.0,
      "Republican": 47.0
     },
@@ -173,7 +189,7 @@
      "pollster": "The Economist/YouGov",
      "end": "2026-10-20",
      "n": 1179,
-     "weight": 0.01,
+     "weight": 0.008,
      "Democratic": 52.0,
      "Republican": 43.0
     },
@@ -181,7 +197,7 @@
      "pollster": "The Economist/YouGov",
      "end": "2026-10-20",
      "n": 1312,
-     "weight": 0.01,
+     "weight": 0.009,
      "Democratic": 50.0,
      "Republican": 43.0
     },
@@ -189,7 +205,7 @@
      "pollster": "The Economist/YouGov",
      "end": "2026-10-20",
      "n": 1496,
-     "weight": 0.011,
+     "weight": 0.009,
      "Democratic": 45.0,
      "Republican": 40.0
     },
@@ -197,7 +213,7 @@
      "pollster": "Focaldata/Financial Times",
      "end": "2026-10-20",
      "n": 1594,
-     "weight": 0.036,
+     "weight": 0.031,
      "Democratic": 53.0,
      "Republican": 44.0
     },
@@ -205,7 +221,7 @@
      "pollster": "Focaldata/Financial Times",
      "end": "2026-10-20",
      "n": 1648,
-     "weight": 0.011,
+     "weight": 0.009,
      "Democratic": 51.0,
      "Republican": 41.0
     },
@@ -213,15 +229,23 @@
      "pollster": "Focaldata/Financial Times",
      "end": "2026-10-20",
      "n": 1845,
-     "weight": 0.011,
+     "weight": 0.009,
      "Democratic": 49.0,
      "Republican": 40.0
+    },
+    {
+     "pollster": "Pennsylvania State University/YouGov",
+     "end": "2026-10-20",
+     "n": 724,
+     "weight": 0.021,
+     "Democratic": 47.0,
+     "Republican": 43.0
     },
     {
      "pollster": "The Rainey Center",
      "end": "2026-10-20",
      "n": 1279,
-     "weight": 0.033,
+     "weight": 0.029,
      "Democratic": 52.0,
      "Republican": 44.0
     },
@@ -229,7 +253,7 @@
      "pollster": "Morning Consult",
      "end": "2026-10-20",
      "n": 2050,
-     "weight": 0.036,
+     "weight": 0.031,
      "Democratic": 48.0,
      "Republican": 42.0
     },
@@ -237,7 +261,7 @@
      "pollster": "Reuters/Ipsos",
      "end": "2026-10-19",
      "n": 1279,
-     "weight": 0.009,
+     "weight": 0.008,
      "Democratic": 47.0,
      "Republican": 35.0
     },
@@ -245,7 +269,7 @@
      "pollster": "Reuters/Ipsos",
      "end": "2026-10-19",
      "n": 1679,
-     "weight": 0.01,
+     "weight": 0.008,
      "Democratic": 40.0,
      "Republican": 29.0
     },
@@ -253,7 +277,7 @@
      "pollster": "The New York Times/Siena University",
      "end": "2026-10-19",
      "n": 3494,
-     "weight": 0.033,
+     "weight": 0.028,
      "Democratic": 52.0,
      "Republican": 41.0
     },
@@ -261,7 +285,7 @@
      "pollster": "The New York Times/Siena University",
      "end": "2026-10-19",
      "n": 3494,
-     "weight": 0.01,
+     "weight": 0.008,
      "Democratic": 51.0,
      "Republican": 39.0
     },
@@ -269,7 +293,7 @@
      "pollster": "CNN/SSRS",
      "end": "2026-10-18",
      "n": 1206,
-     "weight": 0.027,
+     "weight": 0.023,
      "Democratic": 49.0,
      "Republican": 39.0
     },
@@ -277,7 +301,7 @@
      "pollster": "Hart Research Associates (D)/Public Opinion Strategies (R)",
      "end": "2026-10-18",
      "n": 1000,
-     "weight": 0.024,
+     "weight": 0.021,
      "Democratic": 52.0,
      "Republican": 45.0
     },
@@ -285,7 +309,7 @@
      "pollster": "RMG Research",
      "end": "2026-10-14",
      "n": 2000,
-     "weight": 0.02,
+     "weight": 0.017,
      "Democratic": 51.0,
      "Republican": 43.0
     },
@@ -293,7 +317,7 @@
      "pollster": "ActiVote",
      "end": "2026-10-14",
      "n": 1000,
-     "weight": 0.005,
+     "weight": 0.004,
      "Democratic": 53.0,
      "Republican": 47.0
     },
@@ -301,7 +325,7 @@
      "pollster": "The Washington Post/ABC News/Ipsos",
      "end": "2026-10-13",
      "n": 2032,
-     "weight": 0.018,
+     "weight": 0.015,
      "Democratic": 52.0,
      "Republican": 44.0
     },
@@ -309,7 +333,7 @@
      "pollster": "The Economist/YouGov",
      "end": "2026-10-12",
      "n": 1403,
-     "weight": 0.005,
+     "weight": 0.004,
      "Democratic": 46.0,
      "Republican": 39.0
     },
@@ -317,7 +341,7 @@
      "pollster": "Beacon Research (D)/Shaw & Co. Research (R)",
      "end": "2026-10-12",
      "n": 1202,
-     "weight": 0.015,
+     "weight": 0.012,
      "Democratic": 54.0,
      "Republican": 45.0
     },
@@ -325,7 +349,7 @@
      "pollster": "SurveyMonkey",
      "end": "2026-10-12",
      "n": 17649,
-     "weight": 0.016,
+     "weight": 0.014,
      "Democratic": 55.0,
      "Republican": 45.0
     },
@@ -336,21 +360,13 @@
      "weight": 0.004,
      "Democratic": 50.0,
      "Republican": 43.0
-    },
-    {
-     "pollster": "Cygnal (R)",
-     "end": "2026-10-10",
-     "n": 1500,
-     "weight": 0.004,
-     "Democratic": 51.0,
-     "Republican": 42.0
     }
    ],
    "dem": 51.3,
-   "rep": 42.7,
+   "rep": 43.1,
    "candidates": {
     "Democratic": 51.3,
-    "Republican": 42.7
+    "Republican": 43.1
    }
   },
   "trend": [
@@ -566,18 +582,56 @@
    },
    {
     "week": "2026-10-19",
-    "margin": 8.7,
-    "n": 19
+    "margin": 8.5,
+    "n": 20
    },
    {
     "week": "2026-10-26",
-    "margin": 9.0,
-    "n": 11
+    "margin": 8.6,
+    "n": 13
    }
   ],
-  "n_polls": 490,
-  "n_polls_all": 721,
+  "n_polls": 493,
+  "n_polls_all": 724,
   "polls": [
+   {
+    "pollster": "ActiVote",
+    "lean": null,
+    "sponsor": null,
+    "start": "2026-10-22",
+    "end": "2026-10-30",
+    "n": 2000,
+    "pop": "LV",
+    "moe": 2.2,
+    "dem": 53.5,
+    "rep": 46.5,
+    "other": null,
+    "und": 6.0,
+    "results": {
+     "Democratic": 53.5,
+     "Republican": 46.5
+    },
+    "url": "https://www.activote.net/polls/generic-ballot/2026-10-30/"
+   },
+   {
+    "pollster": "Ipsos",
+    "lean": null,
+    "sponsor": null,
+    "start": "2026-10-20",
+    "end": "2026-10-28",
+    "n": 1209,
+    "pop": "LV",
+    "moe": 3.5,
+    "dem": 50.0,
+    "rep": 44.0,
+    "other": null,
+    "und": 6.0,
+    "results": {
+     "Democratic": 50.0,
+     "Republican": 44.0
+    },
+    "url": "https://www.linkedin.com/posts/courtney-kennedy-15b70419_days-before-the-midterm-the-democratic-party-share-7521962096671252480-ORrE/"
+   },
    {
     "pollster": "Tufts University/YouGov",
     "lean": null,
@@ -1033,6 +1087,25 @@
      "Republican": 40.0
     },
     "url": "https://www.focaldata.com/blog/democrats-hit-new-high-in-penultimate-midterms-poll"
+   },
+   {
+    "pollster": "Pennsylvania State University/YouGov",
+    "lean": null,
+    "sponsor": null,
+    "start": "2026-10-14",
+    "end": "2026-10-20",
+    "n": 724,
+    "pop": "LV",
+    "moe": 4.4,
+    "dem": 47.0,
+    "rep": 43.0,
+    "other": null,
+    "und": 10.0,
+    "results": {
+     "Democratic": 47.0,
+     "Republican": 43.0
+    },
+    "url": "https://democracy.psu.edu/poll-report-archive/democrats-have-tiny-edge-in-congressional-generic-ballot/"
    },
    {
     "pollster": "The Rainey Center",
@@ -10531,116 +10604,6 @@
   ]
  },
  "senate": {
-  "IL": {
-   "page": "2026 United States Senate election in Illinois",
-   "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Illinois",
-   "fetched_via": "api",
-   "candidates": [
-    {
-     "name": "Juliana Stratton",
-     "party": "D"
-    },
-    {
-     "name": "Don Tracy",
-     "party": "R"
-    }
-   ],
-   "main": {
-    "a": "Juliana Stratton",
-    "b": "Don Tracy"
-   },
-   "avg": {
-    "margin": 16.4,
-    "n_polls": 2,
-    "window_days": 30,
-    "method": "fewer than 3 polls in 21 days; last 2 polls",
-    "latest_poll": "2026-10-20",
-    "weights": {
-     "recency": "exp(-days_since_end/10)",
-     "sample": "sqrt(min(n,1500)/600)",
-     "pollster_dedupe": 0.3
-    },
-    "polls_used": [
-     {
-      "pollster": "ActiVote",
-      "end": "2026-10-20",
-      "n": 400,
-      "weight": 0.849,
-      "Juliana Stratton": 58.5,
-      "Don Tracy": 41.5
-     },
-     {
-      "pollster": "Public Policy Polling (D)",
-      "end": "2026-10-01",
-      "n": 569,
-      "weight": 0.151,
-      "Juliana Stratton": 49.0,
-      "Don Tracy": 36.0
-     }
-    ],
-    "dem": 57.1,
-    "rep": 40.7,
-    "candidates": {
-     "Juliana Stratton": 57.1,
-     "Don Tracy": 40.7
-    }
-   },
-   "trend": [
-    {
-     "week": "2026-09-28",
-     "margin": 13.0,
-     "n": 1
-    },
-    {
-     "week": "2026-10-19",
-     "margin": 17.0,
-     "n": 1
-    }
-   ],
-   "n_polls": 2,
-   "n_tables_on_page": 4,
-   "polls": [
-    {
-     "pollster": "ActiVote",
-     "lean": null,
-     "sponsor": null,
-     "start": "2026-09-26",
-     "end": "2026-10-20",
-     "n": 400,
-     "pop": "LV",
-     "moe": 4.9,
-     "dem": 58.5,
-     "rep": 41.5,
-     "other": null,
-     "und": null,
-     "results": {
-      "Juliana Stratton": 58.5,
-      "Don Tracy": 41.5
-     },
-     "url": "https://www.activote.net/polls/2026/il-u-s-senate/"
-    },
-    {
-     "pollster": "Public Policy Polling (D)",
-     "lean": "D",
-     "sponsor": "Chicago News Weekly",
-     "start": "2026-09-30",
-     "end": "2026-10-01",
-     "n": 569,
-     "pop": "LV",
-     "moe": null,
-     "dem": 49.0,
-     "rep": 36.0,
-     "other": null,
-     "und": 15.0,
-     "results": {
-      "Juliana Stratton": 49.0,
-      "Don Tracy": 36.0
-     },
-     "url": "https://www.cnwmedia.com/article/cnw-poll-pritzker-leads-bailey-by-20-points-democrats-ahead-in-four-other-statewide-races"
-    }
-   ],
-   "special": false
-  },
   "IA": {
    "page": "2026 United States Senate election in Iowa",
    "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Iowa",
@@ -11706,7 +11669,7 @@
    },
    "avg": {
     "margin": 3.4,
-    "n_polls": 6,
+    "n_polls": 5,
     "window_days": 21,
     "method": "last 21 days",
     "latest_poll": "2026-10-28",
@@ -11720,7 +11683,7 @@
       "pollster": "Emerson College",
       "end": "2026-10-28",
       "n": 800,
-      "weight": 0.264,
+      "weight": 0.268,
       "Adam Hamilton": 50.0,
       "Roger Marshall": 47.0
      },
@@ -11728,7 +11691,7 @@
       "pollster": "The Washington Post/SSPG",
       "end": "2026-10-26",
       "n": 801,
-      "weight": 0.216,
+      "weight": 0.219,
       "Adam Hamilton": 52.0,
       "Roger Marshall": 43.0
      },
@@ -11736,7 +11699,7 @@
       "pollster": "SSRS",
       "end": "2026-10-26",
       "n": 838,
-      "weight": 0.221,
+      "weight": 0.224,
       "Adam Hamilton": 49.0,
       "Roger Marshall": 45.0
      },
@@ -11744,7 +11707,7 @@
       "pollster": "RedBox Research (D)",
       "end": "2026-10-23",
       "n": 1301,
-      "weight": 0.204,
+      "weight": 0.207,
       "Adam Hamilton": 45.0,
       "Roger Marshall": 46.0
      },
@@ -11752,23 +11715,15 @@
       "pollster": "InsiderAdvantage (R)",
       "end": "2026-10-14",
       "n": 1200,
-      "weight": 0.08,
+      "weight": 0.081,
       "Adam Hamilton": 47.0,
       "Roger Marshall": 48.0
-     },
-     {
-      "pollster": "InsiderAdvantage (R)",
-      "end": "2026-10-10",
-      "n": 1200,
-      "weight": 0.016,
-      "Adam Hamilton": 48.0,
-      "Roger Marshall": 47.0
      }
     ],
     "dem": 48.9,
-    "rep": 45.6,
+    "rep": 45.5,
     "candidates": {
-     "Roger Marshall": 45.6,
+     "Roger Marshall": 45.5,
      "Adam Hamilton": 48.9,
      "David Graham": 3.3
     }
@@ -11870,7 +11825,7 @@
      "moe": 3.9,
      "dem": 52.0,
      "rep": 43.0,
-     "other": null,
+     "other": 1.0,
      "und": null,
      "results": {
       "Roger Marshall": 43.0,
@@ -12287,7 +12242,7 @@
    "avg": {
     "margin": -9.0,
     "n_polls": 2,
-    "window_days": 316,
+    "window_days": 317,
     "method": "fewer than 3 polls in 21 days; last 2 polls",
     "latest_poll": "2026-08-27",
     "weights": {
@@ -12392,7 +12347,7 @@
    "avg": {
     "margin": -0.0,
     "n_polls": 3,
-    "window_days": 101,
+    "window_days": 102,
     "method": "fewer than 3 polls in 21 days; last 3 polls",
     "latest_poll": "2026-10-29",
     "weights": {
@@ -12527,11 +12482,11 @@
     "b": "Susan Collins"
    },
    "avg": {
-    "margin": 2.8,
-    "n_polls": 9,
+    "margin": 3.2,
+    "n_polls": 10,
     "window_days": 21,
     "method": "last 21 days",
-    "latest_poll": "2026-10-26",
+    "latest_poll": "2026-10-27",
     "weights": {
      "recency": "exp(-days_since_end/10)",
      "sample": "sqrt(min(n,1500)/600)",
@@ -12539,10 +12494,18 @@
     },
     "polls_used": [
      {
+      "pollster": "Data for Progress (D)",
+      "end": "2026-10-27",
+      "n": 652,
+      "weight": 0.165,
+      "Troy Jackson": 50.0,
+      "Susan Collins": 45.0
+     },
+     {
       "pollster": "SSRS",
       "end": "2026-10-26",
       "n": 783,
-      "weight": 0.196,
+      "weight": 0.164,
       "Troy Jackson": 49.0,
       "Susan Collins": 45.0
      },
@@ -12550,7 +12513,7 @@
       "pollster": "Marist University",
       "end": "2026-10-25",
       "n": null,
-      "weight": 0.155,
+      "weight": 0.13,
       "Troy Jackson": 49.0,
       "Susan Collins": 47.0
      },
@@ -12558,7 +12521,7 @@
       "pollster": "Marist University",
       "end": "2026-10-25",
       "n": 1449,
-      "weight": 0.072,
+      "weight": 0.06,
       "Troy Jackson": 53.0,
       "Susan Collins": 44.0
      },
@@ -12566,7 +12529,7 @@
       "pollster": "Trafalgar Group (R)",
       "end": "2026-10-23",
       "n": 1077,
-      "weight": 0.17,
+      "weight": 0.142,
       "Troy Jackson": 47.0,
       "Susan Collins": 47.0
      },
@@ -12574,7 +12537,7 @@
       "pollster": "Echelon Insights (R)",
       "end": "2026-10-23",
       "n": 413,
-      "weight": 0.105,
+      "weight": 0.088,
       "Troy Jackson": 51.0,
       "Susan Collins": 44.0
      },
@@ -12582,7 +12545,7 @@
       "pollster": "Beacon Research (D)/Shaw & Co. Research (R)",
       "end": "2026-10-20",
       "n": 1514,
-      "weight": 0.149,
+      "weight": 0.124,
       "Troy Jackson": 49.0,
       "Susan Collins": 49.0
      },
@@ -12590,7 +12553,7 @@
       "pollster": "Beacon Research (D)/Shaw & Co. Research (R)",
       "end": "2026-10-20",
       "n": 1689,
-      "weight": 0.045,
+      "weight": 0.037,
       "Troy Jackson": 50.0,
       "Susan Collins": 48.0
      },
@@ -12598,7 +12561,7 @@
       "pollster": "InsiderAdvantage (R)",
       "end": "2026-10-14",
       "n": 1200,
-      "weight": 0.073,
+      "weight": 0.061,
       "Troy Jackson": 49.0,
       "Susan Collins": 47.0
      },
@@ -12606,16 +12569,16 @@
       "pollster": "Suffolk University",
       "end": "2026-10-11",
       "n": 500,
-      "weight": 0.035,
+      "weight": 0.029,
       "Troy Jackson": 49.0,
       "Susan Collins": 47.0
      }
     ],
-    "dem": 49.2,
-    "rep": 46.4,
+    "dem": 49.3,
+    "rep": 46.2,
     "candidates": {
-     "Susan Collins": 46.4,
-     "Troy Jackson": 49.2
+     "Susan Collins": 46.2,
+     "Troy Jackson": 49.3
     }
    },
    "trend": [
@@ -12671,13 +12634,32 @@
     },
     {
      "week": "2026-10-26",
-     "margin": 4.0,
-     "n": 1
+     "margin": 4.5,
+     "n": 2
     }
    ],
-   "n_polls": 33,
+   "n_polls": 34,
    "n_tables_on_page": 11,
    "polls": [
+    {
+     "pollster": "Data for Progress (D)",
+     "lean": "D",
+     "sponsor": null,
+     "start": "2026-10-23",
+     "end": "2026-10-27",
+     "n": 652,
+     "pop": "LV",
+     "moe": 4.5,
+     "dem": 50.0,
+     "rep": 45.0,
+     "other": null,
+     "und": 4.0,
+     "results": {
+      "Susan Collins": 45.0,
+      "Troy Jackson": 50.0
+     },
+     "url": "https://www.dataforprogress.org/blog/2026/10/30/democratic-senate-candidates-lead-in-maine-michigan-and-texas"
+    },
     {
      "pollster": "SSRS",
      "lean": null,
@@ -13353,7 +13335,7 @@
    "avg": {
     "margin": 27.3,
     "n_polls": 8,
-    "window_days": 141,
+    "window_days": 142,
     "method": "fewer than 3 polls in 21 days; last 8 polls",
     "latest_poll": "2026-10-18",
     "weights": {
@@ -13799,7 +13781,7 @@
       "pollster": "Rasmussen Reports (R)",
       "end": "2026-10-29",
       "n": 745,
-      "weight": 0.143,
+      "weight": 0.132,
       "Abdul El-Sayed": 49.0,
       "Mike Rogers": 44.0
      },
@@ -13807,7 +13789,7 @@
       "pollster": "Upswing Research (D)",
       "end": "2026-10-28",
       "n": 505,
-      "weight": 0.106,
+      "weight": 0.099,
       "Abdul El-Sayed": 50.0,
       "Mike Rogers": 45.0
      },
@@ -13815,7 +13797,7 @@
       "pollster": "Mitchell Research & Communications",
       "end": "2026-10-27",
       "n": 636,
-      "weight": 0.108,
+      "weight": 0.1,
       "Abdul El-Sayed": 51.0,
       "Mike Rogers": 44.0
      },
@@ -13823,15 +13805,23 @@
       "pollster": "SSRS",
       "end": "2026-10-27",
       "n": 768,
-      "weight": 0.119,
+      "weight": 0.11,
       "Abdul El-Sayed": 49.0,
       "Mike Rogers": 42.0
+     },
+     {
+      "pollster": "Data for Progress (D)",
+      "end": "2026-10-25",
+      "n": 622,
+      "weight": 0.081,
+      "Abdul El-Sayed": 50.0,
+      "Mike Rogers": 46.0
      },
      {
       "pollster": "RedBox Research (D)",
       "end": "2026-10-23",
       "n": 2696,
-      "weight": 0.111,
+      "weight": 0.103,
       "Abdul El-Sayed": 49.0,
       "Mike Rogers": 44.0
      },
@@ -13839,7 +13829,7 @@
       "pollster": "Michigan State University/Verasight",
       "end": "2026-10-23",
       "n": 1383,
-      "weight": 0.107,
+      "weight": 0.099,
       "Abdul El-Sayed": 51.0,
       "Mike Rogers": 43.0
      },
@@ -13847,7 +13837,7 @@
       "pollster": "InsiderAdvantage (R)",
       "end": "2026-10-22",
       "n": 1200,
-      "weight": 0.09,
+      "weight": 0.083,
       "Abdul El-Sayed": 47.0,
       "Mike Rogers": 46.0
      },
@@ -13855,7 +13845,7 @@
       "pollster": "Glengariff Group",
       "end": "2026-10-22",
       "n": 600,
-      "weight": 0.064,
+      "weight": 0.059,
       "Abdul El-Sayed": 51.0,
       "Mike Rogers": 45.0
      },
@@ -13863,7 +13853,7 @@
       "pollster": "Michigan State University/YouGov",
       "end": "2026-10-19",
       "n": 836,
-      "weight": 0.056,
+      "weight": 0.052,
       "Abdul El-Sayed": 48.0,
       "Mike Rogers": 46.0
      },
@@ -13871,7 +13861,7 @@
       "pollster": "Michigan State University/YouGov",
       "end": "2026-10-19",
       "n": 1000,
-      "weight": 0.018,
+      "weight": 0.017,
       "Abdul El-Sayed": 45.0,
       "Mike Rogers": 41.0
      },
@@ -13879,7 +13869,7 @@
       "pollster": "Marist University",
       "end": "2026-10-18",
       "n": null,
-      "weight": 0.043,
+      "weight": 0.04,
       "Abdul El-Sayed": 50.0,
       "Mike Rogers": 48.0
      },
@@ -13887,7 +13877,7 @@
       "pollster": "Marist University",
       "end": "2026-10-18",
       "n": 1185,
-      "weight": 0.018,
+      "weight": 0.017,
       "Abdul El-Sayed": 52.0,
       "Mike Rogers": 45.0
      },
@@ -13895,24 +13885,16 @@
       "pollster": "Rasmussen Reports (R)",
       "end": "2026-10-14",
       "n": 798,
-      "weight": 0.01,
+      "weight": 0.009,
       "Abdul El-Sayed": 46.0,
       "Mike Rogers": 44.0
-     },
-     {
-      "pollster": "InsiderAdvantage (R)",
-      "end": "2026-10-10",
-      "n": 1200,
-      "weight": 0.008,
-      "Abdul El-Sayed": 48.0,
-      "Mike Rogers": 46.0
      }
     ],
-    "dem": 49.4,
-    "rep": 44.3,
+    "dem": 49.5,
+    "rep": 44.4,
     "candidates": {
-     "Abdul El-Sayed": 49.4,
-     "Mike Rogers": 44.3
+     "Abdul El-Sayed": 49.5,
+     "Mike Rogers": 44.4
     }
    },
    "trend": [
@@ -13969,7 +13951,7 @@
     {
      "week": "2026-10-19",
      "margin": 4.3,
-     "n": 6
+     "n": 7
     },
     {
      "week": "2026-10-26",
@@ -13977,7 +13959,7 @@
      "n": 4
     }
    ],
-   "n_polls": 68,
+   "n_polls": 69,
    "n_tables_on_page": 18,
    "polls": [
     {
@@ -14055,6 +14037,25 @@
       "Mike Rogers": 42.0
      },
      "url": "https://www.documentcloud.org/documents/28856720-cnn-poll-conducted-by-ssrs-michigan-october/"
+    },
+    {
+     "pollster": "Data for Progress (D)",
+     "lean": "D",
+     "sponsor": null,
+     "start": "2026-10-23",
+     "end": "2026-10-25",
+     "n": 622,
+     "pop": "LV",
+     "moe": 4.0,
+     "dem": 50.0,
+     "rep": 46.0,
+     "other": 2.0,
+     "und": 3.0,
+     "results": {
+      "Abdul El-Sayed": 50.0,
+      "Mike Rogers": 46.0
+     },
+     "url": "https://www.dataforprogress.org/blog/2026/10/30/democratic-senate-candidates-lead-in-maine-michigan-and-texas"
     },
     {
      "pollster": "RedBox Research (D)",
@@ -16117,7 +16118,7 @@
    "avg": {
     "margin": -3.0,
     "n_polls": 4,
-    "window_days": 496,
+    "window_days": 497,
     "method": "fewer than 3 polls in 21 days; last 4 polls",
     "latest_poll": "2026-10-22",
     "weights": {
@@ -16941,11 +16942,11 @@
     "b": "Pete Ricketts"
    },
    "avg": {
-    "margin": 0.2,
-    "n_polls": 5,
+    "margin": -2.0,
+    "n_polls": 6,
     "window_days": 21,
     "method": "last 21 days",
-    "latest_poll": "2026-10-23",
+    "latest_poll": "2026-10-29",
     "weights": {
      "recency": "exp(-days_since_end/10)",
      "sample": "sqrt(min(n,1500)/600)",
@@ -16953,10 +16954,18 @@
     },
     "polls_used": [
      {
+      "pollster": "New York Times/Siena University",
+      "end": "2026-10-29",
+      "n": 809,
+      "weight": 0.36,
+      "Dan Osborn": 43.0,
+      "Pete Ricketts": 49.0
+     },
+     {
       "pollster": "Echelon Insights (R)",
       "end": "2026-10-23",
       "n": 407,
-      "weight": 0.219,
+      "weight": 0.14,
       "Dan Osborn": 46.0,
       "Pete Ricketts": 47.0
      },
@@ -16964,7 +16973,7 @@
       "pollster": "GBAO (D)",
       "end": "2026-10-22",
       "n": 800,
-      "weight": 0.277,
+      "weight": 0.178,
       "Dan Osborn": 46.0,
       "Pete Ricketts": 45.0
      },
@@ -16972,7 +16981,7 @@
       "pollster": "Impact Research (D)",
       "end": "2026-10-20",
       "n": 600,
-      "weight": 0.197,
+      "weight": 0.126,
       "Dan Osborn": 47.0,
       "Pete Ricketts": 49.0
      },
@@ -16980,7 +16989,7 @@
       "pollster": "Concord Public Opinion Partners (D)",
       "end": "2026-10-18",
       "n": 500,
-      "weight": 0.147,
+      "weight": 0.094,
       "Dan Osborn": 48.0,
       "Pete Ricketts": 41.0
      },
@@ -16988,18 +16997,18 @@
       "pollster": "National Public Affairs (R)",
       "end": "2026-10-18",
       "n": 598,
-      "weight": 0.161,
+      "weight": 0.103,
       "Dan Osborn": 43.0,
       "Pete Ricketts": 46.0
      }
     ],
-    "ind": 46.0,
+    "ind": 44.9,
     "main_challenger": "I",
     "ind_name": "Dan Osborn",
-    "rep": 45.8,
+    "rep": 46.9,
     "candidates": {
-     "Pete Ricketts": 45.8,
-     "Dan Osborn": 46.0
+     "Pete Ricketts": 46.9,
+     "Dan Osborn": 44.9
     }
    },
    "trend": [
@@ -17032,11 +17041,35 @@
      "week": "2026-10-19",
      "margin": -0.7,
      "n": 3
+    },
+    {
+     "week": "2026-10-26",
+     "margin": -6.0,
+     "n": 1
     }
    ],
-   "n_polls": 16,
+   "n_polls": 17,
    "n_tables_on_page": 4,
    "polls": [
+    {
+     "pollster": "New York Times/Siena University",
+     "lean": null,
+     "sponsor": null,
+     "start": "2026-10-23",
+     "end": "2026-10-29",
+     "n": 809,
+     "pop": "LV",
+     "moe": 4.0,
+     "ind": 43.0,
+     "rep": 49.0,
+     "other": 0.0,
+     "und": 8.0,
+     "results": {
+      "Pete Ricketts": 49.0,
+      "Dan Osborn": 43.0
+     },
+     "url": "https://www.nytimes.com/interactive/2026/10/31/polls/times-siena-ne-poll-toplines.html"
+    },
     {
      "pollster": "Echelon Insights (R)",
      "lean": "R",
@@ -18166,7 +18199,7 @@
    "avg": {
     "margin": 16.4,
     "n_polls": 3,
-    "window_days": 63,
+    "window_days": 65,
     "method": "fewer than 3 polls in 21 days; last 3 polls",
     "latest_poll": "2026-10-09",
     "weights": {
@@ -18285,9 +18318,7 @@
      "url": "https://www.abqjournal.com/news/journal-poll-us-sen-ben-ray-lujan-has-comfortable-lead-in-reelection-campaign/3112569"
     }
    ],
-   "special": false,
-   "stale": true,
-   "stale_error": "FetchError: time budget exhausted while fetching '2026 United States Senate election in New Mexico' (rest: HTTP 429)"
+   "special": false
   },
   "NC": {
    "page": "2026 United States Senate election in North Carolina",
@@ -18308,8 +18339,8 @@
     "b": "Michael Whatley"
    },
    "avg": {
-    "margin": 10.6,
-    "n_polls": 7,
+    "margin": 10.9,
+    "n_polls": 6,
     "window_days": 21,
     "method": "last 21 days",
     "latest_poll": "2026-10-25",
@@ -18323,7 +18354,7 @@
       "pollster": "Quantus Insights (R)",
       "end": "2026-10-25",
       "n": 722,
-      "weight": 0.297,
+      "weight": 0.323,
       "Roy Cooper": 51.0,
       "Michael Whatley": 43.0
      },
@@ -18331,7 +18362,7 @@
       "pollster": "Quantus Insights (R)",
       "end": "2026-10-25",
       "n": 702,
-      "weight": 0.088,
+      "weight": 0.096,
       "Roy Cooper": 53.0,
       "Michael Whatley": 44.0
      },
@@ -18339,7 +18370,7 @@
       "pollster": "Harper Polling (R)",
       "end": "2026-10-20",
       "n": 600,
-      "weight": 0.164,
+      "weight": 0.179,
       "Roy Cooper": 49.0,
       "Michael Whatley": 39.0
      },
@@ -18347,7 +18378,7 @@
       "pollster": "ActiVote",
       "end": "2026-10-20",
       "n": 400,
-      "weight": 0.134,
+      "weight": 0.146,
       "Roy Cooper": 57.0,
       "Michael Whatley": 43.0
      },
@@ -18355,7 +18386,7 @@
       "pollster": "High Point University/YouGov",
       "end": "2026-10-20",
       "n": 620,
-      "weight": 0.167,
+      "weight": 0.182,
       "Roy Cooper": 54.0,
       "Michael Whatley": 40.0
      },
@@ -18363,24 +18394,16 @@
       "pollster": "SurveyUSA",
       "end": "2026-10-11",
       "n": 643,
-      "weight": 0.069,
+      "weight": 0.075,
       "Roy Cooper": 54.0,
       "Michael Whatley": 40.0
-     },
-     {
-      "pollster": "Trafalgar Group (R)",
-      "end": "2026-10-10",
-      "n": 1091,
-      "weight": 0.081,
-      "Roy Cooper": 49.0,
-      "Michael Whatley": 41.0
      }
     ],
-    "dem": 52.2,
+    "dem": 52.5,
     "rep": 41.6,
     "candidates": {
      "Michael Whatley": 41.6,
-     "Roy Cooper": 52.2
+     "Roy Cooper": 52.5
     }
    },
    "trend": [
@@ -19750,9 +19773,7 @@
      "variant": true
     }
    ],
-   "special": false,
-   "stale": true,
-   "stale_error": "skipped: time budget of 300s exhausted"
+   "special": false
   },
   "OK": {
    "page": "2026 United States Senate election in Oklahoma",
@@ -19775,7 +19796,7 @@
    "avg": {
     "margin": -24.0,
     "n_polls": 1,
-    "window_days": 85,
+    "window_days": 87,
     "method": "fewer than 3 polls in 21 days; last 1 polls",
     "latest_poll": "2026-08-06",
     "weights": {
@@ -19824,9 +19845,7 @@
      "url": "https://chs-inc.com/general-election-rep/"
     }
    ],
-   "special": false,
-   "stale": true,
-   "stale_error": "skipped: time budget of 300s exhausted"
+   "special": false
   },
   "OR": {
    "page": "2026 United States Senate election in Oregon",
@@ -19842,9 +19861,7 @@
    "n_polls": 0,
    "n_tables_on_page": 0,
    "polls": [],
-   "special": false,
-   "stale": true,
-   "stale_error": "skipped: time budget of 300s exhausted"
+   "special": false
   },
   "RI": {
    "page": "2026 United States Senate election in Rhode Island",
@@ -19871,7 +19888,7 @@
    "avg": {
     "margin": 28.7,
     "n_polls": 6,
-    "window_days": 193,
+    "window_days": 195,
     "method": "fewer than 3 polls in 21 days; last 6 polls",
     "latest_poll": "2026-10-11",
     "weights": {
@@ -20078,9 +20095,7 @@
      "url": "https://scholars.unh.edu/cgi/viewcontent.cgi?article=1945&context=survey_center_polls"
     }
    ],
-   "special": false,
-   "stale": true,
-   "stale_error": "skipped: time budget of 300s exhausted"
+   "special": false
   },
   "SC": {
    "page": "2026 United States Senate election in South Carolina",
@@ -20101,11 +20116,11 @@
     "b": "Darline Graham"
    },
    "avg": {
-    "margin": -1.5,
-    "n_polls": 7,
+    "margin": -0.4,
+    "n_polls": 8,
     "window_days": 21,
     "method": "last 21 days",
-    "latest_poll": "2026-10-26",
+    "latest_poll": "2026-10-29",
     "weights": {
      "recency": "exp(-days_since_end/10)",
      "sample": "sqrt(min(n,1500)/600)",
@@ -20113,10 +20128,18 @@
     },
     "polls_used": [
      {
+      "pollster": "Patinkin Research Strategies (D)",
+      "end": "2026-10-29",
+      "n": 500,
+      "weight": 0.171,
+      "Annie Andrews": 48.0,
+      "Darline Graham": 43.0
+     },
+     {
       "pollster": "New York Times/Siena University",
       "end": "2026-10-26",
       "n": 707,
-      "weight": 0.181,
+      "weight": 0.15,
       "Annie Andrews": 48.0,
       "Darline Graham": 48.0
      },
@@ -20124,7 +20147,7 @@
       "pollster": "Targoz Media Research",
       "end": "2026-10-25",
       "n": 895,
-      "weight": 0.185,
+      "weight": 0.153,
       "Annie Andrews": 46.0,
       "Darline Graham": 47.0
      },
@@ -20132,7 +20155,7 @@
       "pollster": "The Citadel",
       "end": "2026-10-25",
       "n": 890,
-      "weight": 0.184,
+      "weight": 0.153,
       "Annie Andrews": 39.0,
       "Darline Graham": 43.0
      },
@@ -20140,7 +20163,7 @@
       "pollster": "The Citadel",
       "end": "2026-10-25",
       "n": 1009,
-      "weight": 0.059,
+      "weight": 0.049,
       "Annie Andrews": 40.0,
       "Darline Graham": 35.0
      },
@@ -20148,7 +20171,7 @@
       "pollster": "East Carolina University",
       "end": "2026-10-24",
       "n": 955,
-      "weight": 0.173,
+      "weight": 0.143,
       "Annie Andrews": 47.0,
       "Darline Graham": 51.0
      },
@@ -20156,7 +20179,7 @@
       "pollster": "Impact Research (D)",
       "end": "2026-10-21",
       "n": 800,
-      "weight": 0.117,
+      "weight": 0.097,
       "Annie Andrews": 45.0,
       "Darline Graham": 44.0
      },
@@ -20164,16 +20187,16 @@
       "pollster": "Trafalgar Group (R)",
       "end": "2026-10-18",
       "n": 1095,
-      "weight": 0.101,
+      "weight": 0.084,
       "Annie Andrews": 46.0,
       "Darline Graham": 49.0
      }
     ],
-    "dem": 44.8,
-    "rep": 46.3,
+    "dem": 45.3,
+    "rep": 45.7,
     "candidates": {
-     "Darline Graham": 46.3,
-     "Annie Andrews": 44.8
+     "Darline Graham": 45.7,
+     "Annie Andrews": 45.3
     }
    },
    "trend": [
@@ -20224,13 +20247,32 @@
     },
     {
      "week": "2026-10-26",
-     "margin": 0.0,
-     "n": 1
+     "margin": 2.5,
+     "n": 2
     }
    ],
-   "n_polls": 16,
+   "n_polls": 17,
    "n_tables_on_page": 17,
    "polls": [
+    {
+     "pollster": "Patinkin Research Strategies (D)",
+     "lean": "D",
+     "sponsor": "Project V",
+     "start": "2026-10-27",
+     "end": "2026-10-29",
+     "n": 500,
+     "pop": "LV",
+     "moe": 4.4,
+     "dem": 48.0,
+     "rep": 43.0,
+     "other": 8.0,
+     "und": 0.0,
+     "results": {
+      "Darline Graham": 43.0,
+      "Annie Andrews": 48.0
+     },
+     "url": "https://static1.squarespace.com/static/54512d3ce4b07de69d8320c7/t/6ae4f0f24aec54388059c463/1793388786248/PRS%2BProjectVOTE.SCSW+Poll+Release.103026.pdf"
+    },
     {
      "pollster": "New York Times/Siena University",
      "lean": null,
@@ -20536,9 +20578,7 @@
      "url": "https://x.com/maxpcohen/status/2094727213044191363"
     }
    ],
-   "special": false,
-   "stale": true,
-   "stale_error": "skipped: time budget of 300s exhausted"
+   "special": false
   },
   "SD": {
    "page": "2026 United States Senate election in South Dakota",
@@ -20559,11 +20599,11 @@
     "b": "Mike Rounds"
    },
    "avg": {
-    "margin": -15.5,
-    "n_polls": 4,
+    "margin": -9.7,
+    "n_polls": 5,
     "window_days": 21,
     "method": "last 21 days",
-    "latest_poll": "2026-10-20",
+    "latest_poll": "2026-10-26",
     "weights": {
      "recency": "exp(-days_since_end/10)",
      "sample": "sqrt(min(n,1500)/600)",
@@ -20571,10 +20611,18 @@
     },
     "polls_used": [
      {
+      "pollster": "Concord Public Opinion Partners (D)",
+      "end": "2026-10-26",
+      "n": 448,
+      "weight": 0.33,
+      "Brian Bengs": 43.0,
+      "Mike Rounds": 41.0
+     },
+     {
       "pollster": "Emerson College",
       "end": "2026-10-20",
       "n": 803,
-      "weight": 0.362,
+      "weight": 0.242,
       "Brian Bengs": 42.0,
       "Mike Rounds": 50.0
      },
@@ -20582,7 +20630,7 @@
       "pollster": "Quantus Insights (R)",
       "end": "2026-10-19",
       "n": 633,
-      "weight": 0.291,
+      "weight": 0.195,
       "Brian Bengs": 37.0,
       "Mike Rounds": 59.0
      },
@@ -20590,7 +20638,7 @@
       "pollster": "Public Opinon Strategies (R)",
       "end": "2026-10-16",
       "n": 500,
-      "weight": 0.191,
+      "weight": 0.128,
       "Brian Bengs": 37.0,
       "Mike Rounds": 54.0
      },
@@ -20598,18 +20646,18 @@
       "pollster": "Mason-Dixon Polling & Strategy",
       "end": "2026-10-14",
       "n": 500,
-      "weight": 0.157,
+      "weight": 0.105,
       "Brian Bengs": 37.0,
       "Mike Rounds": 56.0
      }
     ],
-    "ind": 38.8,
+    "ind": 40.2,
     "main_challenger": "I",
     "ind_name": "Brian Bengs",
-    "rep": 54.3,
+    "rep": 49.9,
     "candidates": {
-     "Mike Rounds": 54.3,
-     "Brian Bengs": 38.8
+     "Mike Rounds": 49.9,
+     "Brian Bengs": 40.2
     }
    },
    "trend": [
@@ -20647,11 +20695,35 @@
      "week": "2026-10-19",
      "margin": -15.0,
      "n": 2
+    },
+    {
+     "week": "2026-10-26",
+     "margin": 2.0,
+     "n": 1
     }
    ],
-   "n_polls": 14,
+   "n_polls": 15,
    "n_tables_on_page": 6,
    "polls": [
+    {
+     "pollster": "Concord Public Opinion Partners (D)",
+     "lean": "D",
+     "sponsor": "Democrats for Education Reform",
+     "start": "2026-10-22",
+     "end": "2026-10-26",
+     "n": 448,
+     "pop": "LV",
+     "moe": 3.5,
+     "ind": 43.0,
+     "rep": 41.0,
+     "other": 9.0,
+     "und": 6.0,
+     "results": {
+      "Mike Rounds": 41.0,
+      "Brian Bengs": 43.0
+     },
+     "url": "https://concordpublicopinionpartners.org/polls/south-dakota-ge-2026-oct26"
+    },
     {
      "pollster": "Emerson College",
      "lean": null,
@@ -20959,9 +21031,7 @@
      "url": "https://x.com/NenoNicolosio/status/1983855337141850313"
     }
    ],
-   "special": false,
-   "stale": true,
-   "stale_error": "skipped: time budget of 300s exhausted"
+   "special": false
   },
   "TN": {
    "page": "2026 United States Senate election in Tennessee",
@@ -20984,7 +21054,7 @@
    "avg": {
     "margin": -20.0,
     "n_polls": 1,
-    "window_days": 65,
+    "window_days": 67,
     "method": "fewer than 3 polls in 21 days; last 1 polls",
     "latest_poll": "2026-08-26",
     "weights": {
@@ -21039,9 +21109,7 @@
      "url": "https://tennsight.com/wp-content/uploads/2026/08/Beacon-Poll-of-TN-August-2026-Crosstabs-Party-Ideology-and-Region-1.pdf"
     }
    ],
-   "special": false,
-   "stale": true,
-   "stale_error": "skipped: time budget of 300s exhausted"
+   "special": false
   },
   "TX": {
    "page": "2026 United States Senate election in Texas",
@@ -21066,11 +21134,11 @@
     "b": "Ken Paxton"
    },
    "avg": {
-    "margin": 3.3,
-    "n_polls": 24,
+    "margin": 3.0,
+    "n_polls": 27,
     "window_days": 21,
     "method": "last 21 days",
-    "latest_poll": "2026-10-28",
+    "latest_poll": "2026-10-30",
     "weights": {
      "recency": "exp(-days_since_end/10)",
      "sample": "sqrt(min(n,1500)/600)",
@@ -21078,10 +21146,26 @@
     },
     "polls_used": [
      {
+      "pollster": "Kreate Strategies",
+      "end": "2026-10-30",
+      "n": 900,
+      "weight": 0.098,
+      "James Talarico": 48.0,
+      "Ken Paxton": 45.0
+     },
+     {
+      "pollster": "Quantus Insights",
+      "end": "2026-10-28",
+      "n": 1221,
+      "weight": 0.094,
+      "James Talarico": 48.0,
+      "Ken Paxton": 49.0
+     },
+     {
       "pollster": "ActiVote",
       "end": "2026-10-28",
       "n": 400,
-      "weight": 0.071,
+      "weight": 0.054,
       "James Talarico": 52.0,
       "Ken Paxton": 48.0
      },
@@ -21089,7 +21173,7 @@
       "pollster": "A2 Insights",
       "end": "2026-10-27",
       "n": 631,
-      "weight": 0.08,
+      "weight": 0.061,
       "James Talarico": 50.0,
       "Ken Paxton": 47.0
      },
@@ -21097,15 +21181,23 @@
       "pollster": "SSRS",
       "end": "2026-10-27",
       "n": 923,
-      "weight": 0.097,
+      "weight": 0.074,
       "James Talarico": 49.0,
       "Ken Paxton": 43.0
+     },
+     {
+      "pollster": "Data for Progress (D)",
+      "end": "2026-10-26",
+      "n": 712,
+      "weight": 0.059,
+      "James Talarico": 49.0,
+      "Ken Paxton": 45.0
      },
      {
       "pollster": "YouGov Blue (D)",
       "end": "2026-10-26",
       "n": 1000,
-      "weight": 0.092,
+      "weight": 0.07,
       "James Talarico": 51.0,
       "Ken Paxton": 43.0
      },
@@ -21113,7 +21205,7 @@
       "pollster": "Texas Southern University",
       "end": "2026-10-25",
       "n": 2000,
-      "weight": 0.102,
+      "weight": 0.077,
       "James Talarico": 49.0,
       "Ken Paxton": 47.0
      },
@@ -21121,7 +21213,7 @@
       "pollster": "Rasmussen Reports",
       "end": "2026-10-21",
       "n": 965,
-      "weight": 0.055,
+      "weight": 0.041,
       "James Talarico": 45.0,
       "Ken Paxton": 45.0
      },
@@ -21129,7 +21221,7 @@
       "pollster": "ActiVote",
       "end": "2026-10-21",
       "n": 400,
-      "weight": 0.011,
+      "weight": 0.008,
       "James Talarico": 51.0,
       "Ken Paxton": 49.0
      },
@@ -21137,7 +21229,7 @@
       "pollster": "Univision/YouGov",
       "end": "2026-10-21",
       "n": 1000,
-      "weight": 0.056,
+      "weight": 0.042,
       "James Talarico": 50.0,
       "Ken Paxton": 45.0
      },
@@ -21145,7 +21237,7 @@
       "pollster": "Verasight/VoteHub",
       "end": "2026-10-20",
       "n": 509,
-      "weight": 0.036,
+      "weight": 0.027,
       "James Talarico": 48.0,
       "Ken Paxton": 45.0
      },
@@ -21153,7 +21245,7 @@
       "pollster": "Verasight/VoteHub",
       "end": "2026-10-20",
       "n": 517,
-      "weight": 0.011,
+      "weight": 0.008,
       "James Talarico": 46.0,
       "Ken Paxton": 45.0
      },
@@ -21161,7 +21253,7 @@
       "pollster": "Emerson College",
       "end": "2026-10-19",
       "n": 1000,
-      "weight": 0.046,
+      "weight": 0.035,
       "James Talarico": 49.0,
       "Ken Paxton": 48.0
      },
@@ -21169,7 +21261,7 @@
       "pollster": "Beacon Research (D)/Shaw & Co. Research (R)",
       "end": "2026-10-19",
       "n": 1398,
-      "weight": 0.054,
+      "weight": 0.041,
       "James Talarico": 49.0,
       "Ken Paxton": 49.0
      },
@@ -21177,7 +21269,7 @@
       "pollster": "Beacon Research (D)/Shaw & Co. Research (R)",
       "end": "2026-10-19",
       "n": 2011,
-      "weight": 0.017,
+      "weight": 0.013,
       "James Talarico": 52.0,
       "Ken Paxton": 46.0
      },
@@ -21185,7 +21277,7 @@
       "pollster": "Texas Public Opinion Research (D)",
       "end": "2026-10-18",
       "n": 969,
-      "weight": 0.041,
+      "weight": 0.031,
       "James Talarico": 51.0,
       "Ken Paxton": 47.0
      },
@@ -21193,7 +21285,7 @@
       "pollster": "Pollfinity Research",
       "end": "2026-10-18",
       "n": 278,
-      "weight": 0.022,
+      "weight": 0.016,
       "James Talarico": 48.0,
       "Ken Paxton": 43.0
      },
@@ -21201,7 +21293,7 @@
       "pollster": "CBS News/YouGov",
       "end": "2026-10-16",
       "n": 1492,
-      "weight": 0.041,
+      "weight": 0.031,
       "James Talarico": 51.0,
       "Ken Paxton": 49.0
      },
@@ -21209,7 +21301,7 @@
       "pollster": "Cor Strategies (R)",
       "end": "2026-10-15",
       "n": 1409,
-      "weight": 0.036,
+      "weight": 0.027,
       "James Talarico": 44.0,
       "Ken Paxton": 40.0
      },
@@ -21217,7 +21309,7 @@
       "pollster": "InsiderAdvantage",
       "end": "2026-10-14",
       "n": 1200,
-      "weight": 0.03,
+      "weight": 0.023,
       "James Talarico": 48.0,
       "Ken Paxton": 49.0
      },
@@ -21225,7 +21317,7 @@
       "pollster": "University of Houston",
       "end": "2026-10-14",
       "n": 2000,
-      "weight": 0.034,
+      "weight": 0.026,
       "James Talarico": 48.0,
       "Ken Paxton": 46.0
      },
@@ -21233,7 +21325,7 @@
       "pollster": "ActiVote",
       "end": "2026-10-14",
       "n": 400,
-      "weight": 0.005,
+      "weight": 0.004,
       "James Talarico": 52.0,
       "Ken Paxton": 48.0
      },
@@ -21241,7 +21333,7 @@
       "pollster": "GS Strategy Group (R)/New River Strategies (D)",
       "end": "2026-10-13",
       "n": 934,
-      "weight": 0.024,
+      "weight": 0.018,
       "James Talarico": 49.0,
       "Ken Paxton": 44.0
      },
@@ -21249,7 +21341,7 @@
       "pollster": "Quantus Insights",
       "end": "2026-10-11",
       "n": 854,
-      "weight": 0.019,
+      "weight": 0.004,
       "James Talarico": 47.0,
       "Ken Paxton": 47.0
      },
@@ -21257,7 +21349,7 @@
       "pollster": "Marist University",
       "end": "2026-10-11",
       "n": null,
-      "weight": 0.016,
+      "weight": 0.012,
       "James Talarico": 47.0,
       "Ken Paxton": 45.0
      },
@@ -21265,17 +21357,17 @@
       "pollster": "Marist University",
       "end": "2026-10-11",
       "n": 1196,
-      "weight": 0.007,
+      "weight": 0.005,
       "James Talarico": 48.0,
       "Ken Paxton": 44.0
      }
     ],
-    "dem": 49.2,
-    "rep": 45.8,
+    "dem": 48.9,
+    "rep": 46.0,
     "candidates": {
-     "Ken Paxton": 45.8,
-     "James Talarico": 49.2,
-     "Ted Brown": 2.8
+     "Ken Paxton": 46.0,
+     "James Talarico": 48.9,
+     "Ted Brown": 1.9
     }
    },
    "trend": [
@@ -21331,13 +21423,53 @@
     },
     {
      "week": "2026-10-26",
-     "margin": 5.2,
-     "n": 4
+     "margin": 3.9,
+     "n": 7
     }
    ],
-   "n_polls": 76,
+   "n_polls": 79,
    "n_tables_on_page": 26,
    "polls": [
+    {
+     "pollster": "Kreate Strategies",
+     "lean": null,
+     "sponsor": null,
+     "start": "2026-10-27",
+     "end": "2026-10-30",
+     "n": 900,
+     "pop": "LV",
+     "moe": 3.3,
+     "dem": 48.0,
+     "rep": 45.0,
+     "other": 0.0,
+     "und": 6.0,
+     "results": {
+      "Ken Paxton": 45.0,
+      "James Talarico": 48.0,
+      "Ted Brown": 0.0
+     },
+     "url": "https://kstrat.net/press/texas-2026-senate-governor-talarico-leads-paxton-october"
+    },
+    {
+     "pollster": "Quantus Insights",
+     "lean": null,
+     "sponsor": null,
+     "start": "2026-10-26",
+     "end": "2026-10-28",
+     "n": 1221,
+     "pop": "LV",
+     "moe": 3.2,
+     "dem": 48.0,
+     "rep": 49.0,
+     "other": null,
+     "und": 2.0,
+     "results": {
+      "Ken Paxton": 49.0,
+      "James Talarico": 48.0,
+      "Ted Brown": 1.0
+     },
+     "url": "https://quantusinsights.org/polling/f/texas-survey-paxton-up-one-abbott-ahead-by-five"
+    },
     {
      "pollster": "ActiVote",
      "lean": null,
@@ -21397,6 +21529,26 @@
       "Ted Brown": null
      },
      "url": "https://www.documentcloud.org/documents/28856724-cnn-poll-conducted-by-ssrs-texas-october/"
+    },
+    {
+     "pollster": "Data for Progress (D)",
+     "lean": "D",
+     "sponsor": null,
+     "start": "2026-10-23",
+     "end": "2026-10-26",
+     "n": 712,
+     "pop": "LV",
+     "moe": 4.0,
+     "dem": 49.0,
+     "rep": 45.0,
+     "other": null,
+     "und": 4.0,
+     "results": {
+      "Ken Paxton": 45.0,
+      "James Talarico": 49.0,
+      "Ted Brown": 2.0
+     },
+     "url": "https://www.dataforprogress.org/blog/2026/10/30/democratic-senate-candidates-lead-in-maine-michigan-and-texas"
     },
     {
      "pollster": "YouGov Blue (D)",
@@ -22985,9 +23137,7 @@
      "url": "https://www.uttyler.edu/academics/colleges-schools/arts-sciences/departments/political-science/files/topline-report-of-texas-voters-revised-september-2025.pdf"
     }
    ],
-   "special": false,
-   "stale": true,
-   "stale_error": "skipped: time budget of 300s exhausted"
+   "special": false
   },
   "VA": {
    "page": "2026 United States Senate election in Virginia",
@@ -23010,7 +23160,7 @@
    "avg": {
     "margin": 18.1,
     "n_polls": 2,
-    "window_days": 178,
+    "window_days": 180,
     "method": "fewer than 3 polls in 21 days; last 2 polls",
     "latest_poll": "2026-06-16",
     "weights": {
@@ -23086,9 +23236,7 @@
      "url": "https://tpsiofficial.substack.com/p/the-virginia-project-the-public-sentiment"
     }
    ],
-   "special": false,
-   "stale": true,
-   "stale_error": "skipped: time budget of 300s exhausted"
+   "special": false
   },
   "WV": {
    "page": "2026 United States Senate election in West Virginia",
@@ -23104,9 +23252,7 @@
    "n_polls": 0,
    "n_tables_on_page": 0,
    "polls": [],
-   "special": false,
-   "stale": true,
-   "stale_error": "skipped: time budget of 300s exhausted"
+   "special": false
   },
   "WY": {
    "page": "2026 United States Senate election in Wyoming",
@@ -23122,9 +23268,7 @@
    "n_polls": 0,
    "n_tables_on_page": 0,
    "polls": [],
-   "special": false,
-   "stale": true,
-   "stale_error": "skipped: time budget of 300s exhausted"
+   "special": false
   },
   "OH": {
    "page": "2026 United States Senate special election in Ohio",
@@ -23145,8 +23289,8 @@
     "b": "Jon Husted"
    },
    "avg": {
-    "margin": 3.2,
-    "n_polls": 13,
+    "margin": 3.1,
+    "n_polls": 12,
     "window_days": 21,
     "method": "last 21 days",
     "latest_poll": "2026-10-26",
@@ -23160,7 +23304,7 @@
       "pollster": "Suffolk University",
       "end": "2026-10-26",
       "n": 500,
-      "weight": 0.127,
+      "weight": 0.131,
       "Sherrod Brown": 47.0,
       "Jon Husted": 44.0
      },
@@ -23168,7 +23312,7 @@
       "pollster": "RedBox Research (D)",
       "end": "2026-10-23",
       "n": 2998,
-      "weight": 0.163,
+      "weight": 0.168,
       "Sherrod Brown": 47.0,
       "Jon Husted": 44.0
      },
@@ -23176,7 +23320,7 @@
       "pollster": "Echelon Insights (R)",
       "end": "2026-10-23",
       "n": 508,
-      "weight": 0.095,
+      "weight": 0.098,
       "Sherrod Brown": 47.0,
       "Jon Husted": 47.0
      },
@@ -23184,7 +23328,7 @@
       "pollster": "InsiderAdvantage (R)",
       "end": "2026-10-22",
       "n": 1200,
-      "weight": 0.132,
+      "weight": 0.136,
       "Sherrod Brown": 47.0,
       "Jon Husted": 44.0
      },
@@ -23192,7 +23336,7 @@
       "pollster": "Verasight/VoteHub",
       "end": "2026-10-20",
       "n": 531,
-      "weight": 0.072,
+      "weight": 0.074,
       "Sherrod Brown": 48.0,
       "Jon Husted": 44.0
      },
@@ -23200,7 +23344,7 @@
       "pollster": "Beacon Research (D)/Shaw & Co. Research (R)",
       "end": "2026-10-19",
       "n": 2005,
-      "weight": 0.033,
+      "weight": 0.034,
       "Sherrod Brown": 53.0,
       "Jon Husted": 46.0
      },
@@ -23208,7 +23352,7 @@
       "pollster": "Beacon Research (D)/Shaw & Co. Research (R)",
       "end": "2026-10-19",
       "n": 1592,
-      "weight": 0.109,
+      "weight": 0.113,
       "Sherrod Brown": 52.0,
       "Jon Husted": 47.0
      },
@@ -23216,7 +23360,7 @@
       "pollster": "Marist University",
       "end": "2026-10-18",
       "n": null,
-      "weight": 0.062,
+      "weight": 0.064,
       "Sherrod Brown": 48.0,
       "Jon Husted": 44.0
      },
@@ -23224,7 +23368,7 @@
       "pollster": "Marist University",
       "end": "2026-10-18",
       "n": 1176,
-      "weight": 0.026,
+      "weight": 0.027,
       "Sherrod Brown": 51.0,
       "Jon Husted": 42.0
      },
@@ -23232,7 +23376,7 @@
       "pollster": "ActiVote",
       "end": "2026-10-18",
       "n": 400,
-      "weight": 0.051,
+      "weight": 0.053,
       "Sherrod Brown": 50.0,
       "Jon Husted": 50.0
      },
@@ -23240,7 +23384,7 @@
       "pollster": "Rasmussen Reports (R)",
       "end": "2026-10-14",
       "n": 901,
-      "weight": 0.051,
+      "weight": 0.053,
       "Sherrod Brown": 47.0,
       "Jon Husted": 49.0
      },
@@ -23248,23 +23392,15 @@
       "pollster": "GS Strategy Group (R)/New River Strategies (D)",
       "end": "2026-10-13",
       "n": 959,
-      "weight": 0.048,
+      "weight": 0.049,
       "Sherrod Brown": 49.0,
       "Jon Husted": 43.0
-     },
-     {
-      "pollster": "Bowling Green State University/YouGov",
-      "end": "2026-10-09",
-      "n": 1000,
-      "weight": 0.033,
-      "Sherrod Brown": 48.0,
-      "Jon Husted": 42.0
      }
     ],
     "dem": 48.3,
-    "rep": 45.1,
+    "rep": 45.2,
     "candidates": {
-     "Jon Husted": 45.1,
+     "Jon Husted": 45.2,
      "Sherrod Brown": 48.3
     }
    },
@@ -24322,9 +24458,7 @@
      "url": "https://scholarworks.bgsu.edu/cgi/viewcontent.cgi?article=1007&context=depo"
     }
    ],
-   "special": true,
-   "stale": true,
-   "stale_error": "skipped: time budget of 300s exhausted"
+   "special": true
   },
   "FL": {
    "page": "2026 United States Senate special election in Florida",
@@ -24345,11 +24479,11 @@
     "b": "Ashley Moody"
    },
    "avg": {
-    "margin": -6.2,
-    "n_polls": 11,
+    "margin": -5.8,
+    "n_polls": 15,
     "window_days": 21,
     "method": "last 21 days",
-    "latest_poll": "2026-10-27",
+    "latest_poll": "2026-10-30",
     "weights": {
      "recency": "exp(-days_since_end/10)",
      "sample": "sqrt(min(n,1500)/600)",
@@ -24357,10 +24491,50 @@
     },
     "polls_used": [
      {
+      "pollster": "Big Data Poll",
+      "end": "2026-10-30",
+      "n": 1067,
+      "weight": 0.13,
+      "Angie Nixon": 45.0,
+      "Ashley Moody": 52.0
+     },
+     {
+      "pollster": "Big Data Poll",
+      "end": "2026-10-30",
+      "n": 1122,
+      "weight": 0.04,
+      "Angie Nixon": 45.0,
+      "Ashley Moody": 51.0
+     },
+     {
+      "pollster": "Stetson University",
+      "end": "2026-10-30",
+      "n": 852,
+      "weight": 0.116,
+      "Angie Nixon": 45.0,
+      "Ashley Moody": 49.0
+     },
+     {
+      "pollster": "InsiderAdvantage (R)",
+      "end": "2026-10-29",
+      "n": 1200,
+      "weight": 0.125,
+      "Angie Nixon": 43.0,
+      "Ashley Moody": 49.0
+     },
+     {
+      "pollster": "Political Matrix/The Listener Group",
+      "end": "2026-10-28",
+      "n": 500,
+      "weight": 0.073,
+      "Angie Nixon": 36.0,
+      "Ashley Moody": 42.0
+     },
+     {
       "pollster": "St. Pete Polls",
       "end": "2026-10-27",
       "n": 916,
-      "weight": 0.178,
+      "weight": 0.089,
       "Angie Nixon": 45.0,
       "Ashley Moody": 49.0
      },
@@ -24368,7 +24542,7 @@
       "pollster": "ActiVote",
       "end": "2026-10-27",
       "n": 400,
-      "weight": 0.118,
+      "weight": 0.059,
       "Angie Nixon": 47.0,
       "Ashley Moody": 53.0
      },
@@ -24376,7 +24550,7 @@
       "pollster": "New York Times/Siena University",
       "end": "2026-10-25",
       "n": 813,
-      "weight": 0.137,
+      "weight": 0.069,
       "Angie Nixon": 44.0,
       "Ashley Moody": 50.0
      },
@@ -24384,7 +24558,7 @@
       "pollster": "RedBox Research (D)",
       "end": "2026-10-23",
       "n": 4832,
-      "weight": 0.153,
+      "weight": 0.076,
       "Angie Nixon": 43.0,
       "Ashley Moody": 50.0
      },
@@ -24392,15 +24566,23 @@
       "pollster": "Echelon Insights (R)",
       "end": "2026-10-23",
       "n": 515,
-      "weight": 0.09,
+      "weight": 0.045,
       "Angie Nixon": 43.0,
       "Ashley Moody": 51.0
+     },
+     {
+      "pollster": "Workbench Strategy (D)",
+      "end": "2026-10-22",
+      "n": 800,
+      "weight": 0.051,
+      "Angie Nixon": 47.0,
+      "Ashley Moody": 49.0
      },
      {
       "pollster": "co/efficient (R)",
       "end": "2026-10-20",
       "n": 1014,
-      "weight": 0.093,
+      "weight": 0.047,
       "Angie Nixon": 40.0,
       "Ashley Moody": 48.0
      },
@@ -24408,7 +24590,7 @@
       "pollster": "University of North Florida",
       "end": "2026-10-19",
       "n": 1471,
-      "weight": 0.102,
+      "weight": 0.051,
       "Angie Nixon": 45.0,
       "Ashley Moody": 49.0
      },
@@ -24416,7 +24598,7 @@
       "pollster": "Univision/YouGov",
       "end": "2026-10-15",
       "n": 825,
-      "weight": 0.051,
+      "weight": 0.025,
       "Angie Nixon": 42.0,
       "Ashley Moody": 51.0
      },
@@ -24424,32 +24606,16 @@
       "pollster": "ActiVote",
       "end": "2026-10-15",
       "n": 400,
-      "weight": 0.011,
+      "weight": 0.005,
       "Angie Nixon": 47.0,
       "Ashley Moody": 53.0
-     },
-     {
-      "pollster": "MDW Communications",
-      "end": "2026-10-10",
-      "n": 2351,
-      "weight": 0.042,
-      "Angie Nixon": 42.0,
-      "Ashley Moody": 48.0
-     },
-     {
-      "pollster": "Stetson University",
-      "end": "2026-10-09",
-      "n": 716,
-      "weight": 0.026,
-      "Angie Nixon": 41.0,
-      "Ashley Moody": 52.0
      }
     ],
-    "dem": 43.8,
-    "rep": 50.0,
+    "dem": 43.7,
+    "rep": 49.5,
     "candidates": {
-     "Ashley Moody": 50.0,
-     "Angie Nixon": 43.8
+     "Ashley Moody": 49.5,
+     "Angie Nixon": 43.7
     }
    },
    "trend": [
@@ -24485,18 +24651,153 @@
     },
     {
      "week": "2026-10-19",
-     "margin": -6.6,
-     "n": 5
+     "margin": -5.8,
+     "n": 6
     },
     {
      "week": "2026-10-26",
-     "margin": -5.0,
-     "n": 2
+     "margin": -5.6,
+     "n": 7
     }
    ],
-   "n_polls": 26,
+   "n_polls": 32,
    "n_tables_on_page": 5,
    "polls": [
+    {
+     "pollster": "Big Data Poll",
+     "lean": null,
+     "sponsor": "1776 Law Center and Public Polling Project",
+     "start": "2026-10-26",
+     "end": "2026-10-30",
+     "n": 1067,
+     "pop": "LV",
+     "moe": 3.0,
+     "dem": 45.0,
+     "rep": 52.0,
+     "other": 4.0,
+     "und": null,
+     "results": {
+      "Ashley Moody": 52.0,
+      "Angie Nixon": 45.0
+     },
+     "url": "https://www.bigdatapoll.com/blog/sunshine-state-poll-ashley-moody-leads-angie-craig-governors-race-tight/"
+    },
+    {
+     "pollster": "Big Data Poll",
+     "lean": null,
+     "sponsor": "1776 Law Center and Public Polling Project",
+     "start": "2026-10-26",
+     "end": "2026-10-30",
+     "n": 1067,
+     "pop": "LV",
+     "moe": 3.0,
+     "dem": 42.0,
+     "rep": 48.0,
+     "other": 3.0,
+     "und": 7.0,
+     "results": {
+      "Ashley Moody": 48.0,
+      "Angie Nixon": 42.0
+     },
+     "url": "https://www.bigdatapoll.com/blog/sunshine-state-poll-ashley-moody-leads-angie-craig-governors-race-tight/",
+     "variant": true
+    },
+    {
+     "pollster": "Big Data Poll",
+     "lean": null,
+     "sponsor": "1776 Law Center and Public Polling Project",
+     "start": "2026-10-26",
+     "end": "2026-10-30",
+     "n": 1122,
+     "pop": "RV",
+     "moe": 3.0,
+     "dem": 45.0,
+     "rep": 51.0,
+     "other": 5.0,
+     "und": null,
+     "results": {
+      "Ashley Moody": 51.0,
+      "Angie Nixon": 45.0
+     },
+     "url": "https://www.bigdatapoll.com/blog/sunshine-state-poll-ashley-moody-leads-angie-craig-governors-race-tight/"
+    },
+    {
+     "pollster": "Big Data Poll",
+     "lean": null,
+     "sponsor": "1776 Law Center and Public Polling Project",
+     "start": "2026-10-26",
+     "end": "2026-10-30",
+     "n": 1122,
+     "pop": "RV",
+     "moe": 3.0,
+     "dem": 41.0,
+     "rep": 47.0,
+     "other": 3.0,
+     "und": 10.0,
+     "results": {
+      "Ashley Moody": 47.0,
+      "Angie Nixon": 41.0
+     },
+     "url": "https://www.bigdatapoll.com/blog/sunshine-state-poll-ashley-moody-leads-angie-craig-governors-race-tight/",
+     "variant": true
+    },
+    {
+     "pollster": "Stetson University",
+     "lean": null,
+     "sponsor": null,
+     "start": "2026-10-26",
+     "end": "2026-10-30",
+     "n": 852,
+     "pop": "RV",
+     "moe": 3.6,
+     "dem": 45.0,
+     "rep": 49.0,
+     "other": 3.0,
+     "und": 3.0,
+     "results": {
+      "Ashley Moody": 49.0,
+      "Angie Nixon": 45.0
+     },
+     "url": "https://www.stetson.edu/artsci/cpor/media/cpor-fall-2026-report-wave-3-october.pdf"
+    },
+    {
+     "pollster": "InsiderAdvantage (R)",
+     "lean": "R",
+     "sponsor": null,
+     "start": "2026-10-28",
+     "end": "2026-10-29",
+     "n": 1200,
+     "pop": "LV",
+     "moe": 2.8,
+     "dem": 43.0,
+     "rep": 49.0,
+     "other": 2.0,
+     "und": 6.0,
+     "results": {
+      "Ashley Moody": 49.0,
+      "Angie Nixon": 43.0
+     },
+     "url": "https://insideradvantage.com/insideradvantage-florida-survey-donalds-49-jolly-45-moody-49-nixon-43/"
+    },
+    {
+     "pollster": "Political Matrix/The Listener Group",
+     "lean": null,
+     "sponsor": null,
+     "start": "2026-10-26",
+     "end": "2026-10-28",
+     "n": 500,
+     "pop": "LV",
+     "moe": 4.4,
+     "dem": 36.0,
+     "rep": 42.0,
+     "other": null,
+     "und": 22.0,
+     "results": {
+      "Ashley Moody": 42.0,
+      "Angie Nixon": 36.0
+     },
+     "url": "https://palafoxproductions.com/new-florida-statewide-poll-for-november-election/"
+    },
     {
      "pollster": "St. Pete Polls",
      "lean": null,
@@ -24591,6 +24892,25 @@
       "Angie Nixon": 43.0
      },
      "url": "https://netchoice.org/netchoice-echelon-insights-poll-voters-rank-ai-regulation-far-behind-cost-of-living-want-one-national-ai-standard/"
+    },
+    {
+     "pollster": "Workbench Strategy (D)",
+     "lean": "D",
+     "sponsor": "Nixon's campaign",
+     "start": "2026-10-18",
+     "end": "2026-10-22",
+     "n": 800,
+     "pop": "LV",
+     "moe": 3.5,
+     "dem": 47.0,
+     "rep": 49.0,
+     "other": null,
+     "und": null,
+     "results": {
+      "Ashley Moody": 49.0,
+      "Angie Nixon": 47.0
+     },
+     "url": "https://megalodon.jp/2026-1031-0033-14/https://www.politico.com:443/newsletters/florida-playbook/2026/10/30/gop-closing-message-keep-florida-great-01142052"
     },
     {
      "pollster": "co/efficient (R)",
@@ -24992,9 +25312,7 @@
      "url": "https://www.orlandosentinel.com/2026/03/04/florida-poll-shows-republicans-lead-democrats-in-statewide-races-but-only-by-single-digits/"
     }
    ],
-   "special": true,
-   "stale": true,
-   "stale_error": "skipped: time budget of 300s exhausted"
+   "special": true
   },
   "AL": {
    "page": "2026 United States Senate election in Alabama",
@@ -25174,14 +25492,12 @@
      "url": "https://yeseverykidfoundation.org/alabama-likely-voters-support-fully-funding-the-choose-act/"
     }
    ],
-   "special": false,
-   "stale": true,
-   "stale_error": "skipped: time budget of 300s exhausted"
+   "special": false
   },
   "AK": {
    "page": "2026 United States Senate election in Alaska",
    "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Alaska",
-   "fetched_via": "rest",
+   "fetched_via": "api",
    "candidates": [
     {
      "name": "Dan S. Sullivan",
@@ -25193,7 +25509,7 @@
     },
     {
      "name": "Dan J. Sullivan",
-     "party": "R"
+     "party": "I"
     },
     {
      "name": "Gerald Heikes",
@@ -25205,11 +25521,11 @@
     "b": "Dan S. Sullivan"
    },
    "avg": {
-    "margin": 2.7,
+    "margin": 2.0,
     "n_polls": 4,
     "window_days": 21,
     "method": "last 21 days",
-    "latest_poll": "2026-10-16",
+    "latest_poll": "2026-10-29",
     "weights": {
      "recency": "exp(-days_since_end/10)",
      "sample": "sqrt(min(n,1500)/600)",
@@ -25217,10 +25533,18 @@
     },
     "polls_used": [
      {
+      "pollster": "Alaska Survey Research",
+      "end": "2026-10-29",
+      "n": 1326,
+      "weight": 0.646,
+      "Mary Peltola": 48.0,
+      "Dan S. Sullivan": 46.0
+     },
+     {
       "pollster": "Data for Progress (D)",
       "end": "2026-10-16",
       "n": 694,
-      "weight": 0.285,
+      "weight": 0.127,
       "Mary Peltola": 47.0,
       "Dan S. Sullivan": 44.0
      },
@@ -25228,7 +25552,7 @@
       "pollster": "Public Policy Polling (D)",
       "end": "2026-10-15",
       "n": 578,
-      "weight": 0.236,
+      "weight": 0.105,
       "Mary Peltola": 48.0,
       "Dan S. Sullivan": 47.0
      },
@@ -25236,26 +25560,18 @@
       "pollster": "Rasmussen Reports (R)",
       "end": "2026-10-15",
       "n": 775,
-      "weight": 0.273,
+      "weight": 0.122,
       "Mary Peltola": 44.0,
       "Dan S. Sullivan": 42.0
-     },
-     {
-      "pollster": "InsiderAdvantage (R)",
-      "end": "2026-10-10",
-      "n": 1200,
-      "weight": 0.206,
-      "Mary Peltola": 48.0,
-      "Dan S. Sullivan": 43.0
      }
     ],
-    "dem": 46.6,
-    "rep": 44.0,
+    "dem": 47.4,
+    "rep": 45.4,
     "candidates": {
-     "Dan S. Sullivan": 44.0,
-     "Mary Peltola": 46.6,
+     "Dan S. Sullivan": 45.4,
+     "Mary Peltola": 47.4,
      "Dan J. Sullivan": 3.1,
-     "Gerald Heikes": 2.3
+     "Gerald Heikes": 2.9
     }
    },
    "trend": [
@@ -25293,11 +25609,37 @@
      "week": "2026-10-12",
      "margin": 2.0,
      "n": 3
+    },
+    {
+     "week": "2026-10-26",
+     "margin": 2.0,
+     "n": 1
     }
    ],
-   "n_polls": 27,
+   "n_polls": 28,
    "n_tables_on_page": 6,
    "polls": [
+    {
+     "pollster": "Alaska Survey Research",
+     "lean": null,
+     "sponsor": null,
+     "start": "2026-10-26",
+     "end": "2026-10-29",
+     "n": 1326,
+     "pop": "LV",
+     "moe": 3.0,
+     "dem": 48.0,
+     "rep": 46.0,
+     "other": null,
+     "und": null,
+     "results": {
+      "Dan S. Sullivan": 46.0,
+      "Mary Peltola": 48.0,
+      "Dan J. Sullivan": 3.0,
+      "Gerald Heikes": 3.0
+     },
+     "url": "https://x.com/The_Real_ASR/status/2116291676176331181"
+    },
     {
      "pollster": "Data for Progress (D)",
      "lean": "D",
@@ -25598,7 +25940,7 @@
     {
      "pollster": "Fabrizio Ward (R)/Impact Research (D)",
      "lean": "R",
-     "sponsor": null,
+     "sponsor": "AARP",
      "start": "2026-09-08",
      "end": "2026-09-11",
      "n": 800,
@@ -25787,7 +26129,7 @@
     {
      "pollster": "Public Policy Polling (D)",
      "lean": "D",
-     "sponsor": null,
+     "sponsor": "Democratic Senatorial Campaign Committee",
      "start": "2026-01-16",
      "end": "2026-01-17",
      "n": 611,
@@ -25932,9 +26274,7 @@
      "url": "https://mustreadalaska.com/new-poll-says-rep-mary-peltola-could-take-sen-dan-sullivan-in-2026/"
     }
    ],
-   "special": false,
-   "stale": true,
-   "stale_error": "skipped: time budget of 300s exhausted"
+   "special": false
   },
   "AR": {
    "page": "2026 United States Senate election in Arkansas",
@@ -25957,7 +26297,7 @@
    "avg": {
     "margin": -9.5,
     "n_polls": 6,
-    "window_days": 263,
+    "window_days": 265,
     "method": "fewer than 3 polls in 21 days; last 6 polls",
     "latest_poll": "2026-10-13",
     "weights": {
@@ -26050,7 +26390,7 @@
     {
      "pollster": "Hendrix College",
      "lean": null,
-     "sponsor": null,
+     "sponsor": "Talk Business & Politics",
      "start": "2026-10-08",
      "end": "2026-10-13",
      "n": 709,
@@ -26107,7 +26447,7 @@
     {
      "pollster": "Hendrix College",
      "lean": null,
-     "sponsor": null,
+     "sponsor": "Talk Business & Politics",
      "start": "2026-08-11",
      "end": "2026-08-12",
      "n": 1217,
@@ -26162,210 +26502,39 @@
      "url": "https://brooklandnews.com/2026/03/05/poll-finds-strong-support-for-trump-cotton-in-arkansas/"
     }
    ],
-   "special": false,
-   "stale": true,
-   "stale_error": "skipped: time budget of 300s exhausted"
+   "special": false
   },
   "CO": {
    "page": "2026 United States Senate election in Colorado",
    "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Colorado",
    "fetched_via": "api",
-   "candidates": [
-    {
-     "name": "Julie Gonzales",
-     "party": null
-    },
-    {
-     "name": "John Hickenlooper",
-     "party": null
-    }
-   ],
+   "candidates": [],
    "main": {
-    "a": "John Hickenlooper",
-    "b": "Julie Gonzales"
+    "a": null,
+    "b": null
    },
-   "avg": {
-    "margin": 7.0,
-    "n_polls": 2,
-    "window_days": 247,
-    "method": "fewer than 3 polls in 21 days; last 2 polls",
-    "latest_poll": "2026-05-28",
-    "weights": {
-     "recency": "exp(-days_since_end/10)",
-     "sample": "sqrt(min(n,1500)/600)",
-     "pollster_dedupe": 0.3
-    },
-    "polls_used": [
-     {
-      "pollster": "Colorado Community Research",
-      "end": "2026-05-28",
-      "n": 796,
-      "weight": 1.0,
-      "John Hickenlooper": 41.0,
-      "Julie Gonzales": 34.0
-     },
-     {
-      "pollster": "Data for Progress (D)",
-      "end": "2026-02-25",
-      "n": 739,
-      "weight": 0.0,
-      "John Hickenlooper": 45.0,
-      "Julie Gonzales": 13.0
-     }
-    ],
-    "ind": 41.0,
-    "main_challenger": "I",
-    "ind_name": "John Hickenlooper",
-    "opp": 34.0,
-    "opp_party": "I",
-    "opp_name": "Julie Gonzales",
-    "candidates": {
-     "Julie Gonzales": 34.0,
-     "John Hickenlooper": 41.0
-    }
-   },
+   "avg": null,
    "trend": [],
-   "n_polls": 2,
+   "n_polls": 0,
    "n_tables_on_page": 1,
-   "polls": [
-    {
-     "pollster": "Colorado Community Research",
-     "lean": null,
-     "sponsor": null,
-     "start": "2026-05-17",
-     "end": "2026-05-28",
-     "n": 796,
-     "pop": "LV",
-     "moe": 4.0,
-     "ind": 41.0,
-     "opp": 34.0,
-     "other": null,
-     "und": 25.0,
-     "results": {
-      "Julie Gonzales": 34.0,
-      "John Hickenlooper": 41.0
-     },
-     "url": "https://www.coloradocommunityresearch.com/past-polls-surveys/undecided-voters-define-colorado-democratic-senate-primary-despite-near-universal-name-id-for-hickenlooper"
-    },
-    {
-     "pollster": "Data for Progress (D)",
-     "lean": "D",
-     "sponsor": "Working Families Party",
-     "start": "2026-02-20",
-     "end": "2026-02-25",
-     "n": 739,
-     "pop": "LV",
-     "moe": 4.0,
-     "ind": 45.0,
-     "opp": 13.0,
-     "other": 4.0,
-     "und": 37.0,
-     "results": {
-      "Julie Gonzales": 13.0,
-      "John Hickenlooper": 45.0
-     },
-     "url": "https://web.archive.org/web/20260228225147/https://workingfamilies.org/wp-content/uploads/2026/02/Colorado-Senate-Democratic-Primary-Poll-Summary-of-Findings-WFP-1.pdf"
-    }
-   ],
-   "special": false,
-   "stale": true,
-   "stale_error": "skipped: time budget of 300s exhausted"
+   "polls": [],
+   "special": false
   },
   "DE": {
    "page": "2026 United States Senate election in Delaware",
    "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Delaware",
-   "fetched_via": "rest",
-   "candidates": [
-    {
-     "name": "Jeff Appelhans",
-     "party": null
-    },
-    {
-     "name": "Chris Coons",
-     "party": null
-    },
-    {
-     "name": "Eric Hansen",
-     "party": null
-    },
-    {
-     "name": "Mary Louve",
-     "party": null
-    }
-   ],
+   "fetched_via": "api",
+   "candidates": [],
    "main": {
-    "a": "Chris Coons",
-    "b": "Jeff Appelhans"
+    "a": null,
+    "b": null
    },
-   "avg": {
-    "margin": 58.0,
-    "n_polls": 1,
-    "window_days": 47,
-    "method": "fewer than 3 polls in 21 days; last 1 polls",
-    "latest_poll": "2026-09-13",
-    "weights": {
-     "recency": "exp(-days_since_end/10)",
-     "sample": "sqrt(min(n,1500)/600)",
-     "pollster_dedupe": 0.3
-    },
-    "polls_used": [
-     {
-      "pollster": "RedBox Research",
-      "end": "2026-09-13",
-      "n": 1099,
-      "weight": 1.0,
-      "Chris Coons": 64.0,
-      "Jeff Appelhans": 6.0
-     }
-    ],
-    "ind": 64.0,
-    "main_challenger": "I",
-    "ind_name": "Chris Coons",
-    "opp": 6.0,
-    "opp_party": "I",
-    "opp_name": "Jeff Appelhans",
-    "candidates": {
-     "Jeff Appelhans": 6.0,
-     "Chris Coons": 64.0,
-     "Eric Hansen": 2.0,
-     "Mary Louve": 4.0
-    }
-   },
-   "trend": [
-    {
-     "week": "2026-09-07",
-     "margin": 58.0,
-     "n": 1
-    }
-   ],
-   "n_polls": 1,
+   "avg": null,
+   "trend": [],
+   "n_polls": 0,
    "n_tables_on_page": 1,
-   "polls": [
-    {
-     "pollster": "RedBox Research",
-     "lean": null,
-     "sponsor": null,
-     "start": "2026-09-13",
-     "end": "2026-09-13",
-     "n": 1099,
-     "pop": "RV",
-     "moe": 3.3,
-     "ind": 64.0,
-     "opp": 6.0,
-     "other": 8.0,
-     "und": 17.0,
-     "results": {
-      "Jeff Appelhans": 6.0,
-      "Chris Coons": 64.0,
-      "Eric Hansen": 2.0,
-      "Mary Louve": 4.0
-     },
-     "url": "https://afightworthhaving.com/polling/delaware-2026"
-    }
-   ],
-   "special": false,
-   "stale": true,
-   "stale_error": "skipped: time budget of 300s exhausted"
+   "polls": [],
+   "special": false
   },
   "GA": {
    "page": "2026 United States Senate election in Georgia",
@@ -26386,8 +26555,8 @@
     "b": "Mike Collins"
    },
    "avg": {
-    "margin": 9.9,
-    "n_polls": 5,
+    "margin": 10.1,
+    "n_polls": 4,
     "window_days": 21,
     "method": "last 21 days",
     "latest_poll": "2026-10-23",
@@ -26401,7 +26570,7 @@
       "pollster": "Echelon Insights (R)",
       "end": "2026-10-23",
       "n": 508,
-      "weight": 0.301,
+      "weight": 0.338,
       "Jon Ossoff": 55.0,
       "Mike Collins": 40.0
      },
@@ -26409,7 +26578,7 @@
       "pollster": "ActiVote",
       "end": "2026-10-20",
       "n": 400,
-      "weight": 0.198,
+      "weight": 0.222,
       "Jon Ossoff": 54.0,
       "Mike Collins": 46.0
      },
@@ -26417,7 +26586,7 @@
       "pollster": "Quantus Insights (R)",
       "end": "2026-10-17",
       "n": 755,
-      "weight": 0.202,
+      "weight": 0.226,
       "Jon Ossoff": 52.0,
       "Mike Collins": 45.0
      },
@@ -26425,23 +26594,15 @@
       "pollster": "University of Georgia School of Public and International Affairs",
       "end": "2026-10-15",
       "n": 1000,
-      "weight": 0.19,
+      "weight": 0.213,
       "Jon Ossoff": 48.0,
       "Mike Collins": 40.0
-     },
-     {
-      "pollster": "Trafalgar Group (R)",
-      "end": "2026-10-09",
-      "n": 1101,
-      "weight": 0.109,
-      "Jon Ossoff": 51.0,
-      "Mike Collins": 43.0
      }
     ],
-    "dem": 52.4,
+    "dem": 52.6,
     "rep": 42.5,
     "candidates": {
-     "Jon Ossoff": 52.4,
+     "Jon Ossoff": 52.6,
      "Mike Collins": 42.5
     }
    },
@@ -26910,7 +27071,7 @@
     {
      "pollster": "Echelon Insights (R)",
      "lean": "R",
-     "sponsor": null,
+     "sponsor": "NetChoice",
      "start": "2026-04-03",
      "end": "2026-04-09",
      "n": 407,
@@ -26929,7 +27090,7 @@
     {
      "pollster": "Emerson College",
      "lean": null,
-     "sponsor": null,
+     "sponsor": "Nexstar Media",
      "start": "2026-02-28",
      "end": "2026-03-02",
      "n": 1000,
@@ -26967,7 +27128,7 @@
     {
      "pollster": "TIPP Insights",
      "lean": null,
-     "sponsor": null,
+     "sponsor": "League of American Workers",
      "start": "2025-07-28",
      "end": "2025-08-01",
      "n": 2956,
@@ -27024,7 +27185,7 @@
     {
      "pollster": "WPA Intelligence (R)",
      "lean": "R",
-     "sponsor": null,
+     "sponsor": "Club for Growth",
      "start": "2025-01-14",
      "end": "2025-01-15",
      "n": 500,
@@ -27041,9 +27202,7 @@
      "url": "https://www.politico.com/news/2025/01/16/kemp-ossoff-poll-georgia-senate-00198719"
     }
    ],
-   "special": false,
-   "stale": true,
-   "stale_error": "skipped: time budget of 300s exhausted"
+   "special": false
   },
   "ID": {
    "page": "2026 United States Senate election in Idaho",
@@ -27066,7 +27225,7 @@
    "avg": {
     "margin": -7.2,
     "n_polls": 8,
-    "window_days": 227,
+    "window_days": 229,
     "method": "fewer than 3 polls in 21 days; last 8 polls",
     "latest_poll": "2026-10-22",
     "weights": {
@@ -27196,7 +27355,7 @@
     {
      "pollster": "Peak Insights (R)",
      "lean": "R",
-     "sponsor": null,
+     "sponsor": "Risch's campaign",
      "start": "2026-09-28",
      "end": "2026-09-30",
      "n": 500,
@@ -27254,7 +27413,7 @@
     {
      "pollster": "Peak Insights (R)",
      "lean": "R",
-     "sponsor": null,
+     "sponsor": "Risch's campaign",
      "start": "2026-08-11",
      "end": "2026-08-13",
      "n": 500,
@@ -27273,7 +27432,7 @@
     {
      "pollster": "The Bullfinch Group",
      "lean": null,
-     "sponsor": null,
+     "sponsor": "Achilles's campaign",
      "start": "2026-08-04",
      "end": "2026-08-07",
      "n": 608,
@@ -27292,7 +27451,7 @@
     {
      "pollster": "The Bullfinch Group",
      "lean": null,
-     "sponsor": null,
+     "sponsor": "Achilles's campaign",
      "start": "2026-08-04",
      "end": "2026-08-07",
      "n": 608,
@@ -27331,7 +27490,7 @@
     {
      "pollster": "The Bullfinch Group",
      "lean": null,
-     "sponsor": null,
+     "sponsor": "Achilles's campaign",
      "start": "2026-05-29",
      "end": "2026-06-01",
      "n": 774,
@@ -27350,7 +27509,7 @@
     {
      "pollster": "Public Policy Polling (I)",
      "lean": null,
-     "sponsor": null,
+     "sponsor": "Achilles's campaign",
      "start": "2026-03-16",
      "end": "2026-03-17",
      "n": 639,
@@ -27367,36 +27526,32 @@
      "url": "https://data.ddhq.io/polls/2026/03/21/Public-Policy-Polling-Idaho"
     }
    ],
-   "special": false,
-   "stale": true,
-   "stale_error": "skipped: time budget of 300s exhausted"
-  }
- },
- "governors": {
-  "FL": {
-   "page": "2026 Florida gubernatorial election",
-   "url": "https://en.wikipedia.org/wiki/2026_Florida_gubernatorial_election",
+   "special": false
+  },
+  "IL": {
+   "page": "2026 United States Senate election in Illinois",
+   "url": "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Illinois",
    "fetched_via": "api",
    "candidates": [
     {
-     "name": "Byron Donalds",
-     "party": "R"
+     "name": "Juliana Stratton",
+     "party": "D"
     },
     {
-     "name": "David Jolly",
-     "party": "D"
+     "name": "Don Tracy",
+     "party": "R"
     }
    ],
    "main": {
-    "a": "David Jolly",
-    "b": "Byron Donalds"
+    "a": "Juliana Stratton",
+    "b": "Don Tracy"
    },
    "avg": {
-    "margin": -3.7,
-    "n_polls": 12,
-    "window_days": 21,
-    "method": "last 21 days",
-    "latest_poll": "2026-10-27",
+    "margin": 12.5,
+    "n_polls": 3,
+    "window_days": 31,
+    "method": "fewer than 3 polls in 21 days; last 3 polls",
+    "latest_poll": "2026-10-30",
     "weights": {
      "recency": "exp(-days_since_end/10)",
      "sample": "sqrt(min(n,1500)/600)",
@@ -27404,941 +27559,119 @@
     },
     "polls_used": [
      {
-      "pollster": "St. Pete Polls",
-      "end": "2026-10-27",
-      "n": 916,
-      "weight": 0.166,
-      "David Jolly": 46.0,
-      "Byron Donalds": 48.0
-     },
-     {
-      "pollster": "New York Times/Siena University",
-      "end": "2026-10-25",
-      "n": 813,
-      "weight": 0.128,
-      "David Jolly": 44.0,
-      "Byron Donalds": 48.0
-     },
-     {
-      "pollster": "RedBox Research",
-      "end": "2026-10-23",
-      "n": 4832,
-      "weight": 0.142,
-      "David Jolly": 44.0,
-      "Byron Donalds": 49.0
-     },
-     {
-      "pollster": "Echelon Insights (R)",
-      "end": "2026-10-23",
-      "n": 515,
-      "weight": 0.083,
-      "David Jolly": 44.0,
-      "Byron Donalds": 50.0
-     },
-     {
-      "pollster": "Workbench Strategy (D)",
-      "end": "2026-10-22",
-      "n": 800,
-      "weight": 0.094,
-      "David Jolly": 48.0,
-      "Byron Donalds": 46.0
-     },
-     {
-      "pollster": "co/efficient (R)",
-      "end": "2026-10-20",
-      "n": 1014,
-      "weight": 0.087,
-      "David Jolly": 40.0,
-      "Byron Donalds": 49.0
-     },
-     {
-      "pollster": "University of North Florida",
-      "end": "2026-10-19",
-      "n": 1471,
-      "weight": 0.095,
-      "David Jolly": 47.0,
-      "Byron Donalds": 49.0
+      "pollster": "ActiVote",
+      "end": "2026-10-30",
+      "n": 400,
+      "weight": 0.85,
+      "Juliana Stratton": 56.0,
+      "Don Tracy": 44.0
      },
      {
       "pollster": "ActiVote",
-      "end": "2026-10-19",
+      "end": "2026-10-20",
       "n": 400,
-      "weight": 0.049,
-      "David Jolly": 48.0,
-      "Byron Donalds": 52.0
+      "weight": 0.094,
+      "Juliana Stratton": 58.5,
+      "Don Tracy": 41.5
      },
      {
-      "pollster": "Univision/YouGov",
-      "end": "2026-10-15",
-      "n": 825,
-      "weight": 0.047,
-      "David Jolly": 42.0,
-      "Byron Donalds": 50.0
-     },
-     {
-      "pollster": "Fabrizio, Lee & Associates (R)",
-      "end": "2026-10-11",
-      "n": 1200,
-      "weight": 0.038,
-      "David Jolly": 43.0,
-      "Byron Donalds": 49.0
-     },
-     {
-      "pollster": "Change Research (D)",
-      "end": "2026-10-10",
-      "n": 920,
-      "weight": 0.03,
-      "David Jolly": 47.0,
-      "Byron Donalds": 47.0
-     },
-     {
-      "pollster": "MDW Communications",
-      "end": "2026-10-10",
-      "n": 2351,
-      "weight": 0.039,
-      "David Jolly": 44.0,
-      "Byron Donalds": 46.0
+      "pollster": "Public Policy Polling (D)",
+      "end": "2026-10-01",
+      "n": 569,
+      "weight": 0.056,
+      "Juliana Stratton": 49.0,
+      "Don Tracy": 36.0
      }
     ],
-    "dem": 44.8,
-    "rep": 48.5,
+    "dem": 55.8,
+    "rep": 43.3,
     "candidates": {
-     "Byron Donalds": 48.5,
-     "David Jolly": 44.8
+     "Juliana Stratton": 55.8,
+     "Don Tracy": 43.3
     }
    },
    "trend": [
     {
-     "week": "2026-08-10",
-     "margin": 1.0,
-     "n": 1
-    },
-    {
-     "week": "2026-09-07",
-     "margin": 3.0,
-     "n": 1
-    },
-    {
-     "week": "2026-09-14",
-     "margin": -1.0,
-     "n": 1
-    },
-    {
-     "week": "2026-09-21",
-     "margin": -5.0,
-     "n": 2
-    },
-    {
      "week": "2026-09-28",
-     "margin": -8.7,
-     "n": 3
-    },
-    {
-     "week": "2026-10-05",
-     "margin": -3.5,
-     "n": 6
-    },
-    {
-     "week": "2026-10-12",
-     "margin": -8.0,
+     "margin": 13.0,
      "n": 1
     },
     {
      "week": "2026-10-19",
-     "margin": -4.0,
-     "n": 7
+     "margin": 17.0,
+     "n": 1
     },
     {
      "week": "2026-10-26",
-     "margin": -2.0,
+     "margin": 12.0,
      "n": 1
     }
    ],
-   "n_polls": 40,
-   "n_tables_on_page": 14,
+   "n_polls": 3,
+   "n_tables_on_page": 4,
    "polls": [
     {
-     "pollster": "St. Pete Polls",
-     "lean": null,
-     "sponsor": "Florida Politics",
-     "start": "2026-10-25",
-     "end": "2026-10-27",
-     "n": 916,
-     "pop": "LV",
-     "moe": 3.2,
-     "dem": 46.0,
-     "rep": 48.0,
-     "other": 3.0,
-     "und": 3.0,
-     "results": {
-      "Byron Donalds": 48.0,
-      "David Jolly": 46.0
-     },
-     "url": "https://data.ddhq.io/polls/2026/10/28/St.-Pete-Polls-Florida"
-    },
-    {
-     "pollster": "New York Times/Siena University",
+     "pollster": "ActiVote",
      "lean": null,
      "sponsor": null,
-     "start": "2026-10-19",
-     "end": "2026-10-25",
-     "n": 813,
+     "start": "2026-10-21",
+     "end": "2026-10-30",
+     "n": 400,
      "pop": "LV",
-     "moe": 3.9,
-     "dem": 44.0,
-     "rep": 48.0,
-     "other": 0.0,
-     "und": 7.0,
-     "results": {
-      "Byron Donalds": 48.0,
-      "David Jolly": 44.0
-     },
-     "url": "https://www.nytimes.com/interactive/2026/10/28/polls/times-siena-fl-poll-toplines.html"
-    },
-    {
-     "pollster": "RedBox Research",
-     "lean": null,
-     "sponsor": null,
-     "start": "2026-10-20",
-     "end": "2026-10-23",
-     "n": 4832,
-     "pop": "LV",
-     "moe": 2.5,
-     "dem": 44.0,
-     "rep": 49.0,
-     "other": 3.0,
-     "und": 4.0,
-     "results": {
-      "Byron Donalds": 49.0,
-      "David Jolly": 44.0
-     },
-     "url": "https://afightworthhaving.com/polling/2026/florida"
-    },
-    {
-     "pollster": "Echelon Insights (R)",
-     "lean": "R",
-     "sponsor": "NetChoice",
-     "start": "2026-10-16",
-     "end": "2026-10-23",
-     "n": 515,
-     "pop": "LV",
-     "moe": 5.0,
-     "dem": 44.0,
-     "rep": 50.0,
-     "other": 1.0,
-     "und": 5.0,
-     "results": {
-      "Byron Donalds": 50.0,
-      "David Jolly": 44.0
-     },
-     "url": "https://netchoice.org/netchoice-echelon-insights-poll-voters-rank-ai-regulation-far-behind-cost-of-living-want-one-national-ai-standard/"
-    },
-    {
-     "pollster": "Workbench Strategy (D)",
-     "lean": "D",
-     "sponsor": null,
-     "start": "2026-10-18",
-     "end": "2026-10-22",
-     "n": 800,
-     "pop": "LV",
-     "moe": 3.5,
-     "dem": 48.0,
-     "rep": 46.0,
+     "moe": 4.9,
+     "dem": 56.0,
+     "rep": 44.0,
      "other": null,
      "und": null,
      "results": {
-      "Byron Donalds": 46.0,
-      "David Jolly": 48.0
+      "Juliana Stratton": 56.0,
+      "Don Tracy": 44.0
      },
-     "url": "https://megalodon.jp/2026-1031-0033-14/https://www.politico.com:443/newsletters/florida-playbook/2026/10/30/gop-closing-message-keep-florida-great-01142052"
-    },
-    {
-     "pollster": "co/efficient (R)",
-     "lean": "R",
-     "sponsor": null,
-     "start": "2026-10-18",
-     "end": "2026-10-20",
-     "n": 1014,
-     "pop": "LV",
-     "moe": 3.1,
-     "dem": 40.0,
-     "rep": 49.0,
-     "other": null,
-     "und": 11.0,
-     "results": {
-      "Byron Donalds": 49.0,
-      "David Jolly": 40.0
-     },
-     "url": "https://battlegrounds.coefficient.org/fl/"
-    },
-    {
-     "pollster": "University of North Florida",
-     "lean": null,
-     "sponsor": null,
-     "start": "2026-10-12",
-     "end": "2026-10-19",
-     "n": 1471,
-     "pop": "LV",
-     "moe": 2.8,
-     "dem": 47.0,
-     "rep": 49.0,
-     "other": null,
-     "und": 4.0,
-     "results": {
-      "Byron Donalds": 49.0,
-      "David Jolly": 47.0
-     },
-     "url": "https://static1.squarespace.com/static/6994d571bce3436c60d86870/t/6ad8a5ec13c20404a1f8052b/1792583148294/UNF+PORL+FALL+Statewide+2026+FLLV+-+Press+Release+1021+EMBARGO.pdf"
+     "url": "https://www.activote.net/polls/2026/il-u-s-senate/2026-10-30/"
     },
     {
      "pollster": "ActiVote",
      "lean": null,
      "sponsor": null,
-     "start": "2026-10-01",
-     "end": "2026-10-19",
+     "start": "2026-09-26",
+     "end": "2026-10-20",
      "n": 400,
      "pop": "LV",
      "moe": 4.9,
-     "dem": 48.0,
-     "rep": 52.0,
+     "dem": 58.5,
+     "rep": 41.5,
      "other": null,
      "und": null,
      "results": {
-      "Byron Donalds": 52.0,
-      "David Jolly": 48.0
+      "Juliana Stratton": 58.5,
+      "Don Tracy": 41.5
      },
-     "url": "https://www.activote.net/polls/2026/fl-governor/"
+     "url": "https://www.activote.net/polls/2026/il-u-s-senate/2026-10-20/"
     },
     {
-     "pollster": "Univision/YouGov",
-     "lean": null,
-     "sponsor": null,
-     "start": "2026-10-02",
-     "end": "2026-10-15",
-     "n": 825,
-     "pop": "RV",
-     "moe": 4.0,
-     "dem": 42.0,
-     "rep": 50.0,
-     "other": null,
-     "und": 8.0,
-     "results": {
-      "Byron Donalds": 50.0,
-      "David Jolly": 42.0
-     },
-     "url": "https://st1.uvnimg.com/65/9b/a8b15584426684070c3d05cf6e34/n-univision-florida-poll-crosstabs-base-final.pdf"
-    },
-    {
-     "pollster": "Fabrizio, Lee & Associates (R)",
-     "lean": "R",
-     "sponsor": "Donalds' campaign",
-     "start": "2026-10-08",
-     "end": "2026-10-11",
-     "n": 1200,
-     "pop": "LV",
-     "moe": null,
-     "dem": 43.0,
-     "rep": 49.0,
-     "other": null,
-     "und": 8.0,
-     "results": {
-      "Byron Donalds": 49.0,
-      "David Jolly": 43.0
-     },
-     "url": "https://floridapolitics.com/archives/824726-poll-byron-donalds-up-6-over-david-jolly-with-3-weeks-until-election-day/"
-    },
-    {
-     "pollster": "Change Research (D)",
+     "pollster": "Public Policy Polling (D)",
      "lean": "D",
-     "sponsor": "Freedom Project USA",
-     "start": "2026-10-08",
-     "end": "2026-10-10",
-     "n": 920,
-     "pop": "LV",
-     "moe": 3.1,
-     "dem": 47.0,
-     "rep": 47.0,
-     "other": 1.0,
-     "und": 5.0,
-     "results": {
-      "Byron Donalds": 47.0,
-      "David Jolly": 47.0
-     },
-     "url": "https://changeresearch.com/research/2026/2026-10-12-florida-aapor-methodology-statement"
-    },
-    {
-     "pollster": "MDW Communications",
-     "lean": null,
-     "sponsor": "EDGE Communications",
-     "start": "2026-10-04",
-     "end": "2026-10-10",
-     "n": 2351,
-     "pop": "LV",
-     "moe": 2.8,
-     "dem": 44.0,
-     "rep": 46.0,
-     "other": null,
-     "und": 10.0,
-     "results": {
-      "Byron Donalds": 46.0,
-      "David Jolly": 44.0
-     },
-     "url": "https://www.mdwcomm.com/media/florida-statewide-poll-october-2026.html"
-    },
-    {
-     "pollster": "Stetson University",
-     "lean": null,
-     "sponsor": null,
-     "start": "2026-10-01",
-     "end": "2026-10-09",
-     "n": 716,
-     "pop": "LV",
-     "moe": 4.2,
-     "dem": 41.0,
-     "rep": 52.0,
-     "other": 3.0,
-     "und": 5.0,
-     "results": {
-      "Byron Donalds": 52.0,
-      "David Jolly": 41.0
-     },
-     "url": "https://www.stetson.edu/artsci/cpor/media/cpor-fall-2026-report-wave-2-october.pdf"
-    },
-    {
-     "pollster": "St. Pete Polls",
-     "lean": null,
-     "sponsor": "Florida Politics",
-     "start": "2026-10-05",
-     "end": "2026-10-07",
-     "n": 836,
-     "pop": "LV",
-     "moe": 3.4,
-     "dem": 45.0,
-     "rep": 45.0,
-     "other": 4.0,
-     "und": 7.0,
-     "results": {
-      "Byron Donalds": 45.0,
-      "David Jolly": 45.0
-     },
-     "url": "https://www.stpetepolls.org/files/StPetePolls_2026_State_Gov_October7_K7ZU3GA.pdf"
-    },
-    {
-     "pollster": "YouGov",
-     "lean": null,
-     "sponsor": null,
-     "start": "2026-09-28",
-     "end": "2026-10-05",
-     "n": 3813,
-     "pop": "LV",
-     "moe": 2.7,
-     "dem": 45.0,
-     "rep": 47.0,
-     "other": 1.0,
-     "und": 7.0,
-     "results": {
-      "Byron Donalds": 47.0,
-      "David Jolly": 45.0
-     },
-     "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/ttw_fl_20260921_lv.pdf"
-    },
-    {
-     "pollster": "Targoz Market Research",
-     "lean": null,
-     "sponsor": "James Madison Institute",
-     "start": "2026-09-28",
-     "end": "2026-10-04",
-     "n": 849,
-     "pop": "LV",
-     "moe": null,
-     "dem": 42.0,
-     "rep": 52.0,
-     "other": 3.0,
-     "und": 3.0,
-     "results": {
-      "Byron Donalds": 52.0,
-      "David Jolly": 42.0
-     },
-     "url": "https://jamesmadison.org/wp-content/uploads/JMI-October-2026-Poll-Marginals.pdf"
-    },
-    {
-     "pollster": "Targoz Market Research",
-     "lean": null,
-     "sponsor": "James Madison Institute",
-     "start": "2026-09-28",
-     "end": "2026-10-04",
-     "n": 1174,
-     "pop": "RV",
-     "moe": 2.8,
-     "dem": 39.0,
-     "rep": 48.0,
-     "other": 5.0,
-     "und": 8.0,
-     "results": {
-      "Byron Donalds": 48.0,
-      "David Jolly": 39.0
-     },
-     "url": "https://jamesmadison.org/wp-content/uploads/JMI-October-2026-Poll-Marginals.pdf"
-    },
-    {
-     "pollster": "Mason-Dixon",
-     "lean": null,
-     "sponsor": null,
-     "start": "2026-09-28",
+     "sponsor": "Chicago News Weekly",
+     "start": "2026-09-30",
      "end": "2026-10-01",
-     "n": 625,
-     "pop": "LV",
-     "moe": 4.0,
-     "dem": 41.0,
-     "rep": 48.0,
-     "other": 1.0,
-     "und": 10.0,
-     "results": {
-      "Byron Donalds": 48.0,
-      "David Jolly": 41.0
-     },
-     "url": "https://s3.documentcloud.org/documents/28724874/fl1026results.pdf"
-    },
-    {
-     "pollster": "Change Research (D)",
-     "lean": "D",
-     "sponsor": "Freedom Project USA",
-     "start": "2026-09-25",
-     "end": "2026-09-27",
-     "n": 1063,
-     "pop": "LV",
-     "moe": 2.8,
-     "dem": 48.0,
-     "rep": 46.0,
-     "other": 1.0,
-     "und": 5.0,
-     "results": {
-      "Byron Donalds": 46.0,
-      "David Jolly": 48.0
-     },
-     "url": "https://changeresearch.com/research/2026/2026-09-28-florida-aapor-methodology-statement"
-    },
-    {
-     "pollster": "Stetson University",
-     "lean": null,
-     "sponsor": null,
-     "start": "2026-09-14",
-     "end": "2026-09-21",
-     "n": 830,
-     "pop": "LV",
-     "moe": 4.3,
-     "dem": 39.0,
-     "rep": 51.0,
-     "other": 5.0,
-     "und": 5.0,
-     "results": {
-      "Byron Donalds": 51.0,
-      "David Jolly": 39.0
-     },
-     "url": "https://www.stetson.edu/artsci/cpor/media/cpor-sept.-2026-poll-final.pdf"
-    },
-    {
-     "pollster": "St. Pete Polls",
-     "lean": null,
-     "sponsor": "Florida Politics",
-     "start": "2026-09-15",
-     "end": "2026-09-17",
-     "n": 913,
-     "pop": "LV",
-     "moe": 3.2,
-     "dem": 43.0,
-     "rep": 44.0,
-     "other": 4.0,
-     "und": 9.0,
-     "results": {
-      "Byron Donalds": 44.0,
-      "David Jolly": 43.0
-     },
-     "url": "http://stpetepolls.org/files/StPetePolls_2026_State_Gov_September17_G7V29XU6.pdf"
-    },
-    {
-     "pollster": "Change Research (D)",
-     "lean": "D",
-     "sponsor": "Freedom Project USA",
-     "start": "2026-09-07",
-     "end": "2026-09-09",
-     "n": 1107,
-     "pop": "LV",
-     "moe": 2.8,
-     "dem": 47.0,
-     "rep": 44.0,
-     "other": 1.0,
-     "und": 7.0,
-     "results": {
-      "Byron Donalds": 44.0,
-      "David Jolly": 47.0
-     },
-     "url": "https://changeresearch.com/research/2026/2026-09-10-florida-aapor-methodology-statement"
-    },
-    {
-     "pollster": "Hart Research Associates (D)",
-     "lean": "D",
-     "sponsor": "Democratic Governors Association",
-     "start": "2026-08-10",
-     "end": "2026-08-13",
-     "n": 600,
-     "pop": "LV",
-     "moe": 4.0,
-     "dem": 46.0,
-     "rep": 45.0,
-     "other": null,
-     "und": 9.0,
-     "results": {
-      "Byron Donalds": 45.0,
-      "David Jolly": 46.0
-     },
-     "url": "https://democraticgovernors.org/updates/new-poll-shows-david-jolly-leading-congressman-byron-donalds-in-the-florida-governors-race/"
-    },
-    {
-     "pollster": "Targoz Market Research",
-     "lean": null,
-     "sponsor": "James Madison Institute",
-     "start": "2026-07-20",
-     "end": "2026-07-26",
-     "n": 1026,
+     "n": 569,
      "pop": "LV",
      "moe": null,
-     "dem": 38.0,
-     "rep": 45.0,
-     "other": null,
-     "und": 17.0,
-     "results": {
-      "Byron Donalds": 45.0,
-      "David Jolly": 38.0
-     },
-     "url": "https://jamesmadison.org/wp-content/uploads/JMI-July-2026-Marginals.pdf"
-    },
-    {
-     "pollster": "Targoz Market Research",
-     "lean": null,
-     "sponsor": "James Madison Institute",
-     "start": "2026-07-20",
-     "end": "2026-07-26",
-     "n": 1338,
-     "pop": "RV",
-     "moe": 2.62,
-     "dem": 36.0,
-     "rep": 40.0,
-     "other": null,
-     "und": 24.0,
-     "results": {
-      "Byron Donalds": 40.0,
-      "David Jolly": 36.0
-     },
-     "url": "https://jamesmadison.org/wp-content/uploads/JMI-July-2026-Marginals.pdf"
-    },
-    {
-     "pollster": "University of North Florida",
-     "lean": null,
-     "sponsor": null,
-     "start": "2026-07-08",
-     "end": "2026-07-17",
-     "n": 848,
-     "pop": "LV",
-     "moe": 3.8,
-     "dem": 41.0,
-     "rep": 46.0,
-     "other": 7.0,
-     "und": 6.0,
-     "results": {
-      "Byron Donalds": 46.0,
-      "David Jolly": 41.0
-     },
-     "url": "https://www.unfporl.org/presser-page"
-    },
-    {
-     "pollster": "Change Research (D)",
-     "lean": "D",
-     "sponsor": null,
-     "start": "2026-07-09",
-     "end": "2026-07-11",
-     "n": 1348,
-     "pop": "RV",
-     "moe": 2.8,
-     "dem": 37.0,
-     "rep": 37.0,
-     "other": 11.0,
-     "und": 16.0,
-     "results": {
-      "Byron Donalds": 37.0,
-      "David Jolly": 37.0
-     },
-     "url": "https://changeresearch.com/florida-florida-florida/"
-    },
-    {
-     "pollster": "Change Research (D)",
-     "lean": "D",
-     "sponsor": null,
-     "start": "2026-07-09",
-     "end": "2026-07-11",
-     "n": 1348,
-     "pop": "RV",
-     "moe": 2.8,
-     "dem": 41.0,
-     "rep": 40.0,
-     "other": 7.0,
-     "und": 12.0,
-     "results": {
-      "Byron Donalds": 40.0,
-      "David Jolly": 41.0
-     },
-     "url": "https://changeresearch.com/florida-florida-florida/",
-     "variant": true
-    },
-    {
-     "pollster": "Change Research (D)",
-     "lean": "D",
-     "sponsor": "Freedom Project USA",
-     "start": "2026-05-13",
-     "end": "2026-05-16",
-     "n": 1593,
-     "pop": "LV",
-     "moe": 2.3,
-     "dem": 46.0,
-     "rep": 42.0,
-     "other": 4.0,
-     "und": 8.0,
-     "results": {
-      "Byron Donalds": 42.0,
-      "David Jolly": 46.0
-     },
-     "url": "https://changeresearch.com/wp-content/uploads/2026/05/Deep-Dive-into-Florida-1.pdf"
-    },
-    {
-     "pollster": "Cherry Communications (R)",
-     "lean": "R",
-     "sponsor": "Florida Chamber of Commerce",
-     "start": "2026-05-01",
-     "end": "2026-05-09",
-     "n": 604,
-     "pop": "LV",
-     "moe": 4.0,
-     "dem": 39.0,
-     "rep": 47.0,
-     "other": null,
-     "und": 14.0,
-     "results": {
-      "Byron Donalds": 47.0,
-      "David Jolly": 39.0
-     },
-     "url": "https://www.flchamber.com/new-florida-chamber-statewide-poll-shows-ashley-moody-byron-donalds-leading-potential-democratic-opponents-in-november-ballot-test/"
-    },
-    {
-     "pollster": "Stetson University",
-     "lean": null,
-     "sponsor": null,
-     "start": "2026-03-15",
-     "end": "2026-04-13",
-     "n": 848,
-     "pop": "LV",
-     "moe": 4.1,
-     "dem": 40.0,
-     "rep": 47.0,
-     "other": null,
-     "und": 7.0,
-     "results": {
-      "Byron Donalds": 47.0,
-      "David Jolly": 40.0
-     },
-     "url": "https://www2.stetson.edu/today/2026/04/stetson-poll-republicans-lead-in-florida-2026-races-but-many-voters-still-undecided/"
-    },
-    {
-     "pollster": "Echelon Insights",
-     "lean": null,
-     "sponsor": "NetChoice",
-     "start": "2026-04-03",
-     "end": "2026-04-09",
-     "n": 406,
-     "pop": "LV",
-     "moe": 6.0,
-     "dem": 43.0,
-     "rep": 49.0,
-     "other": null,
-     "und": 8.0,
-     "results": {
-      "Byron Donalds": 49.0,
-      "David Jolly": 43.0
-     },
-     "url": "https://netchoice.org/wp-content/uploads/2026/04/NetChoice-Apr-2026-National-Antitrust-Survey-Topline.pdf"
-    },
-    {
-     "pollster": "MDW Communications (D)",
-     "lean": "D",
-     "sponsor": "Edge Communications",
-     "start": "2026-03-27",
-     "end": "2026-04-03",
-     "n": 1834,
-     "pop": "LV",
-     "moe": 2.0,
-     "dem": 41.0,
-     "rep": 41.0,
-     "other": null,
-     "und": 18.0,
-     "results": {
-      "Byron Donalds": 41.0,
-      "David Jolly": 41.0
-     },
-     "url": "https://floridapolitics.com/archives/790357-poll-democrats-gaining-ground-key-races-tighten-in-florida-as-donald-trump-drags-gop/"
-    },
-    {
-     "pollster": "Emerson College",
-     "lean": null,
-     "sponsor": null,
-     "start": "2026-03-29",
-     "end": "2026-03-31",
-     "n": 1165,
-     "pop": "LV",
-     "moe": 2.8,
-     "dem": 39.0,
-     "rep": 44.0,
-     "other": 2.0,
-     "und": 17.0,
-     "results": {
-      "Byron Donalds": 44.0,
-      "David Jolly": 39.0
-     },
-     "url": "https://emersoncollegepolling.com/florida-2026-poll-donalds-leads-gop-primary-for-governor-republicans-outpace-democrats-in-florida-elections/"
-    },
-    {
-     "pollster": "University of North Florida",
-     "lean": null,
-     "sponsor": null,
-     "start": "2026-02-21",
-     "end": "2026-03-02",
-     "n": 786,
-     "pop": "LV",
-     "moe": 4.0,
-     "dem": 36.0,
-     "rep": 42.0,
-     "other": 5.0,
-     "und": 17.0,
-     "results": {
-      "Byron Donalds": 42.0,
-      "David Jolly": 36.0
-     },
-     "url": "https://www.orlandosentinel.com/2026/03/04/florida-poll-shows-republicans-lead-democrats-in-statewide-races-but-only-by-single-digits/"
-    },
-    {
-     "pollster": "Targoz Market Research",
-     "lean": null,
-     "sponsor": "James Madison Institute",
-     "start": "2026-02-13",
-     "end": "2026-02-16",
-     "n": 1129,
-     "pop": "LV",
-     "moe": 2.8,
-     "dem": 36.0,
-     "rep": 41.0,
-     "other": 6.0,
-     "und": 12.0,
-     "results": {
-      "Byron Donalds": 41.0,
-      "David Jolly": 36.0
-     },
-     "url": "https://jamesmadison.org/the-james-madison-institute-releases-latest-jmi-poll-of-florida-voters-2/"
-    },
-    {
-     "pollster": "University of North Florida",
-     "lean": null,
-     "sponsor": null,
-     "start": "2025-10-15",
-     "end": "2025-10-25",
-     "n": 728,
-     "pop": "LV",
-     "moe": 4.3,
-     "dem": 34.0,
-     "rep": 45.0,
-     "other": 3.0,
-     "und": 18.0,
-     "results": {
-      "Byron Donalds": 45.0,
-      "David Jolly": 34.0
-     },
-     "url": "https://www.unfporl.org/uploads/1/4/4/5/144559024/unf_porl_fall_statewide_2025_lv_-_press_release.pdf"
-    },
-    {
-     "pollster": "Targoz Market Research",
-     "lean": null,
-     "sponsor": "James Madison Institute",
-     "start": "2025-09-16",
-     "end": "2025-09-18",
-     "n": 1118,
-     "pop": "RV",
-     "moe": 2.8,
-     "dem": 32.0,
+     "dem": 49.0,
      "rep": 36.0,
-     "other": 4.0,
-     "und": 28.0,
-     "results": {
-      "Byron Donalds": 36.0,
-      "David Jolly": 32.0
-     },
-     "url": "https://jamesmadison.org/wp-content/uploads/Marginals.pdf"
-    },
-    {
-     "pollster": "Bendixen & Amandi International (D)",
-     "lean": "D",
-     "sponsor": "Jolly's campaign",
-     "start": "2025-09-07",
-     "end": "2025-09-09",
-     "n": 631,
-     "pop": "LV",
-     "moe": 4.0,
-     "dem": 41.0,
-     "rep": 40.0,
      "other": null,
-     "und": 19.0,
+     "und": 15.0,
      "results": {
-      "Byron Donalds": 40.0,
-      "David Jolly": 41.0
+      "Juliana Stratton": 49.0,
+      "Don Tracy": 36.0
      },
-     "url": "https://floridapolitics.com/archives/755557-poll-david-jolly-in-dead-heat-with-byron-donalds-paul-renner/"
-    },
-    {
-     "pollster": "AIF Center (R)",
-     "lean": "R",
-     "sponsor": null,
-     "start": "2025-08-25",
-     "end": "2025-08-27",
-     "n": 800,
-     "pop": "LV",
-     "moe": 3.5,
-     "dem": 41.0,
-     "rep": 49.0,
-     "other": null,
-     "und": 11.0,
-     "results": {
-      "Byron Donalds": 49.0,
-      "David Jolly": 41.0
-     },
-     "url": "https://floridapolitics.com/archives/755696-new-poll-shows-byron-donalds-with-8-point-edge-on-david-jolly/"
-    },
-    {
-     "pollster": "Victory Insights (R)",
-     "lean": "R",
-     "sponsor": null,
-     "start": "2025-06-07",
-     "end": "2025-06-10",
-     "n": 600,
-     "pop": "LV",
-     "moe": 2.8,
-     "dem": 31.0,
-     "rep": 37.0,
-     "other": null,
-     "und": 32.0,
-     "results": {
-      "Byron Donalds": 37.0,
-      "David Jolly": 31.0
-     },
-     "url": "https://irp.cdn-website.com/07e08705/files/uploaded/PollSummary_FL-Gov_06-11-2025.pdf"
+     "url": "https://www.cnwmedia.com/article/cnw-poll-pritzker-leads-bailey-by-20-points-democrats-ahead-in-four-other-statewide-races"
     }
-   ]
-  },
+   ],
+   "special": false
+  }
+ },
+ "governors": {
   "GA": {
    "page": "2026 Georgia gubernatorial election",
    "url": "https://en.wikipedia.org/wiki/2026_Georgia_gubernatorial_election",
@@ -29001,7 +28334,7 @@
    "avg": {
     "margin": -18.8,
     "n_polls": 3,
-    "window_days": 93,
+    "window_days": 94,
     "method": "fewer than 3 polls in 21 days; last 3 polls",
     "latest_poll": "2026-10-22",
     "weights": {
@@ -29181,11 +28514,11 @@
     "b": "Darren Bailey"
    },
    "avg": {
-    "margin": 18.3,
-    "n_polls": 3,
-    "window_days": 341,
-    "method": "fewer than 3 polls in 21 days; last 3 polls",
-    "latest_poll": "2026-10-22",
+    "margin": 18.1,
+    "n_polls": 4,
+    "window_days": 342,
+    "method": "fewer than 3 polls in 21 days; last 4 polls",
+    "latest_poll": "2026-10-31",
     "weights": {
      "recency": "exp(-days_since_end/10)",
      "sample": "sqrt(min(n,1500)/600)",
@@ -29194,9 +28527,17 @@
     "polls_used": [
      {
       "pollster": "ActiVote",
+      "end": "2026-10-31",
+      "n": 400,
+      "weight": 0.846,
+      "JB Pritzker": 59.0,
+      "Darren Bailey": 41.0
+     },
+     {
+      "pollster": "ActiVote",
       "end": "2026-10-22",
       "n": 400,
-      "weight": 0.873,
+      "weight": 0.103,
       "JB Pritzker": 59.0,
       "Darren Bailey": 41.0
      },
@@ -29204,7 +28545,7 @@
       "pollster": "Public Policy Polling (D)",
       "end": "2026-10-01",
       "n": 569,
-      "weight": 0.127,
+      "weight": 0.05,
       "JB Pritzker": 54.0,
       "Darren Bailey": 34.0
      },
@@ -29217,11 +28558,11 @@
       "Darren Bailey": 34.0
      }
     ],
-    "dem": 58.4,
-    "rep": 40.1,
+    "dem": 58.7,
+    "rep": 40.6,
     "candidates": {
-     "JB Pritzker": 58.4,
-     "Darren Bailey": 40.1
+     "JB Pritzker": 58.7,
+     "Darren Bailey": 40.6
     }
    },
    "trend": [
@@ -29234,11 +28575,35 @@
      "week": "2026-10-19",
      "margin": 18.0,
      "n": 1
+    },
+    {
+     "week": "2026-10-26",
+     "margin": 18.0,
+     "n": 1
     }
    ],
-   "n_polls": 3,
+   "n_polls": 4,
    "n_tables_on_page": 2,
    "polls": [
+    {
+     "pollster": "ActiVote",
+     "lean": null,
+     "sponsor": null,
+     "start": "2026-10-23",
+     "end": "2026-10-31",
+     "n": 400,
+     "pop": "LV",
+     "moe": 4.9,
+     "dem": 59.0,
+     "rep": 41.0,
+     "other": null,
+     "und": null,
+     "results": {
+      "JB Pritzker": 59.0,
+      "Darren Bailey": 41.0
+     },
+     "url": "https://www.activote.net/polls/2026/il-governor/2026-10-31/"
+    },
     {
      "pollster": "ActiVote",
      "lean": null,
@@ -29946,7 +29311,7 @@
     "b": "Ty Masterson"
    },
    "avg": {
-    "margin": -1.1,
+    "margin": -1.4,
     "n_polls": 4,
     "window_days": 21,
     "method": "last 21 days",
@@ -29962,8 +29327,8 @@
       "end": "2026-10-28",
       "n": 800,
       "weight": 0.324,
-      "Cindy Holscher": 46.0,
-      "Ty Masterson": 50.0
+      "Cindy Holscher": 48.0,
+      "Ty Masterson": 53.0
      },
      {
       "pollster": "The Washington Post/SSPG",
@@ -29990,11 +29355,11 @@
       "Ty Masterson": 47.0
      }
     ],
-    "dem": 47.2,
-    "rep": 48.3,
+    "dem": 47.8,
+    "rep": 49.2,
     "candidates": {
-     "Cindy Holscher": 47.2,
-     "Ty Masterson": 48.3
+     "Cindy Holscher": 47.8,
+     "Ty Masterson": 49.2
     }
    },
    "trend": [
@@ -30025,13 +29390,32 @@
     },
     {
      "week": "2026-10-26",
-     "margin": -1.0,
+     "margin": -1.3,
      "n": 3
     }
    ],
    "n_polls": 10,
    "n_tables_on_page": 2,
    "polls": [
+    {
+     "pollster": "Emerson College",
+     "lean": null,
+     "sponsor": null,
+     "start": "2026-10-26",
+     "end": "2026-10-28",
+     "n": 800,
+     "pop": "LV",
+     "moe": 3.5,
+     "dem": 48.0,
+     "rep": 53.0,
+     "other": null,
+     "und": null,
+     "results": {
+      "Cindy Holscher": 48.0,
+      "Ty Masterson": 53.0
+     },
+     "url": "https://emersoncollegepolling.com/october-2026-kansas-poll-hamilton-maintains-edge-over-marshall/"
+    },
     {
      "pollster": "Emerson College",
      "lean": null,
@@ -30048,25 +29432,6 @@
      "results": {
       "Cindy Holscher": 46.0,
       "Ty Masterson": 50.0
-     },
-     "url": "https://emersoncollegepolling.com/october-2026-kansas-poll-hamilton-maintains-edge-over-marshall/"
-    },
-    {
-     "pollster": "Emerson College",
-     "lean": null,
-     "sponsor": null,
-     "start": "2026-10-26",
-     "end": "2026-10-28",
-     "n": 800,
-     "pop": "LV",
-     "moe": 3.5,
-     "dem": 47.5,
-     "rep": 52.5,
-     "other": null,
-     "und": null,
-     "results": {
-      "Cindy Holscher": 47.5,
-      "Ty Masterson": 52.5
      },
      "url": "https://emersoncollegepolling.com/october-2026-kansas-poll-hamilton-maintains-edge-over-marshall/",
      "variant": true
@@ -30267,11 +29632,11 @@
     "b": "Bobby Charles"
    },
    "avg": {
-    "margin": 9.5,
-    "n_polls": 7,
+    "margin": 10.1,
+    "n_polls": 8,
     "window_days": 21,
     "method": "last 21 days",
-    "latest_poll": "2026-10-26",
+    "latest_poll": "2026-10-27",
     "weights": {
      "recency": "exp(-days_since_end/10)",
      "sample": "sqrt(min(n,1500)/600)",
@@ -30279,10 +29644,18 @@
     },
     "polls_used": [
      {
+      "pollster": "Data for Progress (D)",
+      "end": "2026-10-27",
+      "n": 652,
+      "weight": 0.207,
+      "Hannah Pingree": 49.0,
+      "Bobby Charles": 37.0
+     },
+     {
       "pollster": "SSRS",
       "end": "2026-10-26",
       "n": 783,
-      "weight": 0.259,
+      "weight": 0.205,
       "Hannah Pingree": 53.0,
       "Bobby Charles": 39.0
      },
@@ -30290,7 +29663,7 @@
       "pollster": "Marist University",
       "end": "2026-10-25",
       "n": null,
-      "weight": 0.205,
+      "weight": 0.163,
       "Hannah Pingree": 44.0,
       "Bobby Charles": 44.0
      },
@@ -30298,7 +29671,7 @@
       "pollster": "Marist University",
       "end": "2026-10-25",
       "n": 1449,
-      "weight": 0.096,
+      "weight": 0.076,
       "Hannah Pingree": 51.0,
       "Bobby Charles": 40.0
      },
@@ -30306,7 +29679,7 @@
       "pollster": "Echelon Insights (R)",
       "end": "2026-10-23",
       "n": 413,
-      "weight": 0.139,
+      "weight": 0.11,
       "Hannah Pingree": 51.0,
       "Bobby Charles": 38.0
      },
@@ -30314,7 +29687,7 @@
       "pollster": "Beacon Research (D)/Shaw & Co. Research (R)",
       "end": "2026-10-20",
       "n": 1514,
-      "weight": 0.197,
+      "weight": 0.156,
       "Hannah Pingree": 49.0,
       "Bobby Charles": 39.0
      },
@@ -30322,7 +29695,7 @@
       "pollster": "Beacon Research (D)/Shaw & Co. Research (R)",
       "end": "2026-10-20",
       "n": 1689,
-      "weight": 0.059,
+      "weight": 0.047,
       "Hannah Pingree": 49.0,
       "Bobby Charles": 39.0
      },
@@ -30330,17 +29703,17 @@
       "pollster": "Suffolk University",
       "end": "2026-10-11",
       "n": 500,
-      "weight": 0.046,
+      "weight": 0.037,
       "Hannah Pingree": 49.0,
       "Bobby Charles": 38.0
      }
     ],
-    "dem": 49.5,
-    "rep": 39.9,
+    "dem": 49.4,
+    "rep": 39.3,
     "candidates": {
-     "Hannah Pingree": 49.5,
-     "Bobby Charles": 39.9,
-     "Rick Bennett": 7.5
+     "Hannah Pingree": 49.4,
+     "Bobby Charles": 39.3,
+     "Rick Bennett": 7.4
     }
    },
    "trend": [
@@ -30386,13 +29759,33 @@
     },
     {
      "week": "2026-10-26",
-     "margin": 14.0,
-     "n": 1
+     "margin": 13.0,
+     "n": 2
     }
    ],
-   "n_polls": 22,
+   "n_polls": 23,
    "n_tables_on_page": 4,
    "polls": [
+    {
+     "pollster": "Data for Progress (D)",
+     "lean": "D",
+     "sponsor": null,
+     "start": "2026-10-23",
+     "end": "2026-10-27",
+     "n": 652,
+     "pop": "LV",
+     "moe": 4.5,
+     "dem": 49.0,
+     "rep": 37.0,
+     "other": null,
+     "und": 6.0,
+     "results": {
+      "Hannah Pingree": 49.0,
+      "Bobby Charles": 37.0,
+      "Rick Bennett": 7.0
+     },
+     "url": "https://www.dataforprogress.org/blog/2026/10/30/democratic-senate-candidates-lead-in-maine-michigan-and-texas"
+    },
     {
      "pollster": "SSRS",
      "lean": null,
@@ -30898,7 +30291,7 @@
    "avg": {
     "margin": 27.0,
     "n_polls": 2,
-    "window_days": 89,
+    "window_days": 90,
     "method": "fewer than 3 polls in 21 days; last 2 polls",
     "latest_poll": "2026-09-27",
     "weights": {
@@ -31002,7 +30395,7 @@
    "avg": {
     "margin": 23.4,
     "n_polls": 8,
-    "window_days": 141,
+    "window_days": 142,
     "method": "fewer than 3 polls in 21 days; last 8 polls",
     "latest_poll": "2026-10-18",
     "weights": {
@@ -31397,8 +30790,8 @@
     "b": "John James"
    },
    "avg": {
-    "margin": 8.6,
-    "n_polls": 8,
+    "margin": 8.0,
+    "n_polls": 9,
     "window_days": 21,
     "method": "last 21 days",
     "latest_poll": "2026-10-27",
@@ -31412,7 +30805,7 @@
       "pollster": "Mitchell Research & Communications",
       "end": "2026-10-27",
       "n": 636,
-      "weight": 0.203,
+      "weight": 0.174,
       "Jocelyn Benson": 49.0,
       "John James": 44.0
      },
@@ -31420,15 +30813,23 @@
       "pollster": "SSRS",
       "end": "2026-10-27",
       "n": 768,
-      "weight": 0.223,
+      "weight": 0.192,
       "Jocelyn Benson": 53.0,
       "John James": 41.0
+     },
+     {
+      "pollster": "Data for Progress (D)",
+      "end": "2026-10-25",
+      "n": 622,
+      "weight": 0.141,
+      "Jocelyn Benson": 50.0,
+      "John James": 46.0
      },
      {
       "pollster": "Michigan State University/Verasight",
       "end": "2026-10-23",
       "n": 1383,
-      "weight": 0.201,
+      "weight": 0.172,
       "Jocelyn Benson": 51.0,
       "John James": 42.0
      },
@@ -31436,7 +30837,7 @@
       "pollster": "Glengariff Group",
       "end": "2026-10-22",
       "n": 600,
-      "weight": 0.12,
+      "weight": 0.103,
       "Jocelyn Benson": 51.0,
       "John James": 45.0
      },
@@ -31444,7 +30845,7 @@
       "pollster": "Michigan State University/YouGov",
       "end": "2026-10-19",
       "n": 836,
-      "weight": 0.105,
+      "weight": 0.09,
       "Jocelyn Benson": 52.0,
       "John James": 40.0
      },
@@ -31452,7 +30853,7 @@
       "pollster": "Michigan State University/YouGov",
       "end": "2026-10-19",
       "n": 1000,
-      "weight": 0.034,
+      "weight": 0.029,
       "Jocelyn Benson": 44.0,
       "John James": 35.0
      },
@@ -31460,7 +30861,7 @@
       "pollster": "Marist University",
       "end": "2026-10-18",
       "n": null,
-      "weight": 0.08,
+      "weight": 0.069,
       "Jocelyn Benson": 51.0,
       "John James": 45.0
      },
@@ -31468,16 +30869,16 @@
       "pollster": "Marist University",
       "end": "2026-10-18",
       "n": 1185,
-      "weight": 0.034,
+      "weight": 0.029,
       "Jocelyn Benson": 53.0,
       "John James": 42.0
      }
     ],
-    "dem": 51.0,
-    "rep": 42.3,
+    "dem": 50.8,
+    "rep": 42.9,
     "candidates": {
-     "Jocelyn Benson": 51.0,
-     "John James": 42.3
+     "Jocelyn Benson": 50.8,
+     "John James": 42.9
     }
    },
    "trend": [
@@ -31523,8 +30924,8 @@
     },
     {
      "week": "2026-10-19",
-     "margin": 9.0,
-     "n": 4
+     "margin": 8.0,
+     "n": 5
     },
     {
      "week": "2026-10-26",
@@ -31532,7 +30933,7 @@
      "n": 2
     }
    ],
-   "n_polls": 39,
+   "n_polls": 40,
    "n_tables_on_page": 20,
    "polls": [
     {
@@ -31572,6 +30973,25 @@
       "John James": 41.0
      },
      "url": "https://www.documentcloud.org/documents/28856720-cnn-poll-conducted-by-ssrs-michigan-october/"
+    },
+    {
+     "pollster": "Data for Progress (D)",
+     "lean": "D",
+     "sponsor": null,
+     "start": "2026-10-23",
+     "end": "2026-10-25",
+     "n": 622,
+     "pop": "LV",
+     "moe": 4.0,
+     "dem": 50.0,
+     "rep": 46.0,
+     "other": 2.0,
+     "und": 3.0,
+     "results": {
+      "Jocelyn Benson": 50.0,
+      "John James": 46.0
+     },
+     "url": "https://www.dataforprogress.org/blog/2026/10/30/democratic-senate-candidates-lead-in-maine-michigan-and-texas"
     },
     {
      "pollster": "Michigan State University/Verasight",
@@ -32790,11 +32210,11 @@
     "b": "Jim Pillen"
    },
    "avg": {
-    "margin": -3.0,
-    "n_polls": 5,
+    "margin": -7.1,
+    "n_polls": 6,
     "window_days": 21,
     "method": "last 21 days",
-    "latest_poll": "2026-10-23",
+    "latest_poll": "2026-10-29",
     "weights": {
      "recency": "exp(-days_since_end/10)",
      "sample": "sqrt(min(n,1500)/600)",
@@ -32802,10 +32222,18 @@
     },
     "polls_used": [
      {
+      "pollster": "New York Times/Siena University",
+      "end": "2026-10-29",
+      "n": 809,
+      "weight": 0.407,
+      "Lynne Walz": 40.0,
+      "Jim Pillen": 53.0
+     },
+     {
       "pollster": "Echelon Insights (R)",
       "end": "2026-10-23",
       "n": 407,
-      "weight": 0.267,
+      "weight": 0.159,
       "Lynne Walz": 40.0,
       "Jim Pillen": 47.0
      },
@@ -32813,7 +32241,7 @@
       "pollster": "Concord Public Opinion Partners (D)",
       "end": "2026-10-18",
       "n": 500,
-      "weight": 0.18,
+      "weight": 0.107,
       "Lynne Walz": 43.0,
       "Jim Pillen": 40.0
      },
@@ -32821,7 +32249,7 @@
       "pollster": "National Public Affairs (R)",
       "end": "2026-10-18",
       "n": 598,
-      "weight": 0.197,
+      "weight": 0.117,
       "Lynne Walz": 41.0,
       "Jim Pillen": 47.0
      },
@@ -32829,7 +32257,7 @@
       "pollster": "Global Strategy Group (D)",
       "end": "2026-10-18",
       "n": 800,
-      "weight": 0.227,
+      "weight": 0.135,
       "Lynne Walz": 39.0,
       "Jim Pillen": 40.0
      },
@@ -32837,16 +32265,16 @@
       "pollster": "Public Policy Polling (D)",
       "end": "2026-10-14",
       "n": 571,
-      "weight": 0.129,
+      "weight": 0.076,
       "Lynne Walz": 46.0,
       "Jim Pillen": 48.0
      }
     ],
-    "dem": 41.3,
-    "rep": 44.3,
+    "dem": 40.8,
+    "rep": 47.8,
     "candidates": {
-     "Jim Pillen": 44.3,
-     "Lynne Walz": 41.3,
+     "Jim Pillen": 47.8,
+     "Lynne Walz": 40.8,
      "Brett Lindstrom": 4.6,
      "Rick Beard": 5.2
     }
@@ -32886,11 +32314,37 @@
      "week": "2026-10-19",
      "margin": -7.0,
      "n": 1
+    },
+    {
+     "week": "2026-10-26",
+     "margin": -13.0,
+     "n": 1
     }
    ],
-   "n_polls": 15,
+   "n_polls": 16,
    "n_tables_on_page": 1,
    "polls": [
+    {
+     "pollster": "New York Times/Siena University",
+     "lean": null,
+     "sponsor": null,
+     "start": "2026-10-23",
+     "end": "2026-10-29",
+     "n": 809,
+     "pop": "LV",
+     "moe": 4.0,
+     "dem": 40.0,
+     "rep": 53.0,
+     "other": 0.0,
+     "und": 7.0,
+     "results": {
+      "Jim Pillen": 53.0,
+      "Lynne Walz": 40.0,
+      "Brett Lindstrom": null,
+      "Rick Beard": null
+     },
+     "url": "https://www.nytimes.com/interactive/2026/10/31/polls/times-siena-ne-poll-toplines.html"
+    },
     {
      "pollster": "Echelon Insights (R)",
      "lean": "R",
@@ -34274,7 +33728,9 @@
      },
      "url": "https://www.santafenewmexican.com/news/elections/hull-campaigns-poll-race-for-governor-of-new-mexico-statistically-tied/article_60922cf5-4d63-46e0-842b-fea10d355c53.html"
     }
-   ]
+   ],
+   "stale": true,
+   "stale_error": "FetchError: time budget exhausted while fetching '2026 New Mexico gubernatorial election' (rest: HTTP 429)"
   },
   "NY": {
    "page": "2026 New York gubernatorial election",
@@ -35061,7 +34517,9 @@
      },
      "url": "https://www.politico.com/f/?id=00000196-794c-d38d-ad9f-fdde91da0000"
     }
-   ]
+   ],
+   "stale": true,
+   "stale_error": "skipped: time budget of 240s exhausted"
   },
   "OH": {
    "page": "2026 Ohio gubernatorial election",
@@ -36032,7 +35490,9 @@
      },
      "url": "https://314action.org/wp-content/uploads/2025/02/Ohio-Poll-Feb-2025.pdf"
     }
-   ]
+   ],
+   "stale": true,
+   "stale_error": "skipped: time budget of 240s exhausted"
   },
   "OK": {
    "page": "2026 Oklahoma gubernatorial election",
@@ -36206,7 +35666,9 @@
      },
      "url": "https://crosstimberspoll.org/ctp-2026-01.html"
     }
-   ]
+   ],
+   "stale": true,
+   "stale_error": "skipped: time budget of 240s exhausted"
   },
   "OR": {
    "page": "2026 Oregon gubernatorial election",
@@ -36488,7 +35950,9 @@
      },
      "url": "https://www.oregonlive.com/politics/2026/02/who-will-be-oregons-next-governor-first-poll-of-2026-names-this-candidate.html"
     }
-   ]
+   ],
+   "stale": true,
+   "stale_error": "skipped: time budget of 240s exhausted"
   },
   "PA": {
    "page": "2026 Pennsylvania gubernatorial election",
@@ -37063,7 +36527,9 @@
      },
      "url": "https://x.com/SusquehannaPR/status/1975656184393666735"
     }
-   ]
+   ],
+   "stale": true,
+   "stale_error": "skipped: time budget of 240s exhausted"
   },
   "RI": {
    "page": "2026 Rhode Island gubernatorial election",
@@ -37403,7 +36869,9 @@
      },
      "url": "https://www.golocalprov.com/politics/new-poll-on-governors-race-turns-race-upside-down"
     }
-   ]
+   ],
+   "stale": true,
+   "stale_error": "skipped: time budget of 240s exhausted"
   },
   "SC": {
    "page": "2026 South Carolina gubernatorial election",
@@ -37692,7 +37160,9 @@
      },
      "url": "https://data.ddhq.io/polls/2026/07/30/Public-Policy-Polling/Annie-Andrews-South-Carolina-2026-07-16-2026-07-17"
     }
-   ]
+   ],
+   "stale": true,
+   "stale_error": "skipped: time budget of 240s exhausted"
   },
   "SD": {
    "page": "2026 South Dakota gubernatorial election",
@@ -37801,7 +37271,9 @@
      },
      "url": "https://www.documentcloud.org/documents/28817212-sd-sen-gov-concord-public-opinion-partners-oct-2026/"
     }
-   ]
+   ],
+   "stale": true,
+   "stale_error": "skipped: time budget of 240s exhausted"
   },
   "TN": {
    "page": "2026 Tennessee gubernatorial election",
@@ -38067,7 +37539,9 @@
      },
      "url": "https://drive.google.com/file/d/1e3buxlVGdwvx-2H11FwX9XI_y1EWvzu6/view"
     }
-   ]
+   ],
+   "stale": true,
+   "stale_error": "skipped: time budget of 240s exhausted"
   },
   "TX": {
    "page": "2026 Texas gubernatorial election",
@@ -39729,7 +39203,9 @@
      },
      "url": "https://emersoncollegepolling.com/texas-2026-poll/"
     }
-   ]
+   ],
+   "stale": true,
+   "stale_error": "skipped: time budget of 240s exhausted"
   },
   "VT": {
    "page": "2026 Vermont gubernatorial election",
@@ -40018,7 +39494,9 @@
      },
      "url": "https://scholars.unh.edu/cgi/viewcontent.cgi?article=1969&context=survey_center_polls"
     }
-   ]
+   ],
+   "stale": true,
+   "stale_error": "skipped: time budget of 240s exhausted"
   },
   "WI": {
    "page": "2026 Wisconsin gubernatorial election",
@@ -40421,7 +39899,9 @@
      },
      "url": "https://tippinsights.com/league-of-american-workers-survey-wisconsin-3/"
     }
-   ]
+   ],
+   "stale": true,
+   "stale_error": "skipped: time budget of 240s exhausted"
   },
   "WY": {
    "page": "2026 Wyoming gubernatorial election",
@@ -40436,7 +39916,9 @@
    "trend": [],
    "n_polls": 0,
    "n_tables_on_page": 1,
-   "polls": []
+   "polls": [],
+   "stale": true,
+   "stale_error": "skipped: time budget of 240s exhausted"
   },
   "AL": {
    "page": "2026 Alabama gubernatorial election",
@@ -40634,7 +40116,9 @@
      },
      "url": "https://www.cygn.al/wp-content/uploads/2025/11/AL-Gov-Gen-Elect-Poll-Memo.pdf"
     }
-   ]
+   ],
+   "stale": true,
+   "stale_error": "skipped: time budget of 240s exhausted"
   },
   "AK": {
    "page": "2026 Alaska gubernatorial election",
@@ -40934,7 +40418,9 @@
      "variant": true,
      "round": "1"
     }
-   ]
+   ],
+   "stale": true,
+   "stale_error": "skipped: time budget of 240s exhausted"
   },
   "AZ": {
    "page": "2026 Arizona gubernatorial election",
@@ -41662,7 +41148,9 @@
      },
      "url": "https://web.archive.org/web/20250214065131/https://projects.fivethirtyeight.com/polls/250212_AZ_KStrategiesdeck.pdf"
     }
-   ]
+   ],
+   "stale": true,
+   "stale_error": "skipped: time budget of 240s exhausted"
   },
   "AR": {
    "page": "2026 Arkansas gubernatorial election",
@@ -41778,7 +41266,9 @@
      },
      "url": "https://talkbusiness.net/2026/08/poll-gov-sanders-holds-lead-over-two-opponents/"
     }
-   ]
+   ],
+   "stale": true,
+   "stale_error": "skipped: time budget of 240s exhausted"
   },
   "CA": {
    "page": "2026 California gubernatorial election",
@@ -42312,7 +41802,9 @@
      },
      "url": "https://escholarship.org/uc/item/4p03f9rh#main"
     }
-   ]
+   ],
+   "stale": true,
+   "stale_error": "skipped: time budget of 240s exhausted"
   },
   "CO": {
    "page": "2026 Colorado gubernatorial election",
@@ -42327,7 +41819,9 @@
    "trend": [],
    "n_polls": 0,
    "n_tables_on_page": 3,
-   "polls": []
+   "polls": [],
+   "stale": true,
+   "stale_error": "skipped: time budget of 240s exhausted"
   },
   "CT": {
    "page": "2026 Connecticut gubernatorial election",
@@ -42705,246 +42199,991 @@
      },
      "url": "https://scholars.unh.edu/cgi/viewcontent.cgi?article=1971&context=survey_center_polls"
     }
-   ]
+   ],
+   "stale": true,
+   "stale_error": "skipped: time budget of 240s exhausted"
+  },
+  "FL": {
+   "page": "2026 Florida gubernatorial election",
+   "url": "https://en.wikipedia.org/wiki/2026_Florida_gubernatorial_election",
+   "fetched_via": "api",
+   "candidates": [
+    {
+     "name": "Byron Donalds",
+     "party": "R"
+    },
+    {
+     "name": "David Jolly",
+     "party": "D"
+    }
+   ],
+   "main": {
+    "a": "David Jolly",
+    "b": "Byron Donalds"
+   },
+   "avg": {
+    "margin": -3.7,
+    "n_polls": 12,
+    "window_days": 21,
+    "method": "last 21 days",
+    "latest_poll": "2026-10-27",
+    "weights": {
+     "recency": "exp(-days_since_end/10)",
+     "sample": "sqrt(min(n,1500)/600)",
+     "pollster_dedupe": 0.3
+    },
+    "polls_used": [
+     {
+      "pollster": "St. Pete Polls",
+      "end": "2026-10-27",
+      "n": 916,
+      "weight": 0.166,
+      "David Jolly": 46.0,
+      "Byron Donalds": 48.0
+     },
+     {
+      "pollster": "New York Times/Siena University",
+      "end": "2026-10-25",
+      "n": 813,
+      "weight": 0.128,
+      "David Jolly": 44.0,
+      "Byron Donalds": 48.0
+     },
+     {
+      "pollster": "RedBox Research",
+      "end": "2026-10-23",
+      "n": 4832,
+      "weight": 0.142,
+      "David Jolly": 44.0,
+      "Byron Donalds": 49.0
+     },
+     {
+      "pollster": "Echelon Insights (R)",
+      "end": "2026-10-23",
+      "n": 515,
+      "weight": 0.083,
+      "David Jolly": 44.0,
+      "Byron Donalds": 50.0
+     },
+     {
+      "pollster": "Workbench Strategy (D)",
+      "end": "2026-10-22",
+      "n": 800,
+      "weight": 0.094,
+      "David Jolly": 48.0,
+      "Byron Donalds": 46.0
+     },
+     {
+      "pollster": "co/efficient (R)",
+      "end": "2026-10-20",
+      "n": 1014,
+      "weight": 0.087,
+      "David Jolly": 40.0,
+      "Byron Donalds": 49.0
+     },
+     {
+      "pollster": "University of North Florida",
+      "end": "2026-10-19",
+      "n": 1471,
+      "weight": 0.095,
+      "David Jolly": 47.0,
+      "Byron Donalds": 49.0
+     },
+     {
+      "pollster": "ActiVote",
+      "end": "2026-10-19",
+      "n": 400,
+      "weight": 0.049,
+      "David Jolly": 48.0,
+      "Byron Donalds": 52.0
+     },
+     {
+      "pollster": "Univision/YouGov",
+      "end": "2026-10-15",
+      "n": 825,
+      "weight": 0.047,
+      "David Jolly": 42.0,
+      "Byron Donalds": 50.0
+     },
+     {
+      "pollster": "Fabrizio, Lee & Associates (R)",
+      "end": "2026-10-11",
+      "n": 1200,
+      "weight": 0.038,
+      "David Jolly": 43.0,
+      "Byron Donalds": 49.0
+     },
+     {
+      "pollster": "Change Research (D)",
+      "end": "2026-10-10",
+      "n": 920,
+      "weight": 0.03,
+      "David Jolly": 47.0,
+      "Byron Donalds": 47.0
+     },
+     {
+      "pollster": "MDW Communications",
+      "end": "2026-10-10",
+      "n": 2351,
+      "weight": 0.039,
+      "David Jolly": 44.0,
+      "Byron Donalds": 46.0
+     }
+    ],
+    "dem": 44.8,
+    "rep": 48.5,
+    "candidates": {
+     "Byron Donalds": 48.5,
+     "David Jolly": 44.8
+    }
+   },
+   "trend": [
+    {
+     "week": "2026-08-10",
+     "margin": 1.0,
+     "n": 1
+    },
+    {
+     "week": "2026-09-07",
+     "margin": 3.0,
+     "n": 1
+    },
+    {
+     "week": "2026-09-14",
+     "margin": -1.0,
+     "n": 1
+    },
+    {
+     "week": "2026-09-21",
+     "margin": -5.0,
+     "n": 2
+    },
+    {
+     "week": "2026-09-28",
+     "margin": -8.7,
+     "n": 3
+    },
+    {
+     "week": "2026-10-05",
+     "margin": -3.5,
+     "n": 6
+    },
+    {
+     "week": "2026-10-12",
+     "margin": -8.0,
+     "n": 1
+    },
+    {
+     "week": "2026-10-19",
+     "margin": -4.0,
+     "n": 7
+    },
+    {
+     "week": "2026-10-26",
+     "margin": -2.0,
+     "n": 1
+    }
+   ],
+   "n_polls": 40,
+   "n_tables_on_page": 14,
+   "polls": [
+    {
+     "pollster": "St. Pete Polls",
+     "lean": null,
+     "sponsor": "Florida Politics",
+     "start": "2026-10-25",
+     "end": "2026-10-27",
+     "n": 916,
+     "pop": "LV",
+     "moe": 3.2,
+     "dem": 46.0,
+     "rep": 48.0,
+     "other": 3.0,
+     "und": 3.0,
+     "results": {
+      "Byron Donalds": 48.0,
+      "David Jolly": 46.0
+     },
+     "url": "https://data.ddhq.io/polls/2026/10/28/St.-Pete-Polls-Florida"
+    },
+    {
+     "pollster": "New York Times/Siena University",
+     "lean": null,
+     "sponsor": null,
+     "start": "2026-10-19",
+     "end": "2026-10-25",
+     "n": 813,
+     "pop": "LV",
+     "moe": 3.9,
+     "dem": 44.0,
+     "rep": 48.0,
+     "other": 0.0,
+     "und": 7.0,
+     "results": {
+      "Byron Donalds": 48.0,
+      "David Jolly": 44.0
+     },
+     "url": "https://www.nytimes.com/interactive/2026/10/28/polls/times-siena-fl-poll-toplines.html"
+    },
+    {
+     "pollster": "RedBox Research",
+     "lean": null,
+     "sponsor": null,
+     "start": "2026-10-20",
+     "end": "2026-10-23",
+     "n": 4832,
+     "pop": "LV",
+     "moe": 2.5,
+     "dem": 44.0,
+     "rep": 49.0,
+     "other": 3.0,
+     "und": 4.0,
+     "results": {
+      "Byron Donalds": 49.0,
+      "David Jolly": 44.0
+     },
+     "url": "https://afightworthhaving.com/polling/2026/florida"
+    },
+    {
+     "pollster": "Echelon Insights (R)",
+     "lean": "R",
+     "sponsor": "NetChoice",
+     "start": "2026-10-16",
+     "end": "2026-10-23",
+     "n": 515,
+     "pop": "LV",
+     "moe": 5.0,
+     "dem": 44.0,
+     "rep": 50.0,
+     "other": 1.0,
+     "und": 5.0,
+     "results": {
+      "Byron Donalds": 50.0,
+      "David Jolly": 44.0
+     },
+     "url": "https://netchoice.org/netchoice-echelon-insights-poll-voters-rank-ai-regulation-far-behind-cost-of-living-want-one-national-ai-standard/"
+    },
+    {
+     "pollster": "Workbench Strategy (D)",
+     "lean": "D",
+     "sponsor": null,
+     "start": "2026-10-18",
+     "end": "2026-10-22",
+     "n": 800,
+     "pop": "LV",
+     "moe": 3.5,
+     "dem": 48.0,
+     "rep": 46.0,
+     "other": null,
+     "und": null,
+     "results": {
+      "Byron Donalds": 46.0,
+      "David Jolly": 48.0
+     },
+     "url": "https://megalodon.jp/2026-1031-0033-14/https://www.politico.com:443/newsletters/florida-playbook/2026/10/30/gop-closing-message-keep-florida-great-01142052"
+    },
+    {
+     "pollster": "co/efficient (R)",
+     "lean": "R",
+     "sponsor": null,
+     "start": "2026-10-18",
+     "end": "2026-10-20",
+     "n": 1014,
+     "pop": "LV",
+     "moe": 3.1,
+     "dem": 40.0,
+     "rep": 49.0,
+     "other": null,
+     "und": 11.0,
+     "results": {
+      "Byron Donalds": 49.0,
+      "David Jolly": 40.0
+     },
+     "url": "https://battlegrounds.coefficient.org/fl/"
+    },
+    {
+     "pollster": "University of North Florida",
+     "lean": null,
+     "sponsor": null,
+     "start": "2026-10-12",
+     "end": "2026-10-19",
+     "n": 1471,
+     "pop": "LV",
+     "moe": 2.8,
+     "dem": 47.0,
+     "rep": 49.0,
+     "other": null,
+     "und": 4.0,
+     "results": {
+      "Byron Donalds": 49.0,
+      "David Jolly": 47.0
+     },
+     "url": "https://static1.squarespace.com/static/6994d571bce3436c60d86870/t/6ad8a5ec13c20404a1f8052b/1792583148294/UNF+PORL+FALL+Statewide+2026+FLLV+-+Press+Release+1021+EMBARGO.pdf"
+    },
+    {
+     "pollster": "ActiVote",
+     "lean": null,
+     "sponsor": null,
+     "start": "2026-10-01",
+     "end": "2026-10-19",
+     "n": 400,
+     "pop": "LV",
+     "moe": 4.9,
+     "dem": 48.0,
+     "rep": 52.0,
+     "other": null,
+     "und": null,
+     "results": {
+      "Byron Donalds": 52.0,
+      "David Jolly": 48.0
+     },
+     "url": "https://www.activote.net/polls/2026/fl-governor/"
+    },
+    {
+     "pollster": "Univision/YouGov",
+     "lean": null,
+     "sponsor": null,
+     "start": "2026-10-02",
+     "end": "2026-10-15",
+     "n": 825,
+     "pop": "RV",
+     "moe": 4.0,
+     "dem": 42.0,
+     "rep": 50.0,
+     "other": null,
+     "und": 8.0,
+     "results": {
+      "Byron Donalds": 50.0,
+      "David Jolly": 42.0
+     },
+     "url": "https://st1.uvnimg.com/65/9b/a8b15584426684070c3d05cf6e34/n-univision-florida-poll-crosstabs-base-final.pdf"
+    },
+    {
+     "pollster": "Fabrizio, Lee & Associates (R)",
+     "lean": "R",
+     "sponsor": "Donalds' campaign",
+     "start": "2026-10-08",
+     "end": "2026-10-11",
+     "n": 1200,
+     "pop": "LV",
+     "moe": null,
+     "dem": 43.0,
+     "rep": 49.0,
+     "other": null,
+     "und": 8.0,
+     "results": {
+      "Byron Donalds": 49.0,
+      "David Jolly": 43.0
+     },
+     "url": "https://floridapolitics.com/archives/824726-poll-byron-donalds-up-6-over-david-jolly-with-3-weeks-until-election-day/"
+    },
+    {
+     "pollster": "Change Research (D)",
+     "lean": "D",
+     "sponsor": "Freedom Project USA",
+     "start": "2026-10-08",
+     "end": "2026-10-10",
+     "n": 920,
+     "pop": "LV",
+     "moe": 3.1,
+     "dem": 47.0,
+     "rep": 47.0,
+     "other": 1.0,
+     "und": 5.0,
+     "results": {
+      "Byron Donalds": 47.0,
+      "David Jolly": 47.0
+     },
+     "url": "https://changeresearch.com/research/2026/2026-10-12-florida-aapor-methodology-statement"
+    },
+    {
+     "pollster": "MDW Communications",
+     "lean": null,
+     "sponsor": "EDGE Communications",
+     "start": "2026-10-04",
+     "end": "2026-10-10",
+     "n": 2351,
+     "pop": "LV",
+     "moe": 2.8,
+     "dem": 44.0,
+     "rep": 46.0,
+     "other": null,
+     "und": 10.0,
+     "results": {
+      "Byron Donalds": 46.0,
+      "David Jolly": 44.0
+     },
+     "url": "https://www.mdwcomm.com/media/florida-statewide-poll-october-2026.html"
+    },
+    {
+     "pollster": "Stetson University",
+     "lean": null,
+     "sponsor": null,
+     "start": "2026-10-01",
+     "end": "2026-10-09",
+     "n": 716,
+     "pop": "LV",
+     "moe": 4.2,
+     "dem": 41.0,
+     "rep": 52.0,
+     "other": 3.0,
+     "und": 5.0,
+     "results": {
+      "Byron Donalds": 52.0,
+      "David Jolly": 41.0
+     },
+     "url": "https://www.stetson.edu/artsci/cpor/media/cpor-fall-2026-report-wave-2-october.pdf"
+    },
+    {
+     "pollster": "St. Pete Polls",
+     "lean": null,
+     "sponsor": "Florida Politics",
+     "start": "2026-10-05",
+     "end": "2026-10-07",
+     "n": 836,
+     "pop": "LV",
+     "moe": 3.4,
+     "dem": 45.0,
+     "rep": 45.0,
+     "other": 4.0,
+     "und": 7.0,
+     "results": {
+      "Byron Donalds": 45.0,
+      "David Jolly": 45.0
+     },
+     "url": "https://www.stpetepolls.org/files/StPetePolls_2026_State_Gov_October7_K7ZU3GA.pdf"
+    },
+    {
+     "pollster": "YouGov",
+     "lean": null,
+     "sponsor": null,
+     "start": "2026-09-28",
+     "end": "2026-10-05",
+     "n": 3813,
+     "pop": "LV",
+     "moe": 2.7,
+     "dem": 45.0,
+     "rep": 47.0,
+     "other": 1.0,
+     "und": 7.0,
+     "results": {
+      "Byron Donalds": 47.0,
+      "David Jolly": 45.0
+     },
+     "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/ttw_fl_20260921_lv.pdf"
+    },
+    {
+     "pollster": "Targoz Market Research",
+     "lean": null,
+     "sponsor": "James Madison Institute",
+     "start": "2026-09-28",
+     "end": "2026-10-04",
+     "n": 849,
+     "pop": "LV",
+     "moe": null,
+     "dem": 42.0,
+     "rep": 52.0,
+     "other": 3.0,
+     "und": 3.0,
+     "results": {
+      "Byron Donalds": 52.0,
+      "David Jolly": 42.0
+     },
+     "url": "https://jamesmadison.org/wp-content/uploads/JMI-October-2026-Poll-Marginals.pdf"
+    },
+    {
+     "pollster": "Targoz Market Research",
+     "lean": null,
+     "sponsor": "James Madison Institute",
+     "start": "2026-09-28",
+     "end": "2026-10-04",
+     "n": 1174,
+     "pop": "RV",
+     "moe": 2.8,
+     "dem": 39.0,
+     "rep": 48.0,
+     "other": 5.0,
+     "und": 8.0,
+     "results": {
+      "Byron Donalds": 48.0,
+      "David Jolly": 39.0
+     },
+     "url": "https://jamesmadison.org/wp-content/uploads/JMI-October-2026-Poll-Marginals.pdf"
+    },
+    {
+     "pollster": "Mason-Dixon",
+     "lean": null,
+     "sponsor": null,
+     "start": "2026-09-28",
+     "end": "2026-10-01",
+     "n": 625,
+     "pop": "LV",
+     "moe": 4.0,
+     "dem": 41.0,
+     "rep": 48.0,
+     "other": 1.0,
+     "und": 10.0,
+     "results": {
+      "Byron Donalds": 48.0,
+      "David Jolly": 41.0
+     },
+     "url": "https://s3.documentcloud.org/documents/28724874/fl1026results.pdf"
+    },
+    {
+     "pollster": "Change Research (D)",
+     "lean": "D",
+     "sponsor": "Freedom Project USA",
+     "start": "2026-09-25",
+     "end": "2026-09-27",
+     "n": 1063,
+     "pop": "LV",
+     "moe": 2.8,
+     "dem": 48.0,
+     "rep": 46.0,
+     "other": 1.0,
+     "und": 5.0,
+     "results": {
+      "Byron Donalds": 46.0,
+      "David Jolly": 48.0
+     },
+     "url": "https://changeresearch.com/research/2026/2026-09-28-florida-aapor-methodology-statement"
+    },
+    {
+     "pollster": "Stetson University",
+     "lean": null,
+     "sponsor": null,
+     "start": "2026-09-14",
+     "end": "2026-09-21",
+     "n": 830,
+     "pop": "LV",
+     "moe": 4.3,
+     "dem": 39.0,
+     "rep": 51.0,
+     "other": 5.0,
+     "und": 5.0,
+     "results": {
+      "Byron Donalds": 51.0,
+      "David Jolly": 39.0
+     },
+     "url": "https://www.stetson.edu/artsci/cpor/media/cpor-sept.-2026-poll-final.pdf"
+    },
+    {
+     "pollster": "St. Pete Polls",
+     "lean": null,
+     "sponsor": "Florida Politics",
+     "start": "2026-09-15",
+     "end": "2026-09-17",
+     "n": 913,
+     "pop": "LV",
+     "moe": 3.2,
+     "dem": 43.0,
+     "rep": 44.0,
+     "other": 4.0,
+     "und": 9.0,
+     "results": {
+      "Byron Donalds": 44.0,
+      "David Jolly": 43.0
+     },
+     "url": "http://stpetepolls.org/files/StPetePolls_2026_State_Gov_September17_G7V29XU6.pdf"
+    },
+    {
+     "pollster": "Change Research (D)",
+     "lean": "D",
+     "sponsor": "Freedom Project USA",
+     "start": "2026-09-07",
+     "end": "2026-09-09",
+     "n": 1107,
+     "pop": "LV",
+     "moe": 2.8,
+     "dem": 47.0,
+     "rep": 44.0,
+     "other": 1.0,
+     "und": 7.0,
+     "results": {
+      "Byron Donalds": 44.0,
+      "David Jolly": 47.0
+     },
+     "url": "https://changeresearch.com/research/2026/2026-09-10-florida-aapor-methodology-statement"
+    },
+    {
+     "pollster": "Hart Research Associates (D)",
+     "lean": "D",
+     "sponsor": "Democratic Governors Association",
+     "start": "2026-08-10",
+     "end": "2026-08-13",
+     "n": 600,
+     "pop": "LV",
+     "moe": 4.0,
+     "dem": 46.0,
+     "rep": 45.0,
+     "other": null,
+     "und": 9.0,
+     "results": {
+      "Byron Donalds": 45.0,
+      "David Jolly": 46.0
+     },
+     "url": "https://democraticgovernors.org/updates/new-poll-shows-david-jolly-leading-congressman-byron-donalds-in-the-florida-governors-race/"
+    },
+    {
+     "pollster": "Targoz Market Research",
+     "lean": null,
+     "sponsor": "James Madison Institute",
+     "start": "2026-07-20",
+     "end": "2026-07-26",
+     "n": 1026,
+     "pop": "LV",
+     "moe": null,
+     "dem": 38.0,
+     "rep": 45.0,
+     "other": null,
+     "und": 17.0,
+     "results": {
+      "Byron Donalds": 45.0,
+      "David Jolly": 38.0
+     },
+     "url": "https://jamesmadison.org/wp-content/uploads/JMI-July-2026-Marginals.pdf"
+    },
+    {
+     "pollster": "Targoz Market Research",
+     "lean": null,
+     "sponsor": "James Madison Institute",
+     "start": "2026-07-20",
+     "end": "2026-07-26",
+     "n": 1338,
+     "pop": "RV",
+     "moe": 2.62,
+     "dem": 36.0,
+     "rep": 40.0,
+     "other": null,
+     "und": 24.0,
+     "results": {
+      "Byron Donalds": 40.0,
+      "David Jolly": 36.0
+     },
+     "url": "https://jamesmadison.org/wp-content/uploads/JMI-July-2026-Marginals.pdf"
+    },
+    {
+     "pollster": "University of North Florida",
+     "lean": null,
+     "sponsor": null,
+     "start": "2026-07-08",
+     "end": "2026-07-17",
+     "n": 848,
+     "pop": "LV",
+     "moe": 3.8,
+     "dem": 41.0,
+     "rep": 46.0,
+     "other": 7.0,
+     "und": 6.0,
+     "results": {
+      "Byron Donalds": 46.0,
+      "David Jolly": 41.0
+     },
+     "url": "https://www.unfporl.org/presser-page"
+    },
+    {
+     "pollster": "Change Research (D)",
+     "lean": "D",
+     "sponsor": null,
+     "start": "2026-07-09",
+     "end": "2026-07-11",
+     "n": 1348,
+     "pop": "RV",
+     "moe": 2.8,
+     "dem": 37.0,
+     "rep": 37.0,
+     "other": 11.0,
+     "und": 16.0,
+     "results": {
+      "Byron Donalds": 37.0,
+      "David Jolly": 37.0
+     },
+     "url": "https://changeresearch.com/florida-florida-florida/"
+    },
+    {
+     "pollster": "Change Research (D)",
+     "lean": "D",
+     "sponsor": null,
+     "start": "2026-07-09",
+     "end": "2026-07-11",
+     "n": 1348,
+     "pop": "RV",
+     "moe": 2.8,
+     "dem": 41.0,
+     "rep": 40.0,
+     "other": 7.0,
+     "und": 12.0,
+     "results": {
+      "Byron Donalds": 40.0,
+      "David Jolly": 41.0
+     },
+     "url": "https://changeresearch.com/florida-florida-florida/",
+     "variant": true
+    },
+    {
+     "pollster": "Change Research (D)",
+     "lean": "D",
+     "sponsor": "Freedom Project USA",
+     "start": "2026-05-13",
+     "end": "2026-05-16",
+     "n": 1593,
+     "pop": "LV",
+     "moe": 2.3,
+     "dem": 46.0,
+     "rep": 42.0,
+     "other": 4.0,
+     "und": 8.0,
+     "results": {
+      "Byron Donalds": 42.0,
+      "David Jolly": 46.0
+     },
+     "url": "https://changeresearch.com/wp-content/uploads/2026/05/Deep-Dive-into-Florida-1.pdf"
+    },
+    {
+     "pollster": "Cherry Communications (R)",
+     "lean": "R",
+     "sponsor": "Florida Chamber of Commerce",
+     "start": "2026-05-01",
+     "end": "2026-05-09",
+     "n": 604,
+     "pop": "LV",
+     "moe": 4.0,
+     "dem": 39.0,
+     "rep": 47.0,
+     "other": null,
+     "und": 14.0,
+     "results": {
+      "Byron Donalds": 47.0,
+      "David Jolly": 39.0
+     },
+     "url": "https://www.flchamber.com/new-florida-chamber-statewide-poll-shows-ashley-moody-byron-donalds-leading-potential-democratic-opponents-in-november-ballot-test/"
+    },
+    {
+     "pollster": "Stetson University",
+     "lean": null,
+     "sponsor": null,
+     "start": "2026-03-15",
+     "end": "2026-04-13",
+     "n": 848,
+     "pop": "LV",
+     "moe": 4.1,
+     "dem": 40.0,
+     "rep": 47.0,
+     "other": null,
+     "und": 7.0,
+     "results": {
+      "Byron Donalds": 47.0,
+      "David Jolly": 40.0
+     },
+     "url": "https://www2.stetson.edu/today/2026/04/stetson-poll-republicans-lead-in-florida-2026-races-but-many-voters-still-undecided/"
+    },
+    {
+     "pollster": "Echelon Insights",
+     "lean": null,
+     "sponsor": "NetChoice",
+     "start": "2026-04-03",
+     "end": "2026-04-09",
+     "n": 406,
+     "pop": "LV",
+     "moe": 6.0,
+     "dem": 43.0,
+     "rep": 49.0,
+     "other": null,
+     "und": 8.0,
+     "results": {
+      "Byron Donalds": 49.0,
+      "David Jolly": 43.0
+     },
+     "url": "https://netchoice.org/wp-content/uploads/2026/04/NetChoice-Apr-2026-National-Antitrust-Survey-Topline.pdf"
+    },
+    {
+     "pollster": "MDW Communications (D)",
+     "lean": "D",
+     "sponsor": "Edge Communications",
+     "start": "2026-03-27",
+     "end": "2026-04-03",
+     "n": 1834,
+     "pop": "LV",
+     "moe": 2.0,
+     "dem": 41.0,
+     "rep": 41.0,
+     "other": null,
+     "und": 18.0,
+     "results": {
+      "Byron Donalds": 41.0,
+      "David Jolly": 41.0
+     },
+     "url": "https://floridapolitics.com/archives/790357-poll-democrats-gaining-ground-key-races-tighten-in-florida-as-donald-trump-drags-gop/"
+    },
+    {
+     "pollster": "Emerson College",
+     "lean": null,
+     "sponsor": null,
+     "start": "2026-03-29",
+     "end": "2026-03-31",
+     "n": 1165,
+     "pop": "LV",
+     "moe": 2.8,
+     "dem": 39.0,
+     "rep": 44.0,
+     "other": 2.0,
+     "und": 17.0,
+     "results": {
+      "Byron Donalds": 44.0,
+      "David Jolly": 39.0
+     },
+     "url": "https://emersoncollegepolling.com/florida-2026-poll-donalds-leads-gop-primary-for-governor-republicans-outpace-democrats-in-florida-elections/"
+    },
+    {
+     "pollster": "University of North Florida",
+     "lean": null,
+     "sponsor": null,
+     "start": "2026-02-21",
+     "end": "2026-03-02",
+     "n": 786,
+     "pop": "LV",
+     "moe": 4.0,
+     "dem": 36.0,
+     "rep": 42.0,
+     "other": 5.0,
+     "und": 17.0,
+     "results": {
+      "Byron Donalds": 42.0,
+      "David Jolly": 36.0
+     },
+     "url": "https://www.orlandosentinel.com/2026/03/04/florida-poll-shows-republicans-lead-democrats-in-statewide-races-but-only-by-single-digits/"
+    },
+    {
+     "pollster": "Targoz Market Research",
+     "lean": null,
+     "sponsor": "James Madison Institute",
+     "start": "2026-02-13",
+     "end": "2026-02-16",
+     "n": 1129,
+     "pop": "LV",
+     "moe": 2.8,
+     "dem": 36.0,
+     "rep": 41.0,
+     "other": 6.0,
+     "und": 12.0,
+     "results": {
+      "Byron Donalds": 41.0,
+      "David Jolly": 36.0
+     },
+     "url": "https://jamesmadison.org/the-james-madison-institute-releases-latest-jmi-poll-of-florida-voters-2/"
+    },
+    {
+     "pollster": "University of North Florida",
+     "lean": null,
+     "sponsor": null,
+     "start": "2025-10-15",
+     "end": "2025-10-25",
+     "n": 728,
+     "pop": "LV",
+     "moe": 4.3,
+     "dem": 34.0,
+     "rep": 45.0,
+     "other": 3.0,
+     "und": 18.0,
+     "results": {
+      "Byron Donalds": 45.0,
+      "David Jolly": 34.0
+     },
+     "url": "https://www.unfporl.org/uploads/1/4/4/5/144559024/unf_porl_fall_statewide_2025_lv_-_press_release.pdf"
+    },
+    {
+     "pollster": "Targoz Market Research",
+     "lean": null,
+     "sponsor": "James Madison Institute",
+     "start": "2025-09-16",
+     "end": "2025-09-18",
+     "n": 1118,
+     "pop": "RV",
+     "moe": 2.8,
+     "dem": 32.0,
+     "rep": 36.0,
+     "other": 4.0,
+     "und": 28.0,
+     "results": {
+      "Byron Donalds": 36.0,
+      "David Jolly": 32.0
+     },
+     "url": "https://jamesmadison.org/wp-content/uploads/Marginals.pdf"
+    },
+    {
+     "pollster": "Bendixen & Amandi International (D)",
+     "lean": "D",
+     "sponsor": "Jolly's campaign",
+     "start": "2025-09-07",
+     "end": "2025-09-09",
+     "n": 631,
+     "pop": "LV",
+     "moe": 4.0,
+     "dem": 41.0,
+     "rep": 40.0,
+     "other": null,
+     "und": 19.0,
+     "results": {
+      "Byron Donalds": 40.0,
+      "David Jolly": 41.0
+     },
+     "url": "https://floridapolitics.com/archives/755557-poll-david-jolly-in-dead-heat-with-byron-donalds-paul-renner/"
+    },
+    {
+     "pollster": "AIF Center (R)",
+     "lean": "R",
+     "sponsor": null,
+     "start": "2025-08-25",
+     "end": "2025-08-27",
+     "n": 800,
+     "pop": "LV",
+     "moe": 3.5,
+     "dem": 41.0,
+     "rep": 49.0,
+     "other": null,
+     "und": 11.0,
+     "results": {
+      "Byron Donalds": 49.0,
+      "David Jolly": 41.0
+     },
+     "url": "https://floridapolitics.com/archives/755696-new-poll-shows-byron-donalds-with-8-point-edge-on-david-jolly/"
+    },
+    {
+     "pollster": "Victory Insights (R)",
+     "lean": "R",
+     "sponsor": null,
+     "start": "2025-06-07",
+     "end": "2025-06-10",
+     "n": 600,
+     "pop": "LV",
+     "moe": 2.8,
+     "dem": 31.0,
+     "rep": 37.0,
+     "other": null,
+     "und": 32.0,
+     "results": {
+      "Byron Donalds": 37.0,
+      "David Jolly": 31.0
+     },
+     "url": "https://irp.cdn-website.com/07e08705/files/uploaded/PollSummary_FL-Gov_06-11-2025.pdf"
+    }
+   ],
+   "stale": true,
+   "stale_error": "skipped: time budget of 240s exhausted"
   }
  },
  "status": {
   "generic-ballot": {
    "ok": true,
-   "n_polls": 490,
+   "n_polls": 493,
    "page": "2026 United States elections",
-   "seconds": 0.9
-  },
-  "FL-governor": {
-   "ok": true,
-   "n_polls": 40,
-   "page": "2026 Florida gubernatorial election",
-   "seconds": 0.6
-  },
-  "GA-governor": {
-   "ok": true,
-   "n_polls": 21,
-   "page": "2026 Georgia gubernatorial election",
-   "seconds": 0.7
-  },
-  "HI-governor": {
-   "ok": true,
-   "n_polls": 0,
-   "page": "2026 Hawaii gubernatorial election",
-   "seconds": 0.4,
-   "warning": "no general-election polls parsed"
-  },
-  "ID-governor": {
-   "ok": true,
-   "n_polls": 3,
-   "page": "2026 Idaho gubernatorial election",
-   "seconds": 0.6
-  },
-  "IL-governor": {
-   "ok": true,
-   "n_polls": 3,
-   "page": "2026 Illinois gubernatorial election",
-   "seconds": 0.5
-  },
-  "IA-governor": {
-   "ok": true,
-   "n_polls": 25,
-   "page": "2026 Iowa gubernatorial election",
-   "seconds": 0.4
-  },
-  "KS-governor": {
-   "ok": true,
-   "n_polls": 10,
-   "page": "2026 Kansas gubernatorial election",
-   "seconds": 0.6
-  },
-  "ME-governor": {
-   "ok": true,
-   "n_polls": 22,
-   "page": "2026 Maine gubernatorial election",
-   "seconds": 0.7
-  },
-  "MD-governor": {
-   "ok": true,
-   "n_polls": 2,
-   "page": "2026 Maryland gubernatorial election",
-   "seconds": 0.6
-  },
-  "MA-governor": {
-   "ok": true,
-   "n_polls": 12,
-   "page": "2026 Massachusetts gubernatorial election",
-   "seconds": 0.4
-  },
-  "MI-governor": {
-   "ok": true,
-   "n_polls": 39,
-   "page": "2026 Michigan gubernatorial election",
-   "seconds": 55.4
-  },
-  "MN-governor": {
-   "ok": true,
-   "n_polls": 15,
-   "page": "2026 Minnesota gubernatorial election",
-   "seconds": 0.7
-  },
-  "NE-governor": {
-   "ok": true,
-   "n_polls": 15,
-   "page": "2026 Nebraska gubernatorial election",
-   "seconds": 0.5
-  },
-  "NV-governor": {
-   "ok": true,
-   "n_polls": 18,
-   "page": "2026 Nevada gubernatorial election",
-   "seconds": 0.6
-  },
-  "NH-governor": {
-   "ok": true,
-   "n_polls": 15,
-   "page": "2026 New Hampshire gubernatorial election",
-   "seconds": 0.5
-  },
-  "NM-governor": {
-   "ok": true,
-   "n_polls": 5,
-   "page": "2026 New Mexico gubernatorial election",
-   "seconds": 0.6
-  },
-  "NY-governor": {
-   "ok": true,
-   "n_polls": 33,
-   "page": "2026 New York gubernatorial election",
-   "seconds": 0.7
-  },
-  "OH-governor": {
-   "ok": true,
-   "n_polls": 39,
-   "page": "2026 Ohio gubernatorial election",
-   "seconds": 0.6
-  },
-  "OK-governor": {
-   "ok": true,
-   "n_polls": 5,
-   "page": "2026 Oklahoma gubernatorial election",
-   "seconds": 0.5
-  },
-  "OR-governor": {
-   "ok": true,
-   "n_polls": 7,
-   "page": "2026 Oregon gubernatorial election",
-   "seconds": 0.6
-  },
-  "PA-governor": {
-   "ok": true,
-   "n_polls": 24,
-   "page": "2026 Pennsylvania gubernatorial election",
-   "seconds": 54.3
-  },
-  "RI-governor": {
-   "ok": true,
-   "n_polls": 8,
-   "page": "2026 Rhode Island gubernatorial election",
-   "seconds": 0.7
-  },
-  "SC-governor": {
-   "ok": true,
-   "n_polls": 9,
-   "page": "2026 South Carolina gubernatorial election",
-   "seconds": 0.6
-  },
-  "SD-governor": {
-   "ok": true,
-   "n_polls": 2,
-   "page": "2026 South Dakota gubernatorial election",
-   "seconds": 0.5
-  },
-  "TN-governor": {
-   "ok": true,
-   "n_polls": 7,
-   "page": "2026 Tennessee gubernatorial election",
-   "seconds": 0.5
-  },
-  "TX-governor": {
-   "ok": true,
-   "n_polls": 65,
-   "page": "2026 Texas gubernatorial election",
-   "seconds": 0.6
-  },
-  "VT-governor": {
-   "ok": true,
-   "n_polls": 7,
-   "page": "2026 Vermont gubernatorial election",
-   "seconds": 0.4
-  },
-  "WI-governor": {
-   "ok": true,
-   "n_polls": 16,
-   "page": "2026 Wisconsin gubernatorial election",
-   "seconds": 0.7
-  },
-  "WY-governor": {
-   "ok": true,
-   "n_polls": 0,
-   "page": "2026 Wyoming gubernatorial election",
-   "seconds": 0.4,
-   "warning": "no general-election polls parsed"
-  },
-  "AL-governor": {
-   "ok": true,
-   "n_polls": 6,
-   "page": "2026 Alabama gubernatorial election",
-   "seconds": 0.8
-  },
-  "AK-governor": {
-   "ok": true,
-   "n_polls": 6,
-   "page": "2026 Alaska gubernatorial election",
-   "seconds": 54.2
-  },
-  "AZ-governor": {
-   "ok": true,
-   "n_polls": 32,
-   "page": "2026 Arizona gubernatorial election",
-   "seconds": 0.6
-  },
-  "AR-governor": {
-   "ok": true,
-   "n_polls": 2,
-   "page": "2026 Arkansas gubernatorial election",
-   "seconds": 0.6
-  },
-  "CA-governor": {
-   "ok": true,
-   "n_polls": 20,
-   "page": "2026 California gubernatorial election",
-   "seconds": 0.8
-  },
-  "CO-governor": {
-   "ok": true,
-   "n_polls": 0,
-   "page": "2026 Colorado gubernatorial election",
-   "seconds": 0.5,
-   "warning": "no general-election polls parsed"
-  },
-  "CT-governor": {
-   "ok": true,
-   "n_polls": 12,
-   "page": "2026 Connecticut gubernatorial election",
-   "seconds": 0.5
-  },
-  "IL-senate": {
-   "ok": true,
-   "n_polls": 2,
-   "page": "2026 United States Senate election in Illinois",
-   "seconds": 0.6
+   "seconds": 1.2
   },
   "IA-senate": {
    "ok": true,
    "n_polls": 40,
    "page": "2026 United States Senate election in Iowa",
-   "seconds": 0.5
+   "seconds": 0.8
   },
   "KS-senate": {
    "ok": true,
@@ -42956,29 +43195,29 @@
    "ok": true,
    "n_polls": 2,
    "page": "2026 United States Senate election in Kentucky",
-   "seconds": 0.6
+   "seconds": 0.5
   },
   "LA-senate": {
    "ok": true,
    "n_polls": 3,
    "page": "2026 United States Senate election in Louisiana",
-   "seconds": 55.2
+   "seconds": 0.6
   },
   "ME-senate": {
    "ok": true,
-   "n_polls": 33,
+   "n_polls": 34,
    "page": "2026 United States Senate election in Maine",
-   "seconds": 1.0
+   "seconds": 0.7
   },
   "MA-senate": {
    "ok": true,
    "n_polls": 13,
    "page": "2026 United States Senate election in Massachusetts",
-   "seconds": 0.6
+   "seconds": 0.5
   },
   "MI-senate": {
    "ok": true,
-   "n_polls": 68,
+   "n_polls": 69,
    "page": "2026 United States Senate election in Michigan",
    "seconds": 0.8
   },
@@ -42992,25 +43231,25 @@
    "ok": true,
    "n_polls": 4,
    "page": "2026 United States Senate election in Mississippi",
-   "seconds": 0.5
+   "seconds": 0.4
   },
   "MT-senate": {
    "ok": true,
    "n_polls": 18,
    "page": "2026 United States Senate election in Montana",
-   "seconds": 0.6
+   "seconds": 31.2
   },
   "NE-senate": {
    "ok": true,
-   "n_polls": 16,
+   "n_polls": 17,
    "page": "2026 United States Senate election in Nebraska",
-   "seconds": 0.6
+   "seconds": 0.5
   },
   "NH-senate": {
    "ok": true,
    "n_polls": 30,
    "page": "2026 United States Senate election in New Hampshire",
-   "seconds": 0.7
+   "seconds": 0.6
   },
   "NJ-senate": {
    "ok": true,
@@ -43020,115 +43259,342 @@
    "warning": "no general-election polls parsed"
   },
   "NM-senate": {
-   "ok": false,
-   "error": "FetchError: time budget exhausted while fetching '2026 United States Senate election in New Mexico' (rest: HTTP 429)",
-   "stale": true,
-   "seconds": 53.6
+   "ok": true,
+   "n_polls": 3,
+   "page": "2026 United States Senate election in New Mexico",
+   "seconds": 0.5
   },
   "NC-senate": {
-   "ok": false,
-   "error": "skipped: time budget of 300s exhausted",
-   "stale": true
+   "ok": true,
+   "n_polls": 59,
+   "page": "2026 United States Senate election in North Carolina",
+   "seconds": 0.6
   },
   "OK-senate": {
-   "ok": false,
-   "error": "skipped: time budget of 300s exhausted",
-   "stale": true
+   "ok": true,
+   "n_polls": 1,
+   "page": "2026 United States Senate election in Oklahoma",
+   "seconds": 0.5
   },
   "OR-senate": {
-   "ok": false,
-   "error": "skipped: time budget of 300s exhausted",
-   "stale": true
+   "ok": true,
+   "n_polls": 0,
+   "page": "2026 United States Senate election in Oregon",
+   "seconds": 0.5,
+   "warning": "no general-election polls parsed"
   },
   "RI-senate": {
-   "ok": false,
-   "error": "skipped: time budget of 300s exhausted",
-   "stale": true
+   "ok": true,
+   "n_polls": 6,
+   "page": "2026 United States Senate election in Rhode Island",
+   "seconds": 0.4
   },
   "SC-senate": {
-   "ok": false,
-   "error": "skipped: time budget of 300s exhausted",
-   "stale": true
+   "ok": true,
+   "n_polls": 17,
+   "page": "2026 United States Senate election in South Carolina",
+   "seconds": 0.7
   },
   "SD-senate": {
-   "ok": false,
-   "error": "skipped: time budget of 300s exhausted",
-   "stale": true
+   "ok": true,
+   "n_polls": 15,
+   "page": "2026 United States Senate election in South Dakota",
+   "seconds": 55.1
   },
   "TN-senate": {
-   "ok": false,
-   "error": "skipped: time budget of 300s exhausted",
-   "stale": true
+   "ok": true,
+   "n_polls": 1,
+   "page": "2026 United States Senate election in Tennessee",
+   "seconds": 0.4
   },
   "TX-senate": {
-   "ok": false,
-   "error": "skipped: time budget of 300s exhausted",
-   "stale": true
+   "ok": true,
+   "n_polls": 79,
+   "page": "2026 United States Senate election in Texas",
+   "seconds": 1.5
   },
   "VA-senate": {
-   "ok": false,
-   "error": "skipped: time budget of 300s exhausted",
-   "stale": true
+   "ok": true,
+   "n_polls": 2,
+   "page": "2026 United States Senate election in Virginia",
+   "seconds": 0.5
   },
   "WV-senate": {
-   "ok": false,
-   "error": "skipped: time budget of 300s exhausted",
-   "stale": true
+   "ok": true,
+   "n_polls": 0,
+   "page": "2026 United States Senate election in West Virginia",
+   "seconds": 0.4,
+   "warning": "no general-election polls parsed"
   },
   "WY-senate": {
-   "ok": false,
-   "error": "skipped: time budget of 300s exhausted",
-   "stale": true
+   "ok": true,
+   "n_polls": 0,
+   "page": "2026 United States Senate election in Wyoming",
+   "seconds": 0.5,
+   "warning": "no general-election polls parsed"
   },
   "OH-senate": {
-   "ok": false,
-   "error": "skipped: time budget of 300s exhausted",
-   "stale": true
+   "ok": true,
+   "n_polls": 47,
+   "page": "2026 United States Senate special election in Ohio",
+   "seconds": 0.6
   },
   "FL-senate": {
-   "ok": false,
-   "error": "skipped: time budget of 300s exhausted",
-   "stale": true
+   "ok": true,
+   "n_polls": 32,
+   "page": "2026 United States Senate special election in Florida",
+   "seconds": 0.6
   },
   "AL-senate": {
-   "ok": false,
-   "error": "skipped: time budget of 300s exhausted",
-   "stale": true
+   "ok": true,
+   "n_polls": 5,
+   "page": "2026 United States Senate election in Alabama",
+   "seconds": 0.5
   },
   "AK-senate": {
-   "ok": false,
-   "error": "skipped: time budget of 300s exhausted",
-   "stale": true
+   "ok": true,
+   "n_polls": 28,
+   "page": "2026 United States Senate election in Alaska",
+   "seconds": 0.5
   },
   "AR-senate": {
-   "ok": false,
-   "error": "skipped: time budget of 300s exhausted",
-   "stale": true
+   "ok": true,
+   "n_polls": 6,
+   "page": "2026 United States Senate election in Arkansas",
+   "seconds": 54.1
   },
   "CO-senate": {
-   "ok": false,
-   "error": "skipped: time budget of 300s exhausted",
-   "stale": true
+   "ok": true,
+   "n_polls": 0,
+   "page": "2026 United States Senate election in Colorado",
+   "seconds": 0.5,
+   "warning": "no general-election polls parsed"
   },
   "DE-senate": {
-   "ok": false,
-   "error": "skipped: time budget of 300s exhausted",
-   "stale": true
+   "ok": true,
+   "n_polls": 0,
+   "page": "2026 United States Senate election in Delaware",
+   "seconds": 0.5,
+   "warning": "no general-election polls parsed"
   },
   "GA-senate": {
-   "ok": false,
-   "error": "skipped: time budget of 300s exhausted",
-   "stale": true
+   "ok": true,
+   "n_polls": 25,
+   "page": "2026 United States Senate election in Georgia",
+   "seconds": 0.7
   },
   "ID-senate": {
+   "ok": true,
+   "n_polls": 8,
+   "page": "2026 United States Senate election in Idaho",
+   "seconds": 0.5
+  },
+  "IL-senate": {
+   "ok": true,
+   "n_polls": 3,
+   "page": "2026 United States Senate election in Illinois",
+   "seconds": 0.7
+  },
+  "GA-governor": {
+   "ok": true,
+   "n_polls": 21,
+   "page": "2026 Georgia gubernatorial election",
+   "seconds": 0.6
+  },
+  "HI-governor": {
+   "ok": true,
+   "n_polls": 0,
+   "page": "2026 Hawaii gubernatorial election",
+   "seconds": 0.4,
+   "warning": "no general-election polls parsed"
+  },
+  "ID-governor": {
+   "ok": true,
+   "n_polls": 3,
+   "page": "2026 Idaho gubernatorial election",
+   "seconds": 0.5
+  },
+  "IL-governor": {
+   "ok": true,
+   "n_polls": 4,
+   "page": "2026 Illinois gubernatorial election",
+   "seconds": 0.5
+  },
+  "IA-governor": {
+   "ok": true,
+   "n_polls": 25,
+   "page": "2026 Iowa gubernatorial election",
+   "seconds": 56.2
+  },
+  "KS-governor": {
+   "ok": true,
+   "n_polls": 10,
+   "page": "2026 Kansas gubernatorial election",
+   "seconds": 0.5
+  },
+  "ME-governor": {
+   "ok": true,
+   "n_polls": 23,
+   "page": "2026 Maine gubernatorial election",
+   "seconds": 0.5
+  },
+  "MD-governor": {
+   "ok": true,
+   "n_polls": 2,
+   "page": "2026 Maryland gubernatorial election",
+   "seconds": 0.5
+  },
+  "MA-governor": {
+   "ok": true,
+   "n_polls": 12,
+   "page": "2026 Massachusetts gubernatorial election",
+   "seconds": 0.5
+  },
+  "MI-governor": {
+   "ok": true,
+   "n_polls": 40,
+   "page": "2026 Michigan gubernatorial election",
+   "seconds": 0.6
+  },
+  "MN-governor": {
+   "ok": true,
+   "n_polls": 15,
+   "page": "2026 Minnesota gubernatorial election",
+   "seconds": 0.6
+  },
+  "NE-governor": {
+   "ok": true,
+   "n_polls": 16,
+   "page": "2026 Nebraska gubernatorial election",
+   "seconds": 0.5
+  },
+  "NV-governor": {
+   "ok": true,
+   "n_polls": 18,
+   "page": "2026 Nevada gubernatorial election",
+   "seconds": 0.5
+  },
+  "NH-governor": {
+   "ok": true,
+   "n_polls": 15,
+   "page": "2026 New Hampshire gubernatorial election",
+   "seconds": 0.4
+  },
+  "NM-governor": {
    "ok": false,
-   "error": "skipped: time budget of 300s exhausted",
+   "error": "FetchError: time budget exhausted while fetching '2026 New Mexico gubernatorial election' (rest: HTTP 429)",
+   "stale": true,
+   "seconds": 54.7
+  },
+  "NY-governor": {
+   "ok": false,
+   "error": "skipped: time budget of 240s exhausted",
+   "stale": true
+  },
+  "OH-governor": {
+   "ok": false,
+   "error": "skipped: time budget of 240s exhausted",
+   "stale": true
+  },
+  "OK-governor": {
+   "ok": false,
+   "error": "skipped: time budget of 240s exhausted",
+   "stale": true
+  },
+  "OR-governor": {
+   "ok": false,
+   "error": "skipped: time budget of 240s exhausted",
+   "stale": true
+  },
+  "PA-governor": {
+   "ok": false,
+   "error": "skipped: time budget of 240s exhausted",
+   "stale": true
+  },
+  "RI-governor": {
+   "ok": false,
+   "error": "skipped: time budget of 240s exhausted",
+   "stale": true
+  },
+  "SC-governor": {
+   "ok": false,
+   "error": "skipped: time budget of 240s exhausted",
+   "stale": true
+  },
+  "SD-governor": {
+   "ok": false,
+   "error": "skipped: time budget of 240s exhausted",
+   "stale": true
+  },
+  "TN-governor": {
+   "ok": false,
+   "error": "skipped: time budget of 240s exhausted",
+   "stale": true
+  },
+  "TX-governor": {
+   "ok": false,
+   "error": "skipped: time budget of 240s exhausted",
+   "stale": true
+  },
+  "VT-governor": {
+   "ok": false,
+   "error": "skipped: time budget of 240s exhausted",
+   "stale": true
+  },
+  "WI-governor": {
+   "ok": false,
+   "error": "skipped: time budget of 240s exhausted",
+   "stale": true
+  },
+  "WY-governor": {
+   "ok": false,
+   "error": "skipped: time budget of 240s exhausted",
+   "stale": true
+  },
+  "AL-governor": {
+   "ok": false,
+   "error": "skipped: time budget of 240s exhausted",
+   "stale": true
+  },
+  "AK-governor": {
+   "ok": false,
+   "error": "skipped: time budget of 240s exhausted",
+   "stale": true
+  },
+  "AZ-governor": {
+   "ok": false,
+   "error": "skipped: time budget of 240s exhausted",
+   "stale": true
+  },
+  "AR-governor": {
+   "ok": false,
+   "error": "skipped: time budget of 240s exhausted",
+   "stale": true
+  },
+  "CA-governor": {
+   "ok": false,
+   "error": "skipped: time budget of 240s exhausted",
+   "stale": true
+  },
+  "CO-governor": {
+   "ok": false,
+   "error": "skipped: time budget of 240s exhausted",
+   "stale": true
+  },
+  "CT-governor": {
+   "ok": false,
+   "error": "skipped: time budget of 240s exhausted",
+   "stale": true
+  },
+  "FL-governor": {
+   "ok": false,
+   "error": "skipped: time budget of 240s exhausted",
    "stale": true
   }
  },
  "summary": {
-  "races_ok": 51,
-  "races_failed": 21,
-  "runtime_seconds": 301.0
+  "races_ok": 50,
+  "races_failed": 22,
+  "runtime_seconds": 277.8
  }
 }
