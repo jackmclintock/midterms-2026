@@ -18,9 +18,18 @@ Everything is plain Python 3 standard library and vanilla JavaScript. No build s
 
 ### Cadence
 
-* Normal: every 30 minutes.
-* Election window (3 Nov 10:00 UTC to 7 Nov): every 5 minutes. A full refresh twice an hour and a fast refresh (results and markets only) in between.
-* The page itself re-fetches `data/live.json` every 60 seconds and when the tab regains focus.
+GitHub's cron proved unreliable (it fired every 4 to 6 hours for this repo), so the schedule is driven by a
+self-sustaining loop job: one Actions run refreshes, commits, sleeps and repeats for about 5.5 hours, then
+dispatches a fresh copy of itself. The cron entries are only a watchdog. A push to `scripts/` or the workflow
+runs a single validation cycle (no commit) and starts the loop if none is running.
+
+* Normal: a server rebuild every 10 minutes (polls from Wikipedia at most hourly). The browser also polls
+  Polymarket directly every minute for live chamber-control prices.
+* Election window (3 Nov 10:00 UTC to 7 Nov): a server rebuild every 6.5 minutes, which is GitHub Pages'
+  build ceiling (10 builds per hour). On top of that the browser polls CNN's AP-fed results JSON directly
+  every 30 seconds (House every 2 minutes), overlays the counts on the latest server data and re-runs the
+  projection model locally (`assets/live.js`). So the page is effectively real time regardless of GitHub.
+* The page re-fetches `data/live.json` every 60 seconds and when the tab regains focus.
 
 ### Sources
 
@@ -53,6 +62,10 @@ python3 -m http.server 8765   # then open http://localhost:8765/
 ```
 
 Set `FAST_MODE=1` to skip the slow sources. Set `TAVILY_API_KEY` to enable the news fallback.
+
+Election-night rehearsal: `python3 scripts/simulate.py --hours 3 --swing -3 --client --out rehearsal` writes the
+pre-election data plus a fake CNN-format feed; serve the folder and open `index.html?feed=feed/` to watch the
+in-browser live layer take over.
 
 ## Repository secrets
 

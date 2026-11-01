@@ -299,4 +299,4 @@ details summary { cursor: pointer; font-weight: 600; }
 .spark path.ours { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
 .spark path.mkt { fill: none; stroke: var(--ind); stroke-width: 1.5; stroke-dasharray: 3 3; opacity: .8; }
 .spark path.area { opacity: .12; }
-.spark text { font-size: 10px; fill: var(--ink-2); font-family: var(--font); }
+.spark text { font-size: 10px; fill: var(--ink-2); font-family: var(--font); paint-order: stroke; stroke: var(--surface); stroke-width: 3px; stroke-linejoin: round; }
