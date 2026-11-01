@@ -84,8 +84,10 @@
   // ------------------------------------------------------------- data load
   // Data lives on the `data` branch and is read from GitHub's raw CDN, so it updates within seconds of each
   // refresh instead of waiting for a Pages rebuild. Locally (or if raw fails) fall back to the relative path.
-  // jsDelivr is purged by the refresh job after every commit (instant), raw.githubusercontent lags up to 5 min.
-  const CDN_BASES = ['https://cdn.jsdelivr.net/gh/jackmclintock/midterms-2026@data/', 'https://raw.githubusercontent.com/jackmclintock/midterms-2026/data/'];
+  // raw.githubusercontent serves the data branch with a 5-minute CDN cache (jsDelivr proved slower to pick up
+  // branch commits). On election night the browser polls the results feeds directly, so this lag only affects
+  // the server-side extras (markets, polls, news), not the counts or the projection.
+  const CDN_BASES = ['https://raw.githubusercontent.com/jackmclintock/midterms-2026/data/'];
   const qsData = new URLSearchParams(location.search).get('data');
   const DATA_BASES = qsData === 'raw' ? CDN_BASES.concat(['']) : qsData === 'local' ? [''] : (/github\.io$/.test(location.hostname) ? CDN_BASES.concat(['']) : ['']);
   async function fetchJson(path, optional) {
