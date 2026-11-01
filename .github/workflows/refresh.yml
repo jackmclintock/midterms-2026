@@ -146,7 +146,8 @@ jobs:
           done
 
       - name: Hand over to a fresh loop (or start one after a push)
-        if: always() && (github.event.inputs.once || '0') != '1'
+        # Not on cancellation: a cancelled loop was replaced by a newer one, re-dispatching would cascade.
+        if: (success() || failure()) && (github.event.inputs.once || '0') != '1'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
