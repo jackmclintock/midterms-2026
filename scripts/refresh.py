@@ -231,6 +231,8 @@ def compact_race(r: dict) -> dict:
             continue
         cc = compact_candidate(meta, c.get("votes") or {}, total)
         cc["leader"] = bool(c.get("leader"))
+        if c.get("nyt_model_estimates"):
+            cc["est"] = c["nyt_model_estimates"]
         cands.append(cc)
     if not cands:  # no reporting unit yet: still list candidates from metadata
         for cid, meta in cands_meta.items():
@@ -287,6 +289,8 @@ def compact_race(r: dict) -> dict:
         "rcv": (r.get("tabulation_method") or "single-round") != "single-round",
         "updated": tru.get("provider_updated_at") or r.get("updated_at"),
         "url": r.get("url"),
+        "nyt_est": tru.get("nyt_model_estimates"),
+        "nyt_model": (r.get("model_settings") or {}).get("model_status"),
     }
 
 
@@ -316,6 +320,9 @@ def fetch_nyt(office: str) -> Optional[dict]:
                 "not_up_by_party": {p: (pb.get(p) or {}).get("no_election") for p in ("DEM", "GOP", "OTH")},
                 "flips": {p: (pb.get(p) or {}).get("flip_count") for p in ("DEM", "GOP", "OTH")},
                 "winner": next((p for p in ("DEM", "GOP") if (pb.get(p) or {}).get("winner")), None),
+                "nyt_model_estimates": o.get("nyt_model_estimates"),
+                "nyt_model_chamber": o.get("nyt_model_chamber"),
+                "model_status": (o.get("model_settings") or {}).get("model_status"),
             }
     except Exception as e:  # party control is optional
         log(f"nyt {office} party control parse failed: {e}")

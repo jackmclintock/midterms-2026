@@ -390,9 +390,25 @@
     return list;
   }
 
+  // NYT's live needle fields are only populated on the night and their exact shape is not published,
+  // so look for a probability-like number under a Democratic key.
+  function findProb(obj, hint) {
+    if (!obj || typeof obj !== 'object') return null;
+    for (const [k, v] of Object.entries(obj)) {
+      if (typeof v === 'number' && v >= 0 && v <= 1 && new RegExp(hint, 'i').test(k)) return v;
+      if (v && typeof v === 'object') { const r = findProb(v, hint); if (r != null) return r; }
+    }
+    return null;
+  }
+  function nytNeedleRow(summary) {
+    const nc = summary && summary.nyt_control; if (!nc) return null;
+    const p = findProb(nc.nyt_model_chamber, 'dem') ?? findProb(nc.nyt_model_estimates, 'dem');
+    return p == null ? null : { k: 'NYT needle (live)', v: p };
+  }
   function senateCompare() {
     const s = D.senate, f = s.forecasts || {}, mk = s.markets || {};
     const rows = [{ k: 'Our model', v: s.summary.p_dem_control }];
+    const nn = nytNeedleRow(s.summary); if (nn) rows.push(nn);
     const names = { ddhq: 'Decision Desk HQ', silver_bulletin: 'Silver Bulletin', racetothewh: 'Race to the WH', split_ticket: 'Split Ticket', economist: 'The Economist', poliwave: 'Poliwave', davemanuel: 'Dave Manuel', pollcheck: 'PollCheck', votescope: 'Vote-Scope', vote_scope: 'Vote-Scope', electindex: 'ElectIndex', kalshi: 'Kalshi', polymarket: 'Polymarket' };
     for (const [k, v] of Object.entries(f)) {
       const val = typeof v === 'object' && v ? v.dem_control : v;
@@ -405,6 +421,7 @@
   function houseCompare() {
     const hs = D.house, mk = hs.markets || {};
     const rows = [{ k: 'Our model', v: hs.summary.p_dem_control }];
+    const nn = nytNeedleRow(hs.summary); if (nn) rows.push(nn);
     for (const f of hs.forecasts || []) {
       if (f.dem_control != null && !/kalshi|polymarket/i.test(f.source)) rows.push({ k: f.source, v: f.dem_control });
     }
@@ -439,7 +456,7 @@
       const ls = window.LiveClient ? window.LiveClient.status() : null;
       b.append(h('div', { class: 'banner', style: 'margin-bottom:12px' },
         h('b', null, 'Results are live. '),
-        ls && ls.feedAt ? `Counts from the ${ls.source}, polled every 30 seconds (last ${ago(ls.feedAt)}). ` : (ls && ls.errors ? 'Waiting for the results feed to open; showing the last server build. ' : ''),
+        ls && (ls.feedAt || ls.nytAt) ? `Counts from the ${ls.source}: CNN/AP every 30 seconds${ls.feedAt ? ' (last ' + ago(ls.feedAt) + ')' : ''}${ls.nytAt ? ', NYT every minute (last ' + ago(ls.nytAt) + ')' : ''}. ` : (ls && ls.errors ? 'Waiting for the results feeds to open; showing the last server build. ' : ''),
         `Polls have closed in ${(D.poll_closing || []).length - nextClose.length} states. `,
         nextClose.length ? `Next closing: ${nextClose.slice(0, 4).map((c) => c.state).join(', ')} at ${fmtTime(nextClose[0].close_utc)} ${tzShort()}. ` : 'All polls have closed. ',
         'Our projection blends the count so far with pre-election expectations and updates every few minutes.'));
@@ -514,6 +531,11 @@
     if (r.prev) row('Last result', `${r.prev.year || ''} ${marginTxt(r.prev.margin_dem, 1)}${r.prev.note ? ' · ' + r.prev.note : ''}`);
     if (live.hist && live.hist.pres_2024_margin_dem != null) row('2024 presidential', marginTxt(live.hist.pres_2024_margin_dem, 1));
     if (r.pvi) row('Cook PVI', r.pvi);
+    if (live.nyt_est && typeof live.nyt_est === 'object') {
+      const parts = Object.entries(live.nyt_est).filter(([k, v]) => typeof v === 'number').slice(0, 6).map(([k, v]) => `${k.replace(/_/g, ' ')} ${Math.abs(v) <= 1 && /prob|chance|p_/i.test(k) ? pctProb(v) : (Math.round(v * 10) / 10)}`);
+      if (parts.length) row('NYT needle estimate', parts.join(' · '));
+    }
+    if (live.src) row('Live source', live.src.toUpperCase().replace('+', ' + '));
     box.append(kv);
     if (r.notes) box.append(h('p', { class: 'muted', style: 'font-size:13px' }, r.notes));
     // Individual polls from our collector

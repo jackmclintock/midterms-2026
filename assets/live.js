@@ -13,7 +13,11 @@
   const SIGMA_POLL = 4.8, SIGMA_NATIONAL = 2.6;
 
   const S = { feedBase: null, force: false, timer: null, feed: { SG: null, GG: null, HG: null }, feedAt: null, feedErr: {}, lastHouse: 0,
+    nyt: { SG: null, GG: null, HG: null, control: {} }, nytAt: null, nytLast: 0, nytLastHouse: 0,
     lastTick: 0, markets: null, marketsAt: null, app: null, etags: {}, pointAt: 0, running: false };
+  const NYT = 'https://static01.nyt.com/elections-assets/pages/data/2026-11-03/';
+  // NYT files are large (0.8 MB each, House 7 MB), so only wide screens without data-saver poll them directly.
+  const useNyt = () => { try { return !S.feedBase && window.innerWidth >= 900 && !(navigator.connection && navigator.connection.saveData); } catch (e) { return false; } };
 
   const qs = new URLSearchParams(location.search);
   if (qs.get('feed')) { S.feedBase = qs.get('feed'); S.force = true; }
@@ -121,7 +125,7 @@
   function indexCnn(list, code) {
     const out = {};
     for (const r of Array.isArray(list) ? list : (list && list.races) || []) {
-      if (r.electionTitle && !/general/i.test(r.electionTitle)) continue;
+      if (/primary|runoff/i.test(r.electionTitle || '') || /primary/i.test(r.raceTitle || '')) continue;
       const key = r.ecKey || '';
       if (code === 'HG') {
         const m = /-HG-([A-Z]{2})-(\d+)/.exec(key); if (!m) continue;
@@ -133,6 +137,60 @@
         (out[st] = out[st] || []).push(rec);
       }
     }
+    return out;
+  }
+
+  // ------------------------------------------------------- NYT parsing
+  const partyCode = (p) => ({ DEM: 'D', GOP: 'R', REP: 'R' }[p] || 'I');
+  function nytRace(r) {
+    const tru = r.top_reporting_unit || {}, meta = r.candidate_metadata || {};
+    const total = +tru.total_votes || 0;
+    let cands = (tru.candidates || []).map((c) => {
+      const m = meta[c.nyt_id] || {}; const v = +((c.votes || {}).total || 0);
+      if (c.nyt_id === 'total_writeins' && !v) return null;
+      const name = [m.first_name, m.last_name].filter(Boolean).join(' ') || m.last_name || c.nyt_id;
+      return { id: c.nyt_id, name, party: partyCode((m.party || {}).nyt_id), inc: !!m.incumbent, votes: v, pct: total ? +(100 * v / total).toFixed(1) : null, leader: !!c.leader, est: c.nyt_model_estimates || undefined };
+    }).filter(Boolean);
+    if (!cands.length) cands = Object.values(meta).filter((m) => m.nyt_id !== 'total_writeins').map((m) => ({ id: m.nyt_id, name: [m.first_name, m.last_name].filter(Boolean).join(' '), party: partyCode((m.party || {}).nyt_id), inc: !!m.incumbent, votes: 0, pct: null, leader: false }));
+    cands.sort((a, b) => b.votes - a.votes);
+    const won = ((r.outcome || {}).won) || [];
+    let winner = cands.find((c) => won.includes(c.id));
+    if (!winner && won.length && meta[won[0]]) { const m = meta[won[0]]; winner = { name: [m.first_name, m.last_name].filter(Boolean).join(' '), party: partyCode((m.party || {}).nyt_id) }; }
+    const d = cands.find((c) => c.party === 'D'), rp = cands.find((c) => c.party === 'R');
+    let margin = null;
+    if (total && cands.length >= 2) {
+      if (d && rp) margin = +(d.pct - rp.pct).toFixed(1);
+      else if (rp) margin = +((cands[0].pct - cands[1].pct) * (cands[0].party !== 'R' ? 1 : -1)).toFixed(1);
+      else margin = +((cands[0].pct - cands[1].pct) * (cands[0].party === 'D' ? 1 : -1)).toFixed(1);
+    }
+    const call = won.length ? 'called' : (r.race_call_status || 'too_early');
+    const hist = {}; for (const [k, v] of Object.entries(tru.historical_comparison_race_data || {})) if (k.includes('-P-2024')) hist.pres_2024_margin_dem = v.margin;
+    return { call, winner: winner ? winner.name : null, winner_party: winner ? winner.party : null, called_by: (r.outcome || {}).called_by || [],
+      eevp: +tru.eevp || 0, votes: total, expected: tru.total_expected_vote || null, precincts: [tru.precincts_reporting || 0, tru.precincts_total || 0],
+      margin, cands: cands.slice(0, 5), hist, updated: tru.provider_updated_at || r.updated_at, url: r.url, nyt_rating: r.rating, nyt_est: tru.nyt_model_estimates || null,
+      nyt_model: (r.model_settings || {}).model_status || null, rcv: (r.tabulation_method || 'single-round') !== 'single-round', src: 'nyt' };
+  }
+  function indexNyt(raw, code) {
+    const out = {};
+    for (const r of raw.races || []) {
+      const id = r.nyt_id || ''; if (!id || id.startsWith('US-')) continue;
+      const st = id.split('-')[0];
+      const rec = nytRace(r); rec.special = id.includes('S_W') || r.race_type_id === 'S_W';
+      if (code === 'HG') { const n = r.seat_number || r.seat; const key = AT_LARGE.has(st) ? `${st}-AL` : `${st}-${String(parseInt(n, 10) || 0).padStart(2, '0')}`; out[key] = rec; }
+      else (out[st] = out[st] || []).push(rec);
+    }
+    let control = null;
+    try { const o = raw.partyControlData.results[0].offices[{ SG: 'S', GG: 'G', HG: 'H' }[code]]; if (o) control = { nyt_model_estimates: o.nyt_model_estimates || null, nyt_model_chamber: o.nyt_model_chamber || null, model_status: (o.model_settings || {}).model_status || null, called: o.num_races_called, seats: Object.fromEntries(Object.entries(o.party_balance || {}).map(([k, v]) => [k, v.seats])) }; } catch (e) {}
+    return { races: out, control, updated: (raw.resultsMeta || {}).resultsUpdatedAt };
+  }
+  // Pick the fresher of two records for the same race: more votes wins, ties go to NYT (richer fields), calls from either.
+  function pick(cnn, nyt) {
+    if (!cnn) return nyt; if (!nyt) return cnn;
+    const base = (nyt.votes || 0) >= (cnn.votes || 0) ? nyt : cnn, other = base === nyt ? cnn : nyt;
+    const out = Object.assign({}, other, base);
+    if (other.call === 'called' && base.call !== 'called') { out.call = 'called'; out.winner = other.winner; out.winner_party = other.winner_party; out.called_by = other.called_by; }
+    if (nyt.nyt_est) out.nyt_est = nyt.nyt_est; if (nyt.expected) out.expected = nyt.expected; if (nyt.hist) out.hist = nyt.hist; if (nyt.url) out.url = nyt.url;
+    out.src = base === nyt ? (cnn.votes ? 'nyt+cnn' : 'nyt') : (nyt.votes ? 'cnn+nyt' : 'cnn');
     return out;
   }
 
@@ -161,12 +219,14 @@
   }
 
   function applyFeed(D) {
-    const f = S.feed;
-    if (!f.SG && !f.GG && !f.HG) return false;
+    const f = S.feed, n = S.nyt;
+    if (!f.SG && !f.GG && !f.HG && !n.SG && !n.GG && !n.HG) return false;
     let touched = 0;
-    if (f.SG) for (const r of D.senate.races) { const list = f.SG[r.postal]; if (!list) continue; const c = list.length > 1 ? (list.find((x) => !!x.special === !!r.special) || list[0]) : list[0]; r.live = mergeLive(r.live, c); touched++; }
-    if (f.GG) for (const r of D.governors.races) { const list = f.GG[r.postal]; if (!list) continue; r.live = mergeLive(r.live, list[0]); touched++; }
-    if (f.HG) for (const d of D.house.districts) { const c = f.HG[d.id]; if (!c) continue; d.live = mergeLive(d.live, c); touched++; }
+    const fromList = (list, r) => (list && list.length ? (list.length > 1 ? (list.find((x) => !!x.special === !!r.special) || list[0]) : list[0]) : null);
+    for (const r of D.senate.races) { const c = pick(fromList(f.SG && f.SG[r.postal], r), fromList(n.SG && n.SG[r.postal], r)); if (!c) continue; r.live = mergeLive(r.live, c); touched++; }
+    for (const r of D.governors.races) { const c = pick(fromList(f.GG && f.GG[r.postal], r), fromList(n.GG && n.GG[r.postal], r)); if (!c) continue; r.live = mergeLive(r.live, c); touched++; }
+    for (const d of D.house.districts) { const c = pick(f.HG && f.HG[d.id], n.HG && n.HG[d.id]); if (!c) continue; d.live = mergeLive(d.live, c); touched++; }
+    for (const [k, code] of [['senate', 'SG'], ['governors', 'GG'], ['house', 'HG']]) if (n.control[code]) D[k].summary.nyt_control = Object.assign({}, D[k].summary.nyt_control || {}, n.control[code]);
     if (!touched) return false;
     for (const key of ['senate', 'governors']) {
       const races = D[key].races, sw = observedSwing(races);
@@ -184,7 +244,7 @@
     D.house.swing = hs;
     D.house.summary = summarize(dists, D.house.summary, 4000);
     D.phase = 'live';
-    D.client_live = { at: new Date().toISOString(), source: S.feedBase ? 'rehearsal feed' : 'CNN/AP feed', touched };
+    D.client_live = { at: new Date().toISOString(), source: S.feedBase ? 'rehearsal feed' : (S.nytAt ? 'NYT and CNN/AP feeds' : 'CNN/AP feed'), touched, nytAt: S.nytAt, cnnAt: S.feedAt };
     return true;
   }
 
@@ -227,7 +287,20 @@
           if (r.status === 'fulfilled') { if (r.value !== undefined) { S.feed[k] = indexCnn(r.value, k); S.feedAt = new Date().toISOString(); changed = true; } delete S.feedErr[k]; }
           else S.feedErr[k] = String(r.reason && r.reason.message || r.reason).slice(0, 80);
         });
-        if (changed || (S.feed.SG || S.feed.GG || S.feed.HG)) { if (applyFeed(D)) { changed = true; appendPoint(D, T); } }
+        if (useNyt()) {
+          const nj = [];
+          if (now - S.nytLast > 60000) { nj.push(['SG', 'results-senate.json'], ['GG', 'results-governor.json']); S.nytLast = now; }
+          if (now - S.nytLastHouse > 300000) { nj.push(['HG', 'results-house.json']); S.nytLastHouse = now; }
+          if (nj.length) {
+            const nres = await Promise.allSettled(nj.map(([k, p]) => getJson(NYT + p, 'nyt' + k)));
+            nres.forEach((r, i) => {
+              const k = nj[i][0];
+              if (r.status === 'fulfilled') { if (r.value !== undefined) { const ix = indexNyt(r.value, k); S.nyt[k] = ix.races; if (ix.control) S.nyt.control[k] = ix.control; S.nytAt = new Date().toISOString(); changed = true; } delete S.feedErr['nyt' + k]; }
+              else S.feedErr['nyt' + k] = String(r.reason && r.reason.message || r.reason).slice(0, 80);
+            });
+          }
+        }
+        if (changed || (S.feed.SG || S.feed.GG || S.feed.HG || S.nyt.SG || S.nyt.GG || S.nyt.HG)) { if (applyFeed(D)) { changed = true; appendPoint(D, T); } }
       }
       if (now - (S.marketsAt ? Date.parse(S.marketsAt) : 0) > 60000) { if (await pollMarkets(D)) changed = true; }
     } catch (e) { console.warn('live tick', e); }
@@ -239,7 +312,7 @@
 
   function status() {
     const errs = Object.keys(S.feedErr);
-    return { active: !!S.timer, feedAt: S.feedAt, marketsAt: S.marketsAt, errors: errs.length ? S.feedErr : null, source: S.feedBase ? 'rehearsal feed' : 'CNN/AP feed', force: S.force };
+    return { active: !!S.timer, feedAt: S.feedAt, nytAt: S.nytAt, nyt: useNyt(), marketsAt: S.marketsAt, errors: errs.length ? S.feedErr : null, source: S.feedBase ? 'rehearsal feed' : (S.nytAt ? 'NYT and CNN/AP feeds' : 'CNN/AP feed'), force: S.force };
   }
 
   function start(app) {
@@ -255,7 +328,7 @@
   }
 
   // After the server data is re-fetched, put the latest feed back on top of it.
-  function reapply(D, T) { if (S.feed.SG || S.feed.GG || S.feed.HG) { if (applyFeed(D)) appendPoint(D, T); } }
+  function reapply(D, T) { if (S.feed.SG || S.feed.GG || S.feed.HG || S.nyt.SG || S.nyt.GG || S.nyt.HG) { if (applyFeed(D)) appendPoint(D, T); } }
 
   window.LiveClient = { start, reapply, status, tick, _state: S };
 })();
