@@ -914,16 +914,21 @@
       }
       grid.append(h('div', { class: 'card', style: 'grid-column:1 / -1' }, h('h3', null, 'Last poll closing times'), h('div', { class: 'muted', style: 'font-size:12px;margin:4px 0 8px' }, 'Bold states have a Senate or governor race. Highlighted tags are competitive. Networks and the AP do not call a race before its last polls close.'), list));
     }
-    // Counting speed notes
+    body.append(grid);
+  }
+
+  // Reference material, collapsed at the foot of the page
+  function renderReference() {
+    const body = $('#reference-body'); if (!body) return;
+    body.innerHTML = '';
     if (H && H.counting_speed_notes) {
       const notes = Object.entries(H.counting_speed_notes).filter(([st]) => STATES[st]);
       const general = H.counting_speed_notes.general;
-      grid.append(h('div', { class: 'card', style: 'grid-column:1 / -1' }, h('h3', null, 'How fast each state counts'), h('div', { class: 'muted', style: 'font-size:12px;margin:4px 0 8px' }, 'Early returns can mislead. Which votes are counted first differs by state.'), general ? h('p', { class: 'note', style: 'margin-bottom:10px' }, general) : null, h('div', { class: 'closings' }, notes.map(([st, n]) => h('div', { class: 'c' }, h('div', { class: 't' }, stateName(st)), h('div', { class: 'sts' }, n))))));
+      body.append(h('details', { class: 'card' }, h('summary', null, 'How fast each state counts'), h('div', { class: 'muted', style: 'font-size:12px;margin:8px 0' }, 'Early returns can mislead. Which votes are counted first differs by state.'), general ? h('p', { class: 'note', style: 'margin-bottom:10px' }, general) : null, h('div', { class: 'closings' }, notes.map(([st, n]) => h('div', { class: 'c' }, h('div', { class: 't' }, stateName(st)), h('div', { class: 'sts' }, n))))));
     }
     if (H && H.election_night_2022_timeline && H.election_night_2022_timeline.length) {
-      grid.append(h('div', { class: 'card', style: 'grid-column:1 / -1' }, h('h3', null, 'How 2022 unfolded, for comparison'), h('div', { class: 'tablewrap', style: 'margin-top:8px' }, h('table', null, h('tbody', null, H.election_night_2022_timeline.filter((e) => e && e.time_et && e.event).map((e) => h('tr', null, h('td', { class: 'mono', style: 'width:90px' }, e.time_et + ' ET'), h('td', { style: 'white-space:normal' }, e.event))))))));
+      body.append(h('details', { class: 'card', style: 'margin-top:10px' }, h('summary', null, 'How 2022 unfolded, for comparison'), h('div', { class: 'tablewrap', style: 'margin-top:8px' }, h('table', null, h('tbody', null, H.election_night_2022_timeline.filter((e) => e && e.time_et && e.event).map((e) => h('tr', null, h('td', { class: 'mono', style: 'width:90px' }, e.time_et + ' ET'), h('td', { style: 'white-space:normal' }, e.event))))))));
     }
-    body.append(grid);
   }
 
   // ----------------------------------------------------------------- news
@@ -973,7 +978,7 @@
 
   // --------------------------------------------------------------- render
   function render() {
-    try { renderHeader(); renderHero(); renderMap(); renderNight(); renderSenate(); renderHouse(); renderGovernors(); renderPolls(); renderModels(); renderHistory(); renderNews(); renderMethod(); }
+    try { renderHeader(); renderHero(); renderMap(); renderNight(); renderSenate(); renderHouse(); renderGovernors(); renderPolls(); renderModels(); renderHistory(); renderNews(); renderMethod(); renderReference(); }
     catch (e) { console.error(e); $('#loading').textContent = 'Render error: ' + e.message; $('#loading').classList.remove('hide'); }
     $('#loading').classList.add('hide'); $('#app').classList.remove('hide');
     fitHeader(); setTimeout(fitHeader, 300);
