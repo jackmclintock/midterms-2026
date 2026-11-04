@@ -227,7 +227,7 @@ def compact_race(r: dict) -> dict:
     cands = []
     for c in tru.get("candidates") or []:
         meta = cands_meta.get(c.get("nyt_id"), {"nyt_id": c.get("nyt_id")})
-        if meta.get("nyt_id") == "total_writeins" and not int((c.get("votes") or {}).get("total") or 0):
+        if (meta.get("nyt_id") == "total_writeins" or "write-in" in str(meta.get("last_name") or "").lower()) and not int((c.get("votes") or {}).get("total") or 0):
             continue
         cc = compact_candidate(meta, c.get("votes") or {}, total)
         cc["leader"] = bool(c.get("leader"))
@@ -892,6 +892,10 @@ def fetch_news(prev: dict) -> dict:
 SIGMA_POLL = 4.8          # typical final-poll-average error in a Senate/Gov race (pts)
 SIGMA_RATING_ONLY = 7.0   # when we only have a rating, not polls
 SIGMA_NATIONAL = 2.6      # shared national error component (pts)
+EARLY_COUNT_SIGMA = 6.0   # extra uncertainty on the uncounted vote while a race is being counted (pts)
+SWING_WEIGHT = 0.6        # how much of the observed national swing is applied to uncalled races
+SWING_CAP = 6.0           # never shift uncalled races by more than this (pts)
+SWING_MIN_EEVP = 50       # only races with at least this much of the expected vote in inform the swing
 PRES_2024_NATIONAL = -1.5  # Trump beat Harris by about 1.5 points nationally
 
 
@@ -986,38 +990,65 @@ def live_update(prior: dict, nyt: Optional[dict], swing: float) -> dict:
     eevp = float(nyt.get("eevp") or 0) / 100.0
     cur = nyt.get("margin")
     if cur is None or eevp <= 0.02:
-        m = prior["margin"] + 0.7 * swing
+        m = prior["margin"] + SWING_WEIGHT * swing
         return {**prior, "margin_live": round(m, 2), "p_live": round(prob_from_margin(m, prior["sigma"]), 3),
                 "state": "waiting" if eevp == 0 else "early"}
-    # Early returns are noisy (vote-type ordering), so trust the count on a concave curve.
+    # Early returns are noisy (vote-type ordering), so trust the count on a concave curve, and keep a wide
+    # uncertainty on the outstanding vote: its composition can differ a lot from what has been counted.
     trust = eevp ** 1.6
-    m = trust * float(cur) + (1 - trust) * (prior["margin"] + 0.7 * swing)
-    sigma = math.sqrt(((1 - eevp) * prior["sigma"]) ** 2 + (1.5 * (1 - eevp)) ** 2 + 0.6 ** 2)
+    m = trust * float(cur) + (1 - trust) * (prior["margin"] + SWING_WEIGHT * swing)
+    sigma = math.sqrt(((1 - eevp) ** 2) * (prior["sigma"] ** 2 + EARLY_COUNT_SIGMA ** 2) + 1.0)
     return {**prior, "margin_live": round(m, 2), "sigma_live": round(sigma, 2),
             "p_live": round(prob_from_margin(m, sigma), 3), "state": "counting"}
 
 
-def observed_swing(races: list[dict]) -> dict:
-    """Median (actual minus expected) margin across races with enough vote in.
-    Positive means Democrats are running ahead of expectations."""
+def swing_observations(races: list[dict]) -> list[tuple[float, str]]:
+    """(actual minus expected margin, state) for races with enough of the vote in to be informative."""
     obs = []
     for r in races:
         live = r.get("live") or {}
         prior = r.get("prior") or {}
-        if live.get("call") == "called" or (live.get("eevp") or 0) >= 60:
-            if live.get("margin") is not None and prior.get("basis") not in (None, "none") and (live.get("eevp") or 0) >= 40:
-                obs.append((float(live["margin"]) - float(prior["margin"]), float(live.get("eevp") or 0)))
+        if (live.get("eevp") or 0) >= SWING_MIN_EEVP and live.get("margin") is not None \
+                and prior.get("basis") not in (None, "none", "uncontested") and abs(prior.get("margin", 0)) < 35:
+            obs.append((float(live["margin"]) - float(prior["margin"]), r.get("postal") or r.get("state") or "?"))
+    return obs
+
+
+def observed_swing(races: list[dict], pooled: Optional[list[tuple[float, str]]] = None) -> dict:
+    """National swing estimate: median of per-state medians (so 25 Florida districts count once), shrunk
+    towards zero when few states have reported, and capped. Positive = Democrats beating expectations."""
+    obs = pooled if pooled is not None else swing_observations(races)
     if not obs:
-        return {"swing": 0.0, "n": 0}
+        return {"swing": 0.0, "n": 0, "states": 0}
+    by_state: dict[str, list[float]] = {}
+    for v, st in obs:
+        by_state.setdefault(st, []).append(v)
+    state_meds = sorted(statistics.median(v) for v in by_state.values())
+    med = statistics.median(state_meds)
+    n_states = len(state_meds)
+    shrink = n_states / (n_states + 3.0)
+    eff = max(-SWING_CAP, min(SWING_CAP, med * shrink))
     vals = sorted(x[0] for x in obs)
-    med = statistics.median(vals)
-    return {"swing": round(med, 2), "n": len(obs), "mean": round(statistics.mean(vals), 2),
-            "spread": round(statistics.pstdev(vals), 2) if len(vals) > 1 else None}
+    return {"swing": round(eff, 2), "raw": round(med, 2), "n": len(obs), "states": n_states,
+            "mean": round(statistics.mean(vals), 2), "spread": round(statistics.pstdev(vals), 2) if len(vals) > 1 else None}
+
+
+NATIONAL_EXTRA = 0.0      # extra shared uncertainty from the live swing estimate (set in main)
+
+
+def swing_uncertainty(sw: dict) -> float:
+    """How uncertain the applied national swing is: large while few states have reported."""
+    if not sw or not sw.get("n"):
+        return 0.0
+    spread = sw.get("spread") or 6.0
+    states = max(1, int(sw.get("states") or 1))
+    return round(min(8.0, max(2.0, spread / math.sqrt(states) + 4.0 / states)), 2)
 
 
 def simulate_chamber(races: list[dict], base_dem: int, to_win: int, sims: int = 20000, seed: int = 7) -> dict:
     """Monte Carlo with a shared national error term plus race-level noise."""
     rng = random.Random(seed)
+    nat_sigma = math.sqrt(SIGMA_NATIONAL ** 2 + NATIONAL_EXTRA ** 2)
     entries = []
     for r in races:
         pj = r.get("proj") or {}
@@ -1031,7 +1062,7 @@ def simulate_chamber(races: list[dict], base_dem: int, to_win: int, sims: int = 
         m = pj.get("margin_live", pj.get("margin", 0.0))
         s = pj.get("sigma_live", pj.get("sigma", SIGMA_POLL))
         eevp = float((r.get("live") or {}).get("eevp") or 0) / 100.0
-        nat = SIGMA_NATIONAL * (1 - eevp)
+        nat = nat_sigma * (1 - eevp)
         entries.append(("rand", m, (s, nat)))
     counts = [0] * (len(entries) + 1)
     dem_control = 0
@@ -1044,7 +1075,7 @@ def simulate_chamber(races: list[dict], base_dem: int, to_win: int, sims: int = 
                 d += a
             else:
                 s, nat = b
-                idio = math.sqrt(max(s * s - nat * nat, 0.25))
+                idio = math.sqrt(max(s * s - min(nat, s * 0.9) ** 2, 0.25))
                 if a + nat * nat_err + rng.gauss(0, idio) > 0:
                     d += 1
         counts[d] += 1
@@ -1072,7 +1103,7 @@ def key_state(seed_race: dict) -> str:
 
 
 def merge_statewide(seed: dict, nyt: Optional[dict], mkts_group: dict, polls_group: dict, national_shift: Optional[float],
-                    office: str) -> dict:
+                    office: str, swing: Optional[dict] = None) -> dict:
     nyt_by: dict[tuple, dict] = {}
     for r in (nyt or {}).get("races", []):
         nyt_by[(r["state"], bool(r["special"]))] = r
@@ -1110,7 +1141,7 @@ def merge_statewide(seed: dict, nyt: Optional[dict], mkts_group: dict, polls_gro
         out.append({"state": STATE_NAMES.get(st, st), "postal": st, "special": sp, "ratings": {"nyt": n.get("nyt_rating")},
                     "prior": prior, "live": n, "dem": next((c["name"] for c in n["cands"] if c["party"] == "D"), None),
                     "rep": next((c["name"] for c in n["cands"] if c["party"] == "R"), None), "other": [], "forecast": {}, "main_challenger": "D"})
-    sw = observed_swing(out)
+    sw = swing if swing is not None else observed_swing(out)
     for r in out:
         r["proj"] = live_update(r["prior"], r.get("live"), sw["swing"])
     out.sort(key=lambda r: abs(r["prior"]["margin"]))
@@ -1263,8 +1294,20 @@ def main() -> int:
     # National environment shift relative to the 2024 presidential vote, damped (generic ballot overstates)
     national_shift = round(0.8 * (gb_margin - PRES_2024_NATIONAL), 2) if gb_margin is not None else None
 
+    # One national swing, pooled across every office and state that has reported enough, then applied everywhere.
+    pre_senate = merge_statewide(seed_senate, nyt_s, mkts.get("senate_races") or {}, polls.get("senate") or {}, national_shift, "senate", {"swing": 0.0, "n": 0})
+    pre_gov = merge_statewide(seed_gov, nyt_g, mkts.get("gov_races") or {}, polls.get("governors") or {}, national_shift, "governor", {"swing": 0.0, "n": 0})
+    pre_house = merge_house(seed_house, nyt_h, mkts, polls.get("house") or {}, 0.0, national_shift)
+    pooled_obs = swing_observations(pre_senate["races"]) + swing_observations(pre_gov["races"]) + swing_observations(pre_house["districts"])
+    national_swing = observed_swing([], pooled_obs)
+    national_swing["by_office"] = {"senate": len(swing_observations(pre_senate["races"])), "governors": len(swing_observations(pre_gov["races"])), "house": len(swing_observations(pre_house["districts"]))}
+    global NATIONAL_EXTRA
+    NATIONAL_EXTRA = swing_uncertainty(national_swing)
+    national_swing["uncertainty"] = NATIONAL_EXTRA
+    log(f"national swing {national_swing}")
+
     # Senate
-    senate = merge_statewide(seed_senate, nyt_s, mkts.get("senate_races") or {}, polls.get("senate") or {}, national_shift, "senate")
+    senate = merge_statewide(seed_senate, nyt_s, mkts.get("senate_races") or {}, polls.get("senate") or {}, national_shift, "senate", national_swing)
     ctrl = (nyt_s or {}).get("control") or {}
     nub = ctrl.get("not_up_by_party") or {}
     not_up_d = int(nub.get("DEM") or (seed_senate.get("seats_not_up") or {}).get("D") or 34)
@@ -1279,7 +1322,7 @@ def main() -> int:
     senate["provider"] = (nyt_s or {}).get("provider")
 
     # Governors
-    govs = merge_statewide(seed_gov, nyt_g, mkts.get("gov_races") or {}, polls.get("governors") or {}, national_shift, "governor")
+    govs = merge_statewide(seed_gov, nyt_g, mkts.get("gov_races") or {}, polls.get("governors") or {}, national_shift, "governor", national_swing)
     gcur = seed_gov.get("current") or {}
     up_d = sum(1 for r in govs["races"] if r.get("incumbent_party") == "D")
     up_r = sum(1 for r in govs["races"] if r.get("incumbent_party") == "R")
@@ -1293,14 +1336,8 @@ def main() -> int:
     govs["provider"] = (nyt_g or {}).get("provider")
 
     # House
-    pre_swing = statistics.median([senate["swing"]["swing"], govs["swing"]["swing"]]) if (senate["swing"]["n"] or govs["swing"]["n"]) else 0.0
-    house = merge_house(seed_house, nyt_h, mkts, polls.get("house") or {}, pre_swing, national_shift)
-    hs = observed_swing(house["districts"])
-    if hs["n"] >= 10:
-        blended = round((pre_swing + hs["swing"]) / 2, 2) if (senate["swing"]["n"] or govs["swing"]["n"]) else hs["swing"]
-        house = merge_house(seed_house, nyt_h, mkts, polls.get("house") or {}, blended, national_shift)
-        hs = observed_swing(house["districts"])
-    house["swing"] = hs
+    house = merge_house(seed_house, nyt_h, mkts, polls.get("house") or {}, national_swing["swing"], national_shift)
+    house["swing"] = national_swing
     house["summary"] = summarize_chamber(house["districts"], 0, 0, 218, 218, 435)
     house["summary"]["nyt_control"] = (nyt_h or {}).get("control")
     house["summary"]["cnn_bop"] = cnn_bop.get("house")
@@ -1338,7 +1375,7 @@ def main() -> int:
              "sen_exp": senate["summary"]["expected"]["D"],
              "hou_exp": house["summary"]["expected"]["D"],
              "sen_called": senate["summary"]["called"], "hou_called": house["summary"]["called"],
-             "swing": senate["swing"].get("swing") if senate["swing"].get("n") else None}
+             "swing": national_swing.get("swing") if national_swing.get("n") else None}
     ts = append_timeseries(ts, point)
     save_json(DATA / "timeseries.json", ts)
 
@@ -1354,6 +1391,7 @@ def main() -> int:
         "senate": senate,
         "house": house,
         "governors": govs,
+        "national_swing": national_swing,
         "balance_of_power": mkts.get("balance_of_power"),
         "markets_summary": {k: mkts.get(k) for k in ("senate_races", "gov_races", "house_races")},
         "markets_raw": {"polymarket": {k: {kk: vv for kk, vv in v.items() if kk != "markets"} | {"markets": v.get("markets", [])[:12]} for k, v in poly.items() if not k.startswith("hou_")},

@@ -10,7 +10,7 @@
   const LIVE_FROM = Date.parse('2026-11-03T10:00:00Z');
   const LIVE_UNTIL = Date.parse('2026-11-24T00:00:00Z');
   const AT_LARGE = new Set(['AK', 'DE', 'ND', 'SD', 'VT', 'WY']);
-  const SIGMA_POLL = 4.8, SIGMA_NATIONAL = 2.6;
+  const SIGMA_POLL = 4.8, SIGMA_NATIONAL = 2.6, EARLY_COUNT_SIGMA = 6.0, SWING_WEIGHT = 0.6, SWING_CAP = 6.0, SWING_MIN_EEVP = 50;
 
   const S = { feedBase: null, force: false, timer: null, feed: { SG: null, GG: null, HG: null }, feedAt: null, feedErr: {}, lastHouse: 0,
     nyt: { SG: null, GG: null, HG: null, control: {} }, nytAt: null, nytLast: 0, nytLastHouse: 0,
@@ -41,35 +41,45 @@
     if (live.call === 'runoff') return Object.assign({}, prior, { p_live: prior.p_dem, state: 'runoff' });
     const eevp = (live.eevp || 0) / 100, cur = live.margin;
     if (cur == null || eevp <= 0.02) {
-      const m = prior.margin + 0.7 * swing;
+      const m = prior.margin + SWING_WEIGHT * swing;
       return Object.assign({}, prior, { margin_live: +m.toFixed(2), p_live: +probFromMargin(m, prior.sigma).toFixed(3), state: eevp === 0 ? 'waiting' : 'early' });
     }
     const trust = Math.pow(eevp, 1.6);
-    const m = trust * cur + (1 - trust) * (prior.margin + 0.7 * swing);
-    const sigma = Math.sqrt(Math.pow((1 - eevp) * prior.sigma, 2) + Math.pow(1.5 * (1 - eevp), 2) + 0.36);
+    const m = trust * cur + (1 - trust) * (prior.margin + SWING_WEIGHT * swing);
+    const sigma = Math.sqrt(Math.pow(1 - eevp, 2) * (prior.sigma * prior.sigma + EARLY_COUNT_SIGMA * EARLY_COUNT_SIGMA) + 1.0);
     return Object.assign({}, prior, { margin_live: +m.toFixed(2), sigma_live: +sigma.toFixed(2), p_live: +probFromMargin(m, sigma).toFixed(3), state: 'counting' });
   }
-  function observedSwing(races) {
-    const vals = [];
+  const median = (arr) => { const v = arr.slice().sort((a, b) => a - b); return v.length % 2 ? v[(v.length - 1) / 2] : (v[v.length / 2 - 1] + v[v.length / 2]) / 2; };
+  function swingObservations(races) {
+    const out = [];
     for (const r of races) {
       const l = r.live || {}, p = r.prior || {};
-      if ((l.call === 'called' || (l.eevp || 0) >= 60) && l.margin != null && p.basis && p.basis !== 'none' && (l.eevp || 0) >= 40) vals.push(l.margin - p.margin);
+      if ((l.eevp || 0) >= SWING_MIN_EEVP && l.margin != null && p.basis && p.basis !== 'none' && p.basis !== 'uncontested' && Math.abs(p.margin || 0) < 35) out.push([l.margin - p.margin, r.postal || r.state || '?']);
     }
-    if (!vals.length) return { swing: 0, n: 0 };
-    vals.sort((a, b) => a - b);
-    const med = vals.length % 2 ? vals[(vals.length - 1) / 2] : (vals[vals.length / 2 - 1] + vals[vals.length / 2]) / 2;
-    const mean = vals.reduce((a, b) => a + b, 0) / vals.length;
-    const sd = Math.sqrt(vals.reduce((a, b) => a + (b - mean) ** 2, 0) / vals.length);
-    return { swing: +med.toFixed(2), n: vals.length, mean: +mean.toFixed(2), spread: vals.length > 1 ? +sd.toFixed(2) : null };
+    return out;
   }
+  // National swing: median of per-state medians, shrunk towards zero while few states have reported, capped.
+  function observedSwing(obs) {
+    if (!obs.length) return { swing: 0, n: 0, states: 0 };
+    const byState = {}; for (const [v, st] of obs) (byState[st] = byState[st] || []).push(v);
+    const stateMeds = Object.values(byState).map(median);
+    const med = median(stateMeds), nStates = stateMeds.length, shrink = nStates / (nStates + 3);
+    const eff = Math.max(-SWING_CAP, Math.min(SWING_CAP, med * shrink));
+    const vals = obs.map((o) => o[0]); const mean = vals.reduce((a, b) => a + b, 0) / vals.length;
+    const sd = Math.sqrt(vals.reduce((a, b) => a + (b - mean) ** 2, 0) / vals.length);
+    return { swing: +eff.toFixed(2), raw: +med.toFixed(2), n: vals.length, states: nStates, mean: +mean.toFixed(2), spread: vals.length > 1 ? +sd.toFixed(2) : null };
+  }
+  let NATIONAL_EXTRA = 0;
+  function swingUncertainty(sw) { if (!sw || !sw.n) return 0; const spread = sw.spread || 6, states = Math.max(1, sw.states || 1); return +Math.min(8, Math.max(2, spread / Math.sqrt(states) + 4 / states)).toFixed(2); }
   function simulate(races, baseDem, toWin, sims) {
+    const natSigma = Math.sqrt(SIGMA_NATIONAL * SIGMA_NATIONAL + NATIONAL_EXTRA * NATIONAL_EXTRA);
     const entries = [];
     for (const r of races) {
       const pj = r.proj || {}; if (pj.p_live == null) continue;
       if (pj.state === 'called') { entries.push([1, pj.p_live >= 0.5 ? 1 : 0, 0, 0]); continue; }
       const m = pj.margin_live != null ? pj.margin_live : (pj.margin || 0), s = pj.sigma_live || pj.sigma || SIGMA_POLL;
-      const eevp = ((r.live || {}).eevp || 0) / 100, nat = SIGMA_NATIONAL * (1 - eevp);
-      entries.push([0, m, nat, Math.sqrt(Math.max(s * s - nat * nat, 0.25))]);
+      const eevp = ((r.live || {}).eevp || 0) / 100, nat = natSigma * (1 - eevp);
+      entries.push([0, m, nat, Math.sqrt(Math.max(s * s - Math.min(nat, s * 0.9) ** 2, 0.25))]);
     }
     const counts = new Array(entries.length + 1).fill(0);
     let ctrl = 0, seatSum = 0;
@@ -147,7 +157,7 @@
     const total = +tru.total_votes || 0;
     let cands = (tru.candidates || []).map((c) => {
       const m = meta[c.nyt_id] || {}; const v = +((c.votes || {}).total || 0);
-      if (c.nyt_id === 'total_writeins' && !v) return null;
+      if ((c.nyt_id === 'total_writeins' || /write-?in/i.test(m.last_name || '')) && !v) return null;
       const name = [m.first_name, m.last_name].filter(Boolean).join(' ') || m.last_name || c.nyt_id;
       return { id: c.nyt_id, name, party: partyCode((m.party || {}).nyt_id), inc: !!m.incumbent, votes: v, pct: total ? +(100 * v / total).toFixed(1) : null, leader: !!c.leader, est: c.nyt_model_estimates || undefined };
     }).filter(Boolean);
@@ -228,20 +238,20 @@
     for (const d of D.house.districts) { const c = pick(f.HG && f.HG[d.id], n.HG && n.HG[d.id]); if (!c) continue; d.live = mergeLive(d.live, c); touched++; }
     for (const [k, code] of [['senate', 'SG'], ['governors', 'GG'], ['house', 'HG']]) if (n.control[code]) D[k].summary.nyt_control = Object.assign({}, D[k].summary.nyt_control || {}, n.control[code]);
     if (!touched) return false;
+    const dists = D.house.districts;
+    const obs = swingObservations(D.senate.races).concat(swingObservations(D.governors.races), swingObservations(dists));
+    const sw = observedSwing(obs);
+    sw.by_office = { senate: swingObservations(D.senate.races).length, governors: swingObservations(D.governors.races).length, house: swingObservations(dists).length };
+    NATIONAL_EXTRA = swingUncertainty(sw); sw.uncertainty = NATIONAL_EXTRA;
+    D.national_swing = sw;
     for (const key of ['senate', 'governors']) {
-      const races = D[key].races, sw = observedSwing(races);
+      const races = D[key].races;
       for (const r of races) r.proj = liveUpdate(r.prior, r.live, sw.swing);
       D[key].swing = sw;
       D[key].summary = summarize(races, D[key].summary, 8000);
     }
-    const pre = (D.senate.swing.n || D.governors.swing.n) ? (D.senate.swing.n ? D.senate.swing.swing : D.governors.swing.swing) : 0;
-    const dists = D.house.districts;
-    for (const d of dists) d.proj = liveUpdate(d.prior, d.live, pre);
-    let hs = observedSwing(dists);
-    const blended = hs.n >= 10 ? ((D.senate.swing.n || D.governors.swing.n) ? (pre + hs.swing) / 2 : hs.swing) : pre;
-    for (const d of dists) d.proj = liveUpdate(d.prior, d.live, blended);
-    hs = observedSwing(dists);
-    D.house.swing = hs;
+    for (const d of dists) d.proj = liveUpdate(d.prior, d.live, sw.swing);
+    D.house.swing = sw;
     D.house.summary = summarize(dists, D.house.summary, 4000);
     D.phase = 'live';
     D.client_live = { at: new Date().toISOString(), source: S.feedBase ? 'rehearsal feed' : (S.nytAt ? 'NYT and CNN/AP feeds' : 'CNN/AP feed'), touched, nytAt: S.nytAt, cnnAt: S.feedAt };
@@ -253,7 +263,7 @@
     const now = Date.now();
     if (now - S.pointAt < 60000) return;
     S.pointAt = now;
-    T.points.push({ t: new Date(now).toISOString().slice(0, 16), sen_model: D.senate.summary.p_dem_control, hou_model: D.house.summary.p_dem_control,
+    T.points.push({ t: new Date(now).toISOString().slice(0, 16) + ':00+00:00', sen_model: D.senate.summary.p_dem_control, hou_model: D.house.summary.p_dem_control,
       gov_model: D.governors.summary.p_dem_control, sen_poly: (D.senate.markets || {}).polymarket_dem, hou_poly: (D.house.markets || {}).polymarket_dem, client: true });
     if (T.points.length > 6000) T.points.splice(0, T.points.length - 6000);
   }

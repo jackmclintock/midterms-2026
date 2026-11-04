@@ -108,7 +108,7 @@
       fetchJson('data/live.json'), fetchJson('data/polls_combined.json', true).then((x) => x || fetchJson('data/polls.json', true)),
       first ? fetchJson('data/seed/history.json', true) : Promise.resolve(H), fetchJson('data/timeseries.json', true)]);
     // Carry client-side (in-browser) time-series points across server refreshes
-    if (T && T.points && ts && ts.points) { const serverLast = ts.points.length ? ts.points[ts.points.length - 1].t : ''; for (const pt of T.points) if (pt.client && pt.t > serverLast) ts.points.push(pt); }
+    if (T && T.points && ts && ts.points) { const have = new Set(ts.points.map((p) => p.t)); for (const pt of T.points) if (pt.client && !have.has(pt.t)) ts.points.push(pt); ts.points.sort((a, b) => (a.t < b.t ? -1 : a.t > b.t ? 1 : 0)); }
     D = live; P = polls; H = hist; T = ts;
     if (window.LiveClient) { try { window.LiveClient.reapply(D, T); } catch (e) { console.warn(e); } }
     render();
@@ -341,9 +341,10 @@
 
   function sparkline(key, mktKey, favD, extraLabel) {
     if (!T || !T.points || T.points.length < 3) return null;
-    const pts = T.points.filter((p) => p[key] != null).map((p) => ({ x: +new Date(p.t), y: p[key] }));
+    const series = (k) => { const m = new Map(); for (const p of T.points) if (p[k] != null) m.set(+new Date(p.t), p[k]); return [...m.entries()].sort((a, b) => a[0] - b[0]).map(([x, y]) => ({ x, y })); };
+    const pts = series(key);
     if (pts.length < 3) return null;
-    const mk = mktKey ? T.points.filter((p) => p[mktKey] != null).map((p) => ({ x: +new Date(p.t), y: p[mktKey] })) : [];
+    const mk = mktKey ? series(mktKey) : [];
     const W = 360, Hh = 54, m = { t: 6, r: 34, b: 4, l: 2 };
     const x0 = pts[0].x, x1 = pts[pts.length - 1].x || x0 + 1;
     const X = (x) => m.l + ((x - x0) / Math.max(1, x1 - x0)) * (W - m.l - m.r);
@@ -400,10 +401,20 @@
     }
     return null;
   }
-  function nytNeedleRow(summary) {
+  function nytNeedle(summary) {
+    // Shape seen on the night: nyt_model_estimates = [{nyt_party_id:'DEM', win_probability, seats, seats_quantile:[p5,p25,p50,p75,p95], nyt_updated_at}, ...]
     const nc = summary && summary.nyt_control; if (!nc) return null;
-    const p = findProb(nc.nyt_model_chamber, 'dem') ?? findProb(nc.nyt_model_estimates, 'dem');
-    return p == null ? null : { k: 'NYT needle (live)', v: p };
+    const est = Array.isArray(nc.nyt_model_estimates) ? nc.nyt_model_estimates : null;
+    if (est) {
+      const dem = est.find((e) => e && /DEM/i.test(e.nyt_party_id || e.party || ''));
+      if (dem && typeof dem.win_probability === 'number') return { p: dem.win_probability, seats: dem.seats, q: dem.seats_quantile, at: dem.nyt_updated_at };
+    }
+    const p = findProb(nc.nyt_model_estimates, 'dem');
+    return p == null ? null : { p };
+  }
+  function nytNeedleRow(summary) {
+    const n = nytNeedle(summary);
+    return n ? { k: `NYT needle (live${n.seats != null ? `, ${n.seats} D seats` : ''})`, v: n.p } : null;
   }
   function senateCompare() {
     const s = D.senate, f = s.forecasts || {}, mk = s.markets || {};
@@ -532,8 +543,15 @@
     if (live.hist && live.hist.pres_2024_margin_dem != null) row('2024 presidential', marginTxt(live.hist.pres_2024_margin_dem, 1));
     if (r.pvi) row('Cook PVI', r.pvi);
     if (live.nyt_est && typeof live.nyt_est === 'object') {
-      const parts = Object.entries(live.nyt_est).filter(([k, v]) => typeof v === 'number').slice(0, 6).map(([k, v]) => `${k.replace(/_/g, ' ')} ${Math.abs(v) <= 1 && /prob|chance|p_/i.test(k) ? pctProb(v) : (Math.round(v * 10) / 10)}`);
-      if (parts.length) row('NYT needle estimate', parts.join(' · '));
+      const e = live.nyt_est, q = Array.isArray(e.margin_quantile) ? e.margin_quantile : null;
+      const dc = (live.cands || []).find((c) => c.party === 'D' && c.est && typeof c.est.win_probability === 'number');
+      const rc = (live.cands || []).find((c) => c.party === 'R' && c.est && typeof c.est.win_probability === 'number');
+      const bits = [];
+      if (dc) bits.push(`${dc.name.split(' ').slice(-1)[0]} ${pctProb(dc.est.win_probability)}`);
+      if (rc) bits.push(`${rc.name.split(' ').slice(-1)[0]} ${pctProb(rc.est.win_probability)}`);
+      if (q && q.length >= 5) bits.push(`final margin ${marginTxt(q[2] * 100, 1, parties)} (${marginTxt(q[0] * 100, 0, parties)} to ${marginTxt(q[4] * 100, 0, parties)})`);
+      if (e.votes_remaining != null && e.votes_estimated) bits.push(`${Math.round(100 * e.votes_remaining / e.votes_estimated)}% of expected vote still out`);
+      if (bits.length) row('NYT needle', bits.join(' · '));
     }
     if (live.src) row('Live source', live.src.toUpperCase().replace('+', ' + '));
     box.append(kv);
@@ -848,16 +866,18 @@
     const grid = h('div', { class: 'grid two' });
     // Swing gauge
     if (live) {
-      const sw = D.senate.swing || {}, hsw = D.house.swing || {}, gsw = D.governors.swing || {};
-      const all = [sw, gsw, hsw].filter((x) => x.n);
+      const nat = D.national_swing || D.senate.swing || {};
+      const sw = nat, hsw = nat, gsw = nat;
+      const all = nat.n ? [nat] : [];
       const card = h('div', { class: 'card' }, h('h3', null, 'Results versus expectations'));
       if (!all.length) card.append(h('p', { class: 'muted', style: 'margin-top:6px' }, 'Once a few races have most of their vote counted, this shows whether the night is running better for Democrats or Republicans than the polls and models expected, and how we are adjusting the uncalled races.'));
       else {
-        const v = sw.n ? sw.swing : (gsw.n ? gsw.swing : hsw.swing);
+        const v = nat.raw != null ? nat.raw : nat.swing;
+        const bo = nat.by_office || {};
         const pos = Math.max(5, Math.min(95, 50 + v * 5));
-        card.append(h('p', { style: 'margin-top:6px' }, h('b', null, v > 0 ? `Democrats are running ${Math.abs(v).toFixed(1)} points ahead of expectations` : v < 0 ? `Republicans are running ${Math.abs(v).toFixed(1)} points ahead of expectations` : 'Results are tracking expectations'), ` across ${sw.n || 0} Senate, ${gsw.n || 0} governor and ${hsw.n || 0} House races with most of the vote counted.`),
+        card.append(h('p', { style: 'margin-top:6px' }, h('b', null, v > 0 ? `Democrats are running ${Math.abs(v).toFixed(1)} points ahead of expectations` : v < 0 ? `Republicans are running ${Math.abs(v).toFixed(1)} points ahead of expectations` : 'Results are tracking expectations'), ` across ${nat.n || 0} races in ${nat.states || 0} states with at least half the expected vote counted (${bo.senate || 0} Senate, ${bo.governors || 0} governor, ${bo.house || 0} House).`),
           h('div', { class: 'swing' }, h('span', { class: 'muted', style: 'font-size:12px' }, 'R +10'), h('div', { class: 'gauge' }, h('div', { class: 'needle', style: `left:${pos}%` })), h('span', { class: 'muted', style: 'font-size:12px' }, 'D +10')),
-          h('p', { class: 'muted', style: 'font-size:12px;margin-top:8px' }, `Uncalled races have their expected margins shifted by 70% of this swing. Spread across races: ${sw.spread != null ? sw.spread : '–'} pts.`));
+          h('p', { class: 'muted', style: 'font-size:12px;margin-top:8px' }, `Applied to uncalled races: ${nat.swing > 0 ? 'D' : 'R'}+${Math.abs(nat.swing || 0).toFixed(1)} after shrinking for how few states have reported (${nat.states || 0}) and a 6-point cap, at 60% weight. Spread across races: ${nat.spread != null ? nat.spread : '–'} pts.`));
       }
       grid.append(card);
       // Races to watch next: uncalled, most vote in, closest
