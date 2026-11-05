@@ -1,0 +1,2180 @@
+{
+ "meta": {
+  "generated": "2026-10-30",
+  "conventions": {
+   "margins": "All race margins and poll averages are Democrat minus Republican in percentage points (positive = D ahead). poll_miss = actual margin - final poll average (positive = Democrats beat the polls). Exceptions noted (UT 2022, AK 2022, ME/VT independents, CA 2018 D-vs-D).",
+   "seat_changes": "Change for the president's party vs the previous general election, per American Presidency Project; alternative tallies (Gallup, Wikipedia before->after) noted in notes.",
+   "generic_ballot": "RealClearPolitics final average (2002+), with FiveThirtyEight final where available; D minus R.",
+   "poll_closing": "Eastern Standard Time on 3 Nov 2026 (DST ends 1 Nov 2026).",
+   "confidence": "2010-2022 cycles verified against Wikipedia/APP/Gallup/UF Election Lab/AP-sourced call times. Items marked 'approx', 'unverified' or 'inferred' in notes were not directly confirmed."
+  }
+ },
+ "midterms": [
+  {
+   "year": 1946,
+   "president": "Truman",
+   "pres_party": "D",
+   "approval": 33,
+   "approval_source": "Gallup job approval at midterm (Gallup table 1946-2014; Gallup Oct 2018 / Oct 3-20 2022 readings)",
+   "house_change_pres_party": -56,
+   "senate_change_pres_party": -12,
+   "house_result": {
+    "D": 188,
+    "R": 246
+   },
+   "senate_result": {
+    "D": 45,
+    "R": 51
+   },
+   "generic_ballot_final": null,
+   "generic_ballot_final_source": null,
+   "generic_ballot_final_538": null,
+   "house_popular_vote_margin": -8.5,
+   "house_popular_vote": {
+    "D": 45.0,
+    "R": 53.5
+   },
+   "generic_ballot_miss": null,
+   "notes": "Seat change per APP (-56 House). Gallup/Brookings cite -55; Wikipedia 'before->after' table shows -54/-10 (measured from pre-election composition incl. vacancies). Approval = Gallup table value (33%); some analyses cite 27% for Truman's lowest 1946 reading. House also 1 American Labor member."
+  },
+  {
+   "year": 1950,
+   "president": "Truman",
+   "pres_party": "D",
+   "approval": 39,
+   "approval_source": "Gallup job approval at midterm (Gallup table 1946-2014; Gallup Oct 2018 / Oct 3-20 2022 readings)",
+   "house_change_pres_party": -28,
+   "senate_change_pres_party": -6,
+   "house_result": {
+    "D": 235,
+    "R": 199
+   },
+   "senate_result": {
+    "D": 49,
+    "R": 47
+   },
+   "generic_ballot_final": null,
+   "generic_ballot_final_source": null,
+   "generic_ballot_final_538": null,
+   "house_popular_vote_margin": 0.7,
+   "house_popular_vote": {
+    "D": 49.6,
+    "R": 48.9
+   },
+   "generic_ballot_miss": null,
+   "notes": "Gallup table lists -29 House; APP -28. Senate -6 per APP (Wikipedia before->after -5). House also 1 independent."
+  },
+  {
+   "year": 1954,
+   "president": "Eisenhower",
+   "pres_party": "R",
+   "approval": 61,
+   "approval_source": "Gallup job approval at midterm (Gallup table 1946-2014; Gallup Oct 2018 / Oct 3-20 2022 readings)",
+   "house_change_pres_party": -18,
+   "senate_change_pres_party": -1,
+   "house_result": {
+    "D": 232,
+    "R": 203
+   },
+   "senate_result": {
+    "D": 48,
+    "R": 47,
+    "I": 1
+   },
+   "generic_ballot_final": null,
+   "generic_ballot_final_source": null,
+   "generic_ballot_final_538": null,
+   "house_popular_vote_margin": 5.5,
+   "house_popular_vote": {
+    "D": 52.5,
+    "R": 47.0
+   },
+   "generic_ballot_miss": null,
+   "notes": "Senate -1 per APP (Wikipedia -2). Independent = Wayne Morse (OR). Democrats took control of both chambers."
+  },
+  {
+   "year": 1958,
+   "president": "Eisenhower",
+   "pres_party": "R",
+   "approval": 57,
+   "approval_source": "Gallup job approval at midterm (Gallup table 1946-2014; Gallup Oct 2018 / Oct 3-20 2022 readings)",
+   "house_change_pres_party": -48,
+   "senate_change_pres_party": -13,
+   "house_result": {
+    "D": 283,
+    "R": 153
+   },
+   "senate_result": {
+    "D": 64,
+    "R": 34
+   },
+   "generic_ballot_final": null,
+   "generic_ballot_final_source": null,
+   "generic_ballot_final_538": null,
+   "house_popular_vote_margin": 12.4,
+   "house_popular_vote": {
+    "D": 56.0,
+    "R": 43.6
+   },
+   "generic_ballot_miss": null,
+   "notes": "Gallup table lists -47 House; APP -48. Senate -13 per APP (Wikipedia -12). Senate shown at start of 86th Congress with Alaska seated (98 seats); 65-35 after Hawaii admitted Aug 1959. House grew to 284 D with Alaska at-large seat."
+  },
+  {
+   "year": 1962,
+   "president": "Kennedy",
+   "pres_party": "D",
+   "approval": 61,
+   "approval_source": "Gallup job approval at midterm (Gallup table 1946-2014; Gallup Oct 2018 / Oct 3-20 2022 readings)",
+   "house_change_pres_party": -4,
+   "senate_change_pres_party": 3,
+   "house_result": {
+    "D": 259,
+    "R": 176
+   },
+   "senate_result": {
+    "D": 67,
+    "R": 33
+   },
+   "generic_ballot_final": null,
+   "generic_ballot_final_source": null,
+   "generic_ballot_final_538": null,
+   "house_popular_vote_margin": 5.3,
+   "house_popular_vote": {
+    "D": 52.4,
+    "R": 47.1
+   },
+   "generic_ballot_miss": null,
+   "notes": "Senate change +3 per APP (Wikipedia +4). Senate composition shown as elected (67 D); Wikipedia 88th Congress page shows 65 D / 33 R / 2 vacancies on opening day. House 258 seated + 1 vacancy."
+  },
+  {
+   "year": 1966,
+   "president": "Johnson",
+   "pres_party": "D",
+   "approval": 44,
+   "approval_source": "Gallup job approval at midterm (Gallup table 1946-2014; Gallup Oct 2018 / Oct 3-20 2022 readings)",
+   "house_change_pres_party": -47,
+   "senate_change_pres_party": -4,
+   "house_result": {
+    "D": 248,
+    "R": 187
+   },
+   "senate_result": {
+    "D": 64,
+    "R": 36
+   },
+   "generic_ballot_final": null,
+   "generic_ballot_final_source": null,
+   "generic_ballot_final_538": null,
+   "house_popular_vote_margin": 2.7,
+   "house_popular_vote": {
+    "D": 50.9,
+    "R": 48.2
+   },
+   "generic_ballot_miss": null,
+   "notes": "Senate -4 per APP (Wikipedia -3)."
+  },
+  {
+   "year": 1970,
+   "president": "Nixon",
+   "pres_party": "R",
+   "approval": 58,
+   "approval_source": "Gallup job approval at midterm (Gallup table 1946-2014; Gallup Oct 2018 / Oct 3-20 2022 readings)",
+   "house_change_pres_party": -12,
+   "senate_change_pres_party": 2,
+   "house_result": {
+    "D": 255,
+    "R": 180
+   },
+   "senate_result": {
+    "D": 54,
+    "R": 44,
+    "I": 2
+   },
+   "generic_ballot_final": null,
+   "generic_ballot_final_source": null,
+   "generic_ballot_final_538": null,
+   "house_popular_vote_margin": 8.7,
+   "house_popular_vote": {
+    "D": 53.6,
+    "R": 44.9
+   },
+   "generic_ballot_miss": null,
+   "notes": "Independents: Harry Byrd Jr. (VA, Ind. Democrat) and James Buckley (NY, Conservative). Republicans gained 2 Senate seats despite House losses."
+  },
+  {
+   "year": 1974,
+   "president": "Ford",
+   "pres_party": "R",
+   "approval": 54,
+   "approval_source": "Gallup job approval at midterm (Gallup table 1946-2014; Gallup Oct 2018 / Oct 3-20 2022 readings)",
+   "house_change_pres_party": -48,
+   "senate_change_pres_party": -5,
+   "house_result": {
+    "D": 291,
+    "R": 144
+   },
+   "senate_result": {
+    "D": 61,
+    "R": 37,
+    "I": 2
+   },
+   "generic_ballot_final": null,
+   "generic_ballot_final_source": null,
+   "generic_ballot_final_538": null,
+   "house_popular_vote_margin": 16.8,
+   "house_popular_vote": {
+    "D": 57.5,
+    "R": 40.7
+   },
+   "generic_ballot_miss": null,
+   "notes": "Post-Watergate; Ford took office Aug 1974. Gallup table lists -43 House (measured from pre-election composition after special elections); APP -48. Senate -5 per APP (Wikipedia -4)."
+  },
+  {
+   "year": 1978,
+   "president": "Carter",
+   "pres_party": "D",
+   "approval": 49,
+   "approval_source": "Gallup job approval at midterm (Gallup table 1946-2014; Gallup Oct 2018 / Oct 3-20 2022 readings)",
+   "house_change_pres_party": -15,
+   "senate_change_pres_party": -3,
+   "house_result": {
+    "D": 277,
+    "R": 158
+   },
+   "senate_result": {
+    "D": 58,
+    "R": 41,
+    "I": 1
+   },
+   "generic_ballot_final": null,
+   "generic_ballot_final_source": null,
+   "generic_ballot_final_538": null,
+   "house_popular_vote_margin": 8.9,
+   "house_popular_vote": {
+    "D": 53.7,
+    "R": 44.8
+   },
+   "generic_ballot_miss": null,
+   "notes": "Gallup table lists -11 House; APP -15. Senate -3 per APP (Wikipedia -2). Independent Harry Byrd Jr."
+  },
+  {
+   "year": 1982,
+   "president": "Reagan",
+   "pres_party": "R",
+   "approval": 42,
+   "approval_source": "Gallup job approval at midterm (Gallup table 1946-2014; Gallup Oct 2018 / Oct 3-20 2022 readings)",
+   "house_change_pres_party": -26,
+   "senate_change_pres_party": 1,
+   "house_result": {
+    "D": 269,
+    "R": 166
+   },
+   "senate_result": {
+    "D": 46,
+    "R": 54
+   },
+   "generic_ballot_final": null,
+   "generic_ballot_final_source": null,
+   "generic_ballot_final_538": null,
+   "house_popular_vote_margin": 11.8,
+   "house_popular_vote": {
+    "D": 55.2,
+    "R": 43.4
+   },
+   "generic_ballot_miss": null,
+   "notes": "Recession midterm. Gallup table lists -28 House; APP -26. Senate +1 per APP (Wikipedia 0: 54->54). House R 165 + 1 Conservative per some tallies."
+  },
+  {
+   "year": 1986,
+   "president": "Reagan",
+   "pres_party": "R",
+   "approval": 63,
+   "approval_source": "Gallup job approval at midterm (Gallup table 1946-2014; Gallup Oct 2018 / Oct 3-20 2022 readings)",
+   "house_change_pres_party": -5,
+   "senate_change_pres_party": -8,
+   "house_result": {
+    "D": 258,
+    "R": 177
+   },
+   "senate_result": {
+    "D": 55,
+    "R": 45
+   },
+   "generic_ballot_final": null,
+   "generic_ballot_final_source": null,
+   "generic_ballot_final_538": null,
+   "house_popular_vote_margin": 9.9,
+   "house_popular_vote": {
+    "D": 54.3,
+    "R": 44.4
+   },
+   "generic_ballot_miss": null,
+   "notes": "Six-year itch: Democrats retook the Senate with +8."
+  },
+  {
+   "year": 1990,
+   "president": "Bush",
+   "pres_party": "R",
+   "approval": 58,
+   "approval_source": "Gallup job approval at midterm (Gallup table 1946-2014; Gallup Oct 2018 / Oct 3-20 2022 readings)",
+   "house_change_pres_party": -8,
+   "senate_change_pres_party": -1,
+   "house_result": {
+    "D": 267,
+    "R": 167
+   },
+   "senate_result": {
+    "D": 56,
+    "R": 44
+   },
+   "generic_ballot_final": null,
+   "generic_ballot_final_source": null,
+   "generic_ballot_final_538": null,
+   "house_popular_vote_margin": 7.8,
+   "house_popular_vote": {
+    "D": 52.1,
+    "R": 44.3
+   },
+   "generic_ballot_miss": null,
+   "notes": "Approval 58 in Gallup table (fell from ~75 after the Gulf buildup / budget deal). House also 1 independent (Sanders)."
+  },
+  {
+   "year": 1994,
+   "president": "Clinton",
+   "pres_party": "D",
+   "approval": 46,
+   "approval_source": "Gallup job approval at midterm (Gallup table 1946-2014; Gallup Oct 2018 / Oct 3-20 2022 readings)",
+   "house_change_pres_party": -54,
+   "senate_change_pres_party": -8,
+   "house_result": {
+    "D": 204,
+    "R": 230
+   },
+   "senate_result": {
+    "D": 47,
+    "R": 53
+   },
+   "generic_ballot_final": null,
+   "generic_ballot_final_source": null,
+   "generic_ballot_final_538": null,
+   "house_popular_vote_margin": -6.8,
+   "house_popular_vote": {
+    "D": 44.7,
+    "R": 51.5
+   },
+   "generic_ballot_miss": null,
+   "notes": "Republican Revolution. Gallup table lists -53 House; APP -54. Senate -8 per APP (-9 incl. Shelby's post-election switch). No RCP generic average existed; Gallup's final likely-voter generic ballot had Republicans ahead by roughly 7 (not verified here). House also 1 independent."
+  },
+  {
+   "year": 1998,
+   "president": "Clinton",
+   "pres_party": "D",
+   "approval": 66,
+   "approval_source": "Gallup job approval at midterm (Gallup table 1946-2014; Gallup Oct 2018 / Oct 3-20 2022 readings)",
+   "house_change_pres_party": 4,
+   "senate_change_pres_party": 0,
+   "house_result": {
+    "D": 211,
+    "R": 223
+   },
+   "senate_result": {
+    "D": 45,
+    "R": 55
+   },
+   "generic_ballot_final": null,
+   "generic_ballot_final_source": null,
+   "generic_ballot_final_538": null,
+   "house_popular_vote_margin": -1.1,
+   "house_popular_vote": {
+    "D": 47.3,
+    "R": 48.4
+   },
+   "generic_ballot_miss": null,
+   "notes": "Impeachment midterm; Gallup table lists +5 House, APP +4. One of two post-1934 midterms where the president's party gained House seats. House also 1 independent."
+  },
+  {
+   "year": 2002,
+   "president": "G.W. Bush",
+   "pres_party": "R",
+   "approval": 63,
+   "approval_source": "Gallup job approval at midterm (Gallup table 1946-2014; Gallup Oct 2018 / Oct 3-20 2022 readings)",
+   "house_change_pres_party": 8,
+   "senate_change_pres_party": 2,
+   "house_result": {
+    "D": 205,
+    "R": 229
+   },
+   "senate_result": {
+    "D": 48,
+    "R": 51,
+    "I": 1
+   },
+   "generic_ballot_final": -1.7,
+   "generic_ballot_final_source": "RealClearPolitics final average, D minus R",
+   "generic_ballot_final_538": null,
+   "house_popular_vote_margin": -4.8,
+   "house_popular_vote": {
+    "D": 45.2,
+    "R": 50.0
+   },
+   "generic_ballot_miss": -3.1,
+   "notes": "Post-9/11. Gallup table lists +6 House; APP +8. RCP final generic R+1.7 is from a secondary compilation (Sam Wang via Mother Jones) of RCP's 2002 average, actual R+4.8 (Wikipedia; some sources 4.6). Independent = Jeffords (VT)."
+  },
+  {
+   "year": 2006,
+   "president": "G.W. Bush",
+   "pres_party": "R",
+   "approval": 38,
+   "approval_source": "Gallup job approval at midterm (Gallup table 1946-2014; Gallup Oct 2018 / Oct 3-20 2022 readings)",
+   "house_change_pres_party": -30,
+   "senate_change_pres_party": -6,
+   "house_result": {
+    "D": 233,
+    "R": 202
+   },
+   "senate_result": {
+    "D": 49,
+    "R": 49,
+    "I": 2
+   },
+   "generic_ballot_final": 11.5,
+   "generic_ballot_final_source": "RealClearPolitics final average, D minus R",
+   "generic_ballot_final_538": null,
+   "house_popular_vote_margin": 8.0,
+   "house_popular_vote": {
+    "D": 52.3,
+    "R": 44.3
+   },
+   "generic_ballot_miss": -3.5,
+   "notes": "Gallup table 38%; final Gallup pre-election poll 37%. House -30 per APP (Wikipedia before->after -32). Independents Sanders and Lieberman caucused with Democrats (51-49 control). RCP final generic D+11.5 vs actual D+8.0 (polls overstated Dems by 3.5)."
+  },
+  {
+   "year": 2010,
+   "president": "Obama",
+   "pres_party": "D",
+   "approval": 45,
+   "approval_source": "Gallup job approval at midterm (Gallup table 1946-2014; Gallup Oct 2018 / Oct 3-20 2022 readings)",
+   "house_change_pres_party": -63,
+   "senate_change_pres_party": -6,
+   "house_result": {
+    "D": 193,
+    "R": 242
+   },
+   "senate_result": {
+    "D": 51,
+    "R": 47,
+    "I": 2
+   },
+   "generic_ballot_final": -9.4,
+   "generic_ballot_final_source": "RealClearPolitics final average, D minus R",
+   "generic_ballot_final_538": null,
+   "house_popular_vote_margin": -6.8,
+   "house_popular_vote": {
+    "D": 44.9,
+    "R": 51.7
+   },
+   "generic_ballot_miss": 2.6,
+   "notes": "Largest House loss since 1938. RCP final generic R+9.4 vs actual R+6.8 (polls overstated GOP by 2.6). Independents Sanders, Lieberman."
+  },
+  {
+   "year": 2014,
+   "president": "Obama",
+   "pres_party": "D",
+   "approval": 44,
+   "approval_source": "Gallup job approval at midterm (Gallup table 1946-2014; Gallup Oct 2018 / Oct 3-20 2022 readings)",
+   "house_change_pres_party": -13,
+   "senate_change_pres_party": -9,
+   "house_result": {
+    "D": 188,
+    "R": 247
+   },
+   "senate_result": {
+    "D": 44,
+    "R": 54,
+    "I": 2
+   },
+   "generic_ballot_final": -2.4,
+   "generic_ballot_final_source": "RealClearPolitics final average, D minus R",
+   "generic_ballot_final_538": null,
+   "house_popular_vote_margin": -5.7,
+   "house_popular_vote": {
+    "D": 45.5,
+    "R": 51.2
+   },
+   "generic_ballot_miss": -3.3,
+   "notes": "Gallup table 44%; Gallup's final pre-election weekly reading was ~42%. RCP final generic R+2.4 (an Oct 27 snapshot showed R+2.8; final value is from memory of the RCP page, which is now blocked) vs actual R+5.7: polls understated GOP by ~3.3. Senate polls skewed ~4 pts toward Democrats (FiveThirtyEight). Independents Sanders, King."
+  },
+  {
+   "year": 2018,
+   "president": "Trump",
+   "pres_party": "R",
+   "approval": 40,
+   "approval_source": "Gallup job approval at midterm (Gallup table 1946-2014; Gallup Oct 2018 / Oct 3-20 2022 readings)",
+   "house_change_pres_party": -41,
+   "senate_change_pres_party": 2,
+   "house_result": {
+    "D": 235,
+    "R": 199
+   },
+   "senate_result": {
+    "D": 45,
+    "R": 53,
+    "I": 2
+   },
+   "generic_ballot_final": 7.3,
+   "generic_ballot_final_source": "RealClearPolitics final average, D minus R",
+   "generic_ballot_final_538": 8.7,
+   "house_popular_vote_margin": 8.6,
+   "house_popular_vote": {
+    "D": 53.4,
+    "R": 44.8
+   },
+   "generic_ballot_miss": 1.3,
+   "notes": "Gallup 40% (Oct 2018). House -41 per APP (241->200 incl. NC-9 re-run won by R in 2019); 199 R won on election night with NC-9 vacant. RCP final generic D+7.3, FiveThirtyEight D+8.7 vs actual D+8.6: most accurate generic ballot cycle since 1996. GOP gained 2 Senate seats on a favorable map."
+  },
+  {
+   "year": 2022,
+   "president": "Biden",
+   "pres_party": "D",
+   "approval": 40,
+   "approval_source": "Gallup job approval at midterm (Gallup table 1946-2014; Gallup Oct 2018 / Oct 3-20 2022 readings)",
+   "house_change_pres_party": -9,
+   "senate_change_pres_party": 1,
+   "house_result": {
+    "D": 213,
+    "R": 222
+   },
+   "senate_result": {
+    "D": 48,
+    "R": 49,
+    "I": 3
+   },
+   "generic_ballot_final": -2.5,
+   "generic_ballot_final_source": "RealClearPolitics final average, D minus R",
+   "generic_ballot_final_538": -1.2,
+   "house_popular_vote_margin": -2.7,
+   "house_popular_vote": {
+    "D": 47.3,
+    "R": 50.0
+   },
+   "generic_ballot_miss": -0.2,
+   "notes": "Gallup 40% (Oct 3-20, 2022). Smallest House loss for a president under 50% approval. Senate 51-49 Dem control (Sanders, King, Sinema independents by Dec 2022). RCP final generic R+2.5, FiveThirtyEight R+1.2 vs actual R+2.7 (Wikipedia 50.0-47.3; some tallies R+2.8). Polls were historically accurate: FiveThirtyEight weighted-average error 4.8, bias D+0.8."
+  }
+ ],
+ "senate_2022": [
+  {
+   "state": "PA",
+   "winner": "Fetterman",
+   "party": "D",
+   "margin": 4.9,
+   "final_poll_avg_margin": -0.4,
+   "poll_miss": 5.3,
+   "poll_source": "RealClearPolitics final (Oz +0.4)",
+   "other_averages": {
+    "270toWin": -0.3
+   },
+   "notes": "Only seat to flip. 538 final roughly tied."
+  },
+  {
+   "state": "GA",
+   "winner": "Warnock",
+   "party": "D",
+   "margin": 0.9,
+   "final_poll_avg_margin": -1.4,
+   "poll_miss": 2.3,
+   "poll_source": "RealClearPolitics final (Walker +1.4), Nov 8 general",
+   "other_averages": {
+    "FiveThirtyEight": -1.0,
+    "270toWin": -1.2
+   },
+   "notes": "General 49.4-48.5 forced Dec 6 runoff; runoff Warnock +2.8. Runoff averages: 270toWin Warnock +3.3, FiveThirtyEight +1.9, RCP ~+3.7 (unverified)."
+  },
+  {
+   "state": "NV",
+   "winner": "Cortez Masto",
+   "party": "D",
+   "margin": 0.8,
+   "final_poll_avg_margin": -3.4,
+   "poll_miss": 4.2,
+   "poll_source": "RealClearPolitics final (Laxalt +3.4)",
+   "other_averages": {
+    "FiveThirtyEight": -1.4,
+    "270toWin": -3.8
+   },
+   "notes": "Called Sat Nov 12; clinched Senate control."
+  },
+  {
+   "state": "AZ",
+   "winner": "Kelly",
+   "party": "D",
+   "margin": 4.9,
+   "final_poll_avg_margin": -0.3,
+   "poll_miss": 5.2,
+   "poll_source": "RealClearPolitics final (Masters +0.3)",
+   "other_averages": {
+    "FiveThirtyEight": 1.5,
+    "270toWin": 1.3
+   },
+   "notes": "Called Fri Nov 11, 8:14 pm ET (AP)."
+  },
+  {
+   "state": "WI",
+   "winner": "Johnson",
+   "party": "R",
+   "margin": -1.0,
+   "final_poll_avg_margin": -3.6,
+   "poll_miss": 2.6,
+   "poll_source": "RealClearPolitics final (Johnson +3.6)",
+   "other_averages": {
+    "FiveThirtyEight": -3.4,
+    "270toWin": -3.6
+   }
+  },
+  {
+   "state": "OH",
+   "winner": "Vance",
+   "party": "R",
+   "margin": -6.1,
+   "final_poll_avg_margin": -7.8,
+   "poll_miss": 1.7,
+   "poll_source": "270toWin final average (Vance +7.8); RCP not verified",
+   "notes": "AP called 11:19 pm ET."
+  },
+  {
+   "state": "NC",
+   "winner": "Budd",
+   "party": "R",
+   "margin": -3.2,
+   "final_poll_avg_margin": -6.0,
+   "poll_miss": 2.8,
+   "poll_source": "RealClearPolitics final (Budd +6.0)",
+   "other_averages": {
+    "FiveThirtyEight": -4.3,
+    "270toWin": -5.0
+   },
+   "notes": "AP called 11:49 pm ET."
+  },
+  {
+   "state": "NH",
+   "winner": "Hassan",
+   "party": "D",
+   "margin": 9.2,
+   "final_poll_avg_margin": 1.4,
+   "poll_miss": 7.8,
+   "poll_source": "RealClearPolitics final (Hassan +1.4)",
+   "other_averages": {
+    "FiveThirtyEight": 2.2,
+    "270toWin": 3.2
+   },
+   "notes": "AP called 11:39 pm ET."
+  },
+  {
+   "state": "CO",
+   "winner": "Bennet",
+   "party": "D",
+   "margin": 14.6,
+   "final_poll_avg_margin": 5.7,
+   "poll_miss": 8.9,
+   "poll_source": "RealClearPolitics final (Bennet +5.7)",
+   "other_averages": {
+    "FiveThirtyEight": 8.4,
+    "270toWin": 6.6
+   }
+  },
+  {
+   "state": "WA",
+   "winner": "Murray",
+   "party": "D",
+   "margin": 14.5,
+   "final_poll_avg_margin": 3.0,
+   "poll_miss": 11.5,
+   "poll_source": "RealClearPolitics final (Murray +3.0)",
+   "other_averages": {
+    "FiveThirtyEight": 4.7,
+    "270toWin": 4.3
+   },
+   "notes": "Largest Senate poll miss of 2022 (11.5 pts, D)."
+  },
+  {
+   "state": "FL",
+   "winner": "Rubio",
+   "party": "R",
+   "margin": -16.4,
+   "final_poll_avg_margin": -8.8,
+   "poll_miss": -7.6,
+   "poll_source": "RealClearPolitics final (Rubio +8.8)",
+   "other_averages": {
+    "FiveThirtyEight": -8.8,
+    "270toWin": -9.2
+   }
+  },
+  {
+   "state": "UT",
+   "winner": "Lee",
+   "party": "R",
+   "margin": -10.4,
+   "final_poll_avg_margin": -9.8,
+   "poll_miss": -0.6,
+   "poll_source": "FiveThirtyEight final (Lee +9.8); opponent McMullin was independent",
+   "other_averages": {
+    "270toWin": -11.3
+   },
+   "notes": "Margin is R minus independent (no Democrat ran)."
+  },
+  {
+   "state": "IA",
+   "winner": "Grassley",
+   "party": "R",
+   "margin": -12.2,
+   "final_poll_avg_margin": -9.6,
+   "poll_miss": -2.6,
+   "poll_source": "FiveThirtyEight final (Grassley +9.6)",
+   "other_averages": {
+    "270toWin": -10.3
+   }
+  },
+  {
+   "state": "AL",
+   "winner": "Britt",
+   "party": "R",
+   "margin": -35.7,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "AK",
+   "winner": "Murkowski",
+   "party": "R",
+   "margin": -7.4,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null,
+   "notes": "Ranked-choice final round vs Republican Tshibaka; margin is R vs R."
+  },
+  {
+   "state": "AR",
+   "winner": "Boozman",
+   "party": "R",
+   "margin": -34.8,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "CA",
+   "winner": "Padilla",
+   "party": "D",
+   "margin": 22.2,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null,
+   "notes": "Special election same day: Padilla +21.8."
+  },
+  {
+   "state": "CT",
+   "winner": "Blumenthal",
+   "party": "D",
+   "margin": 15.0,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "HI",
+   "winner": "Schatz",
+   "party": "D",
+   "margin": 45.2,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "ID",
+   "winner": "Crapo",
+   "party": "R",
+   "margin": -32.0,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "IL",
+   "winner": "Duckworth",
+   "party": "D",
+   "margin": 15.3,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "IN",
+   "winner": "Young",
+   "party": "R",
+   "margin": -20.7,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "KS",
+   "winner": "Moran",
+   "party": "R",
+   "margin": -23.0,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "KY",
+   "winner": "Paul",
+   "party": "R",
+   "margin": -23.6,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "LA",
+   "winner": "Kennedy",
+   "party": "R",
+   "margin": -43.7,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null,
+   "notes": "Jungle primary; margin over top Democrat."
+  },
+  {
+   "state": "MD",
+   "winner": "Van Hollen",
+   "party": "D",
+   "margin": 31.6,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "MO",
+   "winner": "Schmitt",
+   "party": "R",
+   "margin": -13.2,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "NY",
+   "winner": "Schumer",
+   "party": "D",
+   "margin": 14.0,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "ND",
+   "winner": "Hoeven",
+   "party": "R",
+   "margin": -31.4,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "OK",
+   "winner": "Lankford",
+   "party": "R",
+   "margin": -32.2,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "OK-special",
+   "winner": "Mullin",
+   "party": "R",
+   "margin": -26.6,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "OR",
+   "winner": "Wyden",
+   "party": "D",
+   "margin": 14.9,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "SC",
+   "winner": "Scott",
+   "party": "R",
+   "margin": -25.9,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "SD",
+   "winner": "Thune",
+   "party": "R",
+   "margin": -43.4,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "VT",
+   "winner": "Welch",
+   "party": "D",
+   "margin": 40.4,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  }
+ ],
+ "senate_2018": [
+  {
+   "state": "FL",
+   "winner": "Scott",
+   "party": "R",
+   "margin": -0.1,
+   "final_poll_avg_margin": 4.4,
+   "poll_miss": -4.5,
+   "poll_source": "270toWin final poll average (mean of last poll from each of up to 5 pollsters, through Nov 6, 2018)",
+   "other_averages": {
+    "RCP_final_approx": 2.4
+   },
+   "notes": "Flip. Recount; Nelson conceded Nov 18. RCP had Nelson ~+2.4 (miss 2.5, inferred from Dave Manuel compilation)."
+  },
+  {
+   "state": "IN",
+   "winner": "Braun",
+   "party": "R",
+   "margin": -5.9,
+   "final_poll_avg_margin": -0.4,
+   "poll_miss": -5.5,
+   "poll_source": "270toWin final poll average (mean of last poll from each of up to 5 pollsters, through Nov 6, 2018)",
+   "other_averages": {
+    "RCP_final_approx": 1.3
+   },
+   "notes": "Flip. RCP had Donnelly ~+1.3 (miss 7.2 per Dave Manuel compilation)."
+  },
+  {
+   "state": "MO",
+   "winner": "Hawley",
+   "party": "R",
+   "margin": -5.8,
+   "final_poll_avg_margin": -0.8,
+   "poll_miss": -5.0,
+   "poll_source": "270toWin final poll average (mean of last poll from each of up to 5 pollsters, through Nov 6, 2018)",
+   "notes": "Flip."
+  },
+  {
+   "state": "ND",
+   "winner": "Cramer",
+   "party": "R",
+   "margin": -10.8,
+   "final_poll_avg_margin": -11.7,
+   "poll_miss": 0.9,
+   "poll_source": "270toWin final poll average (mean of last poll from each of up to 5 pollsters, through Nov 6, 2018)",
+   "notes": "Flip; polls accurate."
+  },
+  {
+   "state": "AZ",
+   "winner": "Sinema",
+   "party": "D",
+   "margin": 2.3,
+   "final_poll_avg_margin": 0.6,
+   "poll_miss": 1.7,
+   "poll_source": "270toWin final poll average (mean of last poll from each of up to 5 pollsters, through Nov 6, 2018)",
+   "other_averages": {
+    "RCP_final_approx": -1.0
+   },
+   "notes": "Flip; called Nov 12. RCP had McSally ~+1 (miss 3.4 per Dave Manuel compilation)."
+  },
+  {
+   "state": "NV",
+   "winner": "Rosen",
+   "party": "D",
+   "margin": 5.0,
+   "final_poll_avg_margin": 1.2,
+   "poll_miss": 3.8,
+   "poll_source": "270toWin final poll average (mean of last poll from each of up to 5 pollsters, through Nov 6, 2018)",
+   "other_averages": {
+    "RCP_final": 0.0
+   },
+   "notes": "Flip. RCP final was a tie (miss 5.0)."
+  },
+  {
+   "state": "TX",
+   "winner": "Cruz",
+   "party": "R",
+   "margin": -2.6,
+   "final_poll_avg_margin": -6.2,
+   "poll_miss": 3.6,
+   "poll_source": "270toWin final poll average (mean of last poll from each of up to 5 pollsters, through Nov 6, 2018)"
+  },
+  {
+   "state": "TN",
+   "winner": "Blackburn",
+   "party": "R",
+   "margin": -10.8,
+   "final_poll_avg_margin": -4.8,
+   "poll_miss": -6.0,
+   "poll_source": "270toWin final poll average (mean of last poll from each of up to 5 pollsters, through Nov 6, 2018)"
+  },
+  {
+   "state": "MT",
+   "winner": "Tester",
+   "party": "D",
+   "margin": 3.5,
+   "final_poll_avg_margin": 5.2,
+   "poll_miss": -1.7,
+   "poll_source": "270toWin final poll average (mean of last poll from each of up to 5 pollsters, through Nov 6, 2018)"
+  },
+  {
+   "state": "WV",
+   "winner": "Manchin",
+   "party": "D",
+   "margin": 3.3,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null,
+   "notes": "270toWin page unavailable; RCP final approx Manchin +5 (unverified)."
+  },
+  {
+   "state": "OH",
+   "winner": "Brown",
+   "party": "D",
+   "margin": 6.8,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "MI",
+   "winner": "Stabenow",
+   "party": "D",
+   "margin": 6.5,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "WI",
+   "winner": "Baldwin",
+   "party": "D",
+   "margin": 10.8,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "NJ",
+   "winner": "Menendez",
+   "party": "D",
+   "margin": 11.2,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "MN-special",
+   "winner": "Smith",
+   "party": "D",
+   "margin": 10.6,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "MN",
+   "winner": "Klobuchar",
+   "party": "D",
+   "margin": 24.1,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "MS-special",
+   "winner": "Hyde-Smith",
+   "party": "R",
+   "margin": -7.2,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null,
+   "notes": "Nov 27 runoff margin."
+  },
+  {
+   "state": "MS",
+   "winner": "Wicker",
+   "party": "R",
+   "margin": -19.0,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "CA",
+   "winner": "Feinstein",
+   "party": "D",
+   "margin": 8.4,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null,
+   "notes": "D vs D (top-two)."
+  },
+  {
+   "state": "CT",
+   "winner": "Murphy",
+   "party": "D",
+   "margin": 20.1,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "DE",
+   "winner": "Carper",
+   "party": "D",
+   "margin": 22.2,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "HI",
+   "winner": "Hirono",
+   "party": "D",
+   "margin": 42.4,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "ME",
+   "winner": "King",
+   "party": "I",
+   "margin": 19.1,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null,
+   "notes": "Independent (caucuses D) vs R."
+  },
+  {
+   "state": "MD",
+   "winner": "Cardin",
+   "party": "D",
+   "margin": 34.6,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "MA",
+   "winner": "Warren",
+   "party": "D",
+   "margin": 24.2,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "NE",
+   "winner": "Fischer",
+   "party": "R",
+   "margin": -19.1,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "NM",
+   "winner": "Heinrich",
+   "party": "D",
+   "margin": 23.6,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "NY",
+   "winner": "Gillibrand",
+   "party": "D",
+   "margin": 34.0,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "PA",
+   "winner": "Casey",
+   "party": "D",
+   "margin": 13.1,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "RI",
+   "winner": "Whitehouse",
+   "party": "D",
+   "margin": 23.2,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "UT",
+   "winner": "Romney",
+   "party": "R",
+   "margin": -31.7,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "VT",
+   "winner": "Sanders",
+   "party": "I",
+   "margin": 39.9,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null,
+   "notes": "Independent (caucuses D) vs R."
+  },
+  {
+   "state": "VA",
+   "winner": "Kaine",
+   "party": "D",
+   "margin": 16.0,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "WA",
+   "winner": "Cantwell",
+   "party": "D",
+   "margin": 16.8,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "WY",
+   "winner": "Barrasso",
+   "party": "R",
+   "margin": -37.0,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  }
+ ],
+ "governors_2022": [
+  {
+   "state": "AZ",
+   "winner": "Hobbs",
+   "party": "D",
+   "margin": 0.7,
+   "final_poll_avg_margin": -3.5,
+   "poll_miss": 4.2,
+   "poll_source": "RealClearPolitics final (Lake +3.5)",
+   "other_averages": {
+    "FiveThirtyEight": -2.4,
+    "270toWin": -2.0
+   },
+   "notes": "AP called Mon Nov 14, 9:20 pm ET."
+  },
+  {
+   "state": "NV",
+   "winner": "Lombardo",
+   "party": "R",
+   "margin": -1.5,
+   "final_poll_avg_margin": -2.6,
+   "poll_miss": 1.1,
+   "poll_source": "RealClearPolitics final (Lombardo +2.6)",
+   "other_averages": {
+    "FiveThirtyEight": -1.7
+   },
+   "notes": "Only governorship to flip to GOP."
+  },
+  {
+   "state": "WI",
+   "winner": "Evers",
+   "party": "D",
+   "margin": 3.4,
+   "final_poll_avg_margin": 0.2,
+   "poll_miss": 3.2,
+   "poll_source": "270toWin final average (Evers +0.2)",
+   "notes": "RCP final was roughly Michels +0.6 (inferred from 4.0 miss in Dave Manuel compilation; unverified)."
+  },
+  {
+   "state": "KS",
+   "winner": "Kelly",
+   "party": "D",
+   "margin": 2.2,
+   "final_poll_avg_margin": 5.1,
+   "poll_miss": -2.9,
+   "poll_source": "FiveThirtyEight final (Kelly +5.1)"
+  },
+  {
+   "state": "OR",
+   "winner": "Kotek",
+   "party": "D",
+   "margin": 3.4,
+   "final_poll_avg_margin": 1.3,
+   "poll_miss": 2.1,
+   "poll_source": "RealClearPolitics final (Kotek +1.3)",
+   "other_averages": {
+    "FiveThirtyEight": 3.0,
+    "270toWin": 1.4
+   },
+   "notes": "Three-way race; independent Johnson 8.6%."
+  },
+  {
+   "state": "MI",
+   "winner": "Whitmer",
+   "party": "D",
+   "margin": 10.5,
+   "final_poll_avg_margin": 1.0,
+   "poll_miss": 9.5,
+   "poll_source": "RealClearPolitics final (Whitmer +1.0)",
+   "other_averages": {
+    "FiveThirtyEight": 4.8,
+    "270toWin": 4.0
+   },
+   "notes": "Largest governor poll miss of 2022 on RCP (9.5 pts, D)."
+  },
+  {
+   "state": "PA",
+   "winner": "Shapiro",
+   "party": "D",
+   "margin": 14.8,
+   "final_poll_avg_margin": 10.7,
+   "poll_miss": 4.1,
+   "poll_source": "270toWin final average (Shapiro +10.7)"
+  },
+  {
+   "state": "NY",
+   "winner": "Hochul",
+   "party": "D",
+   "margin": 6.4,
+   "final_poll_avg_margin": 8.2,
+   "poll_miss": -1.8,
+   "poll_source": "270toWin final average (Hochul +8.2)",
+   "notes": "One of few races where Dems underperformed averages."
+  },
+  {
+   "state": "GA",
+   "winner": "Kemp",
+   "party": "R",
+   "margin": -7.5,
+   "final_poll_avg_margin": -7.2,
+   "poll_miss": -0.3,
+   "poll_source": "270toWin final average (Kemp +7.2)"
+  },
+  {
+   "state": "FL",
+   "winner": "DeSantis",
+   "party": "R",
+   "margin": -19.4,
+   "final_poll_avg_margin": -12.2,
+   "poll_miss": -7.2,
+   "poll_source": "RealClearPolitics final (DeSantis +12.2)",
+   "other_averages": {
+    "FiveThirtyEight": -12.1,
+    "270toWin": -12.2
+   }
+  },
+  {
+   "state": "OK",
+   "winner": "Stitt",
+   "party": "R",
+   "margin": -13.7,
+   "final_poll_avg_margin": -4.8,
+   "poll_miss": -8.9,
+   "poll_source": "FiveThirtyEight final (Stitt +4.8)"
+  },
+  {
+   "state": "MN",
+   "winner": "Walz",
+   "party": "D",
+   "margin": 7.7,
+   "final_poll_avg_margin": 4.3,
+   "poll_miss": 3.4,
+   "poll_source": "RealClearPolitics final (Walz +4.3)",
+   "other_averages": {
+    "FiveThirtyEight": 8.8
+   }
+  },
+  {
+   "state": "NM",
+   "winner": "Lujan Grisham",
+   "party": "D",
+   "margin": 6.4,
+   "final_poll_avg_margin": 3.5,
+   "poll_miss": 2.9,
+   "poll_source": "RealClearPolitics final (Lujan Grisham +3.5)",
+   "other_averages": {
+    "FiveThirtyEight": 7.6
+   }
+  },
+  {
+   "state": "ME",
+   "winner": "Mills",
+   "party": "D",
+   "margin": 13.2,
+   "final_poll_avg_margin": 7.0,
+   "poll_miss": 6.2,
+   "poll_source": "FiveThirtyEight final (Mills +7)"
+  },
+  {
+   "state": "CO",
+   "winner": "Polis",
+   "party": "D",
+   "margin": 19.3,
+   "final_poll_avg_margin": 10.7,
+   "poll_miss": 8.6,
+   "poll_source": "RealClearPolitics final (Polis +10.7)"
+  },
+  {
+   "state": "TX",
+   "winner": "Abbott",
+   "party": "R",
+   "margin": -10.9,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "NH",
+   "winner": "Sununu",
+   "party": "R",
+   "margin": -15.5,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "IA",
+   "winner": "Reynolds",
+   "party": "R",
+   "margin": -18.5,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  },
+  {
+   "state": "OH",
+   "winner": "DeWine",
+   "party": "R",
+   "margin": -25.0,
+   "final_poll_avg_margin": null,
+   "poll_miss": null,
+   "poll_source": null
+  }
+ ],
+ "polling_error_by_cycle": [
+  {
+   "year": 2014,
+   "senate_avg_bias": 4.0,
+   "governor_avg_bias": 3.4,
+   "direction": "underestimated R",
+   "house_generic_final": -2.4,
+   "house_actual": -5.7,
+   "house_generic_miss": 3.3,
+   "notes": "FiveThirtyEight (Nov 5, 2014): Senate polls biased ~4 pts toward Democrats (early estimate 6); governor polls 3.4 (early estimate 4.0). Generic miss uses RCP final R+2.4 vs actual R+5.7. senate_avg_miss (absolute error) not verified; user's example 5.3 could not be confirmed."
+  },
+  {
+   "year": 2016,
+   "overall_bias": 3.0,
+   "direction": "underestimated R",
+   "house_generic_final": 0.6,
+   "house_actual": -1.1,
+   "house_generic_miss": 1.7,
+   "notes": "Silver Bulletin: 2016 polls biased D+3.0. RCP final generic D+0.6 vs actual R+1.1."
+  },
+  {
+   "year": 2018,
+   "overall_bias": -0.5,
+   "direction": "underestimated D (slightly)",
+   "house_generic_final": 7.3,
+   "house_generic_final_538": 8.7,
+   "house_actual": 8.6,
+   "house_generic_miss": 1.3,
+   "notes": "Silver Bulletin: 2018 bias R+0.5 (polls very slightly understated Democrats). FiveThirtyEight: Senate polls more accurate than usual; generic ballot nearly exact (538 D+8.7 vs D+8.6)."
+  },
+  {
+   "year": 2020,
+   "overall_bias": 4.7,
+   "direction": "underestimated R",
+   "house_generic_final": 6.8,
+   "house_generic_final_538": 7.3,
+   "house_actual": 3.1,
+   "house_generic_miss": 3.7,
+   "notes": "Silver Bulletin: bias D+4.7. 538 generic D+7.3 vs actual D+3.1 = 4.2-pt miss, largest since 2006; RCP D+6.8 (3.7-pt miss)."
+  },
+  {
+   "year": 2022,
+   "overall_weighted_avg_error": 4.8,
+   "overall_bias": 0.8,
+   "direction": "underestimated R (very slightly); misses were bipartisan by race",
+   "house_generic_final": -2.5,
+   "house_generic_final_538": -1.2,
+   "house_actual": -2.7,
+   "house_generic_miss": 0.2,
+   "notes": "FiveThirtyEight: 2021-22 weighted-average error 4.8 pts, lowest since 1998 (House district polls 5.0; Senate/governor 'only slightly lower than usual'). Silver Bulletin: bias D+0.8. Race-level: Dems beat averages in PA, AZ, NV, NH, WA, CO, MI, AZ-gov; GOP beat them in FL, OK, NY."
+  },
+  {
+   "year": 2024,
+   "senate_avg_error": 4.1,
+   "overall_bias": 2.9,
+   "direction": "underestimated R",
+   "house_generic_final": 0.3,
+   "house_actual": -2.6,
+   "house_generic_miss": 2.9,
+   "notes": "Silver Bulletin: Senate avg error 4.1 (lowest on record); bias D+2.9 overall, ~3 in presidential/Senate/House polls, ~2 in governor polls; 2024 avg error lowest since 1998. Generic final ~D+0.3 (Cook compilation via electoral-vote.com) vs actual R+2.6 (Wikipedia 49.8-47.2; Silver R+2.6, Cook R+2.7)."
+  },
+  {
+   "year": 2025,
+   "overall_avg_error": 7.1,
+   "overall_bias": -6.1,
+   "direction": "underestimated D",
+   "notes": "Silver Bulletin: off-year 2025 polls biased R+6.1 (NJ governor R+9). Included for context only."
+  }
+ ],
+ "turnout": [
+  {
+   "year": 2014,
+   "vep_turnout": 36.6,
+   "vap_turnout": 33.9,
+   "ballots": 83155963,
+   "source": "UF Election Lab / US Elections Project Turnout_2014G_v1.0 (VEP 36.61%, VAP 33.87%)"
+  },
+  {
+   "year": 2018,
+   "vep_turnout": 50.0,
+   "vap_turnout": 46.7,
+   "ballots": 118581921,
+   "source": "UF Election Lab Turnout_2018G_v1.1 (VEP 50.05%, VAP 46.69%); highest midterm since 1914"
+  },
+  {
+   "year": 2022,
+   "vep_turnout": 45.9,
+   "vap_turnout": 42.9,
+   "ballots": 112030874,
+   "source": "UF Election Lab Turnout_2022G_v1.1 (VEP 45.91%, VAP 42.86%); earlier estimate 46.6%"
+  },
+  {
+   "year": 2024,
+   "vep_turnout": 64.1,
+   "vap_turnout": 59.2,
+   "ballots": 156766239,
+   "source": "UF Election Lab Turnout_2024G_v0.3 (presidential, for comparison)"
+  }
+ ],
+ "poll_closing_times_et_2026": [
+  {
+   "state": "AL",
+   "postal": "AL",
+   "first_close": "20:00",
+   "last_close": "20:00",
+   "typical_call_time": "20:00"
+  },
+  {
+   "state": "AK",
+   "postal": "AK",
+   "first_close": "00:00",
+   "last_close": "01:00",
+   "typical_call_time": "01:00",
+   "notes": "Most of state closes 8 pm AKST = midnight ET Nov 4; Aleutians west of Umnak (HST) 1 am ET. Ranked-choice tabulation ~15 days later."
+  },
+  {
+   "state": "AZ",
+   "postal": "AZ",
+   "first_close": "21:00",
+   "last_close": "21:00",
+   "typical_call_time": "21:00",
+   "notes": "7 pm MST (no DST)."
+  },
+  {
+   "state": "AR",
+   "postal": "AR",
+   "first_close": "20:30",
+   "last_close": "20:30",
+   "typical_call_time": "20:30"
+  },
+  {
+   "state": "CA",
+   "postal": "CA",
+   "first_close": "23:00",
+   "last_close": "23:00",
+   "typical_call_time": "23:00"
+  },
+  {
+   "state": "CO",
+   "postal": "CO",
+   "first_close": "21:00",
+   "last_close": "21:00",
+   "typical_call_time": "21:00"
+  },
+  {
+   "state": "CT",
+   "postal": "CT",
+   "first_close": "20:00",
+   "last_close": "20:00",
+   "typical_call_time": "20:00"
+  },
+  {
+   "state": "DE",
+   "postal": "DE",
+   "first_close": "20:00",
+   "last_close": "20:00",
+   "typical_call_time": "20:00"
+  },
+  {
+   "state": "FL",
+   "postal": "FL",
+   "first_close": "19:00",
+   "last_close": "20:00",
+   "typical_call_time": "20:00",
+   "notes": "Peninsula 7 pm ET; Panhandle (CT) closes 8 pm ET. Networks call statewide races after 8 pm ET."
+  },
+  {
+   "state": "GA",
+   "postal": "GA",
+   "first_close": "19:00",
+   "last_close": "19:00",
+   "typical_call_time": "19:00"
+  },
+  {
+   "state": "HI",
+   "postal": "HI",
+   "first_close": "00:00",
+   "last_close": "00:00",
+   "typical_call_time": "00:00",
+   "notes": "7 pm HST = midnight ET Nov 4."
+  },
+  {
+   "state": "ID",
+   "postal": "ID",
+   "first_close": "22:00",
+   "last_close": "23:00",
+   "typical_call_time": "23:00",
+   "notes": "Mountain-zone majority 10 pm ET; northern Panhandle (PT) 11 pm ET."
+  },
+  {
+   "state": "IL",
+   "postal": "IL",
+   "first_close": "20:00",
+   "last_close": "20:00",
+   "typical_call_time": "20:00"
+  },
+  {
+   "state": "IN",
+   "postal": "IN",
+   "first_close": "18:00",
+   "last_close": "19:00",
+   "typical_call_time": "19:00",
+   "notes": "Eastern-zone counties 6 pm ET; NW/SW Central-zone counties 7 pm ET. Statewide calls wait for 7 pm."
+  },
+  {
+   "state": "IA",
+   "postal": "IA",
+   "first_close": "21:00",
+   "last_close": "21:00",
+   "typical_call_time": "21:00"
+  },
+  {
+   "state": "KS",
+   "postal": "KS",
+   "first_close": "20:00",
+   "last_close": "21:00",
+   "typical_call_time": "21:00",
+   "notes": "Four western Mountain-zone counties close 9 pm ET."
+  },
+  {
+   "state": "KY",
+   "postal": "KY",
+   "first_close": "18:00",
+   "last_close": "19:00",
+   "typical_call_time": "19:00",
+   "notes": "Eastern half 6 pm ET; western (CT) 7 pm ET. Safe races sometimes called at 6 pm."
+  },
+  {
+   "state": "LA",
+   "postal": "LA",
+   "first_close": "21:00",
+   "last_close": "21:00",
+   "typical_call_time": "21:00"
+  },
+  {
+   "state": "ME",
+   "postal": "ME",
+   "first_close": "20:00",
+   "last_close": "20:00",
+   "typical_call_time": "20:00",
+   "notes": "Ranked-choice tabulation for federal races takes days if no majority."
+  },
+  {
+   "state": "MD",
+   "postal": "MD",
+   "first_close": "20:00",
+   "last_close": "20:00",
+   "typical_call_time": "20:00"
+  },
+  {
+   "state": "MA",
+   "postal": "MA",
+   "first_close": "20:00",
+   "last_close": "20:00",
+   "typical_call_time": "20:00"
+  },
+  {
+   "state": "MI",
+   "postal": "MI",
+   "first_close": "20:00",
+   "last_close": "21:00",
+   "typical_call_time": "21:00",
+   "notes": "Four Upper Peninsula counties on Central time close 9 pm ET."
+  },
+  {
+   "state": "MN",
+   "postal": "MN",
+   "first_close": "21:00",
+   "last_close": "21:00",
+   "typical_call_time": "21:00"
+  },
+  {
+   "state": "MS",
+   "postal": "MS",
+   "first_close": "20:00",
+   "last_close": "20:00",
+   "typical_call_time": "20:00"
+  },
+  {
+   "state": "MO",
+   "postal": "MO",
+   "first_close": "20:00",
+   "last_close": "20:00",
+   "typical_call_time": "20:00"
+  },
+  {
+   "state": "MT",
+   "postal": "MT",
+   "first_close": "22:00",
+   "last_close": "22:00",
+   "typical_call_time": "22:00"
+  },
+  {
+   "state": "NE",
+   "postal": "NE",
+   "first_close": "21:00",
+   "last_close": "21:00",
+   "typical_call_time": "21:00",
+   "notes": "8 pm CT and 7 pm MT close simultaneously at 9 pm ET."
+  },
+  {
+   "state": "NV",
+   "postal": "NV",
+   "first_close": "22:00",
+   "last_close": "22:00",
+   "typical_call_time": "22:00"
+  },
+  {
+   "state": "NH",
+   "postal": "NH",
+   "first_close": "19:00",
+   "last_close": "20:00",
+   "typical_call_time": "20:00",
+   "notes": "Towns close at 7 or 8 pm local; statewide calls after 8 pm ET."
+  },
+  {
+   "state": "NJ",
+   "postal": "NJ",
+   "first_close": "20:00",
+   "last_close": "20:00",
+   "typical_call_time": "20:00"
+  },
+  {
+   "state": "NM",
+   "postal": "NM",
+   "first_close": "21:00",
+   "last_close": "21:00",
+   "typical_call_time": "21:00"
+  },
+  {
+   "state": "NY",
+   "postal": "NY",
+   "first_close": "21:00",
+   "last_close": "21:00",
+   "typical_call_time": "21:00"
+  },
+  {
+   "state": "NC",
+   "postal": "NC",
+   "first_close": "19:30",
+   "last_close": "19:30",
+   "typical_call_time": "19:30"
+  },
+  {
+   "state": "ND",
+   "postal": "ND",
+   "first_close": "20:00",
+   "last_close": "21:00",
+   "typical_call_time": "21:00",
+   "notes": "Counties may close between 7 and 9 pm local; most close by 8 pm CT (9 pm ET). Green Papers lists 9 pm CST 'reportedly'."
+  },
+  {
+   "state": "OH",
+   "postal": "OH",
+   "first_close": "19:30",
+   "last_close": "19:30",
+   "typical_call_time": "19:30"
+  },
+  {
+   "state": "OK",
+   "postal": "OK",
+   "first_close": "20:00",
+   "last_close": "20:00",
+   "typical_call_time": "20:00"
+  },
+  {
+   "state": "OR",
+   "postal": "OR",
+   "first_close": "22:00",
+   "last_close": "23:00",
+   "typical_call_time": "23:00",
+   "notes": "Malheur County (MT) 10 pm ET; rest of state 11 pm ET. All-mail."
+  },
+  {
+   "state": "PA",
+   "postal": "PA",
+   "first_close": "20:00",
+   "last_close": "20:00",
+   "typical_call_time": "20:00"
+  },
+  {
+   "state": "RI",
+   "postal": "RI",
+   "first_close": "20:00",
+   "last_close": "20:00",
+   "typical_call_time": "20:00"
+  },
+  {
+   "state": "SC",
+   "postal": "SC",
+   "first_close": "19:00",
+   "last_close": "19:00",
+   "typical_call_time": "19:00"
+  },
+  {
+   "state": "SD",
+   "postal": "SD",
+   "first_close": "20:00",
+   "last_close": "21:00",
+   "typical_call_time": "21:00",
+   "notes": "Western Mountain-zone counties close 9 pm ET."
+  },
+  {
+   "state": "TN",
+   "postal": "TN",
+   "first_close": "20:00",
+   "last_close": "20:00",
+   "typical_call_time": "20:00",
+   "notes": "8 pm ET / 7 pm CT close simultaneously."
+  },
+  {
+   "state": "TX",
+   "postal": "TX",
+   "first_close": "20:00",
+   "last_close": "21:00",
+   "typical_call_time": "21:00",
+   "notes": "El Paso and Hudspeth (MT) close 9 pm ET; early-vote dump at 8 pm ET."
+  },
+  {
+   "state": "UT",
+   "postal": "UT",
+   "first_close": "22:00",
+   "last_close": "22:00",
+   "typical_call_time": "22:00"
+  },
+  {
+   "state": "VT",
+   "postal": "VT",
+   "first_close": "19:00",
+   "last_close": "19:00",
+   "typical_call_time": "19:00"
+  },
+  {
+   "state": "VA",
+   "postal": "VA",
+   "first_close": "19:00",
+   "last_close": "19:00",
+   "typical_call_time": "19:00"
+  },
+  {
+   "state": "WA",
+   "postal": "WA",
+   "first_close": "23:00",
+   "last_close": "23:00",
+   "typical_call_time": "23:00",
+   "notes": "All-mail; counting continues for days."
+  },
+  {
+   "state": "WV",
+   "postal": "WV",
+   "first_close": "19:30",
+   "last_close": "19:30",
+   "typical_call_time": "19:30"
+  },
+  {
+   "state": "WI",
+   "postal": "WI",
+   "first_close": "21:00",
+   "last_close": "21:00",
+   "typical_call_time": "21:00"
+  },
+  {
+   "state": "WY",
+   "postal": "WY",
+   "first_close": "21:00",
+   "last_close": "21:00",
+   "typical_call_time": "21:00"
+  }
+ ],
+ "election_night_2022_timeline": [
+  {
+   "time_et": "18:00",
+   "date": "2022-11-08",
+   "event": "First polls close in eastern Indiana and Kentucky"
+  },
+  {
+   "time_et": "19:00",
+   "date": "2022-11-08",
+   "event": "Polls close GA, IN, KY, SC, VT, VA (first full wave); AP calls KY Senate (Paul) and safe races"
+  },
+  {
+   "time_et": "19:30",
+   "date": "2022-11-08",
+   "event": "Polls close NC, OH, WV"
+  },
+  {
+   "time_et": "20:00",
+   "date": "2022-11-08",
+   "event": "Big wave: AL, CT, DE, DC, FL, IL, ME, MD, MA, MS, MO, NH, NJ, OK, PA, RI, TN. DeSantis and Rubio projected in Florida within minutes of 8 pm; 'red wave' narrative peaks"
+  },
+  {
+   "time_et": "20:30",
+   "date": "2022-11-08",
+   "event": "Arkansas closes"
+  },
+  {
+   "time_et": "21:00",
+   "date": "2022-11-08",
+   "event": "AZ, CO, IA, KS, LA, MI, MN, NE, NM, NY, ND, SD, TX, WI, WY close"
+  },
+  {
+   "time_et": "22:00",
+   "date": "2022-11-08",
+   "event": "MT, NV, UT close"
+  },
+  {
+   "time_et": "23:00",
+   "date": "2022-11-08",
+   "event": "CA, ID, OR, WA close"
+  },
+  {
+   "time_et": "23:19",
+   "date": "2022-11-08",
+   "event": "AP calls Ohio Senate for Vance (R hold)"
+  },
+  {
+   "time_et": "23:39",
+   "date": "2022-11-08",
+   "event": "AP calls New Hampshire Senate for Hassan (D hold)"
+  },
+  {
+   "time_et": "23:49",
+   "date": "2022-11-08",
+   "event": "AP calls North Carolina Senate for Budd (R hold)"
+  },
+  {
+   "time_et": "00:00",
+   "date": "2022-11-09",
+   "event": "Alaska and Hawaii close; by midnight it is clear no red wave: Dems hold MI/PA/WI governorships, Whitmer and Shapiro projected"
+  },
+  {
+   "time_et": "~01:00-01:51",
+   "date": "2022-11-09",
+   "event": "Pennsylvania Senate called for Fetterman (networks ~1 am; AP 1:51 am per Pittsburgh Post-Gazette) - first and only Senate flip"
+  },
+  {
+   "time_et": "morning",
+   "date": "2022-11-09",
+   "event": "Georgia Senate confirmed headed to Dec 6 runoff (Warnock 49.4%); Wisconsin Senate called for Johnson (AP time reported as 12:46, a.m./p.m. ambiguous; Fox ~noon)"
+  },
+  {
+   "time_et": "20:14",
+   "date": "2022-11-11",
+   "event": "AP calls Arizona Senate for Kelly; Senate 49-49"
+  },
+  {
+   "time_et": "~23:10",
+   "date": "2022-11-12",
+   "event": "AP calls Nevada Senate for Cortez Masto (AP story stamped 8:12 pm PST) - Democrats clinch Senate control (50 + GA pending)"
+  },
+  {
+   "time_et": "21:20",
+   "date": "2022-11-14",
+   "event": "AP calls Arizona governor for Hobbs over Lake"
+  },
+  {
+   "time_et": "~18:45",
+   "date": "2022-11-16",
+   "event": "AP calls House control for Republicans after Mike Garcia (CA-27) reaches 218th seat; AP explainer published 6:47 pm ET"
+  },
+  {
+   "time_et": "22:26",
+   "date": "2022-12-06",
+   "event": "AP calls Georgia runoff for Warnock; Senate 51-49"
+  },
+  {
+   "comparison_2018": [
+    {
+     "time_et": "18:00",
+     "date": "2018-11-06",
+     "event": "Eastern IN and KY close"
+    },
+    {
+     "time_et": "19:00",
+     "date": "2018-11-06",
+     "event": "GA, IN, KY, SC, VT, VA close"
+    },
+    {
+     "time_et": "~19:40",
+     "date": "2018-11-06",
+     "event": "First House flip called: Wexton defeats Comstock (VA-10)"
+    },
+    {
+     "time_et": "~21:30-21:45",
+     "date": "2018-11-06",
+     "event": "Fox News (~9:30) then NBC project Democrats will take the House"
+    },
+    {
+     "time_et": "~22:33",
+     "date": "2018-11-06",
+     "event": "CNN projects Republicans retain Senate (Fox 11:05 pm) after Braun (IN), Cramer (ND) and Hawley (MO) calls"
+    },
+    {
+     "time_et": "~22:55",
+     "date": "2018-11-06",
+     "event": "ABC calls the House for Democrats (approx.)"
+    },
+    {
+     "time_et": "-",
+     "date": "2018-11-12",
+     "event": "Arizona Senate called for Sinema (6 days after election)"
+    },
+    {
+     "time_et": "-",
+     "date": "2018-11-15",
+     "event": "Maine ME-2 ranked-choice tabulation gives Golden the seat"
+    },
+    {
+     "time_et": "-",
+     "date": "2018-11-18",
+     "event": "Florida Senate recount ends; Nelson concedes to Scott (0.12 pt margin)"
+    },
+    {
+     "time_et": "-",
+     "date": "2018-11-27",
+     "event": "Mississippi special Senate runoff: Hyde-Smith wins; final Senate 53-47"
+    }
+   ]
+  }
+ ],
+ "counting_speed_notes": {
+  "AZ": "Maricopa takes ~10-13 days (13 in 2024). Early ballots received before Election Day reported first at 10 pm ET (lean mixed/R in recent cycles), then Election Day votes (lean R since 2020), then 'late earlies' dropped off on Election Day counted over the following week (leaned D in 2022, R in 2024). 2024 bipartisan law (effective 2026) lets counties offer on-site ID for Election Day drop-offs to skip signature curing; HB 2703 (end most Election Day drop-offs) vetoed Feb 2025.",
+  "PA": "No pre-canvassing of mail ballots before 7 am Election Day. Election Day votes (R-leaning) often reported first in many counties -> red mirage, then blue shift as mail ballots (D-leaning) are added. Philadelphia/Allegheny finished most mail counting on election night in 2024; Senate was called ~1-2 am in 2022.",
+  "CA": "Weeks. Mail ballots postmarked by Election Day accepted 7 days later; late-counted ballots historically lean D (in 2022 they moved several House seats toward Dems). House control in 2022 waited on CA (Nov 16).",
+  "NV": "Mail ballots postmarked by Election Day accepted until 5 pm on the 4th day after (shortened from 7 days by 2025 law; upheld by SCOTUS ruling reported June 2026). Clark County reports in batches over several days; late mail leaned D in 2022, more mixed in 2024. Signature cure deadline extends further.",
+  "GA": "Fast. Early in-person and absentee votes (D-leaning) reported first after 7 pm; counties must report early vote by 8 pm under 2024 rules. Election Day votes lean R -> blue mirage then red shift. Runoff if no majority (Senate 2022 went to Dec 6).",
+  "NC": "Fast. Early/absentee vote (D-leaning) reported at 7:30 pm, Election Day precincts follow; ~95%+ counted on election night. Mail ballots must arrive by Election Day since 2023 law.",
+  "FL": "Very fast. Mail and early votes tabulated before close and dumped at 7/8 pm ET; most counties finished by ~9 pm ET. Statewide calls shortly after 8 pm ET when the Panhandle closes.",
+  "TX": "Fast. Early vote dump (now majority of ballots) at 8 pm ET; Election Day precincts trickle in. Harris County has been slow (hours to a day).",
+  "MI": "Faster since 2022: Prop 2 (2022) and 2023 law allow large jurisdictions to pre-process absentee ballots up to 8 days before Election Day; nine days of early in-person voting. Detroit absentee results still land late night. 2024 statewide results essentially complete by Wednesday morning.",
+  "WI": "No pre-processing: absentee ballots cannot be opened before 7 am Election Day. Milwaukee central count reports absentee ballots (heavily D) in one dump typically midnight-3 am CT -> late blue shift. Monday-processing bill not enacted as of late 2025. Senate called Wednesday in 2022.",
+  "ME": "Ranked-choice voting for federal races. If no majority, ballots transported to Augusta and tabulated over roughly a week (ME-2 called Nov 15 in 2018; Golden race took a week in 2022 and 2024). Also slow Election Day reporting from small towns.",
+  "AK": "Ranked-choice (top-four); absentee ballots accepted up to 10 days (domestic) / 15 days (overseas) after; RCV tabulation runs ~15 days after Election Day (Nov 18-ish). A 2026 initiative to repeal top-four/RCV is on the ballot (would not affect 2026 count). Polls close midnight ET.",
+  "OH": "Fast. Early/absentee reported first at 7:30 pm (D-leaning), then Election Day (R-leaning) -> red shift. Mail ballots postmarked by the day before and arriving within 4 days counted later but rarely decisive.",
+  "IA": "Fast; most results by ~midnight ET. Mail ballots must arrive by close of polls (2021 law).",
+  "NE": "Fast; mail must arrive by close of polls. Watch NE-2.",
+  "CO": "All-mail; ballots received through Election Day. Large early dump at 9 pm ET covers most votes; counting finishes within days.",
+  "WA": "All-mail, postmarked by Election Day; counts continue for 1-2 weeks and late ballots lean D (Murray 2022 margin grew from election night). Close House races take days.",
+  "OR": "All-mail, postmarked by Election Day (accepted 7 days after); most counted within a few days.",
+  "UT": "Mail-dominant; postmarked by day before Election Day; counting takes 1-2 weeks.",
+  "NY": "Historically slow absentee counting; since 2022-23 law absentee ballots are canvassed as received, so most results known election night. Mail ballots postmarked by Election Day accepted 7 days.",
+  "MN": "Fast; most results by late evening.",
+  "KS": "Fast; mail ballots postmarked by Election Day accepted 3 days after (repeal of grace period under litigation/legislative change - verify).",
+  "NH": "Fast on election night; paper ballots hand-counted in small towns but complete by ~midnight.",
+  "VA": "Fast; early votes reported first (since 2022 same-day report), then Election Day; late mail (postmarked by E-day, accepted 3 days) rarely decisive.",
+  "MT": "Mail-dominant; results late evening ET; close races may take until next day.",
+  "NM": "Fast; most results by midnight ET.",
+  "general": "Pattern: states that pre-process mail/early votes and report them first (FL, GA, NC, OH, TX, CO) show a 'blue mirage' then red shift; states that cannot pre-process (PA, WI) or count mail late (AZ, NV, CA, WA) show a 'red mirage' then blue shift. House control in 2022 took 8 days (Nov 16); Senate took 4 (Nov 12). In 2018 both chambers were called on election night."
+ },
+ "sources": [
+  "https://en.wikipedia.org/wiki/United_States_midterm_election",
+  "https://www.presidency.ucsb.edu/statistics/data/seats-congress-gainedlost-the-presidents-party-mid-term-elections",
+  "https://news.gallup.com/poll/242093/midterm-seat-loss-averages-unpopular-presidents.aspx",
+  "https://news.gallup.com/poll/141812/avg-midterm-seat-loss-presidents-below-approval.aspx",
+  "https://en.wikipedia.org/wiki/List_of_United_States_House_of_Representatives_elections,_1856%E2%80%93present",
+  "https://en.wikipedia.org/wiki/Party_divisions_of_United_States_Congresses",
+  "https://en.wikipedia.org/wiki/82nd_United_States_Congress",
+  "https://en.wikipedia.org/wiki/86th_United_States_Congress",
+  "https://en.wikipedia.org/wiki/88th_United_States_Congress",
+  "https://en.wikipedia.org/wiki/90th_United_States_Congress",
+  "https://en.wikipedia.org/wiki/1946_United_States_House_of_Representatives_elections (and each midterm-year House elections page 1950-2024)",
+  "https://en.wikipedia.org/wiki/2022_United_States_Senate_elections",
+  "https://en.wikipedia.org/wiki/2018_United_States_Senate_elections",
+  "https://en.wikipedia.org/wiki/2022_United_States_gubernatorial_elections",
+  "https://en.wikipedia.org/wiki/2022_United_States_Senate_election_in_Nevada (and Georgia, Arizona, Wisconsin, North_Carolina, New_Hampshire, Colorado, Washington, Florida, Utah, Iowa, Pennsylvania pages: 'Aggregate polls' tables)",
+  "https://en.wikipedia.org/wiki/2022_Arizona_gubernatorial_election (and Nevada, Kansas, Oregon, Michigan, Florida, Oklahoma, Minnesota, New_Mexico, Maine gubernatorial pages)",
+  "https://www.270towin.com/2018-senate-polls/indiana (and missouri, florida, north-dakota, arizona, nevada, texas, tennessee, montana)",
+  "https://www.270towin.com/2022-senate-polls/pennsylvania",
+  "https://www.270towin.com/2022-senate-polls/ohio",
+  "https://www.270towin.com/2022-governor-polls/wisconsin (and pennsylvania, new-york, georgia)",
+  "https://www.davemanuel.com/2026/10/14/the-biggest-polling-misses-in-midterm-election-history/ (RCP final averages compilation)",
+  "https://fivethirtyeight.com/features/2022-election-polling-accuracy (via search excerpts; page now redirects)",
+  "https://fivethirtyeight.com/2014/11/05/the-polls-were-skewed-toward-democrats (via search excerpts)",
+  "https://www.natesilver.net/p/actually-sometimes-polls-underestimate",
+  "https://www.natesilver.net/p/so-how-did-the-polls-do-in-2024-its",
+  "https://www.natesilver.net/p/midterm-polls-have-good-news-great",
+  "https://fair.org/home/the-persistently-faulty-record-of-generic-ballot-polling/",
+  "https://www.motherjones.com/?p=196736 (Sam Wang compilation of RCP generic ballot finals 2002-2010)",
+  "https://www.electoral-vote.com/evp2026/Items/Mar30-6.html (Cook Political generic ballot vs result 2018-2024)",
+  "https://election.lab.ufl.edu/data-downloads/turnoutdata/Turnout_2022G_v1.1.csv (and 2018G_v1.1, 2014G_v1.0, 2024G_v0.3)",
+  "https://www.thegreenpapers.com/G26/PollingHours.phtml",
+  "https://www.270towin.com/content/local-poll-closing-times-november-2026-general-election",
+  "https://www.nhpr.org/2022-11-08/your-election-night-guide-hour-by-hour (NPR)",
+  "https://rollcall.com/2022/11/08/heres-who-won-2022s-most-competitive-senate-races/ (AP call times)",
+  "https://rollcall.com/2022/11/16/republicans-secure-house-majority-but-it-will-be-a-narrow-one/",
+  "https://www.wsls.com/news/politics/2022/11/13/why-ap-called-nevada-senate-race-for-catherine-cortez-masto/",
+  "https://www.wsls.com/news/politics/2022/11/12/why-the-ap-called-the-arizona-senate-race-for-mark-kelly/",
+  "https://www.axios.com/2022/11/14/hobbs-narrow-lead-lake-gains-arizona-governor",
+  "https://rollcall.com/2022/12/06/warnock-win-in-georgia-runoff-boosts-democrats-senate-control/",
+  "https://www.theringer.com/2018/11/07/politics/election-night-needle-nate-silver-five-thirty-eight-new-york-times",
+  "https://www.romper.com/p/who-controls-the-senate-now-midterm-election-results-were-extremely-close-in-many-states-13100466 (CNN 10:33 pm Senate call)",
+  "https://votebeat.org/arizona/2025/02/12/election-results-speed-faster-bill-compromise-katie-hobbs-veto-threat",
+  "https://www.kunr.org/local-stories/2026-06-29/mail-ballots-in-nevada-can-continue-to-be-counted-after-election-day",
+  "https://ballotpedia.org/Alaska_Repeal_Top-Four_Ranked-Choice_Voting_Initiative_(2026)",
+  "https://upnorthnewswi.com/2025/10/21/gop-bill-to-allow-monday-absentee-ballot-processing-has-big-strings-attached",
+  "https://en.wikipedia.org/wiki/2018_opinion_polling_on_the_Trump_administration (Gallup Oct 2018 = 40%)",
+  "https://statista.com/statistics/923792/job-approval-ratings-us-presidents-midterm-elections (Gallup Oct 25 2022 = 40%)"
+ ]
+}

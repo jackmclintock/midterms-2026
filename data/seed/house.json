@@ -1,0 +1,1934 @@
+{
+ "as_of": "2026-10-30",
+ "election_date": "2026-11-03",
+ "current_composition": {
+  "R": 218,
+  "D": 214,
+  "I": 1,
+  "vacant": 2,
+  "notes": "Per Wikipedia (Oct 30): 218 R, 214 D, 1 independent (Kevin Kiley, CA-6, left GOP March 2026), 2 vacancies that stay open through the election: FL-20 (Sheila Cherfilus-McCormick, D, resigned Apr 21, 2026) and TX-23 (Tony Gonzales, R, resigned Apr 14, 2026). Democrats need a net gain of ~3-4 seats for 218."
+ },
+ "majority": 218,
+ "redistricting_notes": "Mid-decade redraws reshaped ~8 states. Texas: legislature drew 5 new R-leaning seats (incl. new TX-9, TX-32, TX-35); a federal panel enjoined the map Nov 18, 2025 but SCOTUS stayed and then allowed it 6-3 on Dec 4, 2025. California: Prop 50 passed with ~64% (Nov 2025), redrawing to target 5 GOP seats (CA-1, CA-3, CA-22, CA-41/CA-48 area, CA-6 now D+5; new CA-38). Florida: special session map signed May 4, 2026 targeting 3-5 R gains (new FL-22; FL-9 Soto and FL-14 Castor now in R-leaning seats). North Carolina: Oct 2025 redraw made NC-1 (Don Davis) R+5. Ohio: unanimous compromise map (Oct 2025) made OH-1 more competitive, OH-9 more R, OH-13 more D. Louisiana: after Louisiana v. Callais (Apr 2026) a map signed May 29 eliminated one of two Black-plurality D seats (LA-6). Alabama: new map removes AL-2's D lean (now R+7); state court block stayed by SCOTUS Jun 2, 2026. Tennessee: TN-9 (Memphis) split, now Safe R. Utah: court-ordered map creates a safe-D Salt Lake seat (UT-1). Virginia: Democrats' redistricting amendment invalidated May 8, 2026 (old lines). Missouri: 2025 map targeting MO-5 blocked by referendum; 2022 map in place. Maryland, Indiana, Kansas efforts failed; Wisconsin challenge dismissed Mar 31, 2026; SCOTUS blocked an NY-11 redraw. Net on-paper effect: roughly R +6 to +9 (TX, FL, NC, OH, AL, LA, TN) offset by D +5 to +6 (CA, UT), i.e. about R +1 to +4 net, but forecasters (DDHQ, Silver) conclude Republicans gain little or nothing net because the strong D environment flips several of the new marginal R seats; the main effect is fewer true swing seats (Silver: D gain ~22 seats on average despite a ~D+9 environment).",
+ "generic_ballot": [
+  {
+   "source": "RealClearPolling",
+   "dem": 51.4,
+   "rep": 43.2,
+   "margin": 8.2,
+   "as_of": "2026-10-26",
+   "url": "https://www.realclearpolling.com/polls/state-of-the-union/generic-congressional-vote",
+   "notes": "Average of polls 10/8-10/26. RCP article Oct 29 cites D+8.3 (within 0.5 of cycle high)."
+  },
+  {
+   "source": "PollCheck",
+   "dem": 50.7,
+   "rep": 42.2,
+   "margin": 8.5,
+   "as_of": "2026-10-29",
+   "url": "https://pollcheck.co.uk/us-midterms-2026/generic-ballot",
+   "notes": "Was D+8.7 on Oct 27."
+  },
+  {
+   "source": "Silver Bulletin",
+   "dem": null,
+   "rep": null,
+   "margin": 8.7,
+   "as_of": "2026-10-29",
+   "url": "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls",
+   "notes": "All-polls average D+8.7, down from cycle high D+9.2; likely-voter-adjusted version D+9.2. Toplines paywalled (Forbes Oct 29 cited 50.6-41.7)."
+  },
+  {
+   "source": "Strength In Numbers / FiftyPlusOne",
+   "dem": 52.3,
+   "rep": 43.3,
+   "margin": 9.0,
+   "as_of": "2026-10-30",
+   "url": "https://fiftyplusone.news/polls/generic-ballot",
+   "notes": "G. Elliott Morris's average now published at FiftyPlusOne."
+  },
+  {
+   "source": "VoteHub",
+   "dem": null,
+   "rep": null,
+   "margin": null,
+   "as_of": null,
+   "url": "https://votehub.com/polls/?poll=generic_ballot_2026",
+   "notes": "Site blocked automated access (403); last found value D+4.7 (Dec 2025)."
+  },
+  {
+   "source": "DDHQ / The Hill",
+   "dem": null,
+   "rep": null,
+   "margin": 8.2,
+   "as_of": "2026-10-20",
+   "url": "https://votes.decisiondeskhq.com/forecast/2026",
+   "notes": "Secondary citation; DDHQ site rate-limited (429)."
+  },
+  {
+   "source": "Poliwave (model input)",
+   "dem": 52.2,
+   "rep": 43.9,
+   "margin": 8.3,
+   "as_of": "2026-10-28",
+   "url": "https://poliwave.com/us/fed/projection",
+   "notes": "Generic ballot used by Poliwave model, polls through Oct 28."
+  },
+  {
+   "source": "USPollingData (Wikipedia aggregator)",
+   "dem": 49.3,
+   "rep": 41.9,
+   "margin": 7.4,
+   "as_of": "2026-10",
+   "url": "https://uspollingdata.com/polls/generic-ballot/",
+   "notes": ""
+  }
+ ],
+ "generic_ballot_history": [
+  {
+   "date": "2025-01-20",
+   "margin": -3.3,
+   "source": "Silver Bulletin",
+   "note": "Inauguration Day"
+  },
+  {
+   "date": "2025-01-15",
+   "margin": 1.2,
+   "source": "USPollingData monthly (Jan 2025)"
+  },
+  {
+   "date": "2025-02-15",
+   "margin": 1.7,
+   "source": "USPollingData monthly"
+  },
+  {
+   "date": "2025-03-15",
+   "margin": 2.2,
+   "source": "USPollingData monthly"
+  },
+  {
+   "date": "2025-04-15",
+   "margin": 2.8,
+   "source": "USPollingData monthly"
+  },
+  {
+   "date": "2025-05-15",
+   "margin": 3.3,
+   "source": "USPollingData monthly"
+  },
+  {
+   "date": "2025-06-15",
+   "margin": 3.7,
+   "source": "USPollingData monthly"
+  },
+  {
+   "date": "2025-07-15",
+   "margin": 4.0,
+   "source": "USPollingData monthly"
+  },
+  {
+   "date": "2025-08-15",
+   "margin": 4.3,
+   "source": "USPollingData monthly"
+  },
+  {
+   "date": "2025-09-15",
+   "margin": 4.6,
+   "source": "USPollingData monthly"
+  },
+  {
+   "date": "2025-10-15",
+   "margin": 4.9,
+   "source": "USPollingData monthly"
+  },
+  {
+   "date": "2025-11-15",
+   "margin": 5.1,
+   "source": "USPollingData monthly"
+  },
+  {
+   "date": "2025-12-15",
+   "margin": 5.3,
+   "source": "USPollingData monthly"
+  },
+  {
+   "date": "2025-12-20",
+   "margin": 4.7,
+   "source": "VoteHub"
+  },
+  {
+   "date": "2026-01-15",
+   "margin": 5.6,
+   "source": "USPollingData monthly"
+  },
+  {
+   "date": "2026-01-29",
+   "margin": 5.3,
+   "source": "Silver Bulletin"
+  },
+  {
+   "date": "2026-02-15",
+   "margin": 5.9,
+   "source": "USPollingData monthly"
+  },
+  {
+   "date": "2026-03-15",
+   "margin": 6.1,
+   "source": "USPollingData monthly"
+  },
+  {
+   "date": "2026-04-15",
+   "margin": 6.2,
+   "source": "USPollingData monthly"
+  },
+  {
+   "date": "2026-05-28",
+   "margin": 6.9,
+   "source": "Silver Bulletin"
+  },
+  {
+   "date": "2026-06-01",
+   "margin": 7.1,
+   "source": "Silver Bulletin",
+   "note": "then-cycle high"
+  },
+  {
+   "date": "2026-07-27",
+   "margin": 6.1,
+   "source": "Silver Bulletin"
+  },
+  {
+   "date": "2026-08-03",
+   "margin": 6.4,
+   "source": "Silver Bulletin"
+  },
+  {
+   "date": "2026-09-04",
+   "margin": 7.4,
+   "source": "Silver Bulletin (via The Conversation)"
+  },
+  {
+   "date": "2026-09-08",
+   "margin": 6.6,
+   "source": "Silver Bulletin (secondary citation)"
+  },
+  {
+   "date": "2026-10-06",
+   "margin": 8.2,
+   "source": "RealClearPolling",
+   "note": "50.4-42.2"
+  },
+  {
+   "date": "2026-10-19",
+   "margin": 9.6,
+   "source": "Silver Bulletin (via The Conversation)"
+  },
+  {
+   "date": "2026-10-20",
+   "margin": 8.2,
+   "source": "DDHQ / The Hill"
+  },
+  {
+   "date": "2026-10-26",
+   "margin": 9.5,
+   "source": "Silver Bulletin (via The Conversation)",
+   "note": "51.6-42.1"
+  },
+  {
+   "date": "2026-10-26",
+   "margin": 8.2,
+   "source": "RealClearPolling",
+   "note": "51.4-43.2"
+  },
+  {
+   "date": "2026-10-27",
+   "margin": 8.7,
+   "source": "PollCheck"
+  },
+  {
+   "date": "2026-10-29",
+   "margin": 8.7,
+   "source": "Silver Bulletin",
+   "note": "down from cycle high 9.2"
+  },
+  {
+   "date": "2026-10-29",
+   "margin": 8.5,
+   "source": "PollCheck"
+  },
+  {
+   "date": "2026-10-29",
+   "margin": 8.3,
+   "source": "RealClearPolling"
+  },
+  {
+   "date": "2026-10-30",
+   "margin": 9.0,
+   "source": "Strength In Numbers / FiftyPlusOne"
+  }
+ ],
+ "chamber_forecasts": [
+  {
+   "source": "DDHQ",
+   "dem_control": 0.8,
+   "dem_seats_median": 238,
+   "as_of": "2026-10-29",
+   "url": "https://votes.decisiondeskhq.com/forecast/2026",
+   "history": [
+    {
+     "date": "2026-07",
+     "p": 0.62
+    },
+    {
+     "date": "2026-08-06",
+     "p": 0.63
+    },
+    {
+     "date": "2026-09-14",
+     "p": 0.68
+    },
+    {
+     "date": "2026-10-12",
+     "p": 0.76
+    },
+    {
+     "date": "2026-10-21",
+     "p": 0.78
+    },
+    {
+     "date": "2026-10-29",
+     "p": 0.8
+    }
+   ],
+   "notes": "Senate 60%, 52 seats. Site rate-limited; figures via DDHQ substack/news."
+  },
+  {
+   "source": "Silver Bulletin",
+   "dem_control": 0.95,
+   "dem_seats_median": 239,
+   "as_of": "2026-10-26",
+   "url": "https://www.natesilver.net/p/2026-midterm-forecast",
+   "history": [
+    {
+     "date": "2026-08-11",
+     "p": 0.87
+    },
+    {
+     "date": "2026-09-03",
+     "p": 0.81
+    },
+    {
+     "date": "2026-10-08",
+     "p": 0.931
+    },
+    {
+     "date": "2026-10-19",
+     "p": 0.94
+    },
+    {
+     "date": "2026-10-22",
+     "p": 0.95
+    }
+   ],
+   "notes": "Seat figure is the mean (238.7 on Oct 8). Senate ~75%. Silver seat ratings (Oct 22): 230 D / 196 R / 9 tossup."
+  },
+  {
+   "source": "Race to the WH",
+   "dem_control": null,
+   "dem_seats_median": null,
+   "as_of": null,
+   "url": "https://www.racetothewh.com/house",
+   "notes": "Forecast is rendered in Infogram embeds that could not be read; an undated secondary source cites ~69%."
+  },
+  {
+   "source": "Split Ticket / The Argument",
+   "dem_control": 0.89,
+   "dem_seats_median": null,
+   "as_of": "2026-10",
+   "url": "https://www.theargumentmag.com/p/split-ticket-2026-midterms-model",
+   "notes": "89-90% per Lakshya Jain interviews; assumes ~D+9 environment; Senate ~65%. Ratings Oct 30: 225 D / 197 R / 13 tossup."
+  },
+  {
+   "source": "Economist",
+   "dem_control": null,
+   "dem_seats_median": null,
+   "as_of": "2026-10-29",
+   "url": "https://www.economist.com/interactive/us-midterms-2026",
+   "notes": "Live number paywalled/blocked; model launched Apr 29, 2026 at ~95% ('19 in 20'). Ratings Oct 29: 230 D / 190 R / 15 uncertain."
+  },
+  {
+   "source": "Poliwave",
+   "dem_control": 0.88,
+   "dem_seats_median": 230,
+   "as_of": "2026-10-30",
+   "url": "https://poliwave.com/us/fed/projection",
+   "notes": "80% range 216-247; Senate 75%; 73% D sweep. Not calibrated per site."
+  },
+  {
+   "source": "Dave Manuel",
+   "dem_control": 0.94,
+   "dem_seats_median": 234,
+   "as_of": "2026-10-30",
+   "url": "https://www.davemanuel.com/2026-midterm-forecast.php",
+   "notes": "90% range 216-258; Senate 68%; not backtested."
+  },
+  {
+   "source": "Kalshi",
+   "dem_control": 0.91,
+   "dem_seats_median": 238,
+   "as_of": "2026-10-28",
+   "url": "https://kalshi.com/category/elections/midterms",
+   "notes": "Market-implied expected seats 238.3 (Oct 26). Senate 67%."
+  },
+  {
+   "source": "Polymarket",
+   "dem_control": 0.935,
+   "dem_seats_median": null,
+   "as_of": "2026-10-30",
+   "url": "https://polymarket.com/event/which-party-will-win-the-house-in-2026",
+   "notes": "Yes price 0.935 via gamma API. R seat brackets: <190 39.5%, 190-194 12.5%, 195-199 11%, 200-204 13%, 205-209 12.9%."
+  },
+  {
+   "source": "VoteHub",
+   "dem_control": 0.72,
+   "dem_seats_median": null,
+   "as_of": null,
+   "url": "https://votehub.com",
+   "notes": "Cited in podcast coverage (assumes ~D+7); Senate 60% (Oct 23). Not verified on site."
+  },
+  {
+   "source": "FiftyPlusOne",
+   "dem_control": null,
+   "dem_seats_median": null,
+   "as_of": "2026-10-28",
+   "url": "https://fiftyplusone.news",
+   "notes": "Ratings 230 D / 196 R / 9 tossup."
+  },
+  {
+   "source": "Fox News Power Rankings",
+   "dem_control": null,
+   "dem_seats_median": null,
+   "as_of": "2026-10-27",
+   "url": null,
+   "notes": "Ratings 223 D / 195 R / 17 tossup."
+  },
+  {
+   "source": "RealClearPolitics ratings",
+   "dem_control": null,
+   "dem_seats_median": null,
+   "as_of": "2026-10-27",
+   "url": "https://www.realclearpolling.com",
+   "notes": "Ratings 226 D / 189 R / 20 tossup."
+  }
+ ],
+ "ratings_summary": {
+  "cook": {
+   "as_of": "2026-10-30",
+   "solid_d": 184,
+   "likely_d": 18,
+   "lean_d": 18,
+   "tossup": 18,
+   "lean_r": 17,
+   "likely_r": 14,
+   "solid_r": 166,
+   "total_d": 220,
+   "total_r": 197,
+   "notes": "Derived from 270toWin Oct 23 counts plus Cook's Oct 30 changes (OH-9, PA-8 to Lean D; CO-5, PA-1, SC-1 to Toss-up; FL-7, FL-9, IN-5 to Lean R; NC-5, NC-9, NJ-2, WA-5 to Likely R). Cook says Democrats favored in 220 seats, 'likeliest outcome' D +12 to +22."
+  },
+  "sabato": {
+   "as_of": "2026-10-27",
+   "safe_d": 184,
+   "likely_d": 19,
+   "lean_d": 22,
+   "tossup": 17,
+   "lean_r": 14,
+   "likely_r": 15,
+   "safe_r": 164,
+   "total_d": 225,
+   "total_r": 193,
+   "notes": "Oct 20: 28 changes toward D (223 D / 200 R / 12 tossup); Oct 27: further changes incl. AL-2, CO-5, KY-6, MT-1, PA-1 to Toss-up."
+  },
+  "inside": {
+   "as_of": "2026-10-29",
+   "solid_d": 190,
+   "likely_d": 5,
+   "lean_d": 7,
+   "tilt_d": 22,
+   "tossup": 13,
+   "tilt_r": 5,
+   "lean_r": 11,
+   "likely_r": 19,
+   "solid_r": 163,
+   "total_d": 224,
+   "total_r": 198,
+   "notes": "Nathan Gonzales (Oct 29): 45 House ratings moved toward Democrats in the final batch; IE projects D gain of 10-20 seats (Oct 20)."
+  }
+ },
+ "competitive_districts": [
+  {
+   "district": "AL-02",
+   "state": "AL",
+   "num": 2,
+   "incumbent": "Shomari Figures",
+   "incumbent_party": "D",
+   "dem": "Shomari Figures",
+   "rep": null,
+   "cook": "Lean R",
+   "sabato": "Toss-up",
+   "inside": "Tilt R",
+   "pvi": "R+7",
+   "prev_margin_2024": 9.2,
+   "prev_winner_share_2024": "54.6% D",
+   "other_ratings": {
+    "ddhq": "Lean R",
+    "split_ticket": "Toss-up",
+    "economist": "Likely R",
+    "silver_bulletin": "Likely R"
+   },
+   "notes": "Redrawn 2026 (new AL map allowed by SCOTUS stay 2 Jun 2026); now R+7. Sabato moved to Toss-up Oct 27."
+  },
+  {
+   "district": "AK-AL",
+   "state": "AK",
+   "num": 0,
+   "incumbent": "Nick Begich III",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": "Nick Begich III",
+   "cook": "Lean R",
+   "sabato": "Lean R",
+   "inside": "Likely R",
+   "pvi": "R+6",
+   "prev_margin_2024": -2.0,
+   "prev_winner_share_2024": "51.3% R",
+   "other_ratings": {
+    "ddhq": "Lean R",
+    "split_ticket": "Likely R",
+    "economist": "Likely R",
+    "silver_bulletin": "Likely R"
+   },
+   "notes": ""
+  },
+  {
+   "district": "AZ-01",
+   "state": "AZ",
+   "num": 1,
+   "incumbent": "Open (David Schweikert retiring)",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": null,
+   "cook": "Lean D",
+   "sabato": "Lean D",
+   "inside": "Tilt D",
+   "pvi": "R+1",
+   "prev_margin_2024": -3.8,
+   "prev_winner_share_2024": "51.9% R",
+   "other_ratings": {
+    "ddhq": "Lean D",
+    "split_ticket": "Safe D",
+    "economist": "Likely D",
+    "silver_bulletin": "Likely D"
+   },
+   "notes": "Open seat; all three raters favor D flip."
+  },
+  {
+   "district": "AZ-02",
+   "state": "AZ",
+   "num": 2,
+   "incumbent": "Eli Crane",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": "Eli Crane",
+   "cook": "Lean R",
+   "sabato": "Lean R",
+   "inside": "Lean R",
+   "pvi": "R+7",
+   "prev_margin_2024": -9.0,
+   "prev_winner_share_2024": "54.5% R",
+   "other_ratings": {
+    "ddhq": "Likely R",
+    "split_ticket": "Toss-up",
+    "economist": "Toss-up",
+    "silver_bulletin": "Lean R"
+   },
+   "notes": ""
+  },
+  {
+   "district": "AZ-06",
+   "state": "AZ",
+   "num": 6,
+   "incumbent": "Juan Ciscomani",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": "Juan Ciscomani",
+   "cook": "Lean D",
+   "sabato": "Lean D",
+   "inside": "Tilt D",
+   "pvi": "EVEN",
+   "prev_margin_2024": -2.5,
+   "prev_winner_share_2024": "50.0% R",
+   "other_ratings": {
+    "ddhq": "Likely D",
+    "split_ticket": "Safe D",
+    "economist": "Likely D",
+    "silver_bulletin": "Likely D"
+   },
+   "notes": "Cook moved Toss-up -> Lean D on Oct 23."
+  },
+  {
+   "district": "CA-13",
+   "state": "CA",
+   "num": 13,
+   "incumbent": "Adam Gray",
+   "incumbent_party": "D",
+   "dem": "Adam Gray",
+   "rep": null,
+   "cook": "Likely D",
+   "sabato": "Likely D",
+   "inside": "Tilt D",
+   "pvi": "D+2",
+   "prev_margin_2024": 0.1,
+   "prev_winner_share_2024": "50.0% D",
+   "other_ratings": {
+    "ddhq": "Likely D",
+    "split_ticket": "Safe D",
+    "economist": "Safe D",
+    "silver_bulletin": "Solid D"
+   },
+   "notes": "Prop 50 lines."
+  },
+  {
+   "district": "CA-22",
+   "state": "CA",
+   "num": 22,
+   "incumbent": "David Valadao",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": "David Valadao",
+   "cook": "Toss-up",
+   "sabato": "Lean D",
+   "inside": "Toss-up",
+   "pvi": "D+1",
+   "prev_margin_2024": -6.8,
+   "prev_winner_share_2024": "53.4% R",
+   "other_ratings": {
+    "ddhq": "Likely D",
+    "split_ticket": "Lean D",
+    "economist": "Safe D",
+    "silver_bulletin": "Likely D"
+   },
+   "notes": "Prop 50 lines."
+  },
+  {
+   "district": "CA-48",
+   "state": "CA",
+   "num": 48,
+   "incumbent": "Open (Darrell Issa retiring)",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": null,
+   "cook": "Lean D",
+   "sabato": "Likely D",
+   "inside": "Tilt D",
+   "pvi": "D+2",
+   "prev_margin_2024": -18.6,
+   "prev_winner_share_2024": "59.3% R",
+   "other_ratings": {
+    "ddhq": "Likely D",
+    "split_ticket": "Safe D",
+    "economist": "Likely D",
+    "silver_bulletin": "Likely D"
+   },
+   "notes": "Prop 50 made seat D+2."
+  },
+  {
+   "district": "CO-04",
+   "state": "CO",
+   "num": 4,
+   "incumbent": "Lauren Boebert",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": "Lauren Boebert",
+   "cook": "Lean R",
+   "sabato": "Lean R",
+   "inside": "Likely R",
+   "pvi": "R+9",
+   "prev_margin_2024": -11.6,
+   "prev_winner_share_2024": "53.6% R",
+   "other_ratings": {
+    "ddhq": "Likely R",
+    "split_ticket": "Toss-up",
+    "economist": "Lean R",
+    "silver_bulletin": "Likely R"
+   },
+   "notes": ""
+  },
+  {
+   "district": "CO-05",
+   "state": "CO",
+   "num": 5,
+   "incumbent": "Jeff Crank",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": "Jeff Crank",
+   "cook": "Toss-up",
+   "sabato": "Toss-up",
+   "inside": "Toss-up",
+   "pvi": "R+5",
+   "prev_margin_2024": -13.8,
+   "prev_winner_share_2024": "54.7% R",
+   "other_ratings": {
+    "ddhq": "Likely R",
+    "split_ticket": "Lean R",
+    "economist": "Lean R",
+    "silver_bulletin": "Toss-up"
+   },
+   "notes": "Cook Lean R -> Toss-up Oct 30; Sabato to Toss-up Oct 27."
+  },
+  {
+   "district": "CO-08",
+   "state": "CO",
+   "num": 8,
+   "incumbent": "Gabe Evans",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": "Gabe Evans",
+   "cook": "Lean D",
+   "sabato": "Lean D",
+   "inside": "Tilt D",
+   "pvi": "EVEN",
+   "prev_margin_2024": -0.7,
+   "prev_winner_share_2024": "49.0% R",
+   "other_ratings": {
+    "ddhq": "Likely D",
+    "split_ticket": "Lean D",
+    "economist": "Lean D",
+    "silver_bulletin": "Likely D"
+   },
+   "notes": "Cook moved Toss-up -> Lean D Oct 23."
+  },
+  {
+   "district": "FL-07",
+   "state": "FL",
+   "num": 7,
+   "incumbent": "Open (Cory Mills lost renomination)",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": "Ryan Elijah",
+   "cook": "Lean R",
+   "sabato": "Likely R",
+   "inside": "Likely R",
+   "pvi": "R+5",
+   "prev_margin_2024": -13.1,
+   "prev_winner_share_2024": "56.5% R",
+   "other_ratings": {
+    "ddhq": "Lean R",
+    "split_ticket": "Toss-up",
+    "economist": "Toss-up",
+    "silver_bulletin": "Lean R"
+   },
+   "notes": "Cook Likely R -> Lean R Oct 30. New FL map."
+  },
+  {
+   "district": "FL-09",
+   "state": "FL",
+   "num": 9,
+   "incumbent": "Darren Soto",
+   "incumbent_party": "D",
+   "dem": "Darren Soto",
+   "rep": null,
+   "cook": "Lean R",
+   "sabato": "Likely R",
+   "inside": "Likely R",
+   "pvi": "R+8",
+   "prev_margin_2024": 12.6,
+   "prev_winner_share_2024": "55.1% D",
+   "other_ratings": {
+    "ddhq": "Lean R",
+    "split_ticket": "Lean R",
+    "economist": "Toss-up",
+    "silver_bulletin": "Lean R"
+   },
+   "notes": "Dem incumbent drawn into R+8 seat by 2026 FL map; Cook Likely R -> Lean R Oct 30."
+  },
+  {
+   "district": "FL-13",
+   "state": "FL",
+   "num": 13,
+   "incumbent": "Anna Paulina Luna",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": "Anna Paulina Luna",
+   "cook": "Lean R",
+   "sabato": "Lean R",
+   "inside": "Lean R",
+   "pvi": "R+6",
+   "prev_margin_2024": -9.6,
+   "prev_winner_share_2024": "54.8% R",
+   "other_ratings": {
+    "ddhq": "Lean R",
+    "split_ticket": "Lean R",
+    "economist": "Lean R",
+    "silver_bulletin": "Lean R"
+   },
+   "notes": ""
+  },
+  {
+   "district": "FL-14",
+   "state": "FL",
+   "num": 14,
+   "incumbent": "Kathy Castor",
+   "incumbent_party": "D",
+   "dem": "Kathy Castor",
+   "rep": null,
+   "cook": "Toss-up",
+   "sabato": "Toss-up",
+   "inside": "Tilt D",
+   "pvi": "R+4",
+   "prev_margin_2024": null,
+   "prev_winner_share_2024": "57.0% D",
+   "other_ratings": {
+    "ddhq": "Lean D",
+    "split_ticket": "Lean D",
+    "economist": "Lean D",
+    "silver_bulletin": "Likely D"
+   },
+   "notes": "Dem incumbent in redrawn R+4 Tampa seat."
+  },
+  {
+   "district": "FL-22",
+   "state": "FL",
+   "num": 22,
+   "incumbent": "Open (new seat)",
+   "incumbent_party": "D",
+   "dem": null,
+   "rep": "Casey Askar",
+   "cook": "Toss-up",
+   "sabato": "Toss-up",
+   "inside": "Toss-up",
+   "pvi": "R+4",
+   "prev_margin_2024": 9.9,
+   "prev_winner_share_2024": "n/a (new seat)",
+   "other_ratings": {
+    "ddhq": "Toss-up",
+    "split_ticket": "Toss-up",
+    "economist": "Toss-up",
+    "silver_bulletin": "Lean D"
+   },
+   "notes": "New seat under 2026 FL map, counted as D-held by Wikipedia. Poliwave lists Casey Askar (R)."
+  },
+  {
+   "district": "FL-25",
+   "state": "FL",
+   "num": 25,
+   "incumbent": "Jared Moskowitz",
+   "incumbent_party": "D",
+   "dem": "Jared Moskowitz",
+   "rep": null,
+   "cook": "Lean D",
+   "sabato": "Lean D",
+   "inside": "Tilt D",
+   "pvi": "R+3",
+   "prev_margin_2024": 9.0,
+   "prev_winner_share_2024": "52.4% D",
+   "other_ratings": {
+    "ddhq": "Lean D",
+    "split_ticket": "Likely D",
+    "economist": "Lean D",
+    "silver_bulletin": "Lean D"
+   },
+   "notes": ""
+  },
+  {
+   "district": "FL-27",
+   "state": "FL",
+   "num": 27,
+   "incumbent": "Maria Elvira Salazar",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": "Maria Elvira Salazar",
+   "cook": "Lean R",
+   "sabato": "Lean R",
+   "inside": "Lean R",
+   "pvi": "R+6",
+   "prev_margin_2024": -20.8,
+   "prev_winner_share_2024": "60.4% R",
+   "other_ratings": {
+    "ddhq": "Likely R",
+    "split_ticket": "Likely R",
+    "economist": "Likely R",
+    "silver_bulletin": "Lean R"
+   },
+   "notes": ""
+  },
+  {
+   "district": "IN-05",
+   "state": "IN",
+   "num": 5,
+   "incumbent": "Victoria Spartz",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": "Victoria Spartz",
+   "cook": "Lean R",
+   "sabato": "Likely R",
+   "inside": "Likely R",
+   "pvi": "R+8",
+   "prev_margin_2024": -18.6,
+   "prev_winner_share_2024": "56.6% R",
+   "other_ratings": {
+    "ddhq": "Likely R",
+    "split_ticket": "Likely R",
+    "economist": "Lean R",
+    "silver_bulletin": "Likely R"
+   },
+   "notes": "Cook Likely R -> Lean R Oct 30."
+  },
+  {
+   "district": "IA-01",
+   "state": "IA",
+   "num": 1,
+   "incumbent": "Mariannette Miller-Meeks",
+   "incumbent_party": "R",
+   "dem": "Christina Bohannan",
+   "rep": "Mariannette Miller-Meeks",
+   "cook": "Lean D",
+   "sabato": "Lean D",
+   "inside": "Tilt D",
+   "pvi": "R+4",
+   "prev_margin_2024": -0.2,
+   "prev_winner_share_2024": "50.1% R",
+   "other_ratings": {
+    "ddhq": "Likely D",
+    "split_ticket": "Likely D",
+    "economist": "Likely D",
+    "silver_bulletin": "Likely D"
+   },
+   "notes": "Rematch; Cook moved to Lean D Oct 9."
+  },
+  {
+   "district": "IA-02",
+   "state": "IA",
+   "num": 2,
+   "incumbent": "Open (Ashley Hinson retiring)",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": null,
+   "cook": "Toss-up",
+   "sabato": "Lean D",
+   "inside": "Toss-up",
+   "pvi": "R+4",
+   "prev_margin_2024": -15.6,
+   "prev_winner_share_2024": "57.1% R",
+   "other_ratings": {
+    "ddhq": "Toss-up",
+    "split_ticket": "Lean D",
+    "economist": "Lean D",
+    "silver_bulletin": "Lean D"
+   },
+   "notes": ""
+  },
+  {
+   "district": "IA-03",
+   "state": "IA",
+   "num": 3,
+   "incumbent": "Zach Nunn",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": "Zach Nunn",
+   "cook": "Lean D",
+   "sabato": "Lean D",
+   "inside": "Tilt D",
+   "pvi": "R+2",
+   "prev_margin_2024": -3.8,
+   "prev_winner_share_2024": "51.9% R",
+   "other_ratings": {
+    "ddhq": "Lean D",
+    "split_ticket": "Likely D",
+    "economist": "Likely D",
+    "silver_bulletin": "Likely D"
+   },
+   "notes": ""
+  },
+  {
+   "district": "KY-06",
+   "state": "KY",
+   "num": 6,
+   "incumbent": "Open (Andy Barr retiring)",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": null,
+   "cook": "Toss-up",
+   "sabato": "Toss-up",
+   "inside": "Toss-up",
+   "pvi": "R+7",
+   "prev_margin_2024": -26.1,
+   "prev_winner_share_2024": "63.0% R",
+   "other_ratings": {
+    "ddhq": "Lean R",
+    "split_ticket": "Toss-up",
+    "economist": "Toss-up",
+    "silver_bulletin": "Toss-up"
+   },
+   "notes": "Sabato to Toss-up Oct 27."
+  },
+  {
+   "district": "ME-02",
+   "state": "ME",
+   "num": 2,
+   "incumbent": "Open (Jared Golden retiring)",
+   "incumbent_party": "D",
+   "dem": null,
+   "rep": "Paul LePage",
+   "cook": "Lean R",
+   "sabato": "Lean R",
+   "inside": "Lean R",
+   "pvi": "R+4",
+   "prev_margin_2024": 0.7,
+   "prev_winner_share_2024": "50.3% D",
+   "other_ratings": {
+    "ddhq": "Toss-up",
+    "split_ticket": "Toss-up",
+    "economist": "Toss-up",
+    "silver_bulletin": "Toss-up"
+   },
+   "notes": "Only D-held seat all three raters rate Lean R. Verify R nominee."
+  },
+  {
+   "district": "MI-04",
+   "state": "MI",
+   "num": 4,
+   "incumbent": "Bill Huizenga",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": "Bill Huizenga",
+   "cook": "Toss-up",
+   "sabato": "Toss-up",
+   "inside": "Toss-up",
+   "pvi": "R+3",
+   "prev_margin_2024": -11.7,
+   "prev_winner_share_2024": "55.1% R",
+   "other_ratings": {
+    "ddhq": "Lean R",
+    "split_ticket": "Toss-up",
+    "economist": "Toss-up",
+    "silver_bulletin": "Lean D"
+   },
+   "notes": ""
+  },
+  {
+   "district": "MI-07",
+   "state": "MI",
+   "num": 7,
+   "incumbent": "Tom Barrett",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": "Tom Barrett",
+   "cook": "Toss-up",
+   "sabato": "Toss-up",
+   "inside": "Toss-up",
+   "pvi": "EVEN",
+   "prev_margin_2024": -3.7,
+   "prev_winner_share_2024": "50.3% R",
+   "other_ratings": {
+    "ddhq": "Likely D",
+    "split_ticket": "Lean D",
+    "economist": "Lean D",
+    "silver_bulletin": "Likely D"
+   },
+   "notes": ""
+  },
+  {
+   "district": "MI-10",
+   "state": "MI",
+   "num": 10,
+   "incumbent": "Open (John James running for governor)",
+   "incumbent_party": "R",
+   "dem": "Christina Hines",
+   "rep": null,
+   "cook": "Toss-up",
+   "sabato": "Toss-up",
+   "inside": "Tilt R",
+   "pvi": "R+3",
+   "prev_margin_2024": -6.1,
+   "prev_winner_share_2024": "51.1% R",
+   "other_ratings": {
+    "ddhq": "Lean D",
+    "split_ticket": "Lean D",
+    "economist": "Lean D",
+    "silver_bulletin": "Lean D"
+   },
+   "notes": "Poliwave lists Christina Hines (D)."
+  },
+  {
+   "district": "MN-01",
+   "state": "MN",
+   "num": 1,
+   "incumbent": "Brad Finstad",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": "Brad Finstad",
+   "cook": "Lean R",
+   "sabato": "Lean R",
+   "inside": "Lean R",
+   "pvi": "R+6",
+   "prev_margin_2024": -17.1,
+   "prev_winner_share_2024": "58.6% R",
+   "other_ratings": {
+    "ddhq": "Lean R",
+    "split_ticket": "Likely R",
+    "economist": "Lean R",
+    "silver_bulletin": "Toss-up"
+   },
+   "notes": ""
+  },
+  {
+   "district": "MO-02",
+   "state": "MO",
+   "num": 2,
+   "incumbent": "Ann Wagner",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": "Ann Wagner",
+   "cook": "Likely R",
+   "sabato": "Toss-up",
+   "inside": "Solid R",
+   "pvi": "R+4",
+   "prev_margin_2024": -12.0,
+   "prev_winner_share_2024": "54.5% R",
+   "other_ratings": {
+    "ddhq": "Lean R",
+    "split_ticket": "Lean R",
+    "economist": "Toss-up",
+    "silver_bulletin": "Toss-up"
+   },
+   "notes": "Big rater split: Sabato Toss-up vs IE Solid R. 2022 map in place after MO referendum."
+  },
+  {
+   "district": "MT-01",
+   "state": "MT",
+   "num": 1,
+   "incumbent": "Open (Ryan Zinke retiring)",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": "Aaron Flint",
+   "cook": "Toss-up",
+   "sabato": "Toss-up",
+   "inside": "Toss-up",
+   "pvi": "R+5",
+   "prev_margin_2024": -7.7,
+   "prev_winner_share_2024": "52.3% R",
+   "other_ratings": {
+    "ddhq": "Lean R",
+    "split_ticket": "Toss-up",
+    "economist": "Toss-up",
+    "silver_bulletin": "Toss-up"
+   },
+   "notes": "Poliwave lists Aaron Flint (R). Sabato to Toss-up Oct 27."
+  },
+  {
+   "district": "NE-02",
+   "state": "NE",
+   "num": 2,
+   "incumbent": "Open (Don Bacon retiring)",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": null,
+   "cook": "Likely D",
+   "sabato": "Likely D",
+   "inside": "Lean D",
+   "pvi": "D+3",
+   "prev_margin_2024": -1.9,
+   "prev_winner_share_2024": "50.9% R",
+   "other_ratings": {
+    "ddhq": "Likely D",
+    "split_ticket": "Safe D",
+    "economist": "Likely D",
+    "silver_bulletin": "Solid D"
+   },
+   "notes": ""
+  },
+  {
+   "district": "NV-01",
+   "state": "NV",
+   "num": 1,
+   "incumbent": "Dina Titus",
+   "incumbent_party": "D",
+   "dem": "Dina Titus",
+   "rep": null,
+   "cook": "Likely D",
+   "sabato": "Likely D",
+   "inside": "Lean D",
+   "pvi": "D+2",
+   "prev_margin_2024": 7.5,
+   "prev_winner_share_2024": "52.0% D",
+   "other_ratings": {
+    "ddhq": "Likely D",
+    "split_ticket": "Safe D",
+    "economist": "Safe D",
+    "silver_bulletin": "Likely D"
+   },
+   "notes": ""
+  },
+  {
+   "district": "NV-02",
+   "state": "NV",
+   "num": 2,
+   "incumbent": "Open (Mark Amodei retiring)",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": null,
+   "cook": "Lean R",
+   "sabato": "Lean R",
+   "inside": "Tilt R",
+   "pvi": "R+7",
+   "prev_margin_2024": null,
+   "prev_winner_share_2024": "55.0% R",
+   "other_ratings": {
+    "ddhq": "Lean R",
+    "split_ticket": "Likely R",
+    "economist": "Lean R",
+    "silver_bulletin": "Likely R"
+   },
+   "notes": ""
+  },
+  {
+   "district": "NV-03",
+   "state": "NV",
+   "num": 3,
+   "incumbent": "Susie Lee",
+   "incumbent_party": "D",
+   "dem": "Susie Lee",
+   "rep": null,
+   "cook": "Likely D",
+   "sabato": "Likely D",
+   "inside": "Lean D",
+   "pvi": "D+1",
+   "prev_margin_2024": 2.7,
+   "prev_winner_share_2024": "51.4% D",
+   "other_ratings": {
+    "ddhq": "Likely D",
+    "split_ticket": "Safe D",
+    "economist": "Safe D",
+    "silver_bulletin": "Solid D"
+   },
+   "notes": ""
+  },
+  {
+   "district": "NH-01",
+   "state": "NH",
+   "num": 1,
+   "incumbent": "Open (Chris Pappas running for Senate)",
+   "incumbent_party": "D",
+   "dem": null,
+   "rep": null,
+   "cook": "Likely D",
+   "sabato": "Likely D",
+   "inside": "Lean D",
+   "pvi": "D+2",
+   "prev_margin_2024": 8.1,
+   "prev_winner_share_2024": "54.0% D",
+   "other_ratings": {
+    "ddhq": "Likely D",
+    "split_ticket": "Likely D",
+    "economist": "Likely D",
+    "silver_bulletin": "Likely D"
+   },
+   "notes": ""
+  },
+  {
+   "district": "NJ-07",
+   "state": "NJ",
+   "num": 7,
+   "incumbent": "Thomas Kean Jr.",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": "Thomas Kean Jr.",
+   "cook": "Lean D",
+   "sabato": "Lean D",
+   "inside": "Tilt D",
+   "pvi": "EVEN",
+   "prev_margin_2024": -5.4,
+   "prev_winner_share_2024": "51.8% R",
+   "other_ratings": {
+    "ddhq": "Likely D",
+    "split_ticket": "Likely D",
+    "economist": "Likely D",
+    "silver_bulletin": "Likely D"
+   },
+   "notes": ""
+  },
+  {
+   "district": "NM-02",
+   "state": "NM",
+   "num": 2,
+   "incumbent": "Gabe Vasquez",
+   "incumbent_party": "D",
+   "dem": "Gabe Vasquez",
+   "rep": null,
+   "cook": "Lean D",
+   "sabato": "Lean D",
+   "inside": "Tilt D",
+   "pvi": "EVEN",
+   "prev_margin_2024": 4.2,
+   "prev_winner_share_2024": "52.1% D",
+   "other_ratings": {
+    "ddhq": "Likely D",
+    "split_ticket": "Safe D",
+    "economist": "Likely D",
+    "silver_bulletin": "Likely D"
+   },
+   "notes": ""
+  },
+  {
+   "district": "NY-03",
+   "state": "NY",
+   "num": 3,
+   "incumbent": "Tom Suozzi",
+   "incumbent_party": "D",
+   "dem": "Tom Suozzi",
+   "rep": null,
+   "cook": "Likely D",
+   "sabato": "Lean D",
+   "inside": "Lean D",
+   "pvi": "EVEN",
+   "prev_margin_2024": 3.6,
+   "prev_winner_share_2024": "51.8% D",
+   "other_ratings": {
+    "ddhq": "Likely D",
+    "split_ticket": "Safe D",
+    "economist": "Safe D",
+    "silver_bulletin": "Solid D"
+   },
+   "notes": ""
+  },
+  {
+   "district": "NY-04",
+   "state": "NY",
+   "num": 4,
+   "incumbent": "Laura Gillen",
+   "incumbent_party": "D",
+   "dem": "Laura Gillen",
+   "rep": null,
+   "cook": "Likely D",
+   "sabato": "Likely D",
+   "inside": "Tilt D",
+   "pvi": "D+2",
+   "prev_margin_2024": 2.3,
+   "prev_winner_share_2024": "51.1% D",
+   "other_ratings": {
+    "ddhq": "Likely D",
+    "split_ticket": "Safe D",
+    "economist": "Safe D",
+    "silver_bulletin": "Solid D"
+   },
+   "notes": ""
+  },
+  {
+   "district": "NY-17",
+   "state": "NY",
+   "num": 17,
+   "incumbent": "Mike Lawler",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": "Mike Lawler",
+   "cook": "Toss-up",
+   "sabato": "Toss-up",
+   "inside": "Toss-up",
+   "pvi": "D+1",
+   "prev_margin_2024": -6.3,
+   "prev_winner_share_2024": "52.2% R",
+   "other_ratings": {
+    "ddhq": "Lean D",
+    "split_ticket": "Lean D",
+    "economist": "Lean D",
+    "silver_bulletin": "Likely D"
+   },
+   "notes": ""
+  },
+  {
+   "district": "NY-21",
+   "state": "NY",
+   "num": 21,
+   "incumbent": "Open (Elise Stefanik retiring)",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": null,
+   "cook": "Lean R",
+   "sabato": "Lean R",
+   "inside": "Lean R",
+   "pvi": "R+10",
+   "prev_margin_2024": -24.0,
+   "prev_winner_share_2024": "62.1% R",
+   "other_ratings": {
+    "ddhq": "Likely R",
+    "split_ticket": "Lean R",
+    "economist": "Lean R",
+    "silver_bulletin": "Lean R"
+   },
+   "notes": ""
+  },
+  {
+   "district": "NC-01",
+   "state": "NC",
+   "num": 1,
+   "incumbent": "Don Davis",
+   "incumbent_party": "D",
+   "dem": "Don Davis",
+   "rep": null,
+   "cook": "Toss-up",
+   "sabato": "Lean D",
+   "inside": "Tilt D",
+   "pvi": "R+5",
+   "prev_margin_2024": 1.7,
+   "prev_winner_share_2024": "49.5% D",
+   "other_ratings": {
+    "ddhq": "Lean D",
+    "split_ticket": "Lean D",
+    "economist": "Toss-up",
+    "silver_bulletin": "Likely D"
+   },
+   "notes": "Made more Republican by Oct 2025 NC redraw; IE moved Tilt R -> Toss-up -> Tilt D in Oct."
+  },
+  {
+   "district": "NC-11",
+   "state": "NC",
+   "num": 11,
+   "incumbent": "Open (Chuck Edwards withdrew Aug 5 after censure)",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": "Jennifer Balkcom",
+   "cook": "Lean D",
+   "sabato": "Lean D",
+   "inside": "Tilt D",
+   "pvi": "R+5",
+   "prev_margin_2024": -13.5,
+   "prev_winner_share_2024": "56.8% R",
+   "other_ratings": {
+    "ddhq": "Toss-up",
+    "split_ticket": "Lean D",
+    "economist": "Likely D",
+    "silver_bulletin": "Likely D"
+   },
+   "notes": "Unusual: R+5 seat rated Lean D after incumbent withdrew post-primary. Poliwave lists Jennifer Balkcom (R)."
+  },
+  {
+   "district": "OH-01",
+   "state": "OH",
+   "num": 1,
+   "incumbent": "Greg Landsman",
+   "incumbent_party": "D",
+   "dem": "Greg Landsman",
+   "rep": null,
+   "cook": "Likely D",
+   "sabato": "Likely D",
+   "inside": "Lean D",
+   "pvi": "R+1",
+   "prev_margin_2024": 9.2,
+   "prev_winner_share_2024": "54.6% D",
+   "other_ratings": {
+    "ddhq": "Likely D",
+    "split_ticket": "Likely D",
+    "economist": "Likely D",
+    "silver_bulletin": "Likely D"
+   },
+   "notes": "Made more competitive by 2025 OH compromise map."
+  },
+  {
+   "district": "OH-07",
+   "state": "OH",
+   "num": 7,
+   "incumbent": "Max Miller",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": "Max Miller",
+   "cook": "Toss-up",
+   "sabato": "Toss-up",
+   "inside": "Tilt D",
+   "pvi": "R+5",
+   "prev_margin_2024": -15.0,
+   "prev_winner_share_2024": "51.1% R",
+   "other_ratings": {
+    "ddhq": "Toss-up",
+    "split_ticket": "Lean D",
+    "economist": "Toss-up",
+    "silver_bulletin": "Likely D"
+   },
+   "notes": ""
+  },
+  {
+   "district": "OH-09",
+   "state": "OH",
+   "num": 9,
+   "incumbent": "Marcy Kaptur",
+   "incumbent_party": "D",
+   "dem": "Marcy Kaptur",
+   "rep": "Derek Merrin",
+   "cook": "Lean D",
+   "sabato": "Toss-up",
+   "inside": "Tilt D",
+   "pvi": "R+5",
+   "prev_margin_2024": 0.6,
+   "prev_winner_share_2024": "48.3% D",
+   "other_ratings": {
+    "ddhq": "Lean D",
+    "split_ticket": "Likely D",
+    "economist": "Lean D",
+    "silver_bulletin": "Lean D"
+   },
+   "notes": "Cook Toss-up -> Lean D Oct 30. Seat made more R by OH map; Poliwave projects R+1.1 flip."
+  },
+  {
+   "district": "OH-10",
+   "state": "OH",
+   "num": 10,
+   "incumbent": "Mike Turner",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": "Mike Turner",
+   "cook": "Lean R",
+   "sabato": "Lean R",
+   "inside": "Lean R",
+   "pvi": "R+4",
+   "prev_margin_2024": -18.4,
+   "prev_winner_share_2024": "57.6% R",
+   "other_ratings": {
+    "ddhq": "Likely R",
+    "split_ticket": "Likely R",
+    "economist": "Likely R",
+    "silver_bulletin": "Likely R"
+   },
+   "notes": ""
+  },
+  {
+   "district": "OH-15",
+   "state": "OH",
+   "num": 15,
+   "incumbent": "Mike Carey",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": "Mike Carey",
+   "cook": "Lean R",
+   "sabato": "Lean R",
+   "inside": "Lean R",
+   "pvi": "R+5",
+   "prev_margin_2024": -12.9,
+   "prev_winner_share_2024": "56.5% R",
+   "other_ratings": {
+    "ddhq": "Likely R",
+    "split_ticket": "Lean R",
+    "economist": "Likely R",
+    "silver_bulletin": "Lean R"
+   },
+   "notes": ""
+  },
+  {
+   "district": "PA-01",
+   "state": "PA",
+   "num": 1,
+   "incumbent": "Brian Fitzpatrick",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": "Brian Fitzpatrick",
+   "cook": "Toss-up",
+   "sabato": "Toss-up",
+   "inside": "Toss-up",
+   "pvi": "D+1",
+   "prev_margin_2024": -12.8,
+   "prev_winner_share_2024": "56.4% R",
+   "other_ratings": {
+    "ddhq": "Toss-up",
+    "split_ticket": "Toss-up",
+    "economist": "Toss-up",
+    "silver_bulletin": "Lean D"
+   },
+   "notes": "Cook Lean R -> Toss-up Oct 30; Sabato to Toss-up Oct 27."
+  },
+  {
+   "district": "PA-07",
+   "state": "PA",
+   "num": 7,
+   "incumbent": "Ryan Mackenzie",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": "Ryan Mackenzie",
+   "cook": "Lean D",
+   "sabato": "Lean D",
+   "inside": "Tilt D",
+   "pvi": "R+1",
+   "prev_margin_2024": -1.0,
+   "prev_winner_share_2024": "50.5% R",
+   "other_ratings": {
+    "ddhq": "Likely D",
+    "split_ticket": "Likely D",
+    "economist": "Lean D",
+    "silver_bulletin": "Likely D"
+   },
+   "notes": ""
+  },
+  {
+   "district": "PA-08",
+   "state": "PA",
+   "num": 8,
+   "incumbent": "Rob Bresnahan",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": "Rob Bresnahan",
+   "cook": "Lean D",
+   "sabato": "Lean D",
+   "inside": "Tilt D",
+   "pvi": "R+4",
+   "prev_margin_2024": -1.6,
+   "prev_winner_share_2024": "50.8% R",
+   "other_ratings": {
+    "ddhq": "Toss-up",
+    "split_ticket": "Lean D",
+    "economist": "Toss-up",
+    "silver_bulletin": "Likely D"
+   },
+   "notes": "Cook Toss-up -> Lean D Oct 30."
+  },
+  {
+   "district": "PA-10",
+   "state": "PA",
+   "num": 10,
+   "incumbent": "Scott Perry",
+   "incumbent_party": "R",
+   "dem": "Janelle Stelson",
+   "rep": "Scott Perry",
+   "cook": "Lean D",
+   "sabato": "Lean D",
+   "inside": "Tilt D",
+   "pvi": "R+3",
+   "prev_margin_2024": -1.3,
+   "prev_winner_share_2024": "50.6% R",
+   "other_ratings": {
+    "ddhq": "Lean D",
+    "split_ticket": "Lean D",
+    "economist": "Lean D",
+    "silver_bulletin": "Likely D"
+   },
+   "notes": "Rematch of 2024."
+  },
+  {
+   "district": "SC-01",
+   "state": "SC",
+   "num": 1,
+   "incumbent": "Open (Nancy Mace running for governor)",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": null,
+   "cook": "Toss-up",
+   "sabato": "Lean R",
+   "inside": "Tilt R",
+   "pvi": "R+6",
+   "prev_margin_2024": -16.6,
+   "prev_winner_share_2024": "58.3% R",
+   "other_ratings": {
+    "ddhq": "Lean R",
+    "split_ticket": "Lean R",
+    "economist": "Toss-up",
+    "silver_bulletin": "Likely R"
+   },
+   "notes": "Cook Lean R -> Toss-up Oct 30."
+  },
+  {
+   "district": "TX-09",
+   "state": "TX",
+   "num": 9,
+   "incumbent": "Open (new seat)",
+   "incumbent_party": "D",
+   "dem": null,
+   "rep": null,
+   "cook": "Likely R",
+   "sabato": "Likely R",
+   "inside": "Lean R",
+   "pvi": "R+9",
+   "prev_margin_2024": null,
+   "prev_winner_share_2024": "n/a (new seat)",
+   "other_ratings": {
+    "ddhq": "Likely R",
+    "split_ticket": "Safe R",
+    "economist": "Likely R",
+    "silver_bulletin": "Likely R"
+   },
+   "notes": "New R-leaning seat under 2025 TX map (SCOTUS allowed 6-3 Dec 4); counted as D-held seat eliminated."
+  },
+  {
+   "district": "TX-15",
+   "state": "TX",
+   "num": 15,
+   "incumbent": "Monica De La Cruz",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": "Monica De La Cruz",
+   "cook": "Toss-up",
+   "sabato": "Lean D",
+   "inside": "Tilt D",
+   "pvi": "R+7",
+   "prev_margin_2024": -14.2,
+   "prev_winner_share_2024": "57.1% R",
+   "other_ratings": {
+    "ddhq": "Toss-up",
+    "split_ticket": "Lean D",
+    "economist": "Toss-up",
+    "silver_bulletin": "Lean D"
+   },
+   "notes": "Striking: R+7 seat with Sabato/IE favoring D."
+  },
+  {
+   "district": "TX-23",
+   "state": "TX",
+   "num": 23,
+   "incumbent": "Vacant (Tony Gonzales resigned Apr 14, 2026)",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": null,
+   "cook": "Lean R",
+   "sabato": "Lean R",
+   "inside": "Likely R",
+   "pvi": "R+7",
+   "prev_margin_2024": -24.6,
+   "prev_winner_share_2024": "62.3% R",
+   "other_ratings": {
+    "ddhq": "Lean R",
+    "split_ticket": "Toss-up",
+    "economist": "Lean R",
+    "silver_bulletin": "Toss-up"
+   },
+   "notes": "Seat vacant through election."
+  },
+  {
+   "district": "TX-28",
+   "state": "TX",
+   "num": 28,
+   "incumbent": "Henry Cuellar",
+   "incumbent_party": "D",
+   "dem": "Henry Cuellar",
+   "rep": null,
+   "cook": "Likely D",
+   "sabato": "Lean D",
+   "inside": "Lean D",
+   "pvi": "R+3",
+   "prev_margin_2024": 5.6,
+   "prev_winner_share_2024": "52.8% D",
+   "other_ratings": {
+    "ddhq": "Likely D",
+    "split_ticket": "Safe D",
+    "economist": "Likely D",
+    "silver_bulletin": "Likely D"
+   },
+   "notes": ""
+  },
+  {
+   "district": "TX-34",
+   "state": "TX",
+   "num": 34,
+   "incumbent": "Vicente Gonzalez",
+   "incumbent_party": "D",
+   "dem": "Vicente Gonzalez",
+   "rep": null,
+   "cook": "Lean D",
+   "sabato": "Lean D",
+   "inside": "Toss-up",
+   "pvi": "R+3",
+   "prev_margin_2024": 2.6,
+   "prev_winner_share_2024": "51.3% D",
+   "other_ratings": {
+    "ddhq": "Lean D",
+    "split_ticket": "Likely D",
+    "economist": "Lean D",
+    "silver_bulletin": "Likely D"
+   },
+   "notes": ""
+  },
+  {
+   "district": "TX-35",
+   "state": "TX",
+   "num": 35,
+   "incumbent": "Open (new seat; Greg Casar running)",
+   "incumbent_party": "D",
+   "dem": "Greg Casar",
+   "rep": null,
+   "cook": "Toss-up",
+   "sabato": "Toss-up",
+   "inside": "Toss-up",
+   "pvi": "R+4",
+   "prev_margin_2024": 34.7,
+   "prev_winner_share_2024": "n/a (new seat)",
+   "other_ratings": {
+    "ddhq": "Toss-up",
+    "split_ticket": "Lean D",
+    "economist": "Lean R",
+    "silver_bulletin": "Toss-up"
+   },
+   "notes": "Poliwave: closest seat in country (D+0.2); lists Johnny Garcia. Verify R nominee."
+  },
+  {
+   "district": "VA-01",
+   "state": "VA",
+   "num": 1,
+   "incumbent": "Rob Wittman",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": "Rob Wittman",
+   "cook": "Toss-up",
+   "sabato": "Toss-up",
+   "inside": "Tilt R",
+   "pvi": "R+3",
+   "prev_margin_2024": -12.8,
+   "prev_winner_share_2024": "56.4% R",
+   "other_ratings": {
+    "ddhq": "Lean R",
+    "split_ticket": "Toss-up",
+    "economist": "Toss-up",
+    "silver_bulletin": "Lean D"
+   },
+   "notes": "VA Dem redistricting amendment invalidated May 8, 2026; old lines."
+  },
+  {
+   "district": "VA-02",
+   "state": "VA",
+   "num": 2,
+   "incumbent": "Jen Kiggans",
+   "incumbent_party": "R",
+   "dem": "Elaine Luria",
+   "rep": "Jen Kiggans",
+   "cook": "Lean D",
+   "sabato": "Lean D",
+   "inside": "Tilt D",
+   "pvi": "EVEN",
+   "prev_margin_2024": -3.8,
+   "prev_winner_share_2024": "50.8% R",
+   "other_ratings": {
+    "ddhq": "Likely D",
+    "split_ticket": "Likely D",
+    "economist": "Lean D",
+    "silver_bulletin": "Likely D"
+   },
+   "notes": "Luria rematch (per Poliwave); Cook to Lean D Oct 23."
+  },
+  {
+   "district": "VA-05",
+   "state": "VA",
+   "num": 5,
+   "incumbent": "John McGuire",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": "John McGuire",
+   "cook": "Likely R",
+   "sabato": "Toss-up",
+   "inside": "Lean R",
+   "pvi": "R+6",
+   "prev_margin_2024": -15.0,
+   "prev_winner_share_2024": "57.5% R",
+   "other_ratings": {
+    "ddhq": "Lean R",
+    "split_ticket": "Likely R",
+    "economist": "Likely R",
+    "silver_bulletin": "Likely R"
+   },
+   "notes": "Sabato Toss-up vs Cook Likely R."
+  },
+  {
+   "district": "WA-03",
+   "state": "WA",
+   "num": 3,
+   "incumbent": "Marie Gluesenkamp Perez",
+   "incumbent_party": "D",
+   "dem": "Marie Gluesenkamp Perez",
+   "rep": null,
+   "cook": "Lean D",
+   "sabato": "Lean D",
+   "inside": "Toss-up",
+   "pvi": "R+2",
+   "prev_margin_2024": 3.9,
+   "prev_winner_share_2024": "51.7% D",
+   "other_ratings": {
+    "ddhq": "Likely D",
+    "split_ticket": "Likely D",
+    "economist": "Lean D",
+    "silver_bulletin": "Likely D"
+   },
+   "notes": ""
+  },
+  {
+   "district": "WI-01",
+   "state": "WI",
+   "num": 1,
+   "incumbent": "Bryan Steil",
+   "incumbent_party": "R",
+   "dem": null,
+   "rep": "Bryan Steil",
+   "cook": "Lean R",
+   "sabato": "Lean R",
+   "inside": "Lean R",
+   "pvi": "R+2",
+   "prev_margin_2024": -10.2,
+   "prev_winner_share_2024": "54.1% R",
+   "other_ratings": {
+    "ddhq": "Lean R",
+    "split_ticket": "Lean R",
+    "economist": "Lean R",
+    "silver_bulletin": "Toss-up"
+   },
+   "notes": ""
+  },
+  {
+   "district": "WI-03",
+   "state": "WI",
+   "num": 3,
+   "incumbent": "Derrick Van Orden",
+   "incumbent_party": "R",
+   "dem": "Rebecca Cooke",
+   "rep": "Derrick Van Orden",
+   "cook": "Lean D",
+   "sabato": "Lean D",
+   "inside": "Tilt D",
+   "pvi": "R+3",
+   "prev_margin_2024": -2.7,
+   "prev_winner_share_2024": "51.4% R",
+   "other_ratings": {
+    "ddhq": "Likely D",
+    "split_ticket": "Lean D",
+    "economist": "Lean D",
+    "silver_bulletin": "Likely D"
+   },
+   "notes": "Rematch; Cook to Lean D Oct 23."
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections",
+  "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_election_ratings",
+  "https://www.cookpolitical.com/ratings/house-race-ratings",
+  "https://www.270towin.com/2026-house-election/table/cook-political-report-2026-house-ratings/",
+  "https://www.270towin.com/2026-house-election/table/crystal-ball-2026-house-forecast/",
+  "https://www.270towin.com/2026-house-election/table/inside-elections-2026-house-ratings/",
+  "https://centerforpolitics.org/crystalball/the-house-28-rating-changes/",
+  "https://rollcall.com/2026/10/20/rating-changes-democrats-inside-elections/",
+  "https://edition.cnn.com/2026/10/30/politics/live-news/midterm-election-congress",
+  "https://www.cookpolitical.com/analysis/house/house-overview/democrats-projected-majority-grows-19",
+  "https://votes.decisiondeskhq.com/forecast/2026",
+  "https://decisiondeskhq.substack.com/p/forecast-update-democrats-favored-house-senate-close-republicans-kansas-new-hampshire-oregon-pennsylvania-virginia-nebraska-idaho",
+  "https://decisiondeskhq.substack.com/p/redistricting-congress-republican-majority-2026-midterms-forecast-democrats-trump-gerrymander-california-texas-florida-ohio-north-carolina-callais",
+  "https://www.natesilver.net/p/generic-ballot-average-2026-nate-silver-bulletin-congress-polls",
+  "https://theconversation.com/democrats-remain-clear-favourites-to-gain-control-of-congress-at-midterms-as-trumps-ratings-slide-again-295134",
+  "https://www.newsweek.com/who-will-win-the-midterms-what-polls-show-10-days-out-12610772",
+  "https://www.yahoo.com/news/politics/articles/democrat-chances-winning-house-senate-101103995.html",
+  "https://www.forbes.com/sites/saradorn/2026/10/29/latest-polls-in-2026-midterms-democrats-lead-in-texas-maine-michigan-kansas-new-hampshire/",
+  "https://www.racetothewh.com/house",
+  "https://www.theargumentmag.com/p/split-ticket-2026-midterms-model",
+  "https://theeconomistoffthecharts.substack.com/p/our-prediction-model-for-americas",
+  "https://poliwave.com/us/fed/projection",
+  "https://poliwave.com/us/fed/data/candidates",
+  "https://www.davemanuel.com/2026-midterm-forecast.php",
+  "https://news.kalshi.com/p/2026-midterm-odds-democrats-forecast-win-house-238-seats",
+  "https://kalshi.com/category/elections/midterms",
+  "https://gamma-api.polymarket.com/public-search?q=control%20the%20House%202026",
+  "https://www.realclearpolling.com/polls/state-of-the-union/generic-congressional-vote",
+  "https://realclearpolitics.com/articles/2026/10/29/democrats_poised_for_largest_generic_ballot_win_since_obamas_2008_blowout_154628.html",
+  "https://pollcheck.co.uk/us-midterms-2026/generic-ballot",
+  "https://fiftyplusone.news/polls/generic-ballot",
+  "https://uspollingdata.com/polls/generic-ballot/",
+  "https://votehub.com/polls/?poll=generic_ballot_2026"
+ ]
+}

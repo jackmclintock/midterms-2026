@@ -1,0 +1,2501 @@
+{
+  "as_of": "2026-10-30",
+  "election_date": "2026-11-03",
+  "current_composition": {
+    "R": 53,
+    "D": 45,
+    "I_caucus_D": 2,
+    "notes": "119th Congress: 53 R, 45 D, 2 independents (King ME, Sanders VT) caucusing with Dems. Dems need net +4 for 51 (VP Vance breaks 50-50 ties). 35 seats up: 33 Class 2 + FL and OH specials; 22 R-held, 13 D-held. Three R-held seats have appointed incumbents (FL Moody, OH Husted, SC D. Graham) and OK's appointee Armstrong is not running."
+  },
+  "seats_not_up": {
+    "R": 31,
+    "D": 34,
+    "notes": "D figure counts King and Sanders. Class 1 (2024-30): 17 D + 2 I, 14 R; Class 3 (2022-28): 15 D, 17 R."
+  },
+  "seats_up": {
+    "R": 22,
+    "D": 13,
+    "total": 35
+  },
+  "chamber_forecasts": {
+    "ddhq": {
+      "dem_control": 0.6,
+      "dem_seats": 52,
+      "as_of": "2026-10-29",
+      "note": "57% on Oct 26; 56% / 51 seats on Oct 14-21"
+    },
+    "silver_bulletin": {
+      "dem_control": 0.777,
+      "dem_seats": null,
+      "as_of": "2026-10-29",
+      "note": "per Newsweek reporting of FLIPR; 74.8% / 52.2 seats on Oct 8; 75.0% on Oct 20 per Vote-Scope. Model page paywalled."
+    },
+    "racetothewh": {
+      "dem_control": null,
+      "as_of": null,
+      "note": "Forecast page is JS-rendered; numbers not retrievable. Says Dems need ME/NC/OH/AK plus IA or TX."
+    },
+    "split_ticket": {
+      "dem_control": null,
+      "as_of": null,
+      "note": "Split Ticket/The Argument model; last public topline ~61% (early Oct). Data behind 'Get the Data' download. Oct 27 ratings: 18 Lean-or-better D, 2 toss-up (IA, KS?), 15 R per 270toWin; AK/ME/OH/TX Lean D, IA Toss-up, KS Lean R."
+    },
+    "economist": {
+      "dem_control": 0.56,
+      "as_of": "2026-10-27",
+      "note": "down from 62% earlier in Oct (Economist X post); Vote-Scope lists 57.6% on Oct 25. Site unreachable from this environment."
+    },
+    "poliwave": {
+      "dem_control": 0.58,
+      "dem_seats": 53,
+      "as_of": "2026-10-29",
+      "note": "projects D-caucus 53-46 + Osborn (I); flips ME, OH, AK; toss-ups KS, IA, NE. Polls through Oct 28."
+    },
+    "davemanuel": {
+      "dem_control": 0.68,
+      "dem_seats": 52,
+      "as_of": "2026-10-30",
+      "note": "R median 48 (90% range 43-53); flips AK, OH, TX, ME, NC. Author says model not backtested."
+    },
+    "kalshi": {
+      "dem_control": 0.688,
+      "as_of": "2026-10-30",
+      "note": "constructed from two balance-of-power contracts (DeFi Rate 08:06 ET); Kalshi's own page showed 67% on Oct 28"
+    },
+    "polymarket": {
+      "dem_control": 0.685,
+      "as_of": "2026-10-30",
+      "note": "polymarkettrader.com 01:54 UTC; DeFi Rate ask 70c same morning"
+    },
+    "pollcheck": {
+      "dem_control": 0.62,
+      "rep_control": 0.32,
+      "neither": 0.06,
+      "as_of": "2026-10-29",
+      "note": "80% range 47-55 D seats"
+    },
+    "vote_scope": {
+      "dem_control": 0.766,
+      "dem_seats": 52.5,
+      "as_of": "2026-10-29"
+    },
+    "electindex": {
+      "dem_control": 0.71,
+      "dem_seats": 52.6,
+      "as_of": "2026-10-26"
+    },
+    "cook_outlook": {
+      "note": "Oct 22 summary D 46 / I 4 / R 50 with Dem pickup range 2-6; Oct 20 ratings: 13 Lean-or-better D, 7 Toss-up, 15 Lean-or-better R"
+    },
+    "inside_elections_outlook": {
+      "note": "Dem net gain +3 to +5 (Oct 15); 9 races shifted toward Dems Oct 29"
+    }
+  },
+  "rating_scale_notes": "Cook: Solid/Likely/Lean/Toss-up. Inside Elections: Solid/Likely/Lean/Tilt/Toss-up. Sabato: Safe/Likely/Leans/Toss-up. Silver/Economist/Split Ticket ratings taken from Wikipedia state pages (as of Oct 27-28).",
+  "poll_avg_notes": "For competitive races poll_avg is the Wikipedia composite (mean of 270toWin, DDHQ, FiftyPlusOne, RCP and Silver Bulletin averages) with sub-fields for RCP and PollCheck; n_polls is PollCheck's poll count. For safe races PollCheck's average or swing estimate is used. RCP's main site blocks fetches; Texas uses RCP directly. margin is dem minus rep (or ind minus rep where noted).",
+  "races": [
+    {
+      "state": "Alabama",
+      "postal": "AL",
+      "special": false,
+      "incumbent": "Tommy Tuberville",
+      "incumbent_party": "R",
+      "incumbent_running": false,
+      "dem": "Everett Wess",
+      "rep": "Barry Moore",
+      "other": [],
+      "ratings": {
+        "cook": "Solid R",
+        "sabato": "Safe R",
+        "inside": "Solid R",
+        "silver_bulletin": null,
+        "split_ticket": null,
+        "economist": null,
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": 35.8,
+        "rep": 52.6,
+        "margin": -16.8,
+        "source": "PollCheck",
+        "as_of": "2026-10-29",
+        "n_polls": 5
+      },
+      "forecast": {
+        "ddhq_dem_win": null,
+        "silver_dem_win": null,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.01,
+        "poliwave": null
+      },
+      "market": {
+        "polymarket_dem": 0.011,
+        "kalshi_dem": 0.025,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2020,
+        "margin_dem": -20.4,
+        "note": "Tuberville 60.1-39.7 over Doug Jones"
+      },
+      "notes": "Open seat; Tuberville running for governor. Rep. Barry Moore heavy favourite."
+    },
+    {
+      "state": "Alaska",
+      "postal": "AK",
+      "special": false,
+      "incumbent": "Dan Sullivan",
+      "incumbent_party": "R",
+      "incumbent_running": true,
+      "dem": "Mary Peltola",
+      "rep": "Dan Sullivan",
+      "other": [],
+      "ratings": {
+        "cook": "Toss-up",
+        "sabato": "Lean D",
+        "inside": "Toss-up",
+        "silver_bulletin": "Lean D",
+        "split_ticket": "Lean D",
+        "economist": "Toss-up",
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": 49.1,
+        "rep": 46.7,
+        "margin": 2.4,
+        "source": "Wikipedia composite avg of 270toWin/DDHQ/FiftyPlusOne/RCP/Silver Bulletin",
+        "as_of": "2026-10-28",
+        "n_polls": 5,
+        "rcp": {
+          "dem": 49.5,
+          "rep": 47.0,
+          "margin": 2.5,
+          "dates": "10/1-10/16"
+        },
+        "pollcheck": {
+          "dem": 51.1,
+          "rep": 48.3
+        }
+      },
+      "forecast": {
+        "ddhq_dem_win": 0.6,
+        "silver_dem_win": 0.646,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.59,
+        "poliwave": null,
+        "silver_as_of": "2026-10-09",
+        "silver_note": "from Newsweek reporting of Silver Bulletin FLIPR; live per-state table is paywalled"
+      },
+      "market": {
+        "polymarket_dem": 0.7,
+        "kalshi_dem": 0.69,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2020,
+        "margin_dem": -12.7,
+        "note": "Sullivan 53.9-41.2 over Al Gross (I)"
+      },
+      "notes": "Top Dem red-state pickup target; ex-Rep. Peltola leads narrowly. Ranked-choice (top-4) general; Sabato rates Lean D flip."
+    },
+    {
+      "state": "Arkansas",
+      "postal": "AR",
+      "special": false,
+      "incumbent": "Tom Cotton",
+      "incumbent_party": "R",
+      "incumbent_running": true,
+      "dem": "Hallie Shoffner",
+      "rep": "Tom Cotton",
+      "other": [
+        {
+          "name": "Jeff Wadlin",
+          "party": "L"
+        }
+      ],
+      "ratings": {
+        "cook": "Solid R",
+        "sabato": "Safe R",
+        "inside": "Solid R",
+        "silver_bulletin": null,
+        "split_ticket": null,
+        "economist": null,
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": 40.1,
+        "rep": 49.5,
+        "margin": -9.4,
+        "source": "PollCheck",
+        "as_of": "2026-10-29",
+        "n_polls": 5
+      },
+      "forecast": {
+        "ddhq_dem_win": null,
+        "silver_dem_win": null,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.01,
+        "poliwave": null
+      },
+      "market": {
+        "polymarket_dem": 0.045,
+        "kalshi_dem": 0.059,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2020,
+        "margin_dem": -33.0,
+        "note": "Cotton 66.5 vs Libertarian 33.5; no Democrat ran"
+      },
+      "notes": "Safe R; polls narrower than 2020 but Cotton not seriously threatened."
+    },
+    {
+      "state": "Colorado",
+      "postal": "CO",
+      "special": false,
+      "incumbent": "John Hickenlooper",
+      "incumbent_party": "D",
+      "incumbent_running": true,
+      "dem": "John Hickenlooper",
+      "rep": "Mark Baisley",
+      "other": [
+        {
+          "name": "Christopher Baum",
+          "party": "Approval Voting"
+        },
+        {
+          "name": "Bob Chew",
+          "party": "Forward"
+        },
+        {
+          "name": "Blake Huber",
+          "party": "L"
+        },
+        {
+          "name": "Adam Withrow",
+          "party": "Unity"
+        }
+      ],
+      "ratings": {
+        "cook": "Solid D",
+        "sabato": "Safe D",
+        "inside": "Solid D",
+        "silver_bulletin": null,
+        "split_ticket": null,
+        "economist": null,
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": null,
+        "rep": null,
+        "margin": 20.0,
+        "source": "PollCheck swing estimate (no candidate numbers)",
+        "as_of": "2026-10-29",
+        "n_polls": null
+      },
+      "forecast": {
+        "ddhq_dem_win": null,
+        "silver_dem_win": null,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.995,
+        "poliwave": null
+      },
+      "market": {
+        "polymarket_dem": 0.99,
+        "kalshi_dem": 0.982,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2020,
+        "margin_dem": 9.3,
+        "note": "Hickenlooper 53.5-44.2 over Cory Gardner"
+      },
+      "notes": "Safe D."
+    },
+    {
+      "state": "Delaware",
+      "postal": "DE",
+      "special": false,
+      "incumbent": "Chris Coons",
+      "incumbent_party": "D",
+      "incumbent_running": true,
+      "dem": "Chris Coons",
+      "rep": "Michael Katz",
+      "other": [],
+      "ratings": {
+        "cook": "Solid D",
+        "sabato": "Safe D",
+        "inside": "Solid D",
+        "silver_bulletin": null,
+        "split_ticket": null,
+        "economist": null,
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": null,
+        "rep": null,
+        "margin": 23.7,
+        "source": "PollCheck swing estimate",
+        "as_of": "2026-10-29",
+        "n_polls": null
+      },
+      "forecast": {
+        "ddhq_dem_win": null,
+        "silver_dem_win": null,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.995,
+        "poliwave": null
+      },
+      "market": {
+        "polymarket_dem": 0.974,
+        "kalshi_dem": 0.989,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2020,
+        "margin_dem": 21.5,
+        "note": "Coons 59.4-37.9"
+      },
+      "notes": "Safe D."
+    },
+    {
+      "state": "Florida (special)",
+      "postal": "FL",
+      "special": true,
+      "incumbent": "Ashley Moody",
+      "incumbent_party": "R",
+      "incumbent_running": true,
+      "dem": "Angie Nixon",
+      "rep": "Ashley Moody",
+      "other": [
+        {
+          "name": "Neil Gillespie",
+          "party": "I"
+        }
+      ],
+      "ratings": {
+        "cook": "Solid R",
+        "sabato": "Likely R",
+        "inside": "Likely R",
+        "silver_bulletin": "Likely R",
+        "split_ticket": "Likely R",
+        "economist": "Likely R",
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": 43.4,
+        "rep": 49.9,
+        "margin": -6.5,
+        "source": "Wikipedia composite avg of 270toWin/DDHQ/FiftyPlusOne/RCP/Silver Bulletin",
+        "as_of": "2026-10-28",
+        "n_polls": 21,
+        "rcp": {
+          "dem": 43.2,
+          "rep": 49.5,
+          "margin": -6.2,
+          "dates": "10/2-10/27"
+        },
+        "pollcheck": {
+          "dem": 43.2,
+          "rep": 49.8
+        }
+      },
+      "forecast": {
+        "ddhq_dem_win": null,
+        "silver_dem_win": null,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.14,
+        "poliwave": null
+      },
+      "market": {
+        "polymarket_dem": 0.105,
+        "kalshi_dem": 0.11,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2022,
+        "margin_dem": -16.4,
+        "note": "Rubio 57.7-41.3 over Demings; seat vacated when Rubio became Sec. of State, Moody appointed Jan 2025"
+      },
+      "notes": "Special for remainder of Rubio term (to 2029). Moody (appointed) favoured mid-single digits over state Rep. Nixon."
+    },
+    {
+      "state": "Georgia",
+      "postal": "GA",
+      "special": false,
+      "incumbent": "Jon Ossoff",
+      "incumbent_party": "D",
+      "incumbent_running": true,
+      "dem": "Jon Ossoff",
+      "rep": "Mike Collins",
+      "other": [],
+      "ratings": {
+        "cook": "Likely D",
+        "sabato": "Likely D",
+        "inside": "Likely D",
+        "silver_bulletin": "Solid D",
+        "split_ticket": "Safe D",
+        "economist": "Likely D",
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": 51.7,
+        "rep": 43.2,
+        "margin": 8.5,
+        "source": "Wikipedia composite avg of 270toWin/DDHQ/FiftyPlusOne/RCP/Silver Bulletin",
+        "as_of": "2026-10-21",
+        "n_polls": 13,
+        "rcp": {
+          "margin": 8.2,
+          "dates": "as of 10/26"
+        },
+        "pollcheck": {
+          "dem": 51.6,
+          "rep": 42.1
+        }
+      },
+      "forecast": {
+        "ddhq_dem_win": null,
+        "silver_dem_win": null,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.94,
+        "poliwave": null
+      },
+      "market": {
+        "polymarket_dem": 0.964,
+        "kalshi_dem": 0.967,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2020,
+        "margin_dem": 1.2,
+        "note": "Ossoff 50.6-49.4 over Perdue in Jan 2021 runoff"
+      },
+      "notes": "Only Dem incumbent in a Trump-won state; Ossoff comfortably ahead of Rep. Mike Collins. Georgia runoff if nobody tops 50%."
+    },
+    {
+      "state": "Idaho",
+      "postal": "ID",
+      "special": false,
+      "incumbent": "Jim Risch",
+      "incumbent_party": "R",
+      "incumbent_running": true,
+      "dem": null,
+      "rep": "Jim Risch",
+      "other": [
+        {
+          "name": "Todd Achilles",
+          "party": "I"
+        },
+        {
+          "name": "Natalie Fleming",
+          "party": "I"
+        },
+        {
+          "name": "Matt Loesby",
+          "party": "L"
+        }
+      ],
+      "ratings": {
+        "cook": "Solid R",
+        "sabato": "Safe R",
+        "inside": "Solid R",
+        "silver_bulletin": null,
+        "split_ticket": null,
+        "economist": null,
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": null,
+        "rep": 46.1,
+        "margin": -4.1,
+        "source": "PollCheck (Risch vs Achilles (I))",
+        "as_of": "2026-10-29",
+        "n_polls": 6,
+        "ind": {
+          "name": "Todd Achilles",
+          "pct": 42.0
+        }
+      },
+      "forecast": {
+        "ddhq_dem_win": null,
+        "silver_dem_win": null,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.01,
+        "poliwave": null
+      },
+      "market": {
+        "polymarket_dem": 0.001,
+        "kalshi_dem": 0.001,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2020,
+        "margin_dem": -29.4,
+        "note": "Risch 62.6-33.2"
+      },
+      "notes": "Democratic nominee withdrew; independent ex-legislator Todd Achilles is main challenger. Polls closer than expected but all raters Safe/Solid R."
+    },
+    {
+      "state": "Illinois",
+      "postal": "IL",
+      "special": false,
+      "incumbent": "Dick Durbin",
+      "incumbent_party": "D",
+      "incumbent_running": false,
+      "dem": "Juliana Stratton",
+      "rep": "Don Tracy",
+      "other": [
+        {
+          "name": "Whitfield Harrington Jr.",
+          "party": "I"
+        }
+      ],
+      "ratings": {
+        "cook": "Solid D",
+        "sabato": "Safe D",
+        "inside": "Solid D",
+        "silver_bulletin": null,
+        "split_ticket": null,
+        "economist": null,
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": null,
+        "rep": null,
+        "margin": 18.0,
+        "source": "PollCheck swing estimate",
+        "as_of": "2026-10-29",
+        "n_polls": null
+      },
+      "forecast": {
+        "ddhq_dem_win": null,
+        "silver_dem_win": null,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.995,
+        "poliwave": null
+      },
+      "market": {
+        "polymarket_dem": 0.986,
+        "kalshi_dem": 0.989,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2020,
+        "margin_dem": 16.0,
+        "note": "Durbin 54.9-38.9"
+      },
+      "notes": "Open seat (Durbin retiring); Lt. Gov. Stratton safe."
+    },
+    {
+      "state": "Iowa",
+      "postal": "IA",
+      "special": false,
+      "incumbent": "Joni Ernst",
+      "incumbent_party": "R",
+      "incumbent_running": false,
+      "dem": "Josh Turek",
+      "rep": "Ashley Hinson",
+      "other": [
+        {
+          "name": "Thomas Laehn",
+          "party": "L"
+        }
+      ],
+      "ratings": {
+        "cook": "Toss-up",
+        "sabato": "Toss-up",
+        "inside": "Toss-up",
+        "silver_bulletin": "Toss-up",
+        "split_ticket": "Toss-up",
+        "economist": "Lean R",
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": 45.8,
+        "rep": 46.0,
+        "margin": -0.2,
+        "source": "Wikipedia composite avg of 270toWin/DDHQ/FiftyPlusOne/RCP/Silver Bulletin",
+        "as_of": "2026-10-29",
+        "n_polls": 28,
+        "rcp": {
+          "dem": 45.5,
+          "rep": 46.0,
+          "margin": -0.5,
+          "dates": "9/29-10/28"
+        },
+        "pollcheck": {
+          "dem": 46.0,
+          "rep": 45.5
+        }
+      },
+      "forecast": {
+        "ddhq_dem_win": 0.47,
+        "silver_dem_win": null,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.45,
+        "poliwave": {
+          "rating": "Toss-up",
+          "margin": "D+0.6"
+        },
+        "ddhq_note": "inferred from DDHQ table showing 53% for leader (Hinson); DDHQ did not list IA among Dem leads on Oct 26"
+      },
+      "market": {
+        "polymarket_dem": 0.455,
+        "kalshi_dem": 0.47,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2020,
+        "margin_dem": -6.5,
+        "note": "Ernst 51.7-45.2 over Greenfield"
+      },
+      "notes": "Open seat (Ernst retired). Rep. Hinson vs state Rep. Turek is a pure coin flip; Dems' 5th/6th seat for a majority."
+    },
+    {
+      "state": "Kansas",
+      "postal": "KS",
+      "special": false,
+      "incumbent": "Roger Marshall",
+      "incumbent_party": "R",
+      "incumbent_running": true,
+      "dem": "Adam Hamilton",
+      "rep": "Roger Marshall",
+      "other": [
+        {
+          "name": "David Graham",
+          "party": "L"
+        }
+      ],
+      "ratings": {
+        "cook": "Toss-up",
+        "sabato": "Toss-up",
+        "inside": "Toss-up",
+        "silver_bulletin": "Toss-up",
+        "split_ticket": "Lean R",
+        "economist": "Toss-up",
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": 46.8,
+        "rep": 45.7,
+        "margin": 1.1,
+        "source": "Wikipedia composite avg of 270toWin/DDHQ/FiftyPlusOne/RCP/Silver Bulletin",
+        "as_of": "2026-10-29",
+        "n_polls": 13,
+        "rcp": {
+          "dem": 46.1,
+          "rep": 45.9,
+          "margin": 0.2,
+          "dates": "9/8-10/26"
+        },
+        "pollcheck": {
+          "dem": 46.7,
+          "rep": 45.3
+        }
+      },
+      "forecast": {
+        "ddhq_dem_win": 0.42,
+        "silver_dem_win": 0.486,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.48,
+        "poliwave": {
+          "rating": "Toss-up",
+          "margin": "R+0.1"
+        },
+        "ddhq_note": "inferred from DDHQ table showing 58% for leader (Marshall); treat as approximate",
+        "silver_as_of": "2026-10-08",
+        "silver_note": "from Newsweek reporting of Silver Bulletin FLIPR; live per-state table is paywalled"
+      },
+      "market": {
+        "polymarket_dem": 0.485,
+        "kalshi_dem": 0.49,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2020,
+        "margin_dem": -11.4,
+        "note": "Marshall 53.2-41.8 over Bollier"
+      },
+      "notes": "Surprise toss-up: Hamilton (D) leads Sen. Marshall in most late polls (CNN/SSRS 49-45). All three raters moved to Toss-up in October."
+    },
+    {
+      "state": "Kentucky",
+      "postal": "KY",
+      "special": false,
+      "incumbent": "Mitch McConnell",
+      "incumbent_party": "R",
+      "incumbent_running": false,
+      "dem": "Charles Booker",
+      "rep": "Andy Barr",
+      "other": [
+        {
+          "name": "Christopher Todd Campbell",
+          "party": "Kentucky Party"
+        }
+      ],
+      "ratings": {
+        "cook": "Solid R",
+        "sabato": "Safe R",
+        "inside": "Solid R",
+        "silver_bulletin": "Solid R",
+        "split_ticket": "Safe R",
+        "economist": "Safe R",
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": null,
+        "rep": null,
+        "margin": -17.3,
+        "source": "PollCheck swing estimate",
+        "as_of": "2026-10-29",
+        "n_polls": null,
+        "latest_poll": {
+          "pollster": "Global Strategy Group (D)",
+          "dates": "2026-08-24/27",
+          "rep": 49,
+          "dem": 40
+        }
+      },
+      "forecast": {
+        "ddhq_dem_win": null,
+        "silver_dem_win": null,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.01,
+        "poliwave": null
+      },
+      "market": {
+        "polymarket_dem": 0.024,
+        "kalshi_dem": 0.037,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2020,
+        "margin_dem": -19.6,
+        "note": "McConnell 57.8-38.2 over McGrath"
+      },
+      "notes": "Open seat (McConnell retiring). Rep. Andy Barr vs Charles Booker; Safe R."
+    },
+    {
+      "state": "Louisiana",
+      "postal": "LA",
+      "special": false,
+      "incumbent": "Bill Cassidy",
+      "incumbent_party": "R",
+      "incumbent_running": false,
+      "dem": "Jamie Davis",
+      "rep": "Julia Letlow",
+      "other": [],
+      "ratings": {
+        "cook": "Solid R",
+        "sabato": "Likely R",
+        "inside": "Likely R",
+        "silver_bulletin": "Solid R",
+        "split_ticket": "Safe R",
+        "economist": "Likely R",
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": null,
+        "rep": null,
+        "margin": -9.2,
+        "source": "PollCheck swing estimate",
+        "as_of": "2026-10-29",
+        "n_polls": null,
+        "latest_poll": {
+          "pollster": "Hart Research (D)",
+          "dates": "2026-09-17/19",
+          "rep": 48,
+          "dem": 44
+        }
+      },
+      "forecast": {
+        "ddhq_dem_win": null,
+        "silver_dem_win": null,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.08,
+        "poliwave": null
+      },
+      "market": {
+        "polymarket_dem": 0.105,
+        "kalshi_dem": 0.1,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2020,
+        "margin_dem": -40.3,
+        "note": "Cassidy 59.3 won outright in jungle primary; top Dem Perkins 19.0"
+      },
+      "notes": "Cassidy lost the (new) closed GOP primary on May 16 to Rep. Julia Letlow; first closed-primary Senate race in LA since 2010. IE/Sabato Likely R only."
+    },
+    {
+      "state": "Maine",
+      "postal": "ME",
+      "special": false,
+      "incumbent": "Susan Collins",
+      "incumbent_party": "R",
+      "incumbent_running": true,
+      "dem": "Troy Jackson",
+      "rep": "Susan Collins",
+      "other": [],
+      "ratings": {
+        "cook": "Toss-up",
+        "sabato": "Toss-up",
+        "inside": "Toss-up",
+        "silver_bulletin": "Lean D",
+        "split_ticket": "Lean D",
+        "economist": "Lean D",
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": 49.3,
+        "rep": 46.6,
+        "margin": 2.7,
+        "source": "Wikipedia composite avg of 270toWin/DDHQ/FiftyPlusOne/RCP/Silver Bulletin",
+        "as_of": "2026-10-29",
+        "n_polls": 29,
+        "rcp": {
+          "dem": 48.7,
+          "rep": 47.3,
+          "margin": 1.4,
+          "dates": "9/23-10/26"
+        },
+        "pollcheck": {
+          "dem": 48.8,
+          "rep": 46.9
+        }
+      },
+      "forecast": {
+        "ddhq_dem_win": 0.57,
+        "silver_dem_win": 0.706,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.69,
+        "poliwave": {
+          "rating": "Lean D",
+          "margin": "D+2.7"
+        },
+        "silver_as_of": "2026-10-09",
+        "silver_note": "from Newsweek reporting of Silver Bulletin FLIPR; live per-state table is paywalled"
+      },
+      "market": {
+        "polymarket_dem": 0.66,
+        "kalshi_dem": 0.65,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2020,
+        "margin_dem": -8.6,
+        "note": "Collins 51.0-42.4 over Gideon"
+      },
+      "notes": "Collins' 6th-term bid; Dem nominee Graham Platner withdrew July 10 (sexual-assault allegations), replaced by ex-Senate President Troy Jackson. Ranked-choice general. Jackson narrowly ahead."
+    },
+    {
+      "state": "Massachusetts",
+      "postal": "MA",
+      "special": false,
+      "incumbent": "Ed Markey",
+      "incumbent_party": "D",
+      "incumbent_running": true,
+      "dem": "Ed Markey",
+      "rep": "John Deaton",
+      "other": [
+        {
+          "name": "Shiva Ayyadurai",
+          "party": "I"
+        },
+        {
+          "name": "Joe Tache",
+          "party": "PSL"
+        }
+      ],
+      "ratings": {
+        "cook": "Solid D",
+        "sabato": "Safe D",
+        "inside": "Solid D",
+        "silver_bulletin": null,
+        "split_ticket": null,
+        "economist": null,
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": 55.8,
+        "rep": 29.0,
+        "margin": 26.8,
+        "source": "PollCheck",
+        "as_of": "2026-10-29",
+        "n_polls": 5
+      },
+      "forecast": {
+        "ddhq_dem_win": null,
+        "silver_dem_win": null,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.995,
+        "poliwave": null
+      },
+      "market": {
+        "polymarket_dem": 0.985,
+        "kalshi_dem": 0.988,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2020,
+        "margin_dem": 33.2,
+        "note": "Markey 66.2-33.0"
+      },
+      "notes": "Safe D; Markey survived primary challenge from Rep. Seth Moulton."
+    },
+    {
+      "state": "Michigan",
+      "postal": "MI",
+      "special": false,
+      "incumbent": "Gary Peters",
+      "incumbent_party": "D",
+      "incumbent_running": false,
+      "dem": "Abdul El-Sayed",
+      "rep": "Mike Rogers",
+      "other": [
+        {
+          "name": "Lydia Christensen",
+          "party": "L"
+        },
+        {
+          "name": "Douglas P. Marsh",
+          "party": "Green"
+        },
+        {
+          "name": "Walter P. Kristy",
+          "party": "Natural Law"
+        },
+        {
+          "name": "Tim Long",
+          "party": "U.S. Taxpayers"
+        }
+      ],
+      "ratings": {
+        "cook": "Toss-up",
+        "sabato": "Lean D",
+        "inside": "Tilt D",
+        "silver_bulletin": "Likely D",
+        "split_ticket": "Lean D",
+        "economist": "Lean D",
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": 49.1,
+        "rep": 44.9,
+        "margin": 4.2,
+        "source": "Wikipedia composite avg of 270toWin/DDHQ/FiftyPlusOne/RCP/Silver Bulletin",
+        "as_of": "2026-10-29",
+        "n_polls": 41,
+        "rcp": {
+          "dem": 48.8,
+          "rep": 45.6,
+          "margin": 3.2,
+          "dates": "9/28-10/27"
+        },
+        "pollcheck": {
+          "dem": 48.5,
+          "rep": 44.5
+        }
+      },
+      "forecast": {
+        "ddhq_dem_win": 0.72,
+        "silver_dem_win": null,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.78,
+        "poliwave": null,
+        "ddhq_note": "DDHQ race page, Lean D, projected D+6"
+      },
+      "market": {
+        "polymarket_dem": 0.755,
+        "kalshi_dem": 0.76,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2020,
+        "margin_dem": 1.7,
+        "note": "Peters 49.9-48.2 over James; Slotkin won 2024 Class 1 seat by 0.3"
+      },
+      "notes": "Open seat (Peters retiring). Progressive El-Sayed vs Rogers (lost 2024 by 0.3). GOP's best pickup chance; El-Sayed leads by ~4."
+    },
+    {
+      "state": "Minnesota",
+      "postal": "MN",
+      "special": false,
+      "incumbent": "Tina Smith",
+      "incumbent_party": "D",
+      "incumbent_running": false,
+      "dem": "Peggy Flanagan",
+      "rep": "Michele Tafoya",
+      "other": [
+        {
+          "name": "Marisa Simonetti",
+          "party": "I"
+        },
+        {
+          "name": "Rebecca Whiting",
+          "party": "L"
+        }
+      ],
+      "ratings": {
+        "cook": "Lean D",
+        "sabato": "Likely D",
+        "inside": "Lean D",
+        "silver_bulletin": "Likely D",
+        "split_ticket": "Likely D",
+        "economist": "Likely D",
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": 48.9,
+        "rep": 42.5,
+        "margin": 6.4,
+        "source": "Wikipedia composite avg of 270toWin/DDHQ/FiftyPlusOne/RCP/Silver Bulletin",
+        "as_of": "2026-10-28",
+        "n_polls": 17,
+        "rcp": {
+          "dem": 47.8,
+          "rep": 42.7,
+          "margin": 5.1,
+          "dates": "10/2-10/26"
+        },
+        "pollcheck": {
+          "dem": 48.2,
+          "rep": 42.2
+        }
+      },
+      "forecast": {
+        "ddhq_dem_win": null,
+        "silver_dem_win": null,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.86,
+        "poliwave": null
+      },
+      "market": {
+        "polymarket_dem": 0.905,
+        "kalshi_dem": 0.901,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2020,
+        "margin_dem": 5.2,
+        "note": "Smith 48.7-43.5 over Lewis"
+      },
+      "notes": "Open seat (Smith retiring). Lt. Gov. Flanagan vs ex-NBC broadcaster Tafoya; Cook moved to Lean D on Oct 20 (toward GOP) but NYT/Siena has Flanagan +14."
+    },
+    {
+      "state": "Mississippi",
+      "postal": "MS",
+      "special": false,
+      "incumbent": "Cindy Hyde-Smith",
+      "incumbent_party": "R",
+      "incumbent_running": true,
+      "dem": "Scott Colom",
+      "rep": "Cindy Hyde-Smith",
+      "other": [
+        {
+          "name": "Ty Pinkins",
+          "party": "I"
+        }
+      ],
+      "ratings": {
+        "cook": "Likely R",
+        "sabato": "Likely R",
+        "inside": "Likely R",
+        "silver_bulletin": "Solid R",
+        "split_ticket": "Safe R",
+        "economist": "Likely R",
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": null,
+        "rep": null,
+        "margin": -10.2,
+        "source": "PollCheck swing estimate",
+        "as_of": "2026-10-29",
+        "n_polls": null,
+        "latest_poll": {
+          "pollster": "Change Research (D)",
+          "dates": "2026-10-21/22",
+          "rep": 43,
+          "dem": 40,
+          "ind": 6
+        }
+      },
+      "forecast": {
+        "ddhq_dem_win": null,
+        "silver_dem_win": null,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.13,
+        "poliwave": null
+      },
+      "market": {
+        "polymarket_dem": 0.135,
+        "kalshi_dem": 0.12,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2020,
+        "margin_dem": -10.0,
+        "note": "Hyde-Smith 54.1-44.1 over Espy"
+      },
+      "notes": "Sleeper: DA Scott Colom within 3 in D-sponsored polling; Cook/IE/Sabato all moved to Likely R in late Oct. Pinkins (I) could split anti-incumbent vote."
+    },
+    {
+      "state": "Montana",
+      "postal": "MT",
+      "special": false,
+      "incumbent": "Steve Daines",
+      "incumbent_party": "R",
+      "incumbent_running": false,
+      "dem": "Alani Bankhead",
+      "rep": "Kurt Alme",
+      "other": [
+        {
+          "name": "Seth Bodnar",
+          "party": "I"
+        },
+        {
+          "name": "Kyle Austin",
+          "party": "L"
+        }
+      ],
+      "ratings": {
+        "cook": "Solid R",
+        "sabato": "Safe R",
+        "inside": "Solid R",
+        "silver_bulletin": "Lean R",
+        "split_ticket": "Safe R",
+        "economist": "Likely R",
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": 17.1,
+        "rep": 42.2,
+        "margin": -11.4,
+        "source": "Wikipedia composite avg of 270toWin/DDHQ/FiftyPlusOne/RCP/Silver Bulletin (margin = Alme over Bodnar (I))",
+        "as_of": "2026-10-28",
+        "n_polls": 13,
+        "ind": {
+          "name": "Seth Bodnar",
+          "pct": 30.8
+        },
+        "pollcheck": {
+          "dem": 16.2,
+          "rep": 42.3
+        }
+      },
+      "forecast": {
+        "ddhq_dem_win": null,
+        "silver_dem_win": null,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.06,
+        "poliwave": null
+      },
+      "market": {
+        "polymarket_dem": 0.001,
+        "kalshi_dem": 0.0045,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2020,
+        "margin_dem": -10.0,
+        "note": "Daines 55.0-45.0 over Bullock"
+      },
+      "notes": "Open seat (Daines retiring). Independent ex-UM president Seth Bodnar, not the Democrat, is the main challenger; one D poll shows Bodnar ahead, Silver rates only Lean R."
+    },
+    {
+      "state": "Nebraska",
+      "postal": "NE",
+      "special": false,
+      "incumbent": "Pete Ricketts",
+      "incumbent_party": "R",
+      "incumbent_running": true,
+      "dem": null,
+      "rep": "Pete Ricketts",
+      "other": [
+        {
+          "name": "Dan Osborn",
+          "party": "I"
+        },
+        {
+          "name": "Chuck Conboy",
+          "party": "America First"
+        },
+        {
+          "name": "Mike Marvin",
+          "party": "Legal Marijuana Now"
+        },
+        {
+          "name": "Robin Richards",
+          "party": "Working People"
+        }
+      ],
+      "ratings": {
+        "cook": "Likely R",
+        "sabato": "Lean R",
+        "inside": "Tilt R",
+        "silver_bulletin": "Lean R",
+        "split_ticket": "Lean R",
+        "economist": "Likely R",
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": null,
+        "rep": 46.5,
+        "margin": -0.7,
+        "source": "Wikipedia composite avg of 270toWin/DDHQ/FiftyPlusOne/RCP/Silver Bulletin (Ricketts vs Osborn (I); no RCP avg)",
+        "as_of": "2026-10-27",
+        "n_polls": 11,
+        "ind": {
+          "name": "Dan Osborn",
+          "pct": 45.8
+        },
+        "pollcheck": {
+          "ind": 46.0,
+          "rep": 45.5
+        }
+      },
+      "forecast": {
+        "ddhq_dem_win": null,
+        "silver_dem_win": null,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.35,
+        "poliwave": {
+          "rating": "Toss-up",
+          "margin": "I+0.9"
+        }
+      },
+      "market": {
+        "polymarket_dem": 0.001,
+        "kalshi_dem": 0.01,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2024,
+        "margin_dem": -25.2,
+        "note": "Ricketts 62.6-37.4 in 2024 special; Osborn lost 2024 Class 1 race to Fischer by 6.7"
+      },
+      "notes": "No Democrat on ballot (nominee withdrew; state party endorsed Osborn in Aug). Osborn (I) within a point of Ricketts; would caucus with neither party, he says."
+    },
+    {
+      "state": "New Hampshire",
+      "postal": "NH",
+      "special": false,
+      "incumbent": "Jeanne Shaheen",
+      "incumbent_party": "D",
+      "incumbent_running": false,
+      "dem": "Chris Pappas",
+      "rep": "John E. Sununu",
+      "other": [
+        {
+          "name": "Edmond LaPlante",
+          "party": "Constitution"
+        }
+      ],
+      "ratings": {
+        "cook": "Lean D",
+        "sabato": "Likely D",
+        "inside": "Tilt D",
+        "silver_bulletin": "Likely D",
+        "split_ticket": "Likely D",
+        "economist": "Likely D",
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": 50.0,
+        "rep": 43.0,
+        "margin": 7.0,
+        "source": "Wikipedia composite avg of 270toWin/DDHQ/FiftyPlusOne/RCP/Silver Bulletin",
+        "as_of": "2026-10-22",
+        "n_polls": 13,
+        "rcp": {
+          "dem": 49.5,
+          "rep": 43.0,
+          "margin": 6.5,
+          "dates": "9/15-10/20"
+        },
+        "pollcheck": {
+          "dem": 49.5,
+          "rep": 42.7
+        }
+      },
+      "forecast": {
+        "ddhq_dem_win": null,
+        "silver_dem_win": null,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.87,
+        "poliwave": null
+      },
+      "market": {
+        "polymarket_dem": 0.925,
+        "kalshi_dem": 0.915,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2020,
+        "margin_dem": 15.6,
+        "note": "Shaheen 56.6-41.0"
+      },
+      "notes": "Open seat (Shaheen retiring). Rep. Pappas vs ex-Sen. John E. Sununu; Pappas up ~7, Cook moved to Lean D Oct 6."
+    },
+    {
+      "state": "New Jersey",
+      "postal": "NJ",
+      "special": false,
+      "incumbent": "Cory Booker",
+      "incumbent_party": "D",
+      "incumbent_running": true,
+      "dem": "Cory Booker",
+      "rep": "Justin Murphy",
+      "other": [
+        {
+          "name": "Veronica Fernandez",
+          "party": "I"
+        },
+        {
+          "name": "Joanne Kuniansky",
+          "party": "SWP"
+        }
+      ],
+      "ratings": {
+        "cook": "Solid D",
+        "sabato": "Safe D",
+        "inside": "Solid D",
+        "silver_bulletin": null,
+        "split_ticket": null,
+        "economist": null,
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": null,
+        "rep": null,
+        "margin": 14.9,
+        "source": "PollCheck swing estimate",
+        "as_of": "2026-10-29",
+        "n_polls": null
+      },
+      "forecast": {
+        "ddhq_dem_win": null,
+        "silver_dem_win": null,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.995,
+        "poliwave": null
+      },
+      "market": {
+        "polymarket_dem": 0.986,
+        "kalshi_dem": 0.976,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2020,
+        "margin_dem": 16.3,
+        "note": "Booker 57.2-40.9"
+      },
+      "notes": "Safe D."
+    },
+    {
+      "state": "New Mexico",
+      "postal": "NM",
+      "special": false,
+      "incumbent": "Ben Ray Lujan",
+      "incumbent_party": "D",
+      "incumbent_running": true,
+      "dem": "Ben Ray Lujan",
+      "rep": "Larry Marker",
+      "other": [],
+      "ratings": {
+        "cook": "Solid D",
+        "sabato": "Safe D",
+        "inside": "Solid D",
+        "silver_bulletin": null,
+        "split_ticket": null,
+        "economist": null,
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": 53.5,
+        "rep": 36.6,
+        "margin": 16.9,
+        "source": "PollCheck",
+        "as_of": "2026-10-29",
+        "n_polls": 3
+      },
+      "forecast": {
+        "ddhq_dem_win": null,
+        "silver_dem_win": null,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.995,
+        "poliwave": null
+      },
+      "market": {
+        "polymarket_dem": 0.989,
+        "kalshi_dem": 0.989,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2020,
+        "margin_dem": 6.1,
+        "note": "Lujan 51.7-45.6 over Ronchetti"
+      },
+      "notes": "Safe D."
+    },
+    {
+      "state": "North Carolina",
+      "postal": "NC",
+      "special": false,
+      "incumbent": "Thom Tillis",
+      "incumbent_party": "R",
+      "incumbent_running": false,
+      "dem": "Roy Cooper",
+      "rep": "Michael Whatley",
+      "other": [
+        {
+          "name": "Shannon Bray",
+          "party": "L"
+        },
+        {
+          "name": "Michael Dublin",
+          "party": "Green"
+        }
+      ],
+      "ratings": {
+        "cook": "Likely D",
+        "sabato": "Likely D",
+        "inside": "Lean D",
+        "silver_bulletin": "Solid D",
+        "split_ticket": "Safe D",
+        "economist": "Likely D",
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": 51.6,
+        "rep": 41.5,
+        "margin": 10.1,
+        "source": "Wikipedia composite avg of 270toWin/DDHQ/FiftyPlusOne/RCP/Silver Bulletin",
+        "as_of": "2026-10-26",
+        "n_polls": 28,
+        "rcp": {
+          "dem": 50.8,
+          "rep": 40.5,
+          "margin": 10.3,
+          "dates": "9/27-10/25"
+        },
+        "pollcheck": {
+          "dem": 51.5,
+          "rep": 40.6
+        }
+      },
+      "forecast": {
+        "ddhq_dem_win": null,
+        "silver_dem_win": 0.953,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.96,
+        "poliwave": null,
+        "silver_as_of": "2026-10-09",
+        "silver_note": "from Newsweek reporting of Silver Bulletin FLIPR; live per-state table is paywalled"
+      },
+      "market": {
+        "polymarket_dem": 0.975,
+        "kalshi_dem": 0.968,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2020,
+        "margin_dem": -1.8,
+        "note": "Tillis 48.7-46.9 over Cunningham"
+      },
+      "notes": "Open seat (Tillis retired after Trump feud). Ex-Gov. Cooper leads ex-RNC chair Whatley by double digits; Dems' most likely flip."
+    },
+    {
+      "state": "Ohio (special)",
+      "postal": "OH",
+      "special": true,
+      "incumbent": "Jon Husted",
+      "incumbent_party": "R",
+      "incumbent_running": true,
+      "dem": "Sherrod Brown",
+      "rep": "Jon Husted",
+      "other": [
+        {
+          "name": "Greg Levy",
+          "party": "I"
+        },
+        {
+          "name": "William Redpath",
+          "party": "L"
+        }
+      ],
+      "ratings": {
+        "cook": "Toss-up",
+        "sabato": "Toss-up",
+        "inside": "Tilt D",
+        "silver_bulletin": "Lean D",
+        "split_ticket": "Lean D",
+        "economist": "Toss-up",
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": 48.1,
+        "rep": 44.8,
+        "margin": 3.3,
+        "source": "Wikipedia composite avg of 270toWin/DDHQ/FiftyPlusOne/RCP/Silver Bulletin",
+        "as_of": "2026-10-28",
+        "n_polls": 28,
+        "rcp": {
+          "dem": 48.1,
+          "rep": 44.8,
+          "margin": 3.3,
+          "dates": "9/22-10/26"
+        },
+        "pollcheck": {
+          "dem": 48.2,
+          "rep": 45.0
+        }
+      },
+      "forecast": {
+        "ddhq_dem_win": 0.54,
+        "silver_dem_win": 0.739,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.65,
+        "poliwave": {
+          "rating": "Lean D",
+          "margin": "D+3.4"
+        },
+        "silver_as_of": "2026-10-09",
+        "silver_note": "from Newsweek reporting of Silver Bulletin FLIPR; live per-state table is paywalled"
+      },
+      "market": {
+        "polymarket_dem": 0.705,
+        "kalshi_dem": 0.7,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2022,
+        "margin_dem": -6.1,
+        "note": "Vance 53.0-46.9 over Ryan; Husted appointed Jan 2025 when Vance became VP. Brown lost 2024 Class 1 race by 3.6"
+      },
+      "notes": "Special for remainder of Vance term (to 2029). Ex-Sen. Sherrod Brown comeback vs appointed Sen. Husted; Brown +3, IE moved to Tilt D Oct 29."
+    },
+    {
+      "state": "Oklahoma",
+      "postal": "OK",
+      "special": false,
+      "incumbent": "Alan Armstrong",
+      "incumbent_party": "R",
+      "incumbent_running": false,
+      "dem": "N'Kiyla Jasmine Thomas",
+      "rep": "Kevin Hern",
+      "other": [
+        {
+          "name": "Sevier White",
+          "party": "L"
+        },
+        {
+          "name": "Ron Meinhardt",
+          "party": "I"
+        },
+        {
+          "name": "Curtis Stinnett",
+          "party": "I"
+        }
+      ],
+      "ratings": {
+        "cook": "Solid R",
+        "sabato": "Safe R",
+        "inside": "Solid R",
+        "silver_bulletin": "Solid R",
+        "split_ticket": "Safe R",
+        "economist": "Safe R",
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": null,
+        "rep": null,
+        "margin": -25.3,
+        "source": "PollCheck swing estimate",
+        "as_of": "2026-10-29",
+        "n_polls": null
+      },
+      "forecast": {
+        "ddhq_dem_win": null,
+        "silver_dem_win": null,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.005,
+        "poliwave": null
+      },
+      "market": {
+        "polymarket_dem": 0.019,
+        "kalshi_dem": 0.029,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2022,
+        "margin_dem": -26.6,
+        "note": "Mullin 61.8-35.2 in 2022 special for Inhofe seat"
+      },
+      "notes": "Mullin resigned Mar 23 2026 to become DHS Secretary; interim appointee Armstrong barred from running. Rep. Kevin Hern safe."
+    },
+    {
+      "state": "Oregon",
+      "postal": "OR",
+      "special": false,
+      "incumbent": "Jeff Merkley",
+      "incumbent_party": "D",
+      "incumbent_running": true,
+      "dem": "Jeff Merkley",
+      "rep": "David Brock Smith",
+      "other": [
+        {
+          "name": "Gary Lyndon Dye",
+          "party": "L"
+        },
+        {
+          "name": "Chris Henry",
+          "party": "Progressive"
+        }
+      ],
+      "ratings": {
+        "cook": "Solid D",
+        "sabato": "Safe D",
+        "inside": "Solid D",
+        "silver_bulletin": null,
+        "split_ticket": null,
+        "economist": null,
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": null,
+        "rep": null,
+        "margin": 23.3,
+        "source": "PollCheck swing estimate",
+        "as_of": "2026-10-29",
+        "n_polls": null
+      },
+      "forecast": {
+        "ddhq_dem_win": null,
+        "silver_dem_win": null,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.995,
+        "poliwave": null
+      },
+      "market": {
+        "polymarket_dem": 0.988,
+        "kalshi_dem": 0.983,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2020,
+        "margin_dem": 17.6,
+        "note": "Merkley 56.9-39.3"
+      },
+      "notes": "Safe D."
+    },
+    {
+      "state": "Rhode Island",
+      "postal": "RI",
+      "special": false,
+      "incumbent": "Jack Reed",
+      "incumbent_party": "D",
+      "incumbent_running": true,
+      "dem": "Jack Reed",
+      "rep": "Raymond McKay",
+      "other": [
+        {
+          "name": "Michael Bahry",
+          "party": "I"
+        }
+      ],
+      "ratings": {
+        "cook": "Solid D",
+        "sabato": "Safe D",
+        "inside": "Solid D",
+        "silver_bulletin": null,
+        "split_ticket": null,
+        "economist": null,
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": 56.2,
+        "rep": 29.3,
+        "margin": 26.9,
+        "source": "PollCheck",
+        "as_of": "2026-10-29",
+        "n_polls": 3
+      },
+      "forecast": {
+        "ddhq_dem_win": null,
+        "silver_dem_win": null,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.995,
+        "poliwave": null
+      },
+      "market": {
+        "polymarket_dem": 0.982,
+        "kalshi_dem": 0.998,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2020,
+        "margin_dem": 33.1,
+        "note": "Reed 66.5-33.4"
+      },
+      "notes": "Safe D."
+    },
+    {
+      "state": "South Carolina",
+      "postal": "SC",
+      "special": false,
+      "incumbent": "Darline Graham",
+      "incumbent_party": "R",
+      "incumbent_running": true,
+      "dem": "Annie Andrews",
+      "rep": "Darline Graham",
+      "other": [
+        {
+          "name": "Kasie Whitener",
+          "party": "L"
+        },
+        {
+          "name": "Mark Hackett",
+          "party": "Constitution"
+        }
+      ],
+      "ratings": {
+        "cook": "Lean R",
+        "sabato": "Lean R",
+        "inside": "Tilt R",
+        "silver_bulletin": "Lean R",
+        "split_ticket": "Lean R",
+        "economist": "Lean R",
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": 44.6,
+        "rep": 46.2,
+        "margin": -1.6,
+        "source": "Wikipedia composite avg of 270toWin/DDHQ/FiftyPlusOne/RCP/Silver Bulletin",
+        "as_of": "2026-10-28",
+        "n_polls": 14,
+        "rcp": {
+          "dem": 45.0,
+          "rep": 47.7,
+          "margin": -2.7,
+          "dates": "9/28-10/26"
+        },
+        "pollcheck": {
+          "dem": 44.9,
+          "rep": 47.1
+        }
+      },
+      "forecast": {
+        "ddhq_dem_win": 0.3,
+        "silver_dem_win": null,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.31,
+        "poliwave": null,
+        "ddhq_note": "stale: The Hill/DDHQ page as of 2026-10-14"
+      },
+      "market": {
+        "polymarket_dem": 0.265,
+        "kalshi_dem": 0.28,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2020,
+        "margin_dem": -10.2,
+        "note": "Lindsey Graham 54.4-44.2 over Harrison"
+      },
+      "notes": "Lindsey Graham died July 11 2026 after winning renomination; his sister Darline Graham (RCP lists her as 'Graham Nordone') was appointed July 13 and won an Aug 25 special GOP runoff. Pediatrician Annie Andrews (D) tied in NYT/Siena 48-48. Regular Class 2 election, not a special.",
+      "incumbent_note": "Appointed 2026-07-13 by Gov. McMaster to succeed Lindsey Graham"
+    },
+    {
+      "state": "South Dakota",
+      "postal": "SD",
+      "special": false,
+      "incumbent": "Mike Rounds",
+      "incumbent_party": "R",
+      "incumbent_running": true,
+      "dem": null,
+      "rep": "Mike Rounds",
+      "other": [
+        {
+          "name": "Brian Bengs",
+          "party": "I"
+        }
+      ],
+      "ratings": {
+        "cook": "Solid R",
+        "sabato": "Safe R",
+        "inside": "Solid R",
+        "silver_bulletin": null,
+        "split_ticket": null,
+        "economist": null,
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": null,
+        "rep": 51.9,
+        "margin": -10.8,
+        "source": "PollCheck (Rounds vs Bengs (I))",
+        "as_of": "2026-10-29",
+        "n_polls": 8,
+        "ind": {
+          "name": "Brian Bengs",
+          "pct": 41.1
+        }
+      },
+      "forecast": {
+        "ddhq_dem_win": null,
+        "silver_dem_win": null,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.005,
+        "poliwave": null
+      },
+      "market": {
+        "polymarket_dem": 0.001,
+        "kalshi_dem": 0.005,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2020,
+        "margin_dem": -31.4,
+        "note": "Rounds 65.7-34.3"
+      },
+      "notes": "Democratic nominee withdrew; 2022 Dem nominee Brian Bengs runs as independent. Safe R."
+    },
+    {
+      "state": "Tennessee",
+      "postal": "TN",
+      "special": false,
+      "incumbent": "Bill Hagerty",
+      "incumbent_party": "R",
+      "incumbent_running": true,
+      "dem": "Marquita Bradshaw",
+      "rep": "Bill Hagerty",
+      "other": [
+        {
+          "name": "8 independents",
+          "party": "I"
+        }
+      ],
+      "ratings": {
+        "cook": "Solid R",
+        "sabato": "Safe R",
+        "inside": "Solid R",
+        "silver_bulletin": null,
+        "split_ticket": null,
+        "economist": null,
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": null,
+        "rep": null,
+        "margin": -20.7,
+        "source": "PollCheck swing estimate",
+        "as_of": "2026-10-29",
+        "n_polls": null
+      },
+      "forecast": {
+        "ddhq_dem_win": null,
+        "silver_dem_win": null,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.005,
+        "poliwave": null
+      },
+      "market": {
+        "polymarket_dem": 0.034,
+        "kalshi_dem": 0.035,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2020,
+        "margin_dem": -27.0,
+        "note": "Hagerty 62.2-35.2 over Bradshaw"
+      },
+      "notes": "Safe R; rematch of 2020."
+    },
+    {
+      "state": "Texas",
+      "postal": "TX",
+      "special": false,
+      "incumbent": "John Cornyn",
+      "incumbent_party": "R",
+      "incumbent_running": false,
+      "dem": "James Talarico",
+      "rep": "Ken Paxton",
+      "other": [
+        {
+          "name": "Ted Brown",
+          "party": "L"
+        }
+      ],
+      "ratings": {
+        "cook": "Toss-up",
+        "sabato": "Toss-up",
+        "inside": "Tilt D",
+        "silver_bulletin": "Lean D",
+        "split_ticket": null,
+        "economist": null,
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": 48.6,
+        "rep": 46.5,
+        "margin": 2.1,
+        "source": "RealClearPolling (Wikipedia composite not retrievable)",
+        "as_of": "2026-10-27",
+        "n_polls": 53,
+        "rcp": {
+          "dem": 48.6,
+          "rep": 46.5,
+          "margin": 2.1,
+          "dates": "10/8-10/27"
+        },
+        "pollcheck": {
+          "dem": 48.4,
+          "rep": 45.6
+        },
+        "silver_avg_margin": 2.5
+      },
+      "forecast": {
+        "ddhq_dem_win": 0.6,
+        "silver_dem_win": 0.743,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.66,
+        "poliwave": {
+          "rating": "Lean D",
+          "margin": "D+2.8"
+        },
+        "silver_as_of": "2026-10-09",
+        "silver_note": "from Newsweek reporting of Silver Bulletin FLIPR; live per-state table is paywalled"
+      },
+      "market": {
+        "polymarket_dem": 0.695,
+        "kalshi_dem": 0.7,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2020,
+        "margin_dem": -9.6,
+        "note": "Cornyn 53.5-43.9 over Hegar"
+      },
+      "notes": "Cornyn lost GOP runoff to AG Ken Paxton; state Rep. James Talarico leads by ~2 in averages. Most expensive race of the cycle; IE moved to Tilt D Oct 29."
+    },
+    {
+      "state": "Virginia",
+      "postal": "VA",
+      "special": false,
+      "incumbent": "Mark Warner",
+      "incumbent_party": "D",
+      "incumbent_running": true,
+      "dem": "Mark Warner",
+      "rep": "Bert Mizusawa",
+      "other": [],
+      "ratings": {
+        "cook": "Solid D",
+        "sabato": "Safe D",
+        "inside": "Solid D",
+        "silver_bulletin": null,
+        "split_ticket": null,
+        "economist": null,
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": null,
+        "rep": null,
+        "margin": 14.8,
+        "source": "PollCheck swing estimate",
+        "as_of": "2026-10-29",
+        "n_polls": null
+      },
+      "forecast": {
+        "ddhq_dem_win": null,
+        "silver_dem_win": null,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.995,
+        "poliwave": null
+      },
+      "market": {
+        "polymarket_dem": 0.987,
+        "kalshi_dem": 0.988,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2020,
+        "margin_dem": 12.0,
+        "note": "Warner 56.0-44.0"
+      },
+      "notes": "Safe D."
+    },
+    {
+      "state": "West Virginia",
+      "postal": "WV",
+      "special": false,
+      "incumbent": "Shelley Moore Capito",
+      "incumbent_party": "R",
+      "incumbent_running": true,
+      "dem": "Rachel Fetty Anderson",
+      "rep": "Shelley Moore Capito",
+      "other": [
+        {
+          "name": "S. Marshall Wilson",
+          "party": "Constitution"
+        }
+      ],
+      "ratings": {
+        "cook": "Solid R",
+        "sabato": "Safe R",
+        "inside": "Solid R",
+        "silver_bulletin": null,
+        "split_ticket": null,
+        "economist": null,
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": null,
+        "rep": null,
+        "margin": -32.9,
+        "source": "PollCheck swing estimate",
+        "as_of": "2026-10-29",
+        "n_polls": null
+      },
+      "forecast": {
+        "ddhq_dem_win": null,
+        "silver_dem_win": null,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.005,
+        "poliwave": null
+      },
+      "market": {
+        "polymarket_dem": 0.014,
+        "kalshi_dem": 0.023,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2020,
+        "margin_dem": -43.3,
+        "note": "Capito 70.3-27.0"
+      },
+      "notes": "Safe R."
+    },
+    {
+      "state": "Wyoming",
+      "postal": "WY",
+      "special": false,
+      "incumbent": "Cynthia Lummis",
+      "incumbent_party": "R",
+      "incumbent_running": false,
+      "dem": "James W. Byrd",
+      "rep": "Harriet Hageman",
+      "other": [],
+      "ratings": {
+        "cook": "Solid R",
+        "sabato": "Safe R",
+        "inside": "Solid R",
+        "silver_bulletin": null,
+        "split_ticket": null,
+        "economist": null,
+        "ratings_as_of": {
+          "cook": "2026-10-20",
+          "inside": "2026-10-29",
+          "sabato": "2026-10-27",
+          "silver_bulletin": "2026-10-28",
+          "split_ticket": "2026-10-27",
+          "economist": "2026-10-28"
+        }
+      },
+      "poll_avg": {
+        "dem": null,
+        "rep": null,
+        "margin": -36.8,
+        "source": "PollCheck swing estimate",
+        "as_of": "2026-10-29",
+        "n_polls": null
+      },
+      "forecast": {
+        "ddhq_dem_win": null,
+        "silver_dem_win": null,
+        "racetothewh_dem_win": null,
+        "split_ticket_dem_win": null,
+        "economist_dem_win": null,
+        "davemanuel_dem_win": 0.005,
+        "poliwave": null
+      },
+      "market": {
+        "polymarket_dem": 0.012,
+        "kalshi_dem": 0.019,
+        "as_of": "2026-10-30"
+      },
+      "prev_result": {
+        "year": 2020,
+        "margin_dem": -46.0,
+        "note": "Lummis 72.9-26.9"
+      },
+      "notes": "Open seat (Lummis retiring); Rep. Hageman safe."
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+    "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Maine",
+    "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_North_Carolina",
+    "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Georgia",
+    "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Michigan",
+    "https://en.wikipedia.org/wiki/2026_United_States_Senate_special_election_in_Ohio",
+    "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas",
+    "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Alaska",
+    "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Iowa",
+    "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Nebraska",
+    "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_New_Hampshire",
+    "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Minnesota",
+    "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Kansas",
+    "https://en.wikipedia.org/wiki/2026_United_States_Senate_special_election_in_Florida",
+    "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Mississippi",
+    "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Louisiana",
+    "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Montana",
+    "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Kentucky",
+    "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_South_Carolina",
+    "https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Oklahoma",
+    "https://pollcheck.co.uk/us-midterms-2026",
+    "https://www.270towin.com/2026-senate-election/",
+    "https://www.270towin.com/2026-senate-election/cook-political-report-2026-senate",
+    "https://www.cookpolitical.com/ratings/senate-race-ratings",
+    "https://www.cookpolitical.com/analysis/senate/senate-overview/senate-majority-squarely-democrats-sights-kansas-moves-toss-two",
+    "https://centerforpolitics.org/crystalball/2026-senate/",
+    "https://centerforpolitics.org/crystalball/10_14_senate/",
+    "https://insideelections.com/ratings/senate",
+    "https://www.newsweek.com/forecaster-shifts-9-senate-races-as-nate-silver-touts-democratic-polls-12639194",
+    "https://www.newsweek.com/nate-silvers-forecast-changes-for-democrats-seats-most-likely-to-flip-12542701",
+    "https://www.newsweek.com/democrat-chances-of-winning-house-senate-hit-new-high-nate-silver-forecast-12545290",
+    "https://www.natesilver.net/p/nate-silver-2026-midterm-election-polls-model",
+    "https://www.natesilver.net/p/nate-silver-2026-midterm-election-senate-model",
+    "https://votes.decisiondeskhq.com/forecast/2026/senate",
+    "https://elections2026.thehill.com/forecast/2026/senate/",
+    "https://x.com/DecisionDeskHQ/status/2114752680547520598",
+    "https://votes.decisiondeskhq.com/races/2026-11-03/michigan-us-senate-general-election/forecast",
+    "https://www.racetothewh.com/senate/26",
+    "https://www.theargumentmag.com/p/split-ticket-2026-midterms-model",
+    "https://x.com/TheEconomist/status/2114935153680126459",
+    "https://www.poliwave.com/us/fed/projection",
+    "https://www.poliwave.com/us/senate",
+    "https://www.davemanuel.com/2026-midterm-forecast.php",
+    "https://vote-scope.com/en/us/senate/compare-forecasts/",
+    "https://defirate.com/odds/2026-midterms/",
+    "https://polymarkettrader.com/odds/senate-forecast-2026/",
+    "https://kalshi.com/markets/controls/senate-winner/controls-2026",
+    "https://www.realclearpolling.com/polls/senate/general/2026/collins-vs-jackson",
+    "https://www.realclearpolling.com/elections/senate/2026/texas",
+    "https://www.realclearpolling.com/polls/senate/general/2026/kansas/marshall-vs-hamilton",
+    "https://www.realclearpolling.com/polls/senate/general/2026/south-carolina/graham-nordone-vs-andrews",
+    "https://x.com/MediumBuying/status/2114704315730333821",
+    "https://www.mediaite.com/media/news/sabatos-crystal-ball-moves-two-key-senate-races-toward-democrats-including-a-gop-flip/",
+    "https://www.cnn.com/2026/10/20/politics/live-news/midterm-election-congress",
+    "https://www.washingtonpost.com/politics/2026/10/06/three-senate-races-shift-toward-democrats-cook-ratings/"
+  ]
+}

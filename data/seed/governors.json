@@ -1,0 +1,1333 @@
+{
+ "as_of": "2026-10-30",
+ "election_date": "2026-11-03",
+ "current": {
+  "R": 26,
+  "D": 24,
+  "notes": "26 R / 24 D after Abigail Spanberger (D) flipped Virginia in Nov 2025 (previously 27-23). 36 seats up: 18 R-held, 18 D-held; 22 incumbents not running (17 term-limited). Three territories also vote (not included)."
+ },
+ "race_count": 36,
+ "summary": {
+  "tossups_consensus": [
+   "GA",
+   "NV"
+  ],
+  "likely_flips": {
+   "D_pickups_favored": [
+    "AK",
+    "IA",
+    "OH"
+   ],
+   "R_pickups_favored": [
+    "KS"
+   ]
+  },
+  "ratings_asof": {
+   "cook": "2026-10-27 (some updated 10-29)",
+   "sabato": "2026-10-27",
+   "inside": "2026-10-29 (some 10-15)"
+  },
+  "notes": "DDHQ (Oct 29, secondary): Democrats favored in 22 of 36 races, 2 toss-ups. Dave Manuel (Oct 30): D projected to hold 27 of 50 governorships."
+ },
+ "field_notes": {
+  "poll_avg": "Where available, the mean of the five aggregators (270toWin, DDHQ, FiftyPlusOne, RCP, Silver Bulletin) as compiled on Wikipedia state pages; otherwise a single named poll. margin = dem - rep.",
+  "forecast.ddhq_dem_win": "DDHQ probabilities are from secondary reporting of the Oct 26-29 forecast (site returned HTTP 429); null where not reported.",
+  "forecast.racetothewh_dem_win": "Race to the WH governor forecast is rendered in Infogram embeds that could not be read; left null.",
+  "forecast.davemanuel_dem_win": "Dave Manuel model (Oct 30); '>99%' recorded as 0.995/0.005.",
+  "prev_result.margin_dem": "Previous-election margin (D minus R, pct pts) from 2022 results (2024 for NH, VT); compiled from memory of certified results, +/-0.2."
+ },
+ "races": [
+  {
+   "state": "Alabama",
+   "postal": "AL",
+   "incumbent": "Kay Ivey",
+   "incumbent_party": "R",
+   "incumbent_running": false,
+   "open": true,
+   "dem": "Doug Jones",
+   "rep": "Tommy Tuberville",
+   "other": [],
+   "ratings": {
+    "cook": "Solid R",
+    "sabato": "Likely R",
+    "inside": "Solid R",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": {
+    "dem": 41.3,
+    "rep": 50.0,
+    "margin": -8.7,
+    "source": "Mean of 3 most recent Oct polls (Chism D, Cygnal R, Alabama Poll)",
+    "as_of": "2026-10-24"
+   },
+   "forecast": {
+    "ddhq_dem_win": null,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.04
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": -37.5
+   },
+   "notes": "Term-limited. Chism (D) poll had Tuberville +3; others +11."
+  },
+  {
+   "state": "Alaska",
+   "postal": "AK",
+   "incumbent": "Mike Dunleavy",
+   "incumbent_party": "R",
+   "incumbent_running": false,
+   "open": true,
+   "dem": "Jonathan Kreiss-Tomkins",
+   "rep": "Bernadette Wilson (also Dave Bronson, Treg Taylor)",
+   "other": [
+    "Top-4 RCV: 1 D, 3 R"
+   ],
+   "ratings": {
+    "cook": "Lean D",
+    "sabato": "Lean D",
+    "inside": "Tilt D",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": {
+    "dem": 53.0,
+    "rep": 47.0,
+    "margin": 6.0,
+    "source": "Alaska Survey Research Oct 23-25 (RCV final round, single poll)",
+    "as_of": "2026-10-25"
+   },
+   "forecast": {
+    "ddhq_dem_win": null,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.98
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": -26.1
+   },
+   "notes": "Term-limited; D flip favored. Kreiss-Tomkins ~51% first round in latest ASR poll. Silver Bulletin Solid D."
+  },
+  {
+   "state": "Arizona",
+   "postal": "AZ",
+   "incumbent": "Katie Hobbs",
+   "incumbent_party": "D",
+   "incumbent_running": true,
+   "open": false,
+   "dem": "Katie Hobbs",
+   "rep": "Andy Biggs",
+   "other": [
+    "Teri Hourihan (No Labels)",
+    "Risa Lombardo (Green)"
+   ],
+   "ratings": {
+    "cook": "Likely D",
+    "sabato": "Likely D",
+    "inside": "Tilt D",
+    "as_of": "cook 2026-10-29; sabato 2026-10-27; ie 2026-10-15"
+   },
+   "poll_avg": {
+    "dem": 49.8,
+    "rep": 40.5,
+    "margin": 9.3,
+    "source": "Wikipedia 'average of aggregates' (270toWin, DDHQ, FiftyPlusOne, RCP, Silver Bulletin)",
+    "as_of": "2026-10-20"
+   },
+   "forecast": {
+    "ddhq_dem_win": null,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.85
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": 0.7
+   },
+   "notes": "Cook moved Lean D -> Likely D Oct 29. HighGround Oct 21-25: Hobbs +13."
+  },
+  {
+   "state": "Arkansas",
+   "postal": "AR",
+   "incumbent": "Sarah Huckabee Sanders",
+   "incumbent_party": "R",
+   "incumbent_running": true,
+   "open": false,
+   "dem": "Fredrick Love",
+   "rep": "Sarah Huckabee Sanders",
+   "other": [
+    "Colt Shelby (Libertarian)"
+   ],
+   "ratings": {
+    "cook": "Solid R",
+    "sabato": "Safe R",
+    "inside": "Solid R",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": null,
+   "forecast": {
+    "ddhq_dem_win": null,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.005
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": -28.0
+   },
+   "notes": ""
+  },
+  {
+   "state": "California",
+   "postal": "CA",
+   "incumbent": "Gavin Newsom",
+   "incumbent_party": "D",
+   "incumbent_running": false,
+   "open": true,
+   "dem": "Xavier Becerra",
+   "rep": "Steve Hilton",
+   "other": [
+    "Butch Ware (write-in)"
+   ],
+   "ratings": {
+    "cook": "Solid D",
+    "sabato": "Safe D",
+    "inside": "Solid D",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": null,
+   "forecast": {
+    "ddhq_dem_win": null,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.995
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": 18.4
+   },
+   "notes": "Term-limited. Polling section not retrieved (safe D)."
+  },
+  {
+   "state": "Colorado",
+   "postal": "CO",
+   "incumbent": "Jared Polis",
+   "incumbent_party": "D",
+   "incumbent_running": false,
+   "open": true,
+   "dem": "Phil Weiser",
+   "rep": "Victor Marx",
+   "other": [
+    "Greg Lopez (I)",
+    "Stephen Hamilton (Am. Constitution)",
+    "Eric Mulder (Libertarian)"
+   ],
+   "ratings": {
+    "cook": "Solid D",
+    "sabato": "Safe D",
+    "inside": "Solid D",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": null,
+   "forecast": {
+    "ddhq_dem_win": null,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.995
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": 19.3
+   },
+   "notes": "Term-limited. No general-election polls listed."
+  },
+  {
+   "state": "Connecticut",
+   "postal": "CT",
+   "incumbent": "Ned Lamont",
+   "incumbent_party": "D",
+   "incumbent_running": true,
+   "open": false,
+   "dem": "Ned Lamont",
+   "rep": "Ryan Fazio",
+   "other": [],
+   "ratings": {
+    "cook": "Solid D",
+    "sabato": "Safe D",
+    "inside": "Solid D",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": {
+    "dem": 55.2,
+    "rep": 37.1,
+    "margin": 18.1,
+    "source": "Wikipedia average of 270toWin/RCP/Silver Bulletin",
+    "as_of": "2026-10-19"
+   },
+   "forecast": {
+    "ddhq_dem_win": null,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.995
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": 13.0
+   },
+   "notes": "Lamont seeking 3rd term."
+  },
+  {
+   "state": "Florida",
+   "postal": "FL",
+   "incumbent": "Ron DeSantis",
+   "incumbent_party": "R",
+   "incumbent_running": false,
+   "open": true,
+   "dem": "David Jolly",
+   "rep": "Byron Donalds",
+   "other": [
+    "Jason Pizzo (I)",
+    "Moliere Dimanche (I)",
+    "Jewett (Libertarian)"
+   ],
+   "ratings": {
+    "cook": "Lean R",
+    "sabato": "Lean R",
+    "inside": "Lean R",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": {
+    "dem": 44.0,
+    "rep": 49.0,
+    "margin": -5.0,
+    "source": "Wikipedia 'average of aggregates' (270toWin, DDHQ, FiftyPlusOne, RCP, Silver Bulletin)",
+    "as_of": "2026-10-28"
+   },
+   "forecast": {
+    "ddhq_dem_win": null,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.23
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": -19.4
+   },
+   "notes": "Term-limited. RCP rates Toss-up, Silver Likely R. St. Pete Polls Oct 25-27: Donalds +2."
+  },
+  {
+   "state": "Georgia",
+   "postal": "GA",
+   "incumbent": "Brian Kemp",
+   "incumbent_party": "R",
+   "incumbent_running": false,
+   "open": true,
+   "dem": "Keisha Lance Bottoms",
+   "rep": "Rick Jackson",
+   "other": [],
+   "ratings": {
+    "cook": "Toss-up",
+    "sabato": "Toss-up",
+    "inside": "Tilt D",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": {
+    "dem": 47.4,
+    "rep": 48.0,
+    "margin": -0.6,
+    "source": "Wikipedia 'average of aggregates' (270toWin, DDHQ, FiftyPlusOne, RCP, Silver Bulletin)",
+    "as_of": "2026-10-28"
+   },
+   "forecast": {
+    "ddhq_dem_win": 0.59,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.52
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": -7.5
+   },
+   "notes": "Term-limited. Closest governor race: three aggregates exactly tied. IE moved to Tilt D (flip) Oct 29; Silver Lean D. DDHQ ~59% Bottoms (secondary). State Navigate Oct 23-27: Bottoms +3."
+  },
+  {
+   "state": "Hawaii",
+   "postal": "HI",
+   "incumbent": "Josh Green",
+   "incumbent_party": "D",
+   "incumbent_running": true,
+   "open": false,
+   "dem": "Josh Green",
+   "rep": "Gary Cordery",
+   "other": [],
+   "ratings": {
+    "cook": "Solid D",
+    "sabato": "Safe D",
+    "inside": "Solid D",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": null,
+   "forecast": {
+    "ddhq_dem_win": null,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.995
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": 26.4
+   },
+   "notes": ""
+  },
+  {
+   "state": "Idaho",
+   "postal": "ID",
+   "incumbent": "Brad Little",
+   "incumbent_party": "R",
+   "incumbent_running": true,
+   "open": false,
+   "dem": "Terri Pickens",
+   "rep": "Brad Little",
+   "other": [
+    "John Stegner (I)",
+    "Paul Sand (Libertarian)"
+   ],
+   "ratings": {
+    "cook": "Solid R",
+    "sabato": "Safe R",
+    "inside": "Solid R",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": null,
+   "forecast": {
+    "ddhq_dem_win": null,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.005
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": -40.2
+   },
+   "notes": ""
+  },
+  {
+   "state": "Illinois",
+   "postal": "IL",
+   "incumbent": "JB Pritzker",
+   "incumbent_party": "D",
+   "incumbent_running": true,
+   "open": false,
+   "dem": "JB Pritzker",
+   "rep": "Darren Bailey",
+   "other": [
+    "Collin Corbett (I)"
+   ],
+   "ratings": {
+    "cook": "Solid D",
+    "sabato": "Safe D",
+    "inside": "Solid D",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": {
+    "dem": 56.5,
+    "rep": 37.5,
+    "margin": 19.0,
+    "source": "Mean of ActiVote (Oct 2-22) and PPP (Sep 30-Oct 1)",
+    "as_of": "2026-10-22"
+   },
+   "forecast": {
+    "ddhq_dem_win": null,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.995
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": 12.5
+   },
+   "notes": "Pritzker seeking 3rd term; 2022 rematch."
+  },
+  {
+   "state": "Iowa",
+   "postal": "IA",
+   "incumbent": "Kim Reynolds",
+   "incumbent_party": "R",
+   "incumbent_running": false,
+   "open": true,
+   "dem": "Rob Sand",
+   "rep": "Zach Lahn",
+   "other": [
+    "Sondra Wilson (I)"
+   ],
+   "ratings": {
+    "cook": "Lean D",
+    "sabato": "Lean D",
+    "inside": "Lean D",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": {
+    "dem": 51.0,
+    "rep": 44.6,
+    "margin": 6.4,
+    "source": "Wikipedia 'average of aggregates' (270toWin, DDHQ, FiftyPlusOne, RCP, Silver Bulletin)",
+    "as_of": "2026-10-29"
+   },
+   "forecast": {
+    "ddhq_dem_win": 0.69,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.84
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": -18.5
+   },
+   "notes": "Reynolds retiring. Unanimous Lean D (flip); Silver Likely D. Sand leads every Oct poll incl. R-sponsored (co/efficient Oct 28: +5). DDHQ 69-73% Sand (secondary)."
+  },
+  {
+   "state": "Kansas",
+   "postal": "KS",
+   "incumbent": "Laura Kelly",
+   "incumbent_party": "D",
+   "incumbent_running": false,
+   "open": true,
+   "dem": "Cindy Holscher",
+   "rep": "Ty Masterson",
+   "other": [],
+   "ratings": {
+    "cook": "Toss-up",
+    "sabato": "Lean R",
+    "inside": "Tilt R",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": {
+    "dem": 44.7,
+    "rep": 48.9,
+    "margin": -4.2,
+    "source": "Wikipedia 'average of aggregates' (270toWin, DDHQ, FiftyPlusOne, RCP, Silver Bulletin)",
+    "as_of": "2026-10-26"
+   },
+   "forecast": {
+    "ddhq_dem_win": 0.33,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.32
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": 2.2
+   },
+   "notes": "Term-limited; best R flip chance. Cook moved Lean R -> Toss-up Oct 27 while most others hold Lean/Tilt R. CNN/SSRS Oct 20-26: Masterson +5. DDHQ ~7 in 10 Masterson."
+  },
+  {
+   "state": "Maine",
+   "postal": "ME",
+   "incumbent": "Janet Mills",
+   "incumbent_party": "D",
+   "incumbent_running": false,
+   "open": true,
+   "dem": "Hannah Pingree",
+   "rep": "Robert (Bobby) Charles",
+   "other": [
+    "Rick Bennett (I)"
+   ],
+   "ratings": {
+    "cook": "Solid D",
+    "sabato": "Likely D",
+    "inside": "Solid D",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": {
+    "dem": 49.1,
+    "rep": 39.5,
+    "margin": 9.6,
+    "source": "Wikipedia 'average of aggregates' (270toWin, DDHQ, FiftyPlusOne, RCP, Silver Bulletin)",
+    "as_of": "2026-10-28",
+    "ind": 7.7,
+    "ind_name": "Rick Bennett"
+   },
+   "forecast": {
+    "ddhq_dem_win": null,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.97
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": 13.3
+   },
+   "notes": "Term-limited. Bennett (I) polling 7-9%. Marist LV sample had a 44-44 tie (RV: Pingree +11)."
+  },
+  {
+   "state": "Maryland",
+   "postal": "MD",
+   "incumbent": "Wes Moore",
+   "incumbent_party": "D",
+   "incumbent_running": true,
+   "open": false,
+   "dem": "Wes Moore",
+   "rep": "Dan Cox",
+   "other": [
+    "Andy Ellis (Green)",
+    "Cathy White (Working Class)"
+   ],
+   "ratings": {
+    "cook": "Solid D",
+    "sabato": "Safe D",
+    "inside": "Solid D",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": {
+    "dem": 51.0,
+    "rep": 24.0,
+    "margin": 27.0,
+    "source": "UMBC Sep 22-27 (single poll)",
+    "as_of": "2026-09-27"
+   },
+   "forecast": {
+    "ddhq_dem_win": null,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.995
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": 32.4
+   },
+   "notes": "2022 rematch."
+  },
+  {
+   "state": "Massachusetts",
+   "postal": "MA",
+   "incumbent": "Maura Healey",
+   "incumbent_party": "D",
+   "incumbent_running": true,
+   "open": false,
+   "dem": "Maura Healey",
+   "rep": "Mike Minogue",
+   "other": [
+    "Andrea James (I)"
+   ],
+   "ratings": {
+    "cook": "Solid D",
+    "sabato": "Safe D",
+    "inside": "Solid D",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": {
+    "dem": 56.4,
+    "rep": 34.3,
+    "margin": 22.1,
+    "source": "Wikipedia average of 270toWin/RCP/Silver Bulletin",
+    "as_of": "2026-10-20"
+   },
+   "forecast": {
+    "ddhq_dem_win": null,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.995
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": 29.1
+   },
+   "notes": ""
+  },
+  {
+   "state": "Michigan",
+   "postal": "MI",
+   "incumbent": "Gretchen Whitmer",
+   "incumbent_party": "D",
+   "incumbent_running": false,
+   "open": true,
+   "dem": "Jocelyn Benson",
+   "rep": "John James",
+   "other": [
+    "Anthony Hudson (Libertarian)",
+    "Douglas Campbell (Green)",
+    "Donna Brandenburg (US Taxpayers)"
+   ],
+   "ratings": {
+    "cook": "Lean D",
+    "sabato": "Likely D",
+    "inside": "Lean D",
+    "as_of": "cook 2026-10-27; sabato 2026-10-27; ie 2026-10-29"
+   },
+   "poll_avg": {
+    "dem": 50.3,
+    "rep": 43.0,
+    "margin": 7.3,
+    "source": "Wikipedia 'average of aggregates' (270toWin, DDHQ, FiftyPlusOne, RCP, Silver Bulletin)",
+    "as_of": "2026-10-22"
+   },
+   "forecast": {
+    "ddhq_dem_win": null,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.89
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": 10.5
+   },
+   "notes": "Term-limited. Mike Duggan (I) suspended campaign May 2026, consolidating D vote. SSRS Oct 20-27: Benson +12."
+  },
+  {
+   "state": "Minnesota",
+   "postal": "MN",
+   "incumbent": "Tim Walz",
+   "incumbent_party": "DFL",
+   "incumbent_running": false,
+   "open": true,
+   "dem": "Amy Klobuchar",
+   "rep": "Lisa Demuth",
+   "other": [
+    "Steven Young (Green)"
+   ],
+   "ratings": {
+    "cook": "Solid D",
+    "sabato": "Safe D",
+    "inside": "Likely D",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": {
+    "dem": 51.0,
+    "rep": 39.9,
+    "margin": 11.1,
+    "source": "Wikipedia average of 270toWin/RCP/Silver Bulletin",
+    "as_of": "2026-10-26"
+   },
+   "forecast": {
+    "ddhq_dem_win": null,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.97
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": 7.7
+   },
+   "notes": "Walz retiring; Sen. Klobuchar running. NYT/Siena Oct 19-26: Klobuchar +18."
+  },
+  {
+   "state": "Nebraska",
+   "postal": "NE",
+   "incumbent": "Jim Pillen",
+   "incumbent_party": "R",
+   "incumbent_running": true,
+   "open": false,
+   "dem": "Lynne Walz",
+   "rep": "Jim Pillen",
+   "other": [
+    "Brett Lindstrom (America First)",
+    "Rick Beard (Legal Marijuana Now)"
+   ],
+   "ratings": {
+    "cook": "Lean R",
+    "sabato": "Likely R",
+    "inside": "Likely R",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": {
+    "dem": 40.5,
+    "rep": 44.2,
+    "margin": -3.7,
+    "source": "Wikipedia average of 270toWin/DDHQ/FiftyPlusOne/Silver Bulletin",
+    "as_of": "2026-10-28"
+   },
+   "forecast": {
+    "ddhq_dem_win": null,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.27
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": -23.4
+   },
+   "notes": "Closer than expected: Cook Lean R; Pillen under 45% in every aggregate; Lindstrom (America First) splitting R vote. D-sponsored polls show Walz within 1-3."
+  },
+  {
+   "state": "Nevada",
+   "postal": "NV",
+   "incumbent": "Joe Lombardo",
+   "incumbent_party": "R",
+   "incumbent_running": true,
+   "open": false,
+   "dem": "Aaron Ford",
+   "rep": "Joe Lombardo",
+   "other": [
+    "Danielle Ford (I)"
+   ],
+   "ratings": {
+    "cook": "Toss-up",
+    "sabato": "Toss-up",
+    "inside": "Toss-up",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": {
+    "dem": 43.5,
+    "rep": 43.7,
+    "margin": -0.2,
+    "source": "Wikipedia 'average of aggregates' (270toWin, DDHQ, FiftyPlusOne, RCP, Silver Bulletin)",
+    "as_of": "2026-10-27"
+   },
+   "forecast": {
+    "ddhq_dem_win": 0.42,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.6
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": -1.5
+   },
+   "notes": "Only race rated Toss-up by all eight raters. DDHQ has Lombardo slight favorite (~58%, secondary); Dave Manuel has Ford 60%. Hart (D) Oct 20-25: Ford +4; GSG (D) Oct 8-13: Lombardo +1."
+  },
+  {
+   "state": "New Hampshire",
+   "postal": "NH",
+   "incumbent": "Kelly Ayotte",
+   "incumbent_party": "R",
+   "incumbent_running": true,
+   "open": false,
+   "dem": "Cinde Warmington",
+   "rep": "Kelly Ayotte",
+   "other": [
+    "Jon Kiper (Community First)"
+   ],
+   "ratings": {
+    "cook": "Likely R",
+    "sabato": "Likely R",
+    "inside": "Solid R",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": {
+    "dem": 41.2,
+    "rep": 50.5,
+    "margin": -9.3,
+    "source": "Wikipedia 'average of aggregates' (270toWin, DDHQ, FiftyPlusOne, RCP, Silver Bulletin)",
+    "as_of": "2026-10-23"
+   },
+   "forecast": {
+    "ddhq_dem_win": null,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.09
+   },
+   "prev_result": {
+    "year": 2024,
+    "margin_dem": -9.3
+   },
+   "notes": "Two-year term; Ayotte elected 2024. DDHQ/RCP Lean R."
+  },
+  {
+   "state": "New Mexico",
+   "postal": "NM",
+   "incumbent": "Michelle Lujan Grisham",
+   "incumbent_party": "D",
+   "incumbent_running": false,
+   "open": true,
+   "dem": "Deb Haaland",
+   "rep": "Gregg Hull",
+   "other": [],
+   "ratings": {
+    "cook": "Solid D",
+    "sabato": "Safe D",
+    "inside": "Likely D",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": {
+    "dem": 48.0,
+    "rep": 40.1,
+    "margin": 7.9,
+    "source": "Silver Bulletin average (through Oct 9)",
+    "as_of": "2026-10-11"
+   },
+   "forecast": {
+    "ddhq_dem_win": null,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.95
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": 6.4
+   },
+   "notes": "Term-limited. Research & Polling Oct 1-9: Haaland +7."
+  },
+  {
+   "state": "New York",
+   "postal": "NY",
+   "incumbent": "Kathy Hochul",
+   "incumbent_party": "D",
+   "incumbent_running": true,
+   "open": false,
+   "dem": "Kathy Hochul",
+   "rep": "Bruce Blakeman",
+   "other": [],
+   "ratings": {
+    "cook": "Solid D",
+    "sabato": "Safe D",
+    "inside": "Likely D",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": {
+    "dem": 52.8,
+    "rep": 40.5,
+    "margin": 12.3,
+    "source": "Wikipedia 'average of aggregates' (270toWin, DDHQ, FiftyPlusOne, RCP, Silver Bulletin)",
+    "as_of": "2026-10-21"
+   },
+   "forecast": {
+    "ddhq_dem_win": null,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.99
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": 6.4
+   },
+   "notes": "Siena Oct 19-22: Hochul +14."
+  },
+  {
+   "state": "Ohio",
+   "postal": "OH",
+   "incumbent": "Mike DeWine",
+   "incumbent_party": "R",
+   "incumbent_running": false,
+   "open": true,
+   "dem": "Amy Acton",
+   "rep": "Vivek Ramaswamy",
+   "other": [
+    "Donald Kissick (Libertarian)"
+   ],
+   "ratings": {
+    "cook": "Lean D",
+    "sabato": "Lean D",
+    "inside": "Tilt D",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": {
+    "dem": 48.1,
+    "rep": 45.0,
+    "margin": 3.1,
+    "source": "Wikipedia 'average of aggregates' (270toWin, DDHQ, FiftyPlusOne, RCP, Silver Bulletin)",
+    "as_of": "2026-10-26"
+   },
+   "forecast": {
+    "ddhq_dem_win": 0.61,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.69
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": -25.0
+   },
+   "notes": "Term-limited. Moved sharply toward D in late Oct: Sabato (Oct 22) and Cook (Oct 23) both to Lean D; Silver Likely D; RCP still Toss-up. Suffolk Oct 21-26: Acton +4. DDHQ 61-62% Acton. Would be first D governor since 2010."
+  },
+  {
+   "state": "Oklahoma",
+   "postal": "OK",
+   "incumbent": "Kevin Stitt",
+   "incumbent_party": "R",
+   "incumbent_running": false,
+   "open": true,
+   "dem": "Cyndi Munson",
+   "rep": "Mike Mazzei",
+   "other": [
+    "Robert Brooks Sr. (I)",
+    "Orlando Bush (I)",
+    "Jerry Griffin (I)"
+   ],
+   "ratings": {
+    "cook": "Likely R",
+    "sabato": "Likely R",
+    "inside": "Likely R",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": {
+    "dem": 45.0,
+    "rep": 49.0,
+    "margin": -4.0,
+    "source": "Workbench Strategy (D) Oct 8-13 (single partisan poll)",
+    "as_of": "2026-10-13"
+   },
+   "forecast": {
+    "ddhq_dem_win": null,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.1
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": -13.6
+   },
+   "notes": "Term-limited. Mazzei beat AG Drummond in Aug 25 runoff. Sparse polling."
+  },
+  {
+   "state": "Oregon",
+   "postal": "OR",
+   "incumbent": "Tina Kotek",
+   "incumbent_party": "D",
+   "incumbent_running": true,
+   "open": false,
+   "dem": "Tina Kotek",
+   "rep": "Christine Drazan",
+   "other": [
+    "Brett Smith (Pacific Green)"
+   ],
+   "ratings": {
+    "cook": "Lean D",
+    "sabato": "Lean D",
+    "inside": "Tilt D",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": {
+    "dem": 45.9,
+    "rep": 43.9,
+    "margin": 2.0,
+    "source": "Silver Bulletin average (through Oct 1)",
+    "as_of": "2026-10-08"
+   },
+   "forecast": {
+    "ddhq_dem_win": null,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.7
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": 3.4
+   },
+   "notes": "2022 rematch. Kotek vulnerable: DHM Sept polls showed Drazan ahead; RCP Toss-up, DDHQ Likely D. Sparse October polling."
+  },
+  {
+   "state": "Pennsylvania",
+   "postal": "PA",
+   "incumbent": "Josh Shapiro",
+   "incumbent_party": "D",
+   "incumbent_running": true,
+   "open": false,
+   "dem": "Josh Shapiro",
+   "rep": "Stacy Garrity",
+   "other": [
+    "Ken Krawchuk (Libertarian)"
+   ],
+   "ratings": {
+    "cook": "Solid D",
+    "sabato": "Safe D",
+    "inside": "Solid D",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": {
+    "dem": 57.1,
+    "rep": 33.8,
+    "margin": 23.3,
+    "source": "Wikipedia 'average of aggregates' (270toWin, DDHQ, FiftyPlusOne, RCP, Silver Bulletin)",
+    "as_of": "2026-10-21"
+   },
+   "forecast": {
+    "ddhq_dem_win": null,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.995
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": 14.8
+   },
+   "notes": "Largest D lead of any contested governor race (+23)."
+  },
+  {
+   "state": "Rhode Island",
+   "postal": "RI",
+   "incumbent": "Dan McKee",
+   "incumbent_party": "D",
+   "incumbent_running": false,
+   "open": true,
+   "dem": "Helena Foulkes",
+   "rep": "Aaron Guckian",
+   "other": [
+    "Ken Block (I)",
+    "Jasjit Gotra (I)",
+    "CD Reynolds (I)"
+   ],
+   "ratings": {
+    "cook": "Solid D",
+    "sabato": "Safe D",
+    "inside": "Solid D",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": null,
+   "forecast": {
+    "ddhq_dem_win": null,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.995
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": 19.0
+   },
+   "notes": "McKee lost renomination to Foulkes in Sept primary (incumbent not on ballot)."
+  },
+  {
+   "state": "South Carolina",
+   "postal": "SC",
+   "incumbent": "Henry McMaster",
+   "incumbent_party": "R",
+   "incumbent_running": false,
+   "open": true,
+   "dem": "Jermaine Johnson",
+   "rep": "Alan Wilson",
+   "other": [
+    "Michael Addison (United Citizens)",
+    "Walid Hakim (Green)"
+   ],
+   "ratings": {
+    "cook": "Solid R",
+    "sabato": "Safe R",
+    "inside": "Solid R",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": {
+    "dem": 42.0,
+    "rep": 51.0,
+    "margin": -9.0,
+    "source": "Mean of NYT/Siena, Targoz, NPA (Oct 13-26)",
+    "as_of": "2026-10-26"
+   },
+   "forecast": {
+    "ddhq_dem_win": null,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.02
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": -17.4
+   },
+   "notes": "Term-limited. DDHQ Lean R, RCP Likely R; NYT/Siena Oct 19-26: Wilson +7."
+  },
+  {
+   "state": "South Dakota",
+   "postal": "SD",
+   "incumbent": "Larry Rhoden",
+   "incumbent_party": "R",
+   "incumbent_running": true,
+   "open": false,
+   "dem": "Dan Ahlers",
+   "rep": "Larry Rhoden",
+   "other": [],
+   "ratings": {
+    "cook": "Solid R",
+    "sabato": "Safe R",
+    "inside": "Solid R",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": null,
+   "forecast": {
+    "ddhq_dem_win": null,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.005
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": -26.9
+   },
+   "notes": "Rhoden succeeded Noem Jan 2025; first election as governor."
+  },
+  {
+   "state": "Tennessee",
+   "postal": "TN",
+   "incumbent": "Bill Lee",
+   "incumbent_party": "R",
+   "incumbent_running": false,
+   "open": true,
+   "dem": "Jerri Green",
+   "rep": "Marsha Blackburn",
+   "other": [
+    "David Hatley (I)",
+    "Lauren Pinkston (I)",
+    "~11 other independents"
+   ],
+   "ratings": {
+    "cook": "Solid R",
+    "sabato": "Safe R",
+    "inside": "Likely R",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": {
+    "dem": 30.0,
+    "rep": 35.0,
+    "margin": -5.0,
+    "source": "GOTV Polling Oct 25-26 (single poll; Hatley (I) 26%)",
+    "as_of": "2026-10-26"
+   },
+   "forecast": {
+    "ddhq_dem_win": null,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.04
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": -32.0
+   },
+   "notes": "Term-limited; Sen. Blackburn running. Spry (R) Oct 10-15: Blackburn +12. GOTV poll outlier with independent at 26%."
+  },
+  {
+   "state": "Texas",
+   "postal": "TX",
+   "incumbent": "Greg Abbott",
+   "incumbent_party": "R",
+   "incumbent_running": true,
+   "open": false,
+   "dem": "Gina Hinojosa",
+   "rep": "Greg Abbott",
+   "other": [
+    "Pat Dixon (Libertarian)"
+   ],
+   "ratings": {
+    "cook": "Lean R",
+    "sabato": "Lean R",
+    "inside": "Tilt R",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": {
+    "dem": 46.7,
+    "rep": 49.2,
+    "margin": -2.5,
+    "source": "Wikipedia 'average of aggregates' (270toWin, DDHQ, FiftyPlusOne, RCP, Silver Bulletin)",
+    "as_of": "2026-10-29"
+   },
+   "forecast": {
+    "ddhq_dem_win": null,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.36
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": -10.9
+   },
+   "notes": "Abbott seeking 4th term; closest TX governor race in decades. RCP Toss-up. CNN/SSRS Oct 20-27: Abbott +2; YouGov Blue (D): Hinojosa +3. Dave Manuel 64% Abbott."
+  },
+  {
+   "state": "Vermont",
+   "postal": "VT",
+   "incumbent": "Phil Scott",
+   "incumbent_party": "R",
+   "incumbent_running": true,
+   "open": false,
+   "dem": "Amanda Janoo",
+   "rep": "Phil Scott",
+   "other": [
+    "June Goodband (Green Mountain)",
+    "Brian Judd (I)",
+    "Dean Roy (Freedom and Unity)"
+   ],
+   "ratings": {
+    "cook": "Likely R",
+    "sabato": "Lean R",
+    "inside": "Likely R",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": {
+    "dem": 46.0,
+    "rep": 49.0,
+    "margin": -3.0,
+    "source": "State Navigate Oct 23-25 (single poll, with leaners)",
+    "as_of": "2026-10-25"
+   },
+   "forecast": {
+    "ddhq_dem_win": null,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.24
+   },
+   "prev_result": {
+    "year": 2024,
+    "margin_dem": -50.8
+   },
+   "notes": "Two-year term; Scott seeking 6th term. Surprisingly close: UNH Sep 17-21 had Janoo +6; State Navigate Oct: Scott +3. Sabato/RCP/Silver Lean R."
+  },
+  {
+   "state": "Wisconsin",
+   "postal": "WI",
+   "incumbent": "Tony Evers",
+   "incumbent_party": "D",
+   "incumbent_running": false,
+   "open": true,
+   "dem": "David Crowley",
+   "rep": "Tom Tiffany",
+   "other": [],
+   "ratings": {
+    "cook": "Lean D",
+    "sabato": "Lean D",
+    "inside": "Tilt D",
+    "as_of": "cook 2026-10-29; sabato 2026-10-27; ie 2026-10-29"
+   },
+   "poll_avg": {
+    "dem": 48.5,
+    "rep": 43.9,
+    "margin": 4.6,
+    "source": "Wikipedia 'average of aggregates' (270toWin, DDHQ, FiftyPlusOne, RCP, Silver Bulletin)",
+    "as_of": "2026-10-28"
+   },
+   "forecast": {
+    "ddhq_dem_win": 0.72,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.72
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": 3.4
+   },
+   "notes": "Evers retiring. Cook Toss-up -> Lean D (Oct 29) and RCP to Lean D (Oct 28). Marquette Oct 14-22: Crowley +7 (LV). Tiffany vacates WI-7."
+  },
+  {
+   "state": "Wyoming",
+   "postal": "WY",
+   "incumbent": "Mark Gordon",
+   "incumbent_party": "R",
+   "incumbent_running": false,
+   "open": true,
+   "dem": "Kenneth Casner",
+   "rep": "Eric Barlow",
+   "other": [
+    "Joseph Kibler (Constitution)"
+   ],
+   "ratings": {
+    "cook": "Solid R",
+    "sabato": "Safe R",
+    "inside": "Solid R",
+    "as_of": "2026-10-27/29"
+   },
+   "poll_avg": null,
+   "forecast": {
+    "ddhq_dem_win": null,
+    "racetothewh_dem_win": null,
+    "davemanuel_dem_win": 0.005
+   },
+   "prev_result": {
+    "year": 2022,
+    "margin_dem": -58.2
+   },
+   "notes": "Term-limited."
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/2026_United_States_gubernatorial_elections",
+  "https://www.cookpolitical.com/ratings/governor-race-ratings",
+  "https://centerforpolitics.org/crystalball/2026-governor/",
+  "https://centerforpolitics.org/crystalball/democrats-appear-to-hold-narrow-senate-edge-with-week-to-go-rating-changes-for-senate-house-and-governors/",
+  "https://insideelections.com/ratings/governor",
+  "https://votes.decisiondeskhq.com/forecast/2026/governor",
+  "https://thehill.com/homenews/6161759-2026-midterms-7-key-governor-races-to-watch-and-where-they-stand/",
+  "https://www.davemanuel.com/2026-midterm-forecast.php",
+  "https://www.racetothewh.com/governor/26",
+  "https://www.realclearpolling.com/maps/governor/2026/toss-up",
+  "https://www.multistate.us/elections/governor-race/ohio-2026",
+  "https://en.wikipedia.org/wiki/2026_Georgia_gubernatorial_election",
+  "https://en.wikipedia.org/wiki/2026_Nevada_gubernatorial_election",
+  "https://en.wikipedia.org/wiki/2026_Arizona_gubernatorial_election",
+  "https://en.wikipedia.org/wiki/2026_Wisconsin_gubernatorial_election",
+  "https://en.wikipedia.org/wiki/2026_Kansas_gubernatorial_election",
+  "https://en.wikipedia.org/wiki/2026_Iowa_gubernatorial_election",
+  "https://en.wikipedia.org/wiki/2026_Ohio_gubernatorial_election",
+  "https://en.wikipedia.org/wiki/2026_Michigan_gubernatorial_election",
+  "https://en.wikipedia.org/wiki/2026_Florida_gubernatorial_election",
+  "https://en.wikipedia.org/wiki/2026_Texas_gubernatorial_election",
+  "https://en.wikipedia.org/wiki/2026_Alaska_gubernatorial_election",
+  "https://en.wikipedia.org/wiki/2026_Oregon_gubernatorial_election",
+  "https://en.wikipedia.org/wiki/2026_New_Hampshire_gubernatorial_election",
+  "https://en.wikipedia.org/wiki/2026_Nebraska_gubernatorial_election",
+  "https://en.wikipedia.org/wiki/2026_Vermont_gubernatorial_election",
+  "https://en.wikipedia.org/wiki/2026_Minnesota_gubernatorial_election",
+  "https://en.wikipedia.org/wiki/2026_Maine_gubernatorial_election",
+  "https://en.wikipedia.org/wiki/2026_New_Mexico_gubernatorial_election",
+  "https://en.wikipedia.org/wiki/2026_New_York_gubernatorial_election",
+  "https://en.wikipedia.org/wiki/2026_Oklahoma_gubernatorial_election",
+  "https://en.wikipedia.org/wiki/2026_South_Carolina_gubernatorial_election",
+  "https://en.wikipedia.org/wiki/2026_Pennsylvania_gubernatorial_election",
+  "https://en.wikipedia.org/wiki/2026_Tennessee_gubernatorial_election",
+  "https://en.wikipedia.org/wiki/2026_Alabama_gubernatorial_election",
+  "https://en.wikipedia.org/wiki/2026_Illinois_gubernatorial_election",
+  "https://en.wikipedia.org/wiki/2026_Massachusetts_gubernatorial_election",
+  "https://en.wikipedia.org/wiki/2026_Connecticut_gubernatorial_election",
+  "https://en.wikipedia.org/wiki/2026_Maryland_gubernatorial_election"
+ ]
+}
