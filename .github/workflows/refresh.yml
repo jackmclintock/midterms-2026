@@ -12,12 +12,11 @@ name: Refresh data
 # (not main), so GitHub Pages never has to rebuild for a data refresh; the page reads the branch through the
 # raw CDN. On election night the page itself also polls the results feeds directly every 30 seconds.
 
+# ARCHIVED after the 2026 midterms: no schedule, no push trigger. Re-enable the workflow in the Actions tab and
+# restore the schedule block below to bring it back for the next cycle.
+#  schedule:
+#    - cron: "11,41 * * * *"
 on:
-  schedule:
-    - cron: "11,41 * * * *"          # watchdog: queues behind a running loop, starts a new one if none
-  push:
-    branches: [main]
-    paths: [".github/workflows/refresh.yml", "scripts/**", "data/seed/**"]
   workflow_dispatch:
     inputs:
       once:

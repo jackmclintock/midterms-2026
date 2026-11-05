@@ -1,5 +1,7 @@
 # Midterms 2026
 
+> **Archived.** The automated refresh was switched off on 5 November 2026 after the election. The site stays up as a record of the night; the page keeps reading the public results feeds in the browser until 24 November, then shows the final state.
+
 A live forecast and results tracker for the 3 November 2026 US midterm elections. Senate, House and governors, with every poll we can find, every public model, prediction markets and historical context, plus our own model that keeps re-estimating the likely outcome through election night.
 
 Live site: https://jackmclintock.github.io/midterms-2026/
